@@ -204,7 +204,7 @@
 
 
 <footer id="fh5co-footer">
-  <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">AturX</a></p>
+  <p>Powered by <a href="https://github.com/aturX" target="_blank">AturX</a></p>
 </footer>
 
 
@@ -247,6 +247,14 @@
         });
     });
 
+    
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
     
 </script>
 
