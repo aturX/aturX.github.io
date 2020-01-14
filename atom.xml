@@ -1,45 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
-    <title>区块链实践网</title>
-    <updated>2020-01-03T04:49:11.159Z</updated>
+    <title>链 求 君</title>
+    <updated>2020-01-14T10:49:41.587Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>AturX  的个人网站</subtitle>
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 区块链实践网</rights>
+    <rights>All rights reserved 2020, 链 求 君</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://aturx.github.io/post/hello-gridea</id>
-        <link href="https://aturx.github.io/post/hello-gridea">
+        <title type="html"><![CDATA[在线视频网站推荐  -  Linker 第 1 期]]></title>
+        <id>https://aturx.github.io/post/在线视频网站推荐  -  Linker 第 1 期</id>
+        <link href="https://aturx.github.io/post/在线视频网站推荐  -  Linker 第 1 期">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2019-10-01T10:36:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1578998757144.jpg" alt="" loading="lazy"></figure>
+<h2 id="1-在线之家">1. 在线之家</h2>
+<p>😜在线观看最新美剧|最新韩剧|天天美剧|人人美剧</p>
+<p><a href="https://www.zxzjs.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="2-蛋蛋赞影院">2. 蛋蛋赞影院</h2>
+<p>😍最新最全高清在线影院</p>
+<p><a href="https://www.dandanzan.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="3-喝茶影视">3. 喝茶影视</h2>
+<p>🤡在线电影-最新电影-手机网免费电影-电影在线观看</p>
+<p><a href="http://www.aaqqw.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="4-yyetss人人影视">4. YYeTss人人影视</h2>
+<p>😱人人美剧迅雷下载_人人影视</p>
+<p><a href="http://www.yyetss.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="5-嘀哩哩">5. 嘀哩哩</h2>
+<p>🤓动漫爱好者的福利，免费视频网,真正的在线高清电影天堂 - ( ゜- ゜)つロ 乾杯~ - dlili</p>
+<p><a href="http://www.dililitv.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="6-91美剧网">6. 91美剧网</h2>
+<p>🤠美剧爱好者的福利，在线美剧天堂,最新美剧资源,高清美剧在线观看</p>
+<p><a href="https://91mjw.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="7韩剧网">7.韩剧网</h2>
+<p>😀韩剧爱好者的福利，韩剧TV,最新韩剧,韩国电视剧,剧集网</p>
+<p><a href="https://wap.juji.tv/">在线地址</a></p>
+<!-- more -->
+<h2 id="8zzzfun动漫视频网">8.ZzzFun动漫视频网</h2>
+<p>😋动画片爱好者专属 (￣﹃￣)~zZZ</p>
+<p><a href="http://www.zzzfun.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="9-低端影视">9. 低端影视</h2>
+<p>👐内容高清的超清在线视频站</p>
+<p><a href="http://ddrk.me/">在线地址</a></p>
+<!-- more -->
+<h2 id="10-茶杯狐-cupfox">10. 茶杯狐 Cupfox</h2>
+<p>😻如果以上都不能符合你的需求，那么你可能需要一个专用搜索引擎。</p>
+<p><a href="https://www.cupfox.com">在线地址</a></p>
+<!-- more -->
+<h1 id="本期内容汇总">本期内容汇总</h1>
+<p><a href="https://www.theurlist.com/searcherbox-1">汇总地址</a></p>
 ]]></content>
     </entry>
 </feed>
