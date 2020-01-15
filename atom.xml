@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-01-14T10:49:41.587Z</updated>
+    <updated>2020-01-15T03:00:34.505Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Searcher - 搜藏家]]></title>
+        <id>https://aturx.github.io/post/searcher</id>
+        <link href="https://aturx.github.io/post/searcher">
+        </link>
+        <updated>2020-01-15T02:46:05.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1579056514881.jpg" alt="" loading="lazy"></figure>
+<h1 id="️-预览">❤️ 预览</h1>
+<p>😎<a href="http://lisiyi.top/cn/index.html">在线地址: lisiyi.top</a></p>
+<hr>
+<h1 id="项目功能">✅ 项目功能</h1>
+<p>完成一个网站导航项目-- 搜藏家 ， 方便自己将常用的网站汇聚在一起，便捷方便的访问使用。</p>
+<hr>
+<h1 id="️-使用技术">♻️ 使用技术</h1>
+<p>Github Page<br>
+HTML / CSS / JavaScript</p>
+<hr>
+<h1 id="参考资料">➿  参考资料</h1>
+<p><a href="http://webstack.cc/cn/index.html">WebStack.cc</a></p>
+<p><a href="https://github.com/WebStackPage/WebStackPage.github.io/">参考仓库</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在线视频网站推荐  -  Linker 第 1 期]]></title>
         <id>https://aturx.github.io/post/在线视频网站推荐  -  Linker 第 1 期</id>
