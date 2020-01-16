@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-01-15T10:49:50.351Z</updated>
+    <updated>2020-01-16T02:26:14.980Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -891,64 +891,64 @@ HTML / CSS / JavaScript</p>
         <summary type="html"><![CDATA[<h1 id="预-选-书-单">😲 预 选 书 单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3522990"><label class="task-list-item-label" for="task-item-3522990"> 《刻意练习》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3153716"><label class="task-list-item-label" for="task-item-3153716"> 《刻意练习》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7956790"><label class="task-list-item-label" for="task-item-7956790"> 《精通比特币》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2689323"><label class="task-list-item-label" for="task-item-2689323"> 《精通比特币》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8996732"><label class="task-list-item-label" for="task-item-8996732"> 《剑指offer》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7890778"><label class="task-list-item-label" for="task-item-7890778"> 《剑指offer》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2353386"><label class="task-list-item-label" for="task-item-2353386"> 《充足理由率的四重根》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3616976"><label class="task-list-item-label" for="task-item-3616976"> 《充足理由率的四重根》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4464857"><label class="task-list-item-label" for="task-item-4464857"> 《故事》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2759963"><label class="task-list-item-label" for="task-item-2759963"> 《故事》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2619764"><label class="task-list-item-label" for="task-item-2619764"> 《Django教程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7550087"><label class="task-list-item-label" for="task-item-7550087"> 《Django教程》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7112975"><label class="task-list-item-label" for="task-item-7112975"> 《数学是什么？》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2834404"><label class="task-list-item-label" for="task-item-2834404"> 《数学是什么？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5456599"><label class="task-list-item-label" for="task-item-5456599"> 《哥德尔、艾舍尔、巴赫》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8018478"><label class="task-list-item-label" for="task-item-8018478"> 《哥德尔、艾舍尔、巴赫》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3830088"><label class="task-list-item-label" for="task-item-3830088"> 《鸟哥Linux私房菜基础篇》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4469844"><label class="task-list-item-label" for="task-item-4469844"> 《鸟哥Linux私房菜基础篇》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4601855"><label class="task-list-item-label" for="task-item-4601855"> 《区块链：定义金融格局》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9390421"><label class="task-list-item-label" for="task-item-9390421"> 《区块链：定义金融格局》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2646835"><label class="task-list-item-label" for="task-item-2646835"> 《编码》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-216283"><label class="task-list-item-label" for="task-item-216283"> 《编码》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5740303"><label class="task-list-item-label" for="task-item-5740303"> 《程序员修炼之道》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2013798"><label class="task-list-item-label" for="task-item-2013798"> 《程序员修炼之道》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2712869"><label class="task-list-item-label" for="task-item-2712869"> 《像程序员一样思考》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6497167"><label class="task-list-item-label" for="task-item-6497167"> 《像程序员一样思考》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3474639"><label class="task-list-item-label" for="task-item-3474639"> 《黑客与画家》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9312059"><label class="task-list-item-label" for="task-item-9312059"> 《黑客与画家》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1103665"><label class="task-list-item-label" for="task-item-1103665"> 《人件》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7817576"><label class="task-list-item-label" for="task-item-7817576"> 《人件》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9086433"><label class="task-list-item-label" for="task-item-9086433"> 《深入理解计算机系统》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-250101"><label class="task-list-item-label" for="task-item-250101"> 《深入理解计算机系统》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1761227"><label class="task-list-item-label" for="task-item-1761227"> 《区块链社会》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5616567"><label class="task-list-item-label" for="task-item-5616567"> 《区块链社会》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6894293"><label class="task-list-item-label" for="task-item-6894293"> 《人类群星闪耀时》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-206295"><label class="task-list-item-label" for="task-item-206295"> 《人类群星闪耀时》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5171121"><label class="task-list-item-label" for="task-item-5171121"> 《硅谷之火》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1009071"><label class="task-list-item-label" for="task-item-1009071"> 《硅谷之火》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1278991"><label class="task-list-item-label" for="task-item-1278991"> 《Python密码学编程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6854657"><label class="task-list-item-label" for="task-item-6854657"> 《Python密码学编程》</label></p>
 </li>
 </ul>
 <h1 id="优-选-资-源">😎 优 选 资 源</h1>
@@ -964,64 +964,64 @@ HTML / CSS / JavaScript</p>
         <content type="html"><![CDATA[<h1 id="预-选-书-单">😲 预 选 书 单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8259752"><label class="task-list-item-label" for="task-item-8259752"> 《刻意练习》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2150677"><label class="task-list-item-label" for="task-item-2150677"> 《刻意练习》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3601318"><label class="task-list-item-label" for="task-item-3601318"> 《精通比特币》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5899060"><label class="task-list-item-label" for="task-item-5899060"> 《精通比特币》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5276892"><label class="task-list-item-label" for="task-item-5276892"> 《剑指offer》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9158995"><label class="task-list-item-label" for="task-item-9158995"> 《剑指offer》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8542033"><label class="task-list-item-label" for="task-item-8542033"> 《充足理由率的四重根》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1549704"><label class="task-list-item-label" for="task-item-1549704"> 《充足理由率的四重根》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5430720"><label class="task-list-item-label" for="task-item-5430720"> 《故事》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6808257"><label class="task-list-item-label" for="task-item-6808257"> 《故事》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8787098"><label class="task-list-item-label" for="task-item-8787098"> 《Django教程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7210267"><label class="task-list-item-label" for="task-item-7210267"> 《Django教程》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2434783"><label class="task-list-item-label" for="task-item-2434783"> 《数学是什么？》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4577399"><label class="task-list-item-label" for="task-item-4577399"> 《数学是什么？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9485199"><label class="task-list-item-label" for="task-item-9485199"> 《哥德尔、艾舍尔、巴赫》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1016018"><label class="task-list-item-label" for="task-item-1016018"> 《哥德尔、艾舍尔、巴赫》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8806518"><label class="task-list-item-label" for="task-item-8806518"> 《鸟哥Linux私房菜基础篇》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5094959"><label class="task-list-item-label" for="task-item-5094959"> 《鸟哥Linux私房菜基础篇》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6518476"><label class="task-list-item-label" for="task-item-6518476"> 《区块链：定义金融格局》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3351129"><label class="task-list-item-label" for="task-item-3351129"> 《区块链：定义金融格局》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3963796"><label class="task-list-item-label" for="task-item-3963796"> 《编码》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7062828"><label class="task-list-item-label" for="task-item-7062828"> 《编码》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-514029"><label class="task-list-item-label" for="task-item-514029"> 《程序员修炼之道》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-414196"><label class="task-list-item-label" for="task-item-414196"> 《程序员修炼之道》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5116608"><label class="task-list-item-label" for="task-item-5116608"> 《像程序员一样思考》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4098304"><label class="task-list-item-label" for="task-item-4098304"> 《像程序员一样思考》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8389939"><label class="task-list-item-label" for="task-item-8389939"> 《黑客与画家》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-136968"><label class="task-list-item-label" for="task-item-136968"> 《黑客与画家》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3083793"><label class="task-list-item-label" for="task-item-3083793"> 《人件》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6890535"><label class="task-list-item-label" for="task-item-6890535"> 《人件》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9656459"><label class="task-list-item-label" for="task-item-9656459"> 《深入理解计算机系统》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3442351"><label class="task-list-item-label" for="task-item-3442351"> 《深入理解计算机系统》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1392102"><label class="task-list-item-label" for="task-item-1392102"> 《区块链社会》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8883342"><label class="task-list-item-label" for="task-item-8883342"> 《区块链社会》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5787984"><label class="task-list-item-label" for="task-item-5787984"> 《人类群星闪耀时》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5496599"><label class="task-list-item-label" for="task-item-5496599"> 《人类群星闪耀时》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7704616"><label class="task-list-item-label" for="task-item-7704616"> 《硅谷之火》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-574660"><label class="task-list-item-label" for="task-item-574660"> 《硅谷之火》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-190061"><label class="task-list-item-label" for="task-item-190061"> 《Python密码学编程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4550900"><label class="task-list-item-label" for="task-item-4550900"> 《Python密码学编程》</label></p>
 </li>
 </ul>
 <h1 id="优-选-资-源">😎 优 选 资 源</h1>
@@ -1037,10 +1037,10 @@ HTML / CSS / JavaScript</p>
 <h1 id="️-2020-年-书-单-观-影">☯️ 2020 年 书 单 &amp; 观 影</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3212712"><label class="task-list-item-label" for="task-item-3212712"> 《Python实现一条区块链》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1596769"><label class="task-list-item-label" for="task-item-1596769"> 《Python实现一条区块链》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2449092"><label class="task-list-item-label" for="task-item-2449092"> 《计算机程序的构造和解释》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9990480"><label class="task-list-item-label" for="task-item-9990480"> 《计算机程序的构造和解释》</label></p>
 </li>
 </ul>
 <!-- more -->
@@ -1048,28 +1048,28 @@ HTML / CSS / JavaScript</p>
 <h1 id="️-2019-年-书-单-观-影">☯️ 2019 年 书 单 &amp; 观 影</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5625867"><label class="task-list-item-label" for="task-item-5625867"> 《区块链技术指南》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4251535"><label class="task-list-item-label" for="task-item-4251535"> 《区块链技术指南》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2214229"><label class="task-list-item-label" for="task-item-2214229"> 《深入浅出Ajax》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4387574"><label class="task-list-item-label" for="task-item-4387574"> 《深入浅出Ajax》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6726613"><label class="task-list-item-label" for="task-item-6726613"> 《GitHub入门与实践》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-550988"><label class="task-list-item-label" for="task-item-550988"> 《GitHub入门与实践》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8685951"><label class="task-list-item-label" for="task-item-8685951"> 《Head First Android 开发》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9821220"><label class="task-list-item-label" for="task-item-9821220"> 《Head First Android 开发》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7089179"><label class="task-list-item-label" for="task-item-7089179"> 《Head First Python》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9621661"><label class="task-list-item-label" for="task-item-9621661"> 《Head First Python》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-921283"><label class="task-list-item-label" for="task-item-921283"> 《Head First SQL》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6512767"><label class="task-list-item-label" for="task-item-6512767"> 《Head First SQL》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4997579"><label class="task-list-item-label" for="task-item-4997579"> 《python测试驱动开发》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9273042"><label class="task-list-item-label" for="task-item-9273042"> 《python测试驱动开发》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9245459"><label class="task-list-item-label" for="task-item-9245459"> 《网络是如何连接的？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item--459"><label class="task-list-item-label" for="task-item--459"> 《网络是如何连接的？》</label></p>
 </li>
 </ul>
 <h3 id=""></h3>
@@ -1077,10 +1077,10 @@ HTML / CSS / JavaScript</p>
 <p>观影</p>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7337454">  <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-7337454">  [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4135366">  <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-4135366">  [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3681802">  <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-3681802">  [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9850292">  <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-9850292">  [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
 </li>
 </ul>
 <h2 id="完成8本">（完成8本）</h2>
@@ -1089,31 +1089,1325 @@ HTML / CSS / JavaScript</p>
 <h1 id="️-2018-年-书-单-观-影">☯️ 2018 年 书 单 &amp; 观 影</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5331929"><label class="task-list-item-label" for="task-item-5331929"> 《发现的乐趣》 理查德 费曼</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8673903"><label class="task-list-item-label" for="task-item-8673903"> 《发现的乐趣》 理查德 费曼</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2440316"><label class="task-list-item-label" for="task-item-2440316"> 《小程序开发》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2750211"><label class="task-list-item-label" for="task-item-2750211"> 《小程序开发》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8019303"><label class="task-list-item-label" for="task-item-8019303"> 《你的灯亮着吗？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9713358"><label class="task-list-item-label" for="task-item-9713358"> 《你的灯亮着吗？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2045572"><label class="task-list-item-label" for="task-item-2045572"> 《计算中的上帝》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2900372"><label class="task-list-item-label" for="task-item-2900372"> 《计算中的上帝》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5634235"><label class="task-list-item-label" for="task-item-5634235"> 《理解专业程序员》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4090189"><label class="task-list-item-label" for="task-item-4090189"> 《理解专业程序员》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3565038"><label class="task-list-item-label" for="task-item-3565038"> 《小王子》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2005648"><label class="task-list-item-label" for="task-item-2005648"> 《小王子》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5739567"><label class="task-list-item-label" for="task-item-5739567"> 《head first HTML》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9265452"><label class="task-list-item-label" for="task-item-9265452"> 《head first HTML》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5641373"><label class="task-list-item-label" for="task-item-5641373"> 《人生的智慧》  -- 叔本华</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9038259"><label class="task-list-item-label" for="task-item-9038259"> 《人生的智慧》  -- 叔本华</label></p>
 </li>
 </ul>
 <h2 id="完成8本-2">(完成8本)</h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux 命令]]></title>
+        <id>https://aturx.github.io/post/Linux命令</id>
+        <link href="https://aturx.github.io/post/Linux命令">
+        </link>
+        <updated>2020-01-07T01:28:10.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="常用命令">🐥 常用命令</h2>
+<ul>
+<li>
+<h2 id="id">id</h2>
+</li>
+</ul>
+<pre><code class="language-sh">// 查看当前用户、组 id
+id
+</code></pre>
+<ul>
+<li>
+<h2 id="lsof">lsof</h2>
+</li>
+</ul>
+<pre><code class="language-sh">//查看端口占用
+lsof -i tcp:5037
+
+
+// 查看某个文件被谁占用
+lsof  main.py
+
+
+// 查看某个用户占用的文件信息
+lsof -u root
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vim命令]]></title>
+        <id>https://aturx.github.io/post/vim命令</id>
+        <link href="https://aturx.github.io/post/vim命令">
+        </link>
+        <updated>2020-01-01T02:21:26.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="移-动">🐶 移 动</h3>
+<p><strong>以字（符）为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">上</td>
+<td style="text-align:left"><code>k</code></td>
+</tr>
+<tr>
+<td style="text-align:left">下</td>
+<td style="text-align:left"><code>j</code></td>
+</tr>
+<tr>
+<td style="text-align:left">左</td>
+<td style="text-align:left"><code>h</code></td>
+</tr>
+<tr>
+<td style="text-align:left">右</td>
+<td style="text-align:left"><code>l</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以单词为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">前一个单词尾</td>
+<td style="text-align:left"><code>ge</code></td>
+</tr>
+<tr>
+<td style="text-align:left">后一个单词首</td>
+<td style="text-align:left"><code>w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词首（已在本词首则跳到前一单词首）</td>
+<td style="text-align:left"><code>b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词尾（已在本词尾则跳到后一单词尾）</td>
+<td style="text-align:left"><code>e</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以屏幕为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下翻页</td>
+<td style="text-align:left"><code>CTRL-f</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻页</td>
+<td style="text-align:left"><code>CTRL-b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下翻半页</td>
+<td style="text-align:left"><code>CTRL-d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻半页</td>
+<td style="text-align:left"><code>CTRL-u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上一行</td>
+<td style="text-align:left"><code>CTRL-y</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下一行</td>
+<td style="text-align:left"><code>CTRL-e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕上方</td>
+<td style="text-align:left"><code>H</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕中间</td>
+<td style="text-align:left"><code>M</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕下方</td>
+<td style="text-align:left"><code>L</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕上方</td>
+<td style="text-align:left"><code>zt</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕中间</td>
+<td style="text-align:left"><code>zz</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕下方</td>
+<td style="text-align:left"><code>zb</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>行号</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到第 num 行</td>
+<td style="text-align:left"><code>:num</code> 或 <code>numG</code> 或 <code>numgg</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>文件</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到文件头</td>
+<td style="text-align:left"><code>gg</code></td>
+</tr>
+<tr>
+<td style="text-align:left">跳到文件尾</td>
+<td style="text-align:left"><code>G</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="编-辑">🦊 编 辑</h3>
+<h4 id="复制">复制</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">复制光标所在单词</td>
+<td style="text-align:left"><code>yiw</code></td>
+</tr>
+<tr>
+<td style="text-align:left">复制光标所在行</td>
+<td style="text-align:left"><code>yy</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="粘贴">粘贴</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">在光标之后粘贴</td>
+<td style="text-align:left"><code>p</code></td>
+</tr>
+<tr>
+<td style="text-align:left">在光标之前粘贴</td>
+<td style="text-align:left"><code>P</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="剪切">剪切</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">剪切选中区域</td>
+<td style="text-align:left"><code>d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">剪切光标所在行</td>
+<td style="text-align:left"><code>dd</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="替换">替换</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将全文中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:%s/str1/str2/g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将 1 到 5 行中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:1,5s/str1/str2/g</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="大小写">大小写</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将选中内容大小写互换</td>
+<td style="text-align:left"><code>~</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为小写</td>
+<td style="text-align:left"><code>gu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为大写</td>
+<td style="text-align:left"><code>gU</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成小写</td>
+<td style="text-align:left"><code>guu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成大写</td>
+<td style="text-align:left"><code>gUU</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="选择">选择</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">选中上一次选择的区域</td>
+<td style="text-align:left"><code>gv</code></td>
+</tr>
+<tr>
+<td style="text-align:left">选中括号内区域</td>
+<td style="text-align:left"><code>vi{</code>、<code>vi[</code>、<code>vi(</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="搜-索">🙈 搜 索</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下查找字符串</td>
+<td style="text-align:left"><code>/str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上查找字符串</td>
+<td style="text-align:left"><code>?str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找下一个</td>
+<td style="text-align:left"><code>n</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找上一个</td>
+<td style="text-align:left"><code>N</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>*</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>#</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="正-则-表-达-式">🐤 正 则 表 达 式</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">匹配单词左边界</td>
+<td style="text-align:left"><code>\&lt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">匹配单词右边界</td>
+<td style="text-align:left"><code>\&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去重</td>
+<td style="text-align:left"><code>:g/^\(.*\)$\n\1/d</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="常-用">🐔 常 用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">删除空行</td>
+<td style="text-align:left"><code>:g/^$/d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">撤销/UNDO</td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重做/REDO</td>
+<td style="text-align:left"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:left">统计行/单词/字符/字节数</td>
+<td style="text-align:left"><code>g C-g</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="全-局">🐋 全 局</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">退出</td>
+<td style="text-align:left"><code>:q</code></td>
+</tr>
+<tr>
+<td style="text-align:left">强制执行</td>
+<td style="text-align:left"><code>!</code></td>
+</tr>
+<tr>
+<td style="text-align:left">执行外部命令</td>
+<td style="text-align:left"><code>:!</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="文-件-操-作">🐞 文 件 操 作</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">打开</td>
+<td style="text-align:left"><code>:e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">打开文件对话框</td>
+<td style="text-align:left"><code>:bro e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">保存</td>
+<td style="text-align:left"><code>:w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">另存为对话框</td>
+<td style="text-align:left"><code>:bro w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看历史文件列表</td>
+<td style="text-align:left"><code>:ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看并打开历史文件</td>
+<td style="text-align:left"><code>:bro ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重命名当前文件</td>
+<td style="text-align:left"><code>:f filename</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vimdiff">🐗 vimdiff</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">移动到上一个不同处</td>
+<td style="text-align:left"><code>[c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">移动到下一个不同处</td>
+<td style="text-align:left"><code>]c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用当前文件的</td>
+<td style="text-align:left"><code>dp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用其它文件的</td>
+<td style="text-align:left"><code>do</code></td>
+</tr>
+<tr>
+<td style="text-align:left">手动刷新重新比较</td>
+<td style="text-align:left"><code>:diffupdate</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="buffer">🐼 Buffer</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">查看 Buffer 列表</td>
+<td style="text-align:left"><code>:ls</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的下一个 Buffer</td>
+<td style="text-align:left"><code>:bn</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的上一个 Buffer</td>
+<td style="text-align:left"><code>:bp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的 num 号 Buffer</td>
+<td style="text-align:left"><code>:bnum</code></td>
+</tr>
+<tr>
+<td style="text-align:left">你之前待过的一个 Buffer</td>
+<td style="text-align:left"><code>:b#</code></td>
+</tr>
+<tr>
+<td style="text-align:left">从 Buffer 列表中删除 num 号 Buffer</td>
+<td style="text-align:left"><code>:bdnum</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组-合-命-令">🦀 组 合 命 令</h3>
+<p>可以使用 <code>|</code> 来组合命令，比如 <code>cmd1 | cmd2</code>。</p>
+<h3 id="代-码">🌘 代 码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">格式化代码</td>
+<td style="text-align:left"><code>gg=G</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去除 1-20 行首的行号</td>
+<td style="text-align:left"><code>:1,20s/^\\s\*[0-9]\*\\s\*//g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开全部折叠</td>
+<td style="text-align:left"><code>zR</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前层级折叠</td>
+<td style="text-align:left"><code>zr</code></td>
+</tr>
+<tr>
+<td style="text-align:left">全部折叠</td>
+<td style="text-align:left"><code>zM</code></td>
+</tr>
+<tr>
+<td style="text-align:left">当前层级折叠</td>
+<td style="text-align:left"><code>zm</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换折叠/展开</td>
+<td style="text-align:left"><code>za</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠/展开当前大区块</td>
+<td style="text-align:left"><code>zA</code></td>
+</tr>
+<tr>
+<td style="text-align:left">折叠当前区块</td>
+<td style="text-align:left"><code>zc</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠当前大区块</td>
+<td style="text-align:left"><code>zC</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前区块</td>
+<td style="text-align:left"><code>zo</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归展开当前大区块</td>
+<td style="text-align:left"><code>zO</code></td>
+</tr>
+<tr>
+<td style="text-align:left">格式化 json 数据</td>
+<td style="text-align:left"><code>:%!python -m json.tool</code></td>
+</tr>
+<tr>
+<td style="text-align:left">缩进当前行</td>
+<td style="text-align:left"><code>&gt;&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">反缩进当前行</td>
+<td style="text-align:left"><code>&lt;&lt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="插">🐾 插</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="移-动">🐶 移 动</h3>
+<p><strong>以字（符）为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">上</td>
+<td style="text-align:left"><code>k</code></td>
+</tr>
+<tr>
+<td style="text-align:left">下</td>
+<td style="text-align:left"><code>j</code></td>
+</tr>
+<tr>
+<td style="text-align:left">左</td>
+<td style="text-align:left"><code>h</code></td>
+</tr>
+<tr>
+<td style="text-align:left">右</td>
+<td style="text-align:left"><code>l</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以单词为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">前一个单词尾</td>
+<td style="text-align:left"><code>ge</code></td>
+</tr>
+<tr>
+<td style="text-align:left">后一个单词首</td>
+<td style="text-align:left"><code>w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词首（已在本词首则跳到前一单词首）</td>
+<td style="text-align:left"><code>b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词尾（已在本词尾则跳到后一单词尾）</td>
+<td style="text-align:left"><code>e</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以屏幕为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下翻页</td>
+<td style="text-align:left"><code>CTRL-f</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻页</td>
+<td style="text-align:left"><code>CTRL-b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下翻半页</td>
+<td style="text-align:left"><code>CTRL-d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻半页</td>
+<td style="text-align:left"><code>CTRL-u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上一行</td>
+<td style="text-align:left"><code>CTRL-y</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下一行</td>
+<td style="text-align:left"><code>CTRL-e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕上方</td>
+<td style="text-align:left"><code>H</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕中间</td>
+<td style="text-align:left"><code>M</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕下方</td>
+<td style="text-align:left"><code>L</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕上方</td>
+<td style="text-align:left"><code>zt</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕中间</td>
+<td style="text-align:left"><code>zz</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕下方</td>
+<td style="text-align:left"><code>zb</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>行号</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到第 num 行</td>
+<td style="text-align:left"><code>:num</code> 或 <code>numG</code> 或 <code>numgg</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>文件</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到文件头</td>
+<td style="text-align:left"><code>gg</code></td>
+</tr>
+<tr>
+<td style="text-align:left">跳到文件尾</td>
+<td style="text-align:left"><code>G</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="编-辑">🦊 编 辑</h3>
+<h4 id="复制">复制</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">复制光标所在单词</td>
+<td style="text-align:left"><code>yiw</code></td>
+</tr>
+<tr>
+<td style="text-align:left">复制光标所在行</td>
+<td style="text-align:left"><code>yy</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="粘贴">粘贴</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">在光标之后粘贴</td>
+<td style="text-align:left"><code>p</code></td>
+</tr>
+<tr>
+<td style="text-align:left">在光标之前粘贴</td>
+<td style="text-align:left"><code>P</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="剪切">剪切</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">剪切选中区域</td>
+<td style="text-align:left"><code>d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">剪切光标所在行</td>
+<td style="text-align:left"><code>dd</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="替换">替换</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将全文中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:%s/str1/str2/g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将 1 到 5 行中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:1,5s/str1/str2/g</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="大小写">大小写</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将选中内容大小写互换</td>
+<td style="text-align:left"><code>~</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为小写</td>
+<td style="text-align:left"><code>gu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为大写</td>
+<td style="text-align:left"><code>gU</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成小写</td>
+<td style="text-align:left"><code>guu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成大写</td>
+<td style="text-align:left"><code>gUU</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="选择">选择</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">选中上一次选择的区域</td>
+<td style="text-align:left"><code>gv</code></td>
+</tr>
+<tr>
+<td style="text-align:left">选中括号内区域</td>
+<td style="text-align:left"><code>vi{</code>、<code>vi[</code>、<code>vi(</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="搜-索">🙈 搜 索</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下查找字符串</td>
+<td style="text-align:left"><code>/str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上查找字符串</td>
+<td style="text-align:left"><code>?str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找下一个</td>
+<td style="text-align:left"><code>n</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找上一个</td>
+<td style="text-align:left"><code>N</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>*</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>#</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="正-则-表-达-式">🐤 正 则 表 达 式</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">匹配单词左边界</td>
+<td style="text-align:left"><code>\&lt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">匹配单词右边界</td>
+<td style="text-align:left"><code>\&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去重</td>
+<td style="text-align:left"><code>:g/^\(.*\)$\n\1/d</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="常-用">🐔 常 用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">删除空行</td>
+<td style="text-align:left"><code>:g/^$/d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">撤销/UNDO</td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重做/REDO</td>
+<td style="text-align:left"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:left">统计行/单词/字符/字节数</td>
+<td style="text-align:left"><code>g C-g</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="全-局">🐋 全 局</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">退出</td>
+<td style="text-align:left"><code>:q</code></td>
+</tr>
+<tr>
+<td style="text-align:left">强制执行</td>
+<td style="text-align:left"><code>!</code></td>
+</tr>
+<tr>
+<td style="text-align:left">执行外部命令</td>
+<td style="text-align:left"><code>:!</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="文-件-操-作">🐞 文 件 操 作</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">打开</td>
+<td style="text-align:left"><code>:e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">打开文件对话框</td>
+<td style="text-align:left"><code>:bro e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">保存</td>
+<td style="text-align:left"><code>:w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">另存为对话框</td>
+<td style="text-align:left"><code>:bro w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看历史文件列表</td>
+<td style="text-align:left"><code>:ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看并打开历史文件</td>
+<td style="text-align:left"><code>:bro ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重命名当前文件</td>
+<td style="text-align:left"><code>:f filename</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vimdiff">🐗 vimdiff</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">移动到上一个不同处</td>
+<td style="text-align:left"><code>[c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">移动到下一个不同处</td>
+<td style="text-align:left"><code>]c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用当前文件的</td>
+<td style="text-align:left"><code>dp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用其它文件的</td>
+<td style="text-align:left"><code>do</code></td>
+</tr>
+<tr>
+<td style="text-align:left">手动刷新重新比较</td>
+<td style="text-align:left"><code>:diffupdate</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="buffer">🐼 Buffer</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">查看 Buffer 列表</td>
+<td style="text-align:left"><code>:ls</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的下一个 Buffer</td>
+<td style="text-align:left"><code>:bn</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的上一个 Buffer</td>
+<td style="text-align:left"><code>:bp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的 num 号 Buffer</td>
+<td style="text-align:left"><code>:bnum</code></td>
+</tr>
+<tr>
+<td style="text-align:left">你之前待过的一个 Buffer</td>
+<td style="text-align:left"><code>:b#</code></td>
+</tr>
+<tr>
+<td style="text-align:left">从 Buffer 列表中删除 num 号 Buffer</td>
+<td style="text-align:left"><code>:bdnum</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组-合-命-令">🦀 组 合 命 令</h3>
+<p>可以使用 <code>|</code> 来组合命令，比如 <code>cmd1 | cmd2</code>。</p>
+<h3 id="代-码">🌘 代 码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">格式化代码</td>
+<td style="text-align:left"><code>gg=G</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去除 1-20 行首的行号</td>
+<td style="text-align:left"><code>:1,20s/^\\s\*[0-9]\*\\s\*//g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开全部折叠</td>
+<td style="text-align:left"><code>zR</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前层级折叠</td>
+<td style="text-align:left"><code>zr</code></td>
+</tr>
+<tr>
+<td style="text-align:left">全部折叠</td>
+<td style="text-align:left"><code>zM</code></td>
+</tr>
+<tr>
+<td style="text-align:left">当前层级折叠</td>
+<td style="text-align:left"><code>zm</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换折叠/展开</td>
+<td style="text-align:left"><code>za</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠/展开当前大区块</td>
+<td style="text-align:left"><code>zA</code></td>
+</tr>
+<tr>
+<td style="text-align:left">折叠当前区块</td>
+<td style="text-align:left"><code>zc</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠当前大区块</td>
+<td style="text-align:left"><code>zC</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前区块</td>
+<td style="text-align:left"><code>zo</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归展开当前大区块</td>
+<td style="text-align:left"><code>zO</code></td>
+</tr>
+<tr>
+<td style="text-align:left">格式化 json 数据</td>
+<td style="text-align:left"><code>:%!python -m json.tool</code></td>
+</tr>
+<tr>
+<td style="text-align:left">缩进当前行</td>
+<td style="text-align:left"><code>&gt;&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">反缩进当前行</td>
+<td style="text-align:left"><code>&lt;&lt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="插">🐾 插</h3>
+<!-- more -->
+<p>件</p>
+<h4 id="ctrlp">CtrlP</h4>
+<p>基础按键 <code>C-p</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">刷新列表</td>
+<td style="text-align:left"><code>F5</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换文件/缓冲区/MRU</td>
+<td style="text-align:left"><code>C-f/b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换全路径搜索/文件名搜索</td>
+<td style="text-align:left"><code>C-d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换正则表达式模式</td>
+<td style="text-align:left"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:left">上/下一个选项</td>
+<td style="text-align:left"><code>C-k/j</code></td>
+</tr>
+<tr>
+<td style="text-align:left">在新标签/垂直分割/水平分割打开文件</td>
+<td style="text-align:left"><code>C-t/v/x</code></td>
+</tr>
+<tr>
+<td style="text-align:left">历史选择记录的上/下一条</td>
+<td style="text-align:left"><code>C-p/n</code></td>
+</tr>
+<tr>
+<td style="text-align:left">创建文件和它的父路径</td>
+<td style="text-align:left"><code>C-y</code></td>
+</tr>
+<tr>
+<td style="text-align:left">标记并打开多个文件</td>
+<td style="text-align:left"><code>C-z C-o</code></td>
+</tr>
+<tr>
+<td style="text-align:left">退出 CtrlP</td>
+<td style="text-align:left"><code>C-c</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="leaderf">LeaderF</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">打开文件</td>
+<td style="text-align:left"><code>Leader-f</code></td>
+</tr>
+<tr>
+<td style="text-align:left">打开缓冲区</td>
+<td style="text-align:left"><code>Leader-b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">打开 MRU</td>
+<td style="text-align:left"><code>Leader-m</code>（自定义的）</td>
+</tr>
+<tr>
+<td style="text-align:left">退出</td>
+<td style="text-align:left"><code>C-c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换模糊查找和正则查找</td>
+<td style="text-align:left"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:left">粘贴</td>
+<td style="text-align:left"><code>C-v</code></td>
+</tr>
+<tr>
+<td style="text-align:left">清空输入</td>
+<td style="text-align:left"><code>C-u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">上/下一个选项</td>
+<td style="text-align:left"><code>C-k/j</code></td>
+</tr>
+<tr>
+<td style="text-align:left">在新标签/垂直分割/水平分割打开文件</td>
+<td style="text-align:left"><code>C-t/]/v</code></td>
+</tr>
+<tr>
+<td style="text-align:left">刷新列表</td>
+<td style="text-align:left"><code>F5</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="vim-table-mode">vim-table-mode</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">删除列</td>
+<td style="text-align:left"><code>Leader-tdc</code></td>
+</tr>
+<tr>
+<td style="text-align:left">删除行</td>
+<td style="text-align:left"><code>Leader-tdd</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重新格式化表格</td>
+<td style="text-align:left"><code>Leader-tr</code></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     <entry>
