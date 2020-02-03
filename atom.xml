@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-02-03T04:51:41.429Z</updated>
+    <updated>2020-02-03T05:24:53.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -11,11 +11,58 @@
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
     <entry>
-        <title type="html"><![CDATA[自媒体工具推荐  -  Linker 第 4 期]]></title>
+        <title type="html"><![CDATA[如何通过GitHub学习？]]></title>
+        <id>https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi</id>
+        <link href="https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi">
+        </link>
+        <updated>2020-02-03T05:19:51.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="目-的">😀  目 的</h2>
+<p>当自己在学习新的知识时，为了能够提高学习效率，并且能够找到相对正确的学习路径，在GitHub上寻找资源是一个不错的选择。<br>
+可以通过GitHub 来搜索 Google 搜索不到的内容，大部分情况下我们想做的事情，已经有人已经做过。</p>
+<h2 id="好-处">😄  好 处</h2>
+<ol>
+<li>
+<p>节省时间</p>
+<p>在 GitHub 上寻找相应的 Demo，了解原理、稍微尝试，再引入到项目中。<br>
+尝试项目需要成本，如果内容较简单，可自己写Demo。<br>
+例： python+demo</p>
+</li>
+<li>
+<p>寻找脚手架：加快前期开发</p>
+<p>搜索技巧： 技术栈 + 技术名称， 寻找 awesome-xxx：可找到一些特定领域的资源<br>
+是否采用脚手架，需要衡量上手的时间成本，是否比重头写快。<br>
+想尽快的进入一个领域，不错的选择是通过awesome-xxx 寻找一些未知的可能性。<br>
+例： python+awesome</p>
+</li>
+<li>
+<p>模仿“轮子的轮子”</p>
+<p>一个完善的程序，会包含很多的细枝末节，这些内容对于上手是一个阻碍。学习框架直接阅读源码，容易陷入澡泽。<br>
+通过造轮子的方式，能够掌握核心的部分，不妨先找一些小而精的轮子的轮子去造。 这种思路搜索Google 往往比 GitHub 搜索好用。<br>
+例： xxx-like 或者 xxx-like framework  或者 仿Flask框架 或者 类flask。</p>
+</li>
+<li>
+<p>学习资源</p>
+<p>GitHub 会有很多免费的资源、电子书、教程、甚至视频资料等等。<br>
+例： 类型 + 笔记， python + 笔记， flask + 笔记， 书名， free-programming-books-zh_CN</p>
+</li>
+<li>
+<p>数据及数据制作工具</p>
+<p>很多时候需要的数据，已经有人获取过了，可以在GitHub上直接拿来使用。比如一些爬虫工具，或者AI训练模型。<br>
+例： face ai ， zhihu spider</p>
+</li>
+</ol>
+<h2 id="总-结">😆  总 结</h2>
+<p>使用现成的工具来完成自己的工作，也是一种必备技能，并不是所有的技术都应亲自掌握。</p>
+<p>人们开发软件的目的就是为了解决某些问题，如果这些问题已经被其他人解决过，为什么我们不去借用。</p>
+<p>善用GitHub， 他山之石可以攻玉。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linker 第 4 期  -  自媒体工具推荐]]></title>
         <id>https://aturx.github.io/post/linker04</id>
         <link href="https://aturx.github.io/post/linker04">
         </link>
-        <updated>2020-01-18T09:05:09.000Z</updated>
+        <updated>2020-01-20T09:05:09.000Z</updated>
         <content type="html"><![CDATA[<p>高效的使用别人成熟的工具，能够很好的解决自己的问题。<br>
 这就是本文的目的，为自媒体人提供一套全面的工具攻略方案。<br>
 下面有你需要的一切：</p>
@@ -123,11 +170,11 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[购物折扣网站推荐  -  Linker 第 3 期]]></title>
+        <title type="html"><![CDATA[Linker 第 3 期  -  购物折扣网站推荐]]></title>
         <id>https://aturx.github.io/post/linker03</id>
         <link href="https://aturx.github.io/post/linker03">
         </link>
-        <updated>2020-01-17T08:30:49.000Z</updated>
+        <updated>2020-01-19T08:30:49.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="劵-妈-妈">🐶  劵 妈 妈</h1>
 <p><a href="http://m.quanmama.com/">在线访问</a></p>
 <p>券妈妈优惠券网是一家免费领取京东优惠券,唯品会优惠券,聚美优品优惠券,1号店优惠券,6pm优惠码,苏宁易购优惠券的优惠券网站。从开通至今，目前网站日访问人数已突破15万人次，每日发放近8万张优惠券。券妈妈拥有一套完善的商家促销以及消费者省钱购物的理念和经验，在券妈妈商家可以尽情促销，消费者可以自由筛选，券妈妈会对所有信息进行核实把关！</p>
@@ -177,6 +224,159 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Linker 第 2 期  -  搜索引擎网站推荐]]></title>
+        <id>https://aturx.github.io/post/linker02</id>
+        <link href="https://aturx.github.io/post/linker02">
+        </link>
+        <updated>2020-01-18T09:36:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>本期主推10个搜索引擎网站。<br>
+无论是搜索结果的质量还是准确率，都超过百度，速来分享！</p>
+<h2 id="多-吉-搜-索">🐶  多 吉 搜 索</h2>
+<p>国内中文搜索引擎，不追踪，不误导。</p>
+<p><a href="https://www.dogedoge.com/">访问地址</a></p>
+<hr>
+<h2 id="秘-迹-搜-索">🐥 秘 迹 搜 索</h2>
+<p>聚合优化的内容，干净的搜索结果，保护你的隐私</p>
+<p><a href="https://mijisou.com/">访问地址</a></p>
+<hr>
+<h2 id="萌-搜">​🐰 萌 搜</h2>
+<p>为小众而搜</p>
+<p><a href="https://mengso.com/search?q=mengso">访问地址</a></p>
+<hr>
+<h2 id="m-e-z-w">🐴 M E Z W</h2>
+<p>MEZW|支持屏蔽功能的搜索引擎</p>
+<p><a href="https://so.mezw.com/">访问地址</a></p>
+<hr>
+<h2 id="鸠-摩-搜-索">💻 鸠 摩 搜 索</h2>
+<p>Jiumo Search 鸠摩搜索- 文档搜索引擎</p>
+<p><a href="https://www.jiumodiary.com/">访问地址</a></p>
+<hr>
+<h2 id="️-盘-搜-搜">❤️ 盘 搜 搜</h2>
+<p>网盘资源搜索神器,收录百度云盘资源等。<br>
+每天更新各类视频,种子,小说,壁纸,音乐等优质网盘资源。</p>
+<p><a href="http://www.pansou.com/">访问地址</a></p>
+<hr>
+<h2 id="史-莱-姆-搜-索">😎 史 莱 姆 搜 索</h2>
+<p>学习资源最丰富的网盘搜索网站</p>
+<p><a href="http://www.slimego.cn/">访问地址</a></p>
+<hr>
+<h2 id="极-客-搜-索">👤 极 客 搜 索</h2>
+<p>轻量级科技内容搜索引擎</p>
+<p><a href="https://s.geekbang.org/">访问地址</a></p>
+<hr>
+<h2 id="矢-量-图-标-搜-索">👽 矢 量 图 标 搜 索</h2>
+<p>正版素材，图标内容搜索</p>
+<p><a href="https://www.iconfont.cn/">访问地址</a></p>
+<hr>
+<h2 id="google-镜-像-实-例">🎃 Google 镜 像 实 例</h2>
+<p>可以安心的搜索Google中的学习资料。</p>
+<p><a href="https://searx.elukerio.org/">访问地址</a></p>
+<hr>
+]]></summary>
+        <content type="html"><![CDATA[<p>本期主推10个搜索引擎网站。<br>
+无论是搜索结果的质量还是准确率，都超过百度，速来分享！</p>
+<h2 id="多-吉-搜-索">🐶  多 吉 搜 索</h2>
+<p>国内中文搜索引擎，不追踪，不误导。</p>
+<p><a href="https://www.dogedoge.com/">访问地址</a></p>
+<hr>
+<h2 id="秘-迹-搜-索">🐥 秘 迹 搜 索</h2>
+<p>聚合优化的内容，干净的搜索结果，保护你的隐私</p>
+<p><a href="https://mijisou.com/">访问地址</a></p>
+<hr>
+<h2 id="萌-搜">​🐰 萌 搜</h2>
+<p>为小众而搜</p>
+<p><a href="https://mengso.com/search?q=mengso">访问地址</a></p>
+<hr>
+<h2 id="m-e-z-w">🐴 M E Z W</h2>
+<p>MEZW|支持屏蔽功能的搜索引擎</p>
+<p><a href="https://so.mezw.com/">访问地址</a></p>
+<hr>
+<h2 id="鸠-摩-搜-索">💻 鸠 摩 搜 索</h2>
+<p>Jiumo Search 鸠摩搜索- 文档搜索引擎</p>
+<p><a href="https://www.jiumodiary.com/">访问地址</a></p>
+<hr>
+<h2 id="️-盘-搜-搜">❤️ 盘 搜 搜</h2>
+<p>网盘资源搜索神器,收录百度云盘资源等。<br>
+每天更新各类视频,种子,小说,壁纸,音乐等优质网盘资源。</p>
+<p><a href="http://www.pansou.com/">访问地址</a></p>
+<hr>
+<h2 id="史-莱-姆-搜-索">😎 史 莱 姆 搜 索</h2>
+<p>学习资源最丰富的网盘搜索网站</p>
+<p><a href="http://www.slimego.cn/">访问地址</a></p>
+<hr>
+<h2 id="极-客-搜-索">👤 极 客 搜 索</h2>
+<p>轻量级科技内容搜索引擎</p>
+<p><a href="https://s.geekbang.org/">访问地址</a></p>
+<hr>
+<h2 id="矢-量-图-标-搜-索">👽 矢 量 图 标 搜 索</h2>
+<p>正版素材，图标内容搜索</p>
+<p><a href="https://www.iconfont.cn/">访问地址</a></p>
+<hr>
+<h2 id="google-镜-像-实-例">🎃 Google 镜 像 实 例</h2>
+<p>可以安心的搜索Google中的学习资料。</p>
+<p><a href="https://searx.elukerio.org/">访问地址</a></p>
+<hr>
+<!-- more -->
+<h2 id="本-期-内-容-汇-总">👏 本 期 内 容 汇 总</h2>
+<p><a href="https://www.theurlist.com/searcherbox-search">汇总地址</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linker 第 1 期  -  在线视频网站推荐]]></title>
+        <id>https://aturx.github.io/post/linker01</id>
+        <link href="https://aturx.github.io/post/linker01">
+        </link>
+        <updated>2020-01-17T10:36:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1578998757144.jpg" alt="" loading="lazy"></figure>
+<h2 id="1-在线之家">1. 在线之家</h2>
+<p>😜在线观看最新美剧|最新韩剧|天天美剧|人人美剧</p>
+<p><a href="https://www.zxzjs.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="2-蛋蛋赞影院">2. 蛋蛋赞影院</h2>
+<p>😍最新最全高清在线影院</p>
+<p><a href="https://www.dandanzan.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="3-喝茶影视">3. 喝茶影视</h2>
+<p>🤡在线电影-最新电影-手机网免费电影-电影在线观看</p>
+<p><a href="http://www.aaqqw.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="4-yyetss人人影视">4. YYeTss人人影视</h2>
+<p>😱人人美剧迅雷下载_人人影视</p>
+<p><a href="http://www.yyetss.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="5-嘀哩哩">5. 嘀哩哩</h2>
+<p>🤓动漫爱好者的福利，免费视频网,真正的在线高清电影天堂 - ( ゜- ゜)つロ 乾杯~ - dlili</p>
+<p><a href="http://www.dililitv.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="6-91美剧网">6. 91美剧网</h2>
+<p>🤠美剧爱好者的福利，在线美剧天堂,最新美剧资源,高清美剧在线观看</p>
+<p><a href="https://91mjw.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="7韩剧网">7.韩剧网</h2>
+<p>😀韩剧爱好者的福利，韩剧TV,最新韩剧,韩国电视剧,剧集网</p>
+<p><a href="https://wap.juji.tv/">在线地址</a></p>
+<!-- more -->
+<h2 id="8zzzfun动漫视频网">8.ZzzFun动漫视频网</h2>
+<p>😋动画片爱好者专属 (￣﹃￣)~zZZ</p>
+<p><a href="http://www.zzzfun.com/">在线地址</a></p>
+<!-- more -->
+<h2 id="9-低端影视">9. 低端影视</h2>
+<p>👐内容高清的超清在线视频站</p>
+<p><a href="http://ddrk.me/">在线地址</a></p>
+<!-- more -->
+<h2 id="10-茶杯狐-cupfox">10. 茶杯狐 Cupfox</h2>
+<p>😻如果以上都不能符合你的需求，那么你可能需要一个专用搜索引擎。</p>
+<p><a href="https://www.cupfox.com">在线地址</a></p>
+<!-- more -->
+<h1 id="本期内容汇总">本期内容汇总</h1>
+<p><a href="https://www.theurlist.com/searcherbox-1">汇总地址</a></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[成长技能训练]]></title>
         <id>https://aturx.github.io/post/成长技能训练</id>
         <link href="https://aturx.github.io/post/成长技能训练">
@@ -186,17 +386,17 @@
 <hr>
 <h3 id="高效的执行力">🐱 高效的执行力</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4017203"><label class="task-list-item-label" for="task-item-4017203"> 识别技能空白的能力。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5488481"><label class="task-list-item-label" for="task-item-5488481"> 识别技能空白的能力。</label></li>
 </ul>
 <p>识别出可能阻碍自己达成目标的知识和技能空白，然后设定教育目标来填补这些空白，并通过一步步努力达成那些目标。通常这些努力涉及阅读各种书籍，与专业人士交往并从他们身上学习，还有主动进行大量试验。永远别抱怨你缺乏技能或没有受过良好教育。也永远别用不知道具体做法的知识欠缺，作为自己无法达成目标的借口。那是种很low的行为表现，而且肯定毫无帮助。</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5058287"><label class="task-list-item-label" for="task-item-5058287"> 个人时间的掌控能力。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3642500"><label class="task-list-item-label" for="task-item-3642500"> 个人时间的掌控能力。</label></li>
 </ul>
 <p>你和其他任何人一样，在本月都有着数量相同的日子。你可以自由决定要如何使用这些日子。若想把时间花在工作上，你可以这样做。若想把时间花在关于成长和生活方式的活动上，你也可以这样做。若你把对自己日程的掌控让给老板、公司、客户、配偶，或其他任何人，这只是种临时选择。没有你的同意，这些人其实无法真正掌控你的时间。你永远都能改变主意，开始对他们的要求说出“不，谢谢。”我们只是必须勇敢上前，宣布自己拥有它，这意味着我们必须开始清醒拒绝那些对个人时间并不合理的要求。</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4405041"><label class="task-list-item-label" for="task-item-4405041"> 时间块内高效专注的能力。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6962720"><label class="task-list-item-label" for="task-item-6962720"> 时间块内高效专注的能力。</label></li>
 </ul>
 <ol>
 <li>挑选一个专注主题，与做一大堆随机选择的行动相反，为此时间块挑出一个清晰主题。</li>
@@ -209,7 +409,7 @@
 <hr>
 <h3 id="计划与目标管理">🐭 计划与目标管理</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3076144"><label class="task-list-item-label" for="task-item-3076144"> 个人目标计划表的制定</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4093640"><label class="task-list-item-label" for="task-item-4093640"> 个人目标计划表的制定</label></li>
 </ul>
 <p>1.年历 ： 记录特定日期， 会发生的特定事件。</p>
 <p>2.价值观列表： 当要做出决定时，价值观列表就如树木的主干，决定必须符合价值观。</p>
@@ -222,7 +422,7 @@
 <hr>
 <h3 id="思想的清晰感">🐹 思想的清晰感</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6326527"><label class="task-list-item-label" for="task-item-6326527"> 掌握自身思维的清晰感</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8127921"><label class="task-list-item-label" for="task-item-8127921"> 掌握自身思维的清晰感</label></li>
 </ul>
 <p>简简单单的一句话：我们会变成自己所想的样子。</p>
 <p>若你发现身处想获得全新生活结果的情境（即：获得某些不同于你当前体验的事物），那你要做的第一步，就是检查自己脑中的主导想法，看它们能否成长为你渴望结果的正确种子。如果你还没取得任何进展，那有不止95%的几率，说明你正抱着错误想法，需要将其替换成全新类型。</p>
@@ -236,7 +436,7 @@
 <hr>
 <h3 id="思考训练-日记工具写博客">🐰【思考训练】 日记工具(写博客)</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3347689"><label class="task-list-item-label" for="task-item-3347689"> 书面方式梳理问题</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-712202"><label class="task-list-item-label" for="task-item-712202"> 书面方式梳理问题</label></li>
 </ul>
 <p>1.换位思考</p>
 <p>很多人用日记或日志作为保存生活事件的记录，我一般不会劳烦自己写下这些内容，甚至很少回头阅读以往日记。对我来说日记主要就是解决问题的工具，一种透彻思考复杂决定，直到自己获得清晰感的有效方式。<br>
@@ -247,7 +447,7 @@
 <hr>
 <h3 id="行为训练-季度计划">🦊【行为训练】 季度计划</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4364387"><label class="task-list-item-label" for="task-item-4364387">  行为成长方向的反馈与矫正</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-194251"><label class="task-list-item-label" for="task-item-194251">  行为成长方向的反馈与矫正</label></li>
 </ul>
 <p>人们的生活有时会变得极其复杂，如果你对前进方向没有准确认识，就很容易被外部压力撞离正常轨道。当你连续几天致力于某个特定项目时，突然在完全不同的生活领域出现一个全新机会，假如不能从思想上抽身而出，纵览全局，你就很难做出清楚明智的决定，导致只见树木不见森林的结果。拥有一份写明的计划安排，你就能随时复查个人目标，轻松鸟瞰自己当前所处情形，从而做出更连贯一致的人生决定。</p>
 <p>在制定一份90天计划时，你着眼的范围其实要比90天更长。我通常会至少展望未来两年的计划，以便看清随后90天里该干什么。生活越是复杂，就越能发现花时间理清个人目标和计划的重要性。一份书面计划对我的最大作用，是给人一种安宁感，知道自己已清醒想过所有事情，一切都在计划之中。只有预先制定好自己信任的高水平计划，我才能实现正确的平衡选择，完成真正重要的事务，清醒决定可以少去关注哪些生活领域。我信任自己的计划，是因为我知道经过充足时间仔细思考，自己才将它制定出来。因此它像日常工具那样，能帮我简化和提速个人的每日决定。每份计划都有某种程度的不准确性，因为我们无法真正知道未来将是怎样。未来纯粹是个思维构想 — 一个幻觉 — 因为你永远不会存在于未来，只能存在于现在。所以制定计划和视觉化想象并不会创造未来。它们的全部作用，就在于影响你的现在。但通过利用连续一致、内在相连的未来愿景，做出一天又一天的相应决定，你会开始营造出前进势头，最终实现自己的那些目标。计划并不能保证完成合乎实际，但是利用计划好的未来愿景，优化你当前时刻的行为决定，这才是制定计划的真正意义。</p>
@@ -255,13 +455,13 @@
 <hr>
 <h3 id="成长工具-榜样模仿">🐻【成长工具】 榜样模仿</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9392306"><label class="task-list-item-label" for="task-item-9392306"> 向成功者模仿学习</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6454583"><label class="task-list-item-label" for="task-item-6454583"> 向成功者模仿学习</label></li>
 </ul>
 <p>所谓模仿榜样，就是找到在某一领域已获得你想要结果的成功人士，学习他们达成那些成果的做法，然后基本上重做相同的事情。我另外发现很有帮助的事情，就是与之相反的概念也十分管用：若你发现某人在特定领域没有你想要的结果，就不要接受其建议。这种说法当然过于概括，但我发现大多数时候，这样做准确无误。很少有人真正花时间好好应用它。你此时生活中是否有想获得更好结果的某个领域？你能否找到已拥有那些结果的人士，花几分钟请教她/他是如何做到的？或者，也许你能找本已达成那种成果的作者的书看看？然后只管采用相同行动步骤（几乎可以不加思考地闭着眼行动），你就有很大机会获得那些渴望结果。</p>
 <hr>
 <h3 id="成长工具-框时工作">🐻【成长工具】 框时工作</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5171638"><label class="task-list-item-label" for="task-item-5171638"> 克服拖延症，提高专注力</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3093703"><label class="task-list-item-label" for="task-item-3093703"> 克服拖延症，提高专注力</label></li>
 </ul>
 <p>在管理任务方面，框时工作是非常有用的技巧。我主要在两种不同的情形下利用此技巧。</p>
 <ol>
@@ -276,7 +476,7 @@
 <hr>
 <h3 id="思维训练最优思维">🐼【思维训练】最优思维</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9042221"><label class="task-list-item-label" for="task-item-9042221"> 训练高标准执行力</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1806004"><label class="task-list-item-label" for="task-item-1806004"> 训练高标准执行力</label></li>
 </ul>
 <p>在思维方式上，质问自己，训练最优思维。<br>
 次优方案：  “做某事的好/极好办法是什么？”<br>
@@ -287,7 +487,7 @@
 <hr>
 <h3 id="思维训练-驯服恐惧">🐨【思维训练】 驯服恐惧</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3177463"><label class="task-list-item-label" for="task-item-3177463"> 锻炼勇气去尝试不同的事物</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5362088"><label class="task-list-item-label" for="task-item-5362088"> 锻炼勇气去尝试不同的事物</label></li>
 </ul>
 <pre><code>你越是学会在不畏恐惧的情形下行动，就越能展现作为人类的伟大之处。
 </code></pre>
@@ -312,7 +512,7 @@
 <h3 id="行为训练-自我训练">🐯【行为训练】 自我训练</h3>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4981265"><label class="task-list-item-label" for="task-item-4981265"> 自我约束力的训练</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3821092"><label class="task-list-item-label" for="task-item-3821092"> 自我约束力的训练</label></p>
 </li>
 <li>
 <p>问题： 遇上知道自己该干什么，但就是难以付诸行动的情形。或者，你会动手开始一项任务，但似乎就是难以保持前进势头，让事情顺利达成。倘若这种问题持续太久，你必将看到它对个人整体信心水平的有害影响。你可能开始认为存在生活动力方面的问题，仿佛自己对成功的渴望不够强烈。</p>
@@ -335,7 +535,7 @@
 <hr>
 <h3 id="行为训练-行为训练">🙊【行为训练】 行为训练</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8873339"><label class="task-list-item-label" for="task-item-8873339"> 克服拖延症的训练</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5959797"><label class="task-list-item-label" for="task-item-5959797"> 克服拖延症的训练</label></li>
 </ul>
 <ol>
 <li>
@@ -362,7 +562,7 @@
 <hr>
 <h3 id="思维训练-积极主动">🦅【思维训练】 积极主动</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2906622"><label class="task-list-item-label" for="task-item-2906622"> 自我生活的掌控力</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9576275"><label class="task-list-item-label" for="task-item-9576275"> 自我生活的掌控力</label></li>
 </ul>
 <p>积极主动意味着清醒控制个人生活，设定目标并着手实现它们。积极主动意味着不只在事情发生时才做出反应，你会清醒主动地设计自己想要发生的事情。</p>
 <ol>
@@ -383,7 +583,7 @@
 <hr>
 <h3 id="行为训练-设置次要顺序">🐤【行为训练】 设置次要顺序</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2334246"><label class="task-list-item-label" for="task-item-2334246"> 时间不可压缩性，只可替换，训练取舍能力</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-597130"><label class="task-list-item-label" for="task-item-597130"> 时间不可压缩性，只可替换，训练取舍能力</label></li>
 </ul>
 <p>无论何时开始一个新事项，都可以清醒有意识地选择要删除哪个旧事项<br>
 请留意你每天所做何事并非那么重要。你能从哪些非重要活动上偷来时间，重新将其安排给更重要的事项。</p>
@@ -393,7 +593,7 @@
 <hr>
 <h3 id="行为训练-塑造自信">🐌【行为训练】 塑造自信</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8824699"><label class="task-list-item-label" for="task-item-8824699">  心理状态调整， 自信的建立</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-350624"><label class="task-list-item-label" for="task-item-350624">  心理状态调整， 自信的建立</label></li>
 </ul>
 <p>问题： 怎样从思想上让你处于自信状态，甚至在个人已有知识暗示你该期望失败时，也对成功感到确信不疑。<br>
 经常限制你的主要因素，并非缺乏知识或练习，而更有可能是种限制性信念：认为自己不该期望头几次就有良好表现 — 这会成为不断自我实现的预言。<br>
@@ -401,7 +601,7 @@
 <hr>
 <h3 id="思维训练情绪掌控">🦂【思维训练】情绪掌控</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5375485"><label class="task-list-item-label" for="task-item-5375485"> 自我心态的调整与转换能力</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8934213"><label class="task-list-item-label" for="task-item-8934213"> 自我心态的调整与转换能力</label></li>
 </ul>
 <p>问题不在于外部事件可以控制你的情绪。而在于你相信它们有此能力。请抛弃这种信念，</p>
 <pre><code>意识到不管环境如何，你都拥有控制自己对外界活动
@@ -429,13 +629,13 @@
 <hr>
 <h3 id="行为训练-解决问题工具箱">🦀【行为训练】  解决问题工具箱</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-790180"><label class="task-list-item-label" for="task-item-790180"> 积极寻找并善用工具，是一种良好的思维模式</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-411144"><label class="task-list-item-label" for="task-item-411144"> 积极寻找并善用工具，是一种良好的思维模式</label></li>
 </ul>
 <p>当你手上只有一把锤子时，每个问题看起来都像个钉子。肯定有些完全无法解决，问题不在于他们缺乏技巧，而更在于缺少合适工具。请试着列出你一直用来处理这个问题的所有不同“工具”。</p>
 <hr>
 <h3 id="行为训练全情投入">🦑【行为训练】全情投入</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9935720"><label class="task-list-item-label" for="task-item-9935720"> 专注力训练</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4436990"><label class="task-list-item-label" for="task-item-4436990"> 专注力训练</label></li>
 </ul>
 <p>当成功远未可知时（至少在没有后见之明的情况下），我们是否还应设定宏大、惊险和勇猛的目标？<br>
 若你设定了宏大目标并最终失败，你将从中学到些东西。若你设定了宏大目标并最终成功，你会收获那个目标的所有成果，同时还能学到些东西。若你根本不去设定目标，就将一无所获也一无所学。</p>
@@ -444,7 +644,7 @@
 <hr>
 <h3 id="行为训练-量子飞跃">🦐【行为训练】 量子飞跃</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4667490"><label class="task-list-item-label" for="task-item-4667490"> 爆发力训练</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1126337"><label class="task-list-item-label" for="task-item-1126337"> 爆发力训练</label></li>
 </ul>
 <p>你如何能实现量子飞跃？你需要在想要成长的特定方向付诸努力，而且需要连续不断地持续使力，直到实现量子飞跃。若你短期内就停止努力，很可能将落回原先开始的地方。所以如果将一次新的量子飞跃作为目标，你首先就需下定决心，持续付诸努力直到实现飞跃改变。<br>
 如何像个量子飞跃变化者一样追求此目标？<br>
@@ -456,20 +656,20 @@
 <hr>
 <h3 id="行为训练-找到职业">🐠【行为训练】 找到职业</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6390761"><label class="task-list-item-label" for="task-item-6390761"> 自由职业才是真正需要的“职业”</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2211970"><label class="task-list-item-label" for="task-item-2211970"> 自由职业才是真正需要的“职业”</label></li>
 </ul>
 <p><code>当你从第一等追求出发从事工作时，次等追求将得到自行解决。</code></p>
 <p>拥有一份自我实现的职业而且赚到大量金钱并不需要个人信仰上的飞跃。它只需要你做出一种选择。你只用在某天醒悟过来并告诉自己配得上两全其美的生活，而且你不会安于任何低于这种标准的生活。它与找到正确工作并不相关。一份职业并非你要去寻找的某样东西；它也不需要某人赐予你什么来将其实现。你无需听凭周围环境的支配摆布。一份职业是你创造而出的成果，一种你自己建立的东西。它意味着你每天所干的工作都与自己人生目的和谐一致。一旦你开始从事这种工作，即使最开始没有任何报偿，你的自尊也将成长到某种程度，可以让自己在各种新机会面前变得无比机智和开放，使你能毫不麻烦地从中赚到大量金钱。不过，当你这样做时，金钱本身已变得不再那么重要。它将只是一种资源，能让你去做更多自己热爱的事情。</p>
 <hr>
 <h3 id="行为训练烦扰之事">🐢【行为训练】烦扰之事</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6564641"><label class="task-list-item-label" for="task-item-6564641"> 集中处理琐碎</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4371755"><label class="task-list-item-label" for="task-item-4371755"> 集中处理琐碎</label></li>
 </ul>
 <p>有时当我们正专注于所有“重要”事务时，一些小事情就开始逐渐堆积起来。请将所有这些小事列成清单，专门用一整块时间彻底处理它们 — 如果你有很多这种小事情，请考虑专门腾出一整天，用来清理废除这些烦扰之事。若你能花时间一次性处理完所有这些小事，也许会对个人情绪和能量水平获得了多大提升惊讶不已。</p>
 <hr>
 <h3 id="行为训练-问责系统">🐍【行为训练】 问责系统</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1069202"><label class="task-list-item-label" for="task-item-1069202"> 建立自我反馈机制，及时纠正自己的方向</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1015484"><label class="task-list-item-label" for="task-item-1015484"> 建立自我反馈机制，及时纠正自己的方向</label></li>
 </ul>
 <p>实现目标上的一个艰难挑战，就是能够一直清醒意识到这些目标并保持在行动轨道上。你有多少次设定完一个目标，怀抱最佳意愿开始行动，然后在未来的某个时刻，忽然意识到这个目标不知怎的已从生活缝隙中溜走？外部影响常会施加让我们偏离正轨的力量。我们必须介入一种反向力量，让自己重回正轨，把我们一次又一次指回个人目标。每月或每周复习一次你的目标还不够频繁。我发现自己必须每天都复习个人主要目标，假如当天满是分心事务，我还必须多复查几遍。否则我就会开始过于偏离航向，被诱惑去做只是有点重要，而非极其重要的事项。这就是种不断重新查看指向针，搞清下个正确步骤的过程。</p>
 <p>但那些次要目标很易诱惑人首先去完成。它们更轻松简单，能马上带来某种成就感。只用继续个人现有做事习惯，一些目标就能自行达成。其他次要目标大部分都能在20-40小时的工作后被彻底解决。但那些首要目标无法自动完成，也不确定能够最终实现，每一个都要求付出成百上千小时的工作。因此若我不做任何特别努力，让自己不断回归那些首要目标，很可能得到的结果，就是自己会完成全部次要目标，并在首要目标上有所斩获，但今年之内无法实现任何一个首要目标。</p>
@@ -480,7 +680,7 @@
 <hr>
 <h3 id="行为训练-目标计分板">🐂【行为训练】 目标计分板</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3740746"><label class="task-list-item-label" for="task-item-3740746"> 目标成就的可视化</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7684261"><label class="task-list-item-label" for="task-item-7684261"> 目标成就的可视化</label></li>
 </ul>
 <p>第一栏内容是你的所有目标。<br>
 第二栏内容是你现在的目标进度，每个目标的当前状态。<br>
@@ -575,7 +775,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[IDEA/Pycharm/GoLand/X]]></title>
+        <title type="html"><![CDATA[工具手册 - IDEA/Pycharm/GoLand/X]]></title>
         <id>https://aturx.github.io/post/IDEA快捷键</id>
         <link href="https://aturx.github.io/post/IDEA快捷键">
         </link>
@@ -1261,490 +1461,6 @@ HTML / CSS / JavaScript</p>
 <h1 id="参考资料">➿  参考资料</h1>
 <p><a href="http://webstack.cc/cn/index.html">WebStack.cc</a></p>
 <p><a href="https://github.com/WebStackPage/WebStackPage.github.io/">参考仓库</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[摘抄&收藏]]></title>
-        <id>https://aturx.github.io/post/摘抄&amp;收藏</id>
-        <link href="https://aturx.github.io/post/摘抄&amp;收藏">
-        </link>
-        <updated>2020-01-13T10:19:07.000Z</updated>
-        <content type="html"><![CDATA[<hr>
-<blockquote>
-<p>知识用的时候才能学会。<br>
-如果想要学会某个东西，先想一个问题问自己，它能干什么？ 然后确定一个目标，再问自己一个问题，它是怎么做的？之后就去实现这个目标，实现之后再回头问自己一个问题，为什么这样做？ 这三个问题有了自己的回答，那么这个东西应该就学会了。<br>
-那么如何能学的很快很高效呢？ 即，将上面的经历周期尽可能的缩短。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>在南海生活着一个货拜族，二战期间，他们看到飞机着陆并带来了大量好东西，他们看到飞机着陆并带来了大量好东西，现在他们希望那样的事情再次出现。于是他们筹划做一个像跑道一样的东西，并在跑道两旁生上火，又做一个小木屋，让一个人坐在里面，头上戴着两块像是耳机收话器的木片，还有竹竿像天线一样伸出——他是控制员——然后他们等待一个飞机来着陆。他们正确地做每一件事，他们做的东西形式上完美正确，和他们以前看到的一模一样。但是它不灵，没有飞机来着陆。他们遵循科学研究的所有外在规则和形式，但是他们遗漏了内在的东西，因为飞机没有着陆。<br>
-有一个因素是货拜族科学中普遍缺乏的。这是一种理念，一种我们总希望你们在学校学习科学的过程中已经学到了的理念——我们从未明确地说它是什么，而只是希望你们通过科学研究的例子把握住它。所以我现在把它拿出来并明确地说起它，这是很有意思的。这是一种科学的正直，是科学思考的一个原则，一种绝对的诚实。举例来说，如果你在做一个实验，你应该报告所有你认为可能导致它无效的数据或现象——而不仅仅汇报你认为对它有利的：其他那些可能解释你结果的根据；那些你记得已经通过其他实验而被你排除了的东西，及这些东西是怎么起作用的。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>你怎么知道什么样的问题适宜于你去努力？感受一个问题的重要性，这种感觉转过来又增加你解决这个问题的机会。我认为我的生命之所以更丰富了，是因为我认识到了我不知道自己在做什么。世界的广博令我欣喜。 费曼： 我什么都不知道，但我确实知道，只要你进入得足够深，任何事情都有意思。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>考虑任何问题，只要有足够的深度，心中总会一次又一次升起同样的激动，同样的敬畏和神秘感。随着知识越来越多、越来越深入，那越来越美妙的神奇引诱着你向更深处继续突进。从不担心得不到答案，带着愉悦和自信，我们翻开每一块新的石头去发现不可想象的奇妙之事——那引领我们向更美妙的问题和秘密的奇妙之事——这无疑是一场伟大而美丽的冒险！</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>马斯克是这么看待学习这件事情的：“我只是考虑‘对于我需要掌握的科目，我应该取得什么样的成绩’。只要考试分数及格，我就满意了。但有些科目，比如物理和计算机，我会尽我所能取得最好的成绩。取得的每一个成绩都是有原因的。我宁愿玩计算机游戏、写代码和读书，也不愿意去获得那些没有意义的A等。我记得在四五年级时，曾有几门功课不及格。然后，我母亲的男朋友告诉我，如果我没有通过考试就要留级。我不知道只有这些科目考试合格才能升入下一个年级。此后，我在这些科目上取得了最好的成绩。”   --- 《马斯克传记》</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>我们做子女的，唯一的错就是以为，父母会在我们身边陪伴很久很久，其实，这是错觉。 如果有时间，多陪陪那个世界上最爱你的人吧。父母在，人生尚有来处；父母去，人生只剩归途。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>人生什么是罪过，为了混口饭吃委屈自己的志趣就是最大的罪过。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>当下的一切都是最好的安排，人不应该活在目的里，而应该活在过程里。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>曾国藩他想到了一个十分简单却又很难坚持做下去的办法，那就是每天把自己搞得非常的忙碌，除了要干成工作狂之外，在其它休息的时间，也要看书，练书法，让自己没有时间起邪念。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>最有用的一个原则似乎是这样一个观念：事物都是由其他事物构成的。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>假如你在一个问题上不能有一点成就，你的这种勇气就没有什么价值。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>每一个不曾起舞的日子，都是对生命的辜负。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>人类的生命，不能以时间长短来衡量，心中充满爱时，刹那即为永恒！</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>人要么永不做梦，要么梦得有趣。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>聪明的人只要能掌握自己，便什么也不会失去。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>一个人知道自己为什么而活，就可以忍受任何一种生活。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>那些听不见音乐的人认为那些跳舞的人疯了。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>人们总有一种浮夸或炫耀的倾向，总有一种把事情弄得艰奥深刻些的倾向。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>一个傻子能做的，另一个也能做。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>要解决一个问题你首先要有基础知识，在知识欠缺的情况下就算逻辑再好、思路再清晰、智商再高，也不一定有效。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>知道什么是关键的问题，不去解决无用的问题。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>只有开始行动才会产生干劲，干劲是行动的结果而不是原因。优秀的人不需要等待学习的状态，而是到了学习时间，自然会进入学习的状态。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>一定要把时间花在解决问题的技能上。就是说，你一定要练就成的技能是——你能解决大多数人不能解决的问题。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>如果你说“我要先学习一下再开始做”那么你永远不会真正开始。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>只有了解原始的初衷和目的，你才能真正“知道”。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>区块链将影响每一个行业。重要的是可以用这项技术做什么。人们使用Windows时，从不会考虑它们背后的代码是什么。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>谦虚对才华无奇的人来说只是一种诚实，对才华绝顶的人来说，是一种虚伪。——叔本华</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>没有实际的问题，你又会没有动力去接触那些技术</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>自己的生命要自己珍惜。所以，不要与蠢货纠结在一起，不要与他们为伴。尤其不要与他们争斗，他们会瞬间把你拉到他们的水平上，然后用他们多年的经验轻而易举地打败你，而后还要持续地羞辱你。珍爱生命，远离蠢货。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>当一件事的难度超过一定程度的时候，那些聪明的人会找到更省力的方法，而能力上有问题的，还是在那使蛮力。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>思考某事和讲述某事是不同的事情。我们思考事物的方式很复杂，有时甚至是不连贯的，而且经常是矛盾的。但是讲述时，我们必须把某事表达得很清晰，可以在很短的时间内说得出来。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>你永远不知道，明天和意外哪个会先来，你以为会陪伴自己一生的人，却走向了生命的尽头。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>何必在乎一个东西叫什么名字。我们需要的，不过是观察所有这些东西，看它们会做哪些事情，然后思考它们为什么是那样，从而得知事物的本质。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>不要给自己设限的学习，学无止境，你在身边发现一个问题，想知道为什么。然后你就想去获得解决这个问题的知识。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>尝试从来没有做过的事情，以及从来不认为自己能做好的事情。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>如果你认为计算机能做到某件事，就要把这种想法写成计算机程序从而实现它。这就是许多伟大的技术发展的灵魂所在。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>有些东西学了就过时，学它干吗？</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>去做有用的事情，有用的事情才能使得大家跟着你一路去做，做的越来越好，如果你真的能够创造有用的东西钱自然会来了，这是恰当的经济运行的方式，总是有更好的产品、更好的服务，你觉得这个东西你喜欢其它的人也会喜欢的话，既然是这么伟大的东西，自然而然的就会奉献自己的时间、生命、精力。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>人们总是有自我的局限，这个局限是你有多大的意愿和能力去学习，读书就是很好的教育，是冲破这个局限的很好的方法。我觉得读书要比谈话更好，有时间跟人家闲聊的话还不如读读书，尤其是读书我现在的速度基本上是一目千行，再发展下去可以一目万行了，我在大学的时候就很爱读书，但是在大学的时候我基本上都不读教科书，我读的都是其它方面的书。 -- 马斯克</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>一旦你坐下来了开始敲代码了，那在未达到目的之前就不要放弃。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>你永远赚不到超出你认知范围之外的钱，除非你靠运气。但是靠运气赚到的钱，往往会靠实力亏掉，这是一种必然。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>解决人类世界的现实问题，这无疑是软件开发的终极目的。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>一只蜈蚣十分快乐，直到一只蟾蜍来开玩笑说：“嗨，哪只脚先行，哪只脚随后？” 蜈蚣疑惑起来，但始终想不透 它心烦意乱，跌入水沟 却不知道怎么跑</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>事物本身是不重要的，重要的是怎么样去发现它们。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>不要光知道事物的名称，要紧的是了解事物的实质。知道一件事物的名称同知道一件事物是两件不同的事。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>还原论认为复杂的系统、事务、现象可以通过将其化解为各部分之组合的方法，加以理解和描述。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>费曼非常喜欢解决问题，他想让自己从第一性原理开始来解每一个问题，这样就可以确信他做对了，免得浪费宝贵的时间去深入其他人的思想，而最终也许只能发现这些思想开始就是错的。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>不要欺骗自己，你自己正是最容易被欺骗的人。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>当你一直有解决问题的好奇心与冲动，会形成某种有趣的局面。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>只有通过教别人，才能让自己学会。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>我一向认为一个人要有「你干吗在乎别人怎么想」的态度，我们要听取别人的建议，加以考虑，但如果我们觉得他们的看法是错的，那就没什么好顾前怕后的。</p>
-</blockquote>
-<hr>
-<blockquote></blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[读书&观影]]></title>
-        <id>https://aturx.github.io/post/读书&amp;观影</id>
-        <link href="https://aturx.github.io/post/读书&amp;观影">
-        </link>
-        <updated>2020-01-13T10:03:01.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="预-选-书-单">😲 预 选 书 单</h1>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1786007"><label class="task-list-item-label" for="task-item-1786007"> 《刻意练习》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2712560"><label class="task-list-item-label" for="task-item-2712560"> 《精通比特币》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2262071"><label class="task-list-item-label" for="task-item-2262071"> 《剑指offer》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5931171"><label class="task-list-item-label" for="task-item-5931171"> 《充足理由率的四重根》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3904485"><label class="task-list-item-label" for="task-item-3904485"> 《故事》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7706395"><label class="task-list-item-label" for="task-item-7706395"> 《Django教程》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2327497"><label class="task-list-item-label" for="task-item-2327497"> 《数学是什么？》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4925702"><label class="task-list-item-label" for="task-item-4925702"> 《哥德尔、艾舍尔、巴赫》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9350016"><label class="task-list-item-label" for="task-item-9350016"> 《鸟哥Linux私房菜基础篇》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9794793"><label class="task-list-item-label" for="task-item-9794793"> 《区块链：定义金融格局》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3482327"><label class="task-list-item-label" for="task-item-3482327"> 《编码》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3551537"><label class="task-list-item-label" for="task-item-3551537"> 《程序员修炼之道》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5353238"><label class="task-list-item-label" for="task-item-5353238"> 《像程序员一样思考》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4111220"><label class="task-list-item-label" for="task-item-4111220"> 《黑客与画家》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3051467"><label class="task-list-item-label" for="task-item-3051467"> 《人件》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2651215"><label class="task-list-item-label" for="task-item-2651215"> 《深入理解计算机系统》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8930609"><label class="task-list-item-label" for="task-item-8930609"> 《区块链社会》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5128314"><label class="task-list-item-label" for="task-item-5128314"> 《人类群星闪耀时》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1749041"><label class="task-list-item-label" for="task-item-1749041"> 《硅谷之火》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6660132"><label class="task-list-item-label" for="task-item-6660132"> 《Python密码学编程》</label></p>
-</li>
-</ul>
-<h1 id="优-选-资-源">😎 优 选 资 源</h1>
-<ul>
-<li>
-<p><a href="http://www.yinwang.org/blog-cn/2017/07/06/master-pl">如何掌握所有编程语言</a></p>
-</li>
-<li>
-<p><a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣</a></p>
-</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="预-选-书-单">😲 预 选 书 单</h1>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1518019"><label class="task-list-item-label" for="task-item-1518019"> 《刻意练习》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8267389"><label class="task-list-item-label" for="task-item-8267389"> 《精通比特币》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8388390"><label class="task-list-item-label" for="task-item-8388390"> 《剑指offer》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2705741"><label class="task-list-item-label" for="task-item-2705741"> 《充足理由率的四重根》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3498961"><label class="task-list-item-label" for="task-item-3498961"> 《故事》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3804030"><label class="task-list-item-label" for="task-item-3804030"> 《Django教程》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5188238"><label class="task-list-item-label" for="task-item-5188238"> 《数学是什么？》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-678396"><label class="task-list-item-label" for="task-item-678396"> 《哥德尔、艾舍尔、巴赫》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-363877"><label class="task-list-item-label" for="task-item-363877"> 《鸟哥Linux私房菜基础篇》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9082435"><label class="task-list-item-label" for="task-item-9082435"> 《区块链：定义金融格局》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3955603"><label class="task-list-item-label" for="task-item-3955603"> 《编码》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4191093"><label class="task-list-item-label" for="task-item-4191093"> 《程序员修炼之道》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4059451"><label class="task-list-item-label" for="task-item-4059451"> 《像程序员一样思考》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-967091"><label class="task-list-item-label" for="task-item-967091"> 《黑客与画家》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3489756"><label class="task-list-item-label" for="task-item-3489756"> 《人件》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4233108"><label class="task-list-item-label" for="task-item-4233108"> 《深入理解计算机系统》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8831838"><label class="task-list-item-label" for="task-item-8831838"> 《区块链社会》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-273888"><label class="task-list-item-label" for="task-item-273888"> 《人类群星闪耀时》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3637377"><label class="task-list-item-label" for="task-item-3637377"> 《硅谷之火》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6647165"><label class="task-list-item-label" for="task-item-6647165"> 《Python密码学编程》</label></p>
-</li>
-</ul>
-<h1 id="优-选-资-源">😎 优 选 资 源</h1>
-<ul>
-<li>
-<p><a href="http://www.yinwang.org/blog-cn/2017/07/06/master-pl">如何掌握所有编程语言</a></p>
-</li>
-<li>
-<p><a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣</a></p>
-</li>
-</ul>
-<h2 id="-more-"><!-- more --></h2>
-<h1 id="️-2020-年-书-单-观-影">☯️ 2020 年 书 单 &amp; 观 影</h1>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1240429"><label class="task-list-item-label" for="task-item-1240429"> 《Python实现一条区块链》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4871617"><label class="task-list-item-label" for="task-item-4871617"> 《计算机程序的构造和解释》</label></p>
-</li>
-</ul>
-<!-- more -->
-<hr>
-<h1 id="️-2019-年-书-单-观-影">☯️ 2019 年 书 单 &amp; 观 影</h1>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7284182"><label class="task-list-item-label" for="task-item-7284182"> 《区块链技术指南》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4882202"><label class="task-list-item-label" for="task-item-4882202"> 《深入浅出Ajax》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9485025"><label class="task-list-item-label" for="task-item-9485025"> 《GitHub入门与实践》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9935662"><label class="task-list-item-label" for="task-item-9935662"> 《Head First Android 开发》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-187094"><label class="task-list-item-label" for="task-item-187094"> 《Head First Python》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-784244"><label class="task-list-item-label" for="task-item-784244"> 《Head First SQL》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5157950"><label class="task-list-item-label" for="task-item-5157950"> 《python测试驱动开发》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5727599"><label class="task-list-item-label" for="task-item-5727599"> 《网络是如何连接的？》</label></p>
-</li>
-</ul>
-<h3 id=""></h3>
-<!-- more -->
-<p>观影</p>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2957337">  <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-2957337">  [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7391163">  <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-7391163">  [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
-</li>
-</ul>
-<h2 id="完成8本">（完成8本）</h2>
-<!-- more -->
-<hr>
-<h1 id="️-2018-年-书-单-观-影">☯️ 2018 年 书 单 &amp; 观 影</h1>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8493303"><label class="task-list-item-label" for="task-item-8493303"> 《发现的乐趣》 理查德 费曼</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4765079"><label class="task-list-item-label" for="task-item-4765079"> 《小程序开发》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9343362"><label class="task-list-item-label" for="task-item-9343362"> 《你的灯亮着吗？》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5568640"><label class="task-list-item-label" for="task-item-5568640"> 《计算中的上帝》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3356113"><label class="task-list-item-label" for="task-item-3356113"> 《理解专业程序员》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9608760"><label class="task-list-item-label" for="task-item-9608760"> 《小王子》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-799511"><label class="task-list-item-label" for="task-item-799511"> 《head first HTML》</label></p>
-</li>
-<li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2326880"><label class="task-list-item-label" for="task-item-2326880"> 《人生的智慧》  -- 叔本华</label></p>
-</li>
-</ul>
-<h2 id="完成8本-2">(完成8本)</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux 命令]]></title>
-        <id>https://aturx.github.io/post/Linux命令</id>
-        <link href="https://aturx.github.io/post/Linux命令">
-        </link>
-        <updated>2020-01-07T01:28:10.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="常用命令">🐥 常用命令</h2>
-<ul>
-<li>
-<h2 id="id">id</h2>
-</li>
-</ul>
-<pre><code class="language-sh">// 查看当前用户、组 id
-id
-</code></pre>
-<ul>
-<li>
-<h2 id="lsof">lsof</h2>
-</li>
-</ul>
-<pre><code class="language-sh">//查看端口占用
-lsof -i tcp:5037
-
-
-// 查看某个文件被谁占用
-lsof  main.py
-
-
-// 查看某个用户占用的文件信息
-lsof -u root
-</code></pre>
 ]]></content>
     </entry>
 </feed>
