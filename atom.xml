@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-02-12T07:42:12.978Z</updated>
+    <updated>2020-02-12T11:57:39.091Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[MetaMask（小狐狸）的学习与使用]]></title>
+        <id>https://aturx.github.io/post/metamaskxiao-hu-li-de-xue-xi-yu-shi-yong</id>
+        <link href="https://aturx.github.io/post/metamaskxiao-hu-li-de-xue-xi-yu-shi-yong">
+        </link>
+        <updated>2020-02-12T11:51:42.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="一-metamask-是什么并且有什么用">一、 MetaMask 是什么并且有什么用？</h2>
+<p>MetaMask 是一个浏览器插件。</p>
+<p>MetaMask是一个桥梁，允许你通过浏览器访问区块链所在的分布式网络。</p>
+<p>它允许你在你的浏览器中运行 Ethereum Dapps，而不需要运行一个完整的 Ethereum 节点。</p>
+<p>你可以在 Chrome、 Firefox、 Opera 和新的 Brave 浏览器中安装 MetaMask 插件。 如果你是一个开发人员，你可以现在就开始使用 MetaMask 进行开发。</p>
+<p>它包括一个安全的身份保密库，提供一个用户界面来管理不同站点的身份，并签署交易。</p>
+<p>它使命是让尽可能多的人能够轻松使用以太坊。</p>
+<p><a href="https://metamask.io/">MetaMask官网</a></p>
+<hr>
+<h2 id="二-chrome中metamask的安装">二、 Chrome中MetaMask的安装</h2>
+<p>从GitHub上下载插件源文件：<br>
+<a href="https://github.com/MetaMask/metamask-extension/releases">下载</a></p>
+<p>1.打开Settings&gt; Extensions。</p>
+<p>2.检查“开发人员模式”。</p>
+<p>3.或者，使用URL： chrome://extensions/输入在地址栏中访问插件管理页面</p>
+<p>4.点击顶部的“打包拓展程序”。</p>
+<p>5.导航到你的metamask-plugin/dist/chrome文件夹。</p>
+<p>6.点击Select进行选择你下载好的插件文件。</p>
+<p>7.通过chrome://settings/languages更改为您的语言环境</p>
+<p>8.重新启动浏览器并在您的语言环境中测试插件</p>
+<p>现在你已经有了MateMask插件，可以单击“检查视图”以查看其开发控制台，通过修改JavaScript 的 contexts 来找到MateMask的控制台。</p>
+<p>如果网络畅通，还有更简单的方式，就是直接从Chrome商店，搜索MateMask进行安装下载。</p>
+<hr>
+<h2 id="三-metamask的使用">三、MetaMask的使用</h2>
+<p>初次使用，只需安装提示，进行注册和密码的设定以及密钥的获取，最后必须将自己的密钥种子安全的保存好，丢了将无法找回自己的数字货币。</p>
+<p>成功登陆后，就可以切换到以太坊网络，发起自己的交易了。</p>
+<p>对于其他的区块链网络也同样使用，并且可以对自己开发的区块链项目进行测试。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[25年没有工作]]></title>
         <id>https://aturx.github.io/post/25-nian-mei-you-gong-zuo</id>
@@ -812,104 +847,6 @@
 <!-- more -->
 <h1 id="网-址-汇-总">🐮 网 址 汇 总</h1>
 <p><a href="https://www.theurlist.com/searcher-3">在线访问</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linker 第 2 期  -  搜索引擎网站推荐]]></title>
-        <id>https://aturx.github.io/post/linker02</id>
-        <link href="https://aturx.github.io/post/linker02">
-        </link>
-        <updated>2020-01-18T09:36:41.000Z</updated>
-        <summary type="html"><![CDATA[<p>本期主推10个搜索引擎网站。<br>
-无论是搜索结果的质量还是准确率，都超过百度，速来分享！</p>
-<h2 id="多-吉-搜-索">🐶  多 吉 搜 索</h2>
-<p>国内中文搜索引擎，不追踪，不误导。</p>
-<p><a href="https://www.dogedoge.com/">访问地址</a></p>
-<hr>
-<h2 id="秘-迹-搜-索">🐥 秘 迹 搜 索</h2>
-<p>聚合优化的内容，干净的搜索结果，保护你的隐私</p>
-<p><a href="https://mijisou.com/">访问地址</a></p>
-<hr>
-<h2 id="萌-搜">​🐰 萌 搜</h2>
-<p>为小众而搜</p>
-<p><a href="https://mengso.com/search?q=mengso">访问地址</a></p>
-<hr>
-<h2 id="m-e-z-w">🐴 M E Z W</h2>
-<p>MEZW|支持屏蔽功能的搜索引擎</p>
-<p><a href="https://so.mezw.com/">访问地址</a></p>
-<hr>
-<h2 id="鸠-摩-搜-索">💻 鸠 摩 搜 索</h2>
-<p>Jiumo Search 鸠摩搜索- 文档搜索引擎</p>
-<p><a href="https://www.jiumodiary.com/">访问地址</a></p>
-<hr>
-<h2 id="️-盘-搜-搜">❤️ 盘 搜 搜</h2>
-<p>网盘资源搜索神器,收录百度云盘资源等。<br>
-每天更新各类视频,种子,小说,壁纸,音乐等优质网盘资源。</p>
-<p><a href="http://www.pansou.com/">访问地址</a></p>
-<hr>
-<h2 id="史-莱-姆-搜-索">😎 史 莱 姆 搜 索</h2>
-<p>学习资源最丰富的网盘搜索网站</p>
-<p><a href="http://www.slimego.cn/">访问地址</a></p>
-<hr>
-<h2 id="极-客-搜-索">👤 极 客 搜 索</h2>
-<p>轻量级科技内容搜索引擎</p>
-<p><a href="https://s.geekbang.org/">访问地址</a></p>
-<hr>
-<h2 id="矢-量-图-标-搜-索">👽 矢 量 图 标 搜 索</h2>
-<p>正版素材，图标内容搜索</p>
-<p><a href="https://www.iconfont.cn/">访问地址</a></p>
-<hr>
-<h2 id="google-镜-像-实-例">🎃 Google 镜 像 实 例</h2>
-<p>可以安心的搜索Google中的学习资料。</p>
-<p><a href="https://searx.elukerio.org/">访问地址</a></p>
-<hr>
-]]></summary>
-        <content type="html"><![CDATA[<p>本期主推10个搜索引擎网站。<br>
-无论是搜索结果的质量还是准确率，都超过百度，速来分享！</p>
-<h2 id="多-吉-搜-索">🐶  多 吉 搜 索</h2>
-<p>国内中文搜索引擎，不追踪，不误导。</p>
-<p><a href="https://www.dogedoge.com/">访问地址</a></p>
-<hr>
-<h2 id="秘-迹-搜-索">🐥 秘 迹 搜 索</h2>
-<p>聚合优化的内容，干净的搜索结果，保护你的隐私</p>
-<p><a href="https://mijisou.com/">访问地址</a></p>
-<hr>
-<h2 id="萌-搜">​🐰 萌 搜</h2>
-<p>为小众而搜</p>
-<p><a href="https://mengso.com/search?q=mengso">访问地址</a></p>
-<hr>
-<h2 id="m-e-z-w">🐴 M E Z W</h2>
-<p>MEZW|支持屏蔽功能的搜索引擎</p>
-<p><a href="https://so.mezw.com/">访问地址</a></p>
-<hr>
-<h2 id="鸠-摩-搜-索">💻 鸠 摩 搜 索</h2>
-<p>Jiumo Search 鸠摩搜索- 文档搜索引擎</p>
-<p><a href="https://www.jiumodiary.com/">访问地址</a></p>
-<hr>
-<h2 id="️-盘-搜-搜">❤️ 盘 搜 搜</h2>
-<p>网盘资源搜索神器,收录百度云盘资源等。<br>
-每天更新各类视频,种子,小说,壁纸,音乐等优质网盘资源。</p>
-<p><a href="http://www.pansou.com/">访问地址</a></p>
-<hr>
-<h2 id="史-莱-姆-搜-索">😎 史 莱 姆 搜 索</h2>
-<p>学习资源最丰富的网盘搜索网站</p>
-<p><a href="http://www.slimego.cn/">访问地址</a></p>
-<hr>
-<h2 id="极-客-搜-索">👤 极 客 搜 索</h2>
-<p>轻量级科技内容搜索引擎</p>
-<p><a href="https://s.geekbang.org/">访问地址</a></p>
-<hr>
-<h2 id="矢-量-图-标-搜-索">👽 矢 量 图 标 搜 索</h2>
-<p>正版素材，图标内容搜索</p>
-<p><a href="https://www.iconfont.cn/">访问地址</a></p>
-<hr>
-<h2 id="google-镜-像-实-例">🎃 Google 镜 像 实 例</h2>
-<p>可以安心的搜索Google中的学习资料。</p>
-<p><a href="https://searx.elukerio.org/">访问地址</a></p>
-<hr>
-<!-- more -->
-<h2 id="本-期-内-容-汇-总">👏 本 期 内 容 汇 总</h2>
-<p><a href="https://www.theurlist.com/searcherbox-search">汇总地址</a></p>
 ]]></content>
     </entry>
 </feed>
