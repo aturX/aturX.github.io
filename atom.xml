@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-02-14T05:26:10.304Z</updated>
+    <updated>2020-02-14T11:02:54.300Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,209 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[使用Remix-IDE进行智能合约测试]]></title>
+        <id>https://aturx.github.io/post/shi-yong-remix-ide-jin-xing-zhi-neng-he-yue-ce-shi</id>
+        <link href="https://aturx.github.io/post/shi-yong-remix-ide-jin-xing-zhi-neng-he-yue-ce-shi">
+        </link>
+        <updated>2020-02-14T10:57:43.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="一-简-介">一、简 介</h2>
+<p>Remix-IDE 是一个在线智能合约开发的网站，包含一些运行环境，可以在线上直接编写合约脚本，并且进行合约测试。<br>
+本文完成通过完成一个智能合约脚本的测试过程，来达到熟练掌握Remix-IDE 以及智能合约的开发以及测试的目的。</p>
+<hr>
+<h2 id="二-remix-ide-布-局">二、Remix-IDE 布 局</h2>
+<figure data-type="image" tabindex="1"><img src="https://remix-ide.readthedocs.io/en/latest/_images/a-layout1c.png" alt="image" loading="lazy"></figure>
+<p>先简单看下界面中的每个部分有什么作用：</p>
+<ol>
+<li>
+<p>图标面板（IconPanel）</p>
+<p>单击以更改哪个插件显示在侧面板中，这里面从上到下依次有：<br>
+文件浏览、切换脚本语言用Vyper、切换脚本语言用Solidity、运行换部署合约脚本、脚本的金泰分析（检测语法错误）、单元测试、插件管理</p>
+</li>
+<li>
+<p>侧面板（SidePanel）</p>
+<p>大多数（但不是全部）插件将在此处展示它的操作界面。如果你点击&quot;文件浏览&quot;，这里会显示当前脚本文件。</p>
+</li>
+<li>
+<p>主面板（MainPanel）</p>
+<p>主要用于编辑文件。在选项卡中可以是用于IDE编译的插件或文件。</p>
+</li>
+<li>
+<p>终端（显示执行结果）</p>
+<p>您将在其中查看与GUI交互的结果。您也可以在此处运行脚本。</p>
+</li>
+</ol>
+<hr>
+<h2 id="三-运-行-环-境">三、 运 行 环 境</h2>
+<figure data-type="image" tabindex="2"><img src="https://remix-ide.readthedocs.io/en/latest/_images/a-hometab.png" alt="image" loading="lazy"></figure>
+<p>RemixIDE 包含两种智能合约脚本语言环境，Solidity 和 Vyper。</p>
+<p>如果你喜欢暗黑色的背景，你可以在这里设置：<br>
+<img src="https://remix-ide.readthedocs.io/en/latest/_images/a-themes.png" alt="image" loading="lazy"></p>
+<hr>
+<h2 id="四-智-能-合-约-编-写">四、智 能 合 约 编 写</h2>
+<p>与Python类似，这两种脚本语言的<br>
+执行文件过程也基本相同。</p>
+<p>虽然Python脚本执行为</p>
+<pre><code>python file_name.py
+</code></pre>
+<p>使用vyper编译脚本</p>
+<pre><code>vyper file_name.vy
+</code></pre>
+<p>使用solidity编译脚本</p>
+<pre><code>solc file_name.sol
+</code></pre>
+<hr>
+<p>此处，我们使用Solidity编写一个简单的智能合约，现在就算你都不理解也不要紧，后面我们会有逐行的讲解：</p>
+<p><strong>Solidity智能合约 （一）</strong></p>
+<pre><code>pragma solidity  &gt;=0.4.22 &lt;0.7.0;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
+
+</code></pre>
+<p>逐行讲解：</p>
+<pre><code>pragma solidity &gt;=0.4.22 &lt;0.7.0;
+//第一行就是告诉大家源代码
+//使用Solidity版本大于0.4.0
+//并且小于 0.7.0
+contract SimpleStorage {}
+
+
+// contract 说明这是一个合约
+// SimpleStorage 是合约的名字，叫做“简单存储”
+// 这个合约实现一个功能，就是
+// 用户将一个数字存储到区块链
+// 数据库中，其他用户可以访问
+
+ uint storedData;
+ 
+// 定义一个变量 storedData
+ 
+ function set(uint x) public {
+        storedData = x;
+    }
+    
+// set() 函数，输入一个值 x
+// 把x赋值给 storedData
+// 完成数据的存储
+
+  function get() public view returns (uint) {
+        return storedData;
+    }
+
+// get() 函数，没有输入值
+// 直接获取变量storedData的值
+// 返回storedData的值
+
+</code></pre>
+<p>该合约能完成的事情并不多（由于以太坊构建的基础架构的原因）：它能允许任何人在合约中存储一个单独的数字，并且这个数字可以被世界上任何人访问，且没有可行的办法阻止你发布这个数字。当然，任何人都可以再次调用 set ，传入不同的值，覆盖你的数字，但是这个数字仍会被存储在区块链的历史记录中。随后，我们会看到怎样施加访问限制，以确保只有你才能改变这个数字。</p>
+<p>简单的讲： <strong>这个智能合约帮你存一个数到区块链中。</strong></p>
+<p>关于测试：</p>
+<p>如何测试这个合约是否正确，那么就看用户set（x）写入到区块链中的数字，是否与他get()到的数字x相同。就知道是否数据写入的正确无误。</p>
+<hr>
+<h2 id="五-执-行-智-能-合-约">五、执 行 智 能 合 约</h2>
+<p>在RemixIDE 文件浏览中，点击+图标，添加一个文件<code>Demo.sol</code><br>
+将上面的合约脚本代码复制到该文件中。</p>
+<p>一般会自动编译，编译报错会爆红色信息，否则在左侧，Solidity图标处，可以看到编译成功的√对勾。<br>
+<img src="https://remix-ide.readthedocs.io/en/latest/_images/a-runtab2.png" alt="image" loading="lazy"><br>
+点击侧边栏中部署图标，进行账户地址的相关配置，就可以将智能合约部署在区块链中。</p>
+<p>但是在这之前，也就是本文的关键，我们需要对这个脚本进行测试。即：编写智能合约测试脚本，并执行测试。</p>
+<hr>
+<h2 id="六-编-写-智-能-合-约-测-试-脚-本">六、编 写 智 能 合 约 测 试 脚 本</h2>
+<p>点击左侧，<img src="https://remix-ide.readthedocs.io/en/latest/_images/a-user-testing-icon.png" alt="image" loading="lazy">进入单元测试。</p>
+<p>内容如下：<br>
+<img src="https://remix-ide.readthedocs.io/en/latest/_images/a-unit-testing-feature.png" alt="image" loading="lazy"></p>
+<p>点击<code>Generate test file</code>生成测试脚本。<br>
+生成的后缀是'_test'的测试文件的基本模板。<br>
+改名为<code>Demo_test.sol</code>,并编写如下内容进行测试：</p>
+<pre><code>pragma solidity &gt;=0.4.22 &lt;0.7.0;
+import &quot;remix_tests.sol&quot;; // this import is automatically injected by Remix.
+import &quot;./Demo.sol&quot;;
+
+contract DemoTest {
+   
+    SimpleStorage simpleStorage;  //定义合约变量     
+   
+    function beforeAll () public {
+        
+         simpleStorage = new SimpleStorage();   // 创建一个合约对象  simpleStorage
+  
+    }
+    
+    function checkNumberRight () public {
+        // 使用 set（）函数设定 x数值为10 ，将其写入了simpleStorage中 
+        simpleStorage.set(uint(10));
+        
+        Assert.equal(simpleStorage.get(), uint(10), &quot;simpleStorage == 10&quot;);
+    }
+    
+   
+}
+</code></pre>
+<p>先勾选<code>RunTests</code>下面的测试文件，然后点击<code>RunTests</code>进行合约测试。</p>
+<p>需要了解的基本的合约测试知识：</p>
+<pre><code>除此之外，Remix还允许使用一些特殊功能来使测试更具结构性。他们是：
+
+beforeEach() -每次测试前运行
+beforeAll() -在所有测试之前运行
+afterEach() -每次测试后运行
+afterAll() -在所有测试后运行
+</code></pre>
+<p>这个脚本，主要用到了<code>beforeAll ()</code>在测试之前来创建自己合约的对象。</p>
+<hr>
+<h2 id="七-智-能-合-约-测-试">七、智 能 合 约 测 试</h2>
+<p>逐行解释测试脚本：</p>
+<pre><code>pragma solidity &gt;=0.4.22 &lt;0.7.0;  // 如上所述， 进行solidity 版本的设定
+import &quot;remix_tests.sol&quot;; //引入 Remix自动测试的库 默认写即可
+import &quot;./Demo.sol&quot;;  // 重要： 引入你要测试的“智能合约”
+
+contract DemoTest {   // 测试函数命名
+   
+    SimpleStorage simpleStorage;  //定义合约变量     
+   
+   
+    // 该函数在执行测试之前执行，先把你的合约创建并赋值给一个对象
+    function beforeAll () public {
+         simpleStorage = new SimpleStorage();   
+         // 创建一个合约对象  simpleStorage
+    }
+    
+    
+    // 重要：测试函数
+    function checkNumberRight () public {
+        // 使用 set（）函数设定 x数值为10 ，将其写入了simpleStorage中  
+        simpleStorage.set(uint(10));
+        
+        // 现在测试simpleStorage的值是否等于 你输入的值10 
+        // 用 get()函数获取simpleStorage的值
+        // uint(10)  表示数字 10
+        // Assert.equal() 表示是否两者相等，不相等，报错提示，测试不通过
+        Assert.equal(simpleStorage.get(), uint(10), &quot;simpleStorage != 10&quot;);
+    }
+    
+   
+}
+</code></pre>
+<p>了解并完成了测试脚本后，并勾选了对应的文件，就可以点击<code>RunTests</code>运行脚本测试：<br>
+<img src="https://remix-ide.readthedocs.io/en/latest/_images/a-unit-testing-run-result.png" alt="image" loading="lazy"></p>
+<p>结果如上，则表示通过测试脚本。</p>
+<hr>
+<h2 id="八-网-站-地-址">八、网 站 地 址</h2>
+<p><a href="http://remix.hubwiz.com">RemixIDE-英文</a></p>
+<p><a href="http://remix.hubwiz.com">RemixIDE-中文</a></p>
+<p><a href="https://solidity-cn.readthedocs.io/zh/develop/">Solidity-文档</a></p>
+<p><a href="https://vyper.readthedocs.io/en/latest/">Vyper-文档</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20多岁该拥有的习惯和实践]]></title>
         <id>https://aturx.github.io/post/20-duo-sui-gai-yong-you-de-xi-guan-he-shi-jian</id>
@@ -699,53 +902,6 @@
 </ol>
 <h2 id="最后">最后</h2>
 <p>测试驱动开发并不是唯一的选择，也要在合理的情况下使用。过度采用TDD开发模式，可能会造成开发效率低下，测试内容冗余的问题。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何通过GitHub学习？]]></title>
-        <id>https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi</id>
-        <link href="https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi">
-        </link>
-        <updated>2020-02-03T05:19:51.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="目-的">😀  目 的</h2>
-<p>当自己在学习新的知识时，为了能够提高学习效率，并且能够找到相对正确的学习路径，在GitHub上寻找资源是一个不错的选择。<br>
-可以通过GitHub 来搜索 Google 搜索不到的内容，大部分情况下我们想做的事情，已经有人已经做过。</p>
-<h2 id="好-处">😄  好 处</h2>
-<ol>
-<li>
-<p>节省时间</p>
-<p>在 GitHub 上寻找相应的 Demo，了解原理、稍微尝试，再引入到项目中。<br>
-尝试项目需要成本，如果内容较简单，可自己写Demo。<br>
-例： python+demo</p>
-</li>
-<li>
-<p>寻找脚手架：加快前期开发</p>
-<p>搜索技巧： 技术栈 + 技术名称， 寻找 awesome-xxx：可找到一些特定领域的资源<br>
-是否采用脚手架，需要衡量上手的时间成本，是否比重头写快。<br>
-想尽快的进入一个领域，不错的选择是通过awesome-xxx 寻找一些未知的可能性。<br>
-例： python+awesome</p>
-</li>
-<li>
-<p>模仿“轮子的轮子”</p>
-<p>一个完善的程序，会包含很多的细枝末节，这些内容对于上手是一个阻碍。学习框架直接阅读源码，容易陷入澡泽。<br>
-通过造轮子的方式，能够掌握核心的部分，不妨先找一些小而精的轮子的轮子去造。 这种思路搜索Google 往往比 GitHub 搜索好用。<br>
-例： xxx-like 或者 xxx-like framework  或者 仿Flask框架 或者 类flask。</p>
-</li>
-<li>
-<p>学习资源</p>
-<p>GitHub 会有很多免费的资源、电子书、教程、甚至视频资料等等。<br>
-例： 类型 + 笔记， python + 笔记， flask + 笔记， 书名， free-programming-books-zh_CN</p>
-</li>
-<li>
-<p>数据及数据制作工具</p>
-<p>很多时候需要的数据，已经有人获取过了，可以在GitHub上直接拿来使用。比如一些爬虫工具，或者AI训练模型。<br>
-例： face ai ， zhihu spider</p>
-</li>
-</ol>
-<h2 id="总-结">😆  总 结</h2>
-<p>使用现成的工具来完成自己的工作，也是一种必备技能，并不是所有的技术都应亲自掌握。</p>
-<p>人们开发软件的目的就是为了解决某些问题，如果这些问题已经被其他人解决过，为什么我们不去借用。</p>
-<p>善用GitHub， 他山之石可以攻玉。</p>
 ]]></content>
     </entry>
 </feed>
