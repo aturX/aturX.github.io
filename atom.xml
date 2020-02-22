@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-02-15T09:48:11.129Z</updated>
+    <updated>2020-02-22T03:22:08.245Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Linker 第 8 期  -  自由职业与数字货币]]></title>
+        <id>https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi</id>
+        <link href="https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi">
+        </link>
+        <updated>2020-02-22T03:15:30.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="国外网站">国外网站</h2>
+<blockquote>
+<p><a href="https://gitcoin.co/">Gitcoin</a><br>
+通过GitHub登录，并完成开发任务，修复bug，完成开发需求，软件测试，代码review等都可以获取代币&gt;激励。我认为GitHub和数字货币结合有着天然的优势。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a href="https://nomadlist.com/">全球数字游民</a><br>
+数字游民，有电脑，有网。世界哪里都是家。这里有更详细的信息，包括每个地方，舒适度，环境是否适宜&gt;办公，网络状态是否良好。或许还能相个亲。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a href="https://remoteok.io/remote-dev-jobs">远程OK</a><br>
+一个提供远程办公的网站，有比较多远程办公需求提供。</p>
+</blockquote>
+<hr>
+<h2 id="代币经济下的自由职业">代币经济下的自由职业</h2>
+<blockquote>
+<p>*<a href="https://freelanceforcoins.com">数字货币自由职业平台-FreelanceForCoins</a></p>
+<p>*<a href="https://ethlance.com">以太坊自由职业平台-Ethlance</a></p>
+<p>*<a href="https://www.cryptogrind.com/">比特币自由职业平台-CryptoGrind</a></p>
+<p>*<a href="https://blocklancer.net/">区块链自由职业平台-Blocklancer</a></p>
+<p>*<a href="https://www.cryptotask.org/">区块链任务接单平台-cryptotask</a></p>
+</blockquote>
+<p>以上五个网站，均通过数字货币进行结算。我只是抱着探索的态度，去尝试了一些。我个人认为，远程创作者 + 区块链代币激励 将会成为很好的一种模式促进自由职业与远程办公的发展。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[区块链周刊 - 第 1 期]]></title>
         <id>https://aturx.github.io/post/qu-kuai-lian-zhou-kan-di-1-qi</id>
@@ -856,67 +889,6 @@ contract DemoTest {   // 测试函数命名
 <!-- more -->
 <p>者的思维模式。 其次，你必须找到一种方式来贡献社会价值，同时实现与个人价值观的一致。 一旦你内化了这两种心态，你就可以在为更大的利益服务的同时获得丰厚的收入。</p>
 <p>如果你想在不降低意识的情况下获得收入，你就必须摆脱限制性信念。 阻止自己赚更多的钱对任何人都没有好处。 限制你的收入只会限制你的贡献。 赚更多钱的有意识的原因是你可以把这些社会信用用在好的地方。 利用它们将你的服务扩展到其他人身上。 如果你过着光荣的生活，那么对你来说收到更多的钱是一件好事。 你会好好保管它的。 你的生活中流动的钱越多，你就能为你的人生目标投入越多的资源。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linker 第 5 期  -  数据分析神器推荐]]></title>
-        <id>https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian</id>
-        <link href="https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian">
-        </link>
-        <updated>2020-02-06T06:58:33.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="榜-单-查-询-工-具">😘 榜 单 查 询 工 具</h1>
-<ul>
-<li>
-<p><a href="https://www.newrank.cn/">新榜</a></p>
-</li>
-<li>
-<p><a href="https://data.wxb.com/">微小宝</a></p>
-</li>
-</ul>
-<p>优点：可以查找到各个宽泛领域排名靠前的公众号名称，适合之前没怎么关注过公众号的小伙伴。</p>
-<p>缺点：分类宽泛、粉丝数权重低的公众号收录不全，有的时候不能够精确查找到和自己定位相似的公众号信息。</p>
-<h1 id="同-行-数-据-分-析">😇 同 行 数 据 分 析</h1>
-<ul>
-<li>
-<p><a href="http://www.gsdata.cn/">清博大数据</a></p>
-</li>
-<li>
-<p><a href="https://zs.xiguaji.com/">西瓜助手</a></p>
-</li>
-<li>
-<p><a href="https://chuansongme.com/">传送门</a></p>
-</li>
-</ul>
-<p>优点：能够直接查找一个公众号的所有内容。</p>
-<p>缺点：没有办法区分头条与原创内容，收录的公众号不全。</p>
-<h1 id="指-数-分-析">🤗 指 数 分 析</h1>
-<ul>
-<li>
-<p><a href="http://index.baidu.com/v2/index.html#/">百度指数</a></p>
-</li>
-<li>
-<p><a href="https://index.toutiao.com/">头条指数</a></p>
-</li>
-<li>
-<p><a href="http://www.wrd.cn/goSearch.shtml">微热点</a></p>
-</li>
-<li>
-<p><a href="https://trends.so.com/">360趋势</a></p>
-</li>
-</ul>
-<h1 id="工-具-导-航">😎 工 具 导 航</h1>
-<ul>
-<li>
-<p><a href="https://navi.weixinhost.com/">候斯特</a></p>
-</li>
-<li>
-<p><a href="http://hao.199it.com/">大数据导航</a></p>
-</li>
-</ul>
-<hr>
-<p>1、所有的工具都是为目的——找到和你之后输出相关联的内容服务，不要限于工具的具体用法上。</p>
-<p>2、只要能找到和你定位相关的内容，你也可以通过使用不同的平台工具来提高自己的效率。</p>
-<p>3、解决问题不一定只有一种方法，不要陷入“手中只有锤子，看什么都是钉子”的思维中。</p>
 ]]></content>
     </entry>
 </feed>
