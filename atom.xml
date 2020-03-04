@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-03-04T06:07:13.498Z</updated>
+    <updated>2020-03-04T06:27:50.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,71 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[网站流量统计功能添加]]></title>
+        <id>https://aturx.github.io/post/wang-zhan-liu-liang-tong-ji-gong-neng-tian-jia</id>
+        <link href="https://aturx.github.io/post/wang-zhan-liu-liang-tong-ji-gong-neng-tian-jia">
+        </link>
+        <updated>2020-03-04T06:26:15.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-站长统计的选择">😁一、站长统计的选择</h1>
+<p>想要查看网站的访问量，可以给网站进行网站统计。先对网站统计的工具选择：因为网站是国内访问，选择百度统计比较合适。</p>
+<p>访问地址：<a href="https://tongji.baidu.com">百度流量统计</a></p>
+<p>还有另一个，网站直接统计的js脚本也可以使用，需要添加到网页中，好处是可以显示用户访问量在页面。</p>
+<p>访问地址： <a href="https://busuanzi.ibruce.info/">不蒜子访问量展示</a></p>
+<h1 id="二-添加网站统计">😁二、添加网站统计</h1>
+<h2 id="百度统计方式">百度统计方式</h2>
+<p>基本过程是：</p>
+<ol>
+<li>
+<p>首页注册登录</p>
+</li>
+<li>
+<p>添加自己的网站域名</p>
+</li>
+<li>
+<p>复制生成好的js代码片段</p>
+</li>
+<li>
+<p>将代码添加到自己的网站页面中</p>
+</li>
+<li>
+<p>20分钟后可查看页面的流量统计</p>
+</li>
+</ol>
+<p>web4web.top 统计代码添加 :</p>
+<pre><code>&lt;script&gt;
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement(&quot;script&quot;);
+  hm.src = &quot;https://hm.baidu.com/hm.js?13ea7e585ad4fa34100390e5a6862c52&quot;;
+  var s = document.getElementsByTagName(&quot;script&quot;)[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+&lt;/script&gt;
+
+</code></pre>
+<p>lisiyi.top 统计代码添加 ：</p>
+<pre><code>&lt;script&gt;
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement(&quot;script&quot;);
+  hm.src = &quot;https://hm.baidu.com/hm.js?5f536360cba2bd2691929ab1dfc08c55&quot;;
+  var s = document.getElementsByTagName(&quot;script&quot;)[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+&lt;/script&gt;
+</code></pre>
+<h2 id="不蒜子方式">不蒜子方式</h2>
+<p>参考：<br>
+<a href="https://liam.page/2017/04/29/busuanzi-offset-setting/">数值初始化</a></p>
+<p>不蒜子 参考代码片段：</p>
+<pre><code>  &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+&lt;span id=&quot;busuanzi_container_site_uv&quot; style='display:none'&gt;
+本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人&lt;/span&gt;| 
+    Powered by &lt;a href=&quot;https://github.com/aturX&quot; target=&quot;_blank&quot;&gt;AturX&lt;/a&gt; 
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Maven 的基础知识]]></title>
         <id>https://aturx.github.io/post/maven-de-ji-chu-zhi-shi</id>
@@ -864,121 +929,6 @@ contract DemoTest {   // 测试函数命名
 </li>
 <li>
 <p><a href="https://www.xplace.com/">xplace</a></p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[提高工作效率的33条规则]]></title>
-        <id>https://aturx.github.io/post/ti-gao-gong-zuo-xiao-lu-de-33-tiao-gui-ze</id>
-        <link href="https://aturx.github.io/post/ti-gao-gong-zuo-xiao-lu-de-33-tiao-gui-ze">
-        </link>
-        <updated>2020-02-08T02:52:34.000Z</updated>
-        <content type="html"><![CDATA[<p>启发式是帮助你解决问题的规则。 当一个问题很大或者很复杂，而且最佳解决方案不明确时，采用启发式方法可以让你开始朝着解决方案前进，即使你不能从起点看到整个路径。</p>
-<p>假设你的目标是爬上一座山的顶峰，但是没有已有的小路选择。 一个启发式的例子是: 直接朝峰顶前进，直到你到达一个你无法跨越的障碍物。 当你遇到这样的障碍时，沿着它向右转，直到你能够再次向山顶前进。 这不是最聪明或最全面的启发式方法，但在许多情况下，它会工作得很好，并且你最终会达到顶峰。</p>
-<p>启发式并不能保证你能找到最优解，通常也不能保证一个解决方案。 但它们在解决某些类型的问题方面做得足够好，因此是有用的。 它的优点在于，它帮你打破了犹豫不决的僵局，让你采取行动。 当你采取行动时，你开始探索解决方案，这会加深你对问题的理解。 当你对这个问题有了更多的了解后，你可以在这个过程中进行路线修正，逐渐提高你找到解决方案的机会。</p>
-<p><strong>如果你试图解决一个你一开始不知道如何解决的问题，你通常会在解决的过程中找到一个解决方案，一个你在开始行动之前无法想象的解决方案。</strong></p>
-<p>对于创造性的工作，比如软件开发，尤其如此。 通常你甚至不知道你想要建立什么，直到你开始建立它。</p>
-<p>启发式有很多的实际应用，我最喜欢的应用领域之一就是个人效率。 关于提高生产力的行为规则  ，可以帮助我们更有效地完成工作。 以下是我最喜欢的一些：</p>
-<ol>
-<li>
-<p><strong>终极武器</strong>！ 完成一项任务最有效的方法就是删除它。 如果这项任务不需要完成，就把它从你的待办事项清单中删除。</p>
-</li>
-<li>
-<p><strong>每日目标</strong> 。没有清晰的注意力，很容易屈服于分心的事物。 提前为每一天设定目标。 决定你要做什么，然后去做。</p>
-</li>
-<li>
-<p><strong>最差排第一</strong>。 要战胜拖延症，就要学会把最不愉快的任务放在早上的第一件事来做，而不是推迟到当天晚些的时候。 取得这个小小的胜利将会为一个非常富有成效的一天奠定基调。</p>
-</li>
-<li>
-<p><strong>高峰时间</strong>。  确定你的生产力高峰周期，并为这些时间安排你最重要的任务。 在非高峰时间做一些次要的工作。</p>
-</li>
-<li>
-<p><strong>禁止通讯区</strong>。 为你必须集中精力的去独自完成的工作，分配不间断的时间块。 为你的空闲时间安排一些轻松的、可中断的任务，为你的无空闲时间安排一些更具挑战性的项目。</p>
-</li>
-<li>
-<p><strong>小里程碑</strong> 。当你开始一项任务时，确定在你停止工作之前你必须达到的目标。 例如，当你在写一本书的时候，你可以决定在你写了至少1000字之前不离开桌子。 无论如何都要击中你的目标。</p>
-</li>
-<li>
-<p><strong>时间限制</strong> 。给自己一个固定的时间段，比如30分钟，在一项任务上取得进展。 不要担心你能走多远。 只要投入时间。</p>
-</li>
-<li>
-<p><strong>批处理</strong>。 把类似的任务，比如打电话、收拾杂物或者跑腿的任务分成一个小块，然后在一个小时内完成。</p>
-</li>
-<li>
-<p><strong>早起的鸟儿</strong>。 早上5点起床，然后直接开始你最重要的工作。 你通常可以在早上8点之前完成比大多数人一天完成的工作都要多。</p>
-</li>
-<li>
-<p><strong>隔绝干扰</strong>。 带上一台没有网络或无线上网的笔记本电脑，去一个你可以在没有干扰的情况下全力工作的地方，比如图书馆、公园、咖啡馆或者你自己的后院。 把你的通讯设备留在身后。</p>
-</li>
-<li>
-<p><strong>节奏</strong> 。故意加快速度去完成任务，尽量比平时快一点。 说的快点。 走的快点。 打字更快点。 快速阅读。 更早点回家。</p>
-</li>
-<li>
-<p><strong>环境干净</strong>。通过培养一个轻松、整洁的工作空间来减轻压力。</p>
-</li>
-<li>
-<p><strong>议程</strong> 。提前向与会者提供清晰的书面议程。 这大大提高了会议的重点和效率。 你也可以通过打电话方式解决。</p>
-</li>
-<li>
-<p><strong>80-20法则</strong>。它规定80% 的任务价值来自20% 的努力。 把你的精力集中在那关键的20% 上，不要过度设计那不关键的80%。</p>
-</li>
-<li>
-<p><strong>预备-射击-瞄准</strong>。 在设定目标后立即采取行动，打破拖延，即使行动没有完美的计划。 你可以一路调整航向。</p>
-</li>
-<li>
-<p><strong>立即行动</strong> 。一旦你得到了做决定所需要的信息，开始计时，给自己60秒的时间做出实际的决定。 花上整整一分钟的时间来犹豫不决，然后对自己的所作所为进行再三的思考，但是最终你会有一个明确的选择。 一旦你做出了决定，采取某种行动让它运作起来。</p>
-</li>
-<li>
-<p><strong>截止日期</strong>。 设定一个完成任务的最后期限，并把它作为一个焦点，以保持在轨道上。</p>
-</li>
-<li>
-<p><strong>发出承诺</strong>。 告诉别人你的承诺，因为他们会帮助你见证这一过程。</p>
-</li>
-<li>
-<p><strong>提早到达</strong>。无论做什么事情，要提早准备不会有错的。</p>
-</li>
-<li>
-<p><strong>碎片时间</strong> 。用阅读来填补那些碎片时间，比如等待约会，排队，或者煮咖啡的时候。 如果你是男性，你甚至可以在剃须的时候读一篇文章(最好是用电动剃须刀)。 一年也能读365篇文章。</p>
-</li>
-<li>
-<p><strong>可视化</strong>。可视化您要完成的目标。将自己置于实际存在的状态。使它成为现实，您很快就会在现实中看到它。</p>
-</li>
-<li>
-<p><strong>奖励自己</strong>。 给自己频繁的成就进行自我奖励。观看电影，预约专业按摩或在游乐园里度过一天。</p>
-</li>
-<li>
-<p><strong>重要任务优先</strong>。把时间分配到重要的任务上，那些重要但很少紧急的任务，某种体育锻炼，写书，找到一个合作伙伴等。</p>
-</li>
-<li>
-<p><strong>连续性</strong> 。在工作日结束时，确定第二天要做的第一件事，并提前准备好材料。 第二天立即开始工作。</p>
-</li>
-<li>
-<p><strong>切片处理</strong>。将复杂的项目分解为较小的，定义明确的任务。专注于仅完成其中一项任务。</p>
-</li>
-<li>
-<p><strong>单一处理</strong> 。一旦你开始一项任务，坚持下去，直到它100% 完成。 不要在中间切换任务。 当有分心的事情发生时，记下来以后再处理。</p>
-</li>
-<li>
-<p><strong>随机化</strong>。选择一个完全随机的较大项目，然后完成它。随机写一篇文章。随机打一个电话。随机写一段程序，完成后的成就感都会调整自己的心态。</p>
-</li>
-<li>
-<p><strong>故意搞砸</strong>。 以一种故意的糟糕方式完成你的任务，意识到你永远不需要与任何人分享结果，从而战胜完美主义。 写一篇关于盐的味道的博客文章，设计一个可怕的不正常的网站，或者创建一个保证第一年破产的商业计划。 真正可怕的初稿，除了练习踩坑，别无选择。</p>
-</li>
-<li>
-<p><strong>30天习惯</strong>。 找出一个你想形成的新习惯，对自己承诺坚持完成并且仅仅坚持30天。 暂时的承诺比永久的承诺更容易遵守，你会发现30天内你成功的完成了，也许你会继续愿意持续30年。</p>
-</li>
-<li>
-<p><strong>借力</strong>。 说服别人为你做某事。</p>
-</li>
-<li>
-<p><strong>移花接木</strong>。学习武术，创建博客或学习绘画。你经常会在一个领域遇到想法，从而提高您在另一个领域的表现。</p>
-</li>
-<li>
-<p><strong>直觉</strong>。保持直觉。可能是对的。</p>
-</li>
-<li>
-<p><strong>优化</strong>。 确定您最常使用的流程，并一步一步地将它们写下来。 在纸上重构它们以提高效率。 然后实现并测试您的改进过程。 有时候我们只有在显微镜下才能看清眼前的事物。</p>
 </li>
 </ol>
 ]]></content>
