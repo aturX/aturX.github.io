@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-03-04T06:27:50.962Z</updated>
+    <updated>2020-03-06T08:54:15.398Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Docker实践01 -- 图形管理工具Portainer的使用]]></title>
+        <id>https://aturx.github.io/post/docker-shi-jian-01-tu-xing-guan-li-gong-ju-portainer-de-shi-yong</id>
+        <link href="https://aturx.github.io/post/docker-shi-jian-01-tu-xing-guan-li-gong-ju-portainer-de-shi-yong">
+        </link>
+        <updated>2020-03-06T08:52:21.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-解决问题">一、 解决问题？</h1>
+<p>Docker 在使用过程中，要在命令行中查看各种信息，非常的不方便，而且管理的效率不高，采用Portainer用来管理Docker和运行的项目足够了。</p>
+<h1 id="二-安装并运行-portainer">二、安装并运行 Portainer</h1>
+<p>Portainer 不用特意去安装，直接用Docker一行命令去运行就可以了。</p>
+<h2 id="dockerhub">DockerHub</h2>
+<p><a href="https://hub.docker.com/r/portainer/portainer">DockerHub</a> 上有很多镜像包可以直接使用，也包括Portainer的镜像。</p>
+<p>执行命令，先把镜像获取到本地：</p>
+<pre><code>docker pull portainer/portainer
+</code></pre>
+<p>运行 Portainer：</p>
+<pre><code>
+$ docker volume create portainer_data
+
+//创建一个portainer_data文件夹存储你容器的相关数据
+//一般它的地址是在： /var/lib/docker/volumes
+
+$ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+
+//其他参数暂时不用修改，就按照官方命令进行启动就可以了
+
+</code></pre>
+<h1 id="三-在线演示">三、在线演示</h1>
+<p>你可以在线查看效果</p>
+<p>访问地址:  http://demo.portainer.io/</p>
+<p>用户名：<code>admin</code><br>
+密码  ：<code>tryportainer</code></p>
+<h1 id="参考">参考</h1>
+<p><a href="https://portainer.readthedocs.io/en/latest/deployment.html">更多部署信息</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[网站流量统计功能添加]]></title>
         <id>https://aturx.github.io/post/wang-zhan-liu-liang-tong-ji-gong-neng-tian-jia</id>
@@ -856,81 +893,6 @@ contract DemoTest {   // 测试函数命名
 <p>当我想到未来25年这条道路时，我感到高兴、兴奋和乐观。 即使我只是保持现在的生活方式，我想我会在这条道路上感到很满足。 但我确信未来会有很多变化，我期待着驾驭它们，即使它们时不时地让我失去平衡。</p>
 <h1 id="题-外-话">🤔 题 外 话</h1>
 <p>这是一篇优质的<strong>外文翻译</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linker 第 6 期  -  开启远程办公之旅]]></title>
-        <id>https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu</id>
-        <link href="https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu">
-        </link>
-        <updated>2020-02-09T05:31:56.000Z</updated>
-        <content type="html"><![CDATA[<p>开启自己的远程办公之旅。<br>
-下面几个网站是我经过探索，发现的新崛起的几个自由职业/远程办公网站。</p>
-<p>我认为，区块链的进步之处，在于我们将信任一个机构，变为了信任一种制度，并对制度的维护者给与激励，这很公平合理。</p>
-<h2 id="国内网站">国内网站</h2>
-<ol>
-<li><a href="https://jarodise.com/">数字游民</a></li>
-</ol>
-<p>国内的数字游民网站，包含很多不错的资源。对远程办公、资源职业、数字游民很有帮助。</p>
-<ol start="2">
-<li><a href="http://www.freemancn.com/index.php?do=tasklist">自由人协作</a></li>
-</ol>
-<p>一个半兼职的任务接单网站，优点是内容比较靠谱，技术要求不高。</p>
-<ol start="3">
-<li><a href="https://eleduck.com/">电鸭社区</a></li>
-</ol>
-<p>国内比较活跃的自由职业者社区，有不错的社区文化，并且在不断的成长过程中。</p>
-<ol start="4">
-<li><a href="https://yuancheng.work/">远程.work</a></li>
-</ol>
-<p>提供了不错的远程岗位，并且可以提供自己的远程需求。</p>
-<h2 id="国外网站">国外网站</h2>
-<ol>
-<li><a href="https://gitcoin.co/">Gitcoin</a></li>
-</ol>
-<p>通过GitHub登录，并完成开发任务，修复bug，完成开发需求，软件测试，代码review等都可以获取代币激励。我认为GitHub和数字货币结合有着天然的优势。</p>
-<ol start="2">
-<li><a href="https://nomadlist.com/">全球数字游民</a></li>
-</ol>
-<p>数字游民，有电脑，有网。世界哪里都是家。这里有更详细的信息，包括每个地方，舒适度，环境是否适宜办公，网络状态是否良好。或许还能相个亲。</p>
-<ol start="3">
-<li><a href="https://remoteok.io/remote-dev-jobs">远程OK</a></li>
-</ol>
-<p>一个提供远程办公的网站，有比较多远程办公需求提供。</p>
-<h2 id="代币经济下的自由职业">代币经济下的自由职业</h2>
-<ol>
-<li>
-<p>*<a href="https://freelanceforcoins.com">数字货币自由职业平台-FreelanceForCoins</a></p>
-</li>
-<li>
-<p>*<a href="https://ethlance.com">以太坊自由职业平台-Ethlance</a></p>
-</li>
-<li>
-<p>*<a href="https://www.cryptogrind.com/">比特币自由职业平台-CryptoGrind</a></p>
-</li>
-<li>
-<p>*<a href="https://blocklancer.net/">区块链自由职业平台-Blocklancer</a></p>
-</li>
-<li>
-<p>*<a href="https://www.cryptotask.org/">cryptotask</a></p>
-</li>
-</ol>
-<p>以上五个网站，均通过数字货币进行结算。我只是抱着探索的态度，去尝试了一些。我个人认为，远程创作者 + 区块链代币激励 将会成为很好的一种模式促进自由职业与远程办公的发展。</p>
-<h2 id="传统自由职业平台">传统自由职业平台</h2>
-<ol>
-<li>
-<p><a href="https://www.truelancer.com">Truelancer</a></p>
-</li>
-<li>
-<p><a href="https://www.peopleperhour.com/">Peopleperhour</a></p>
-</li>
-<li>
-<p><a href="https://www.guru.com/">guru</a></p>
-</li>
-<li>
-<p><a href="https://www.xplace.com/">xplace</a></p>
-</li>
-</ol>
 ]]></content>
     </entry>
 </feed>

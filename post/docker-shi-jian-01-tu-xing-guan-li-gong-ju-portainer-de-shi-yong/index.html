@@ -183,53 +183,55 @@ var _hmt = _hmt || [];
         <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
             <figure class="animate-box">
                 
-                    <img src="https://aturx.github.io//post-images/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi.PNG" alt="Linker 第 8 期  -  自由职业与数字货币" class="img-responsive">
-                
             </figure>
             <span class="fh5co-meta animate-box">
                 
                     <div class="tag-container">
                         
-                            <a href="https://aturx.github.io/tag/c2EZW6nSY" class="tag">善用佳软, </a>
+                            <a href="https://aturx.github.io/tag/Zhe5lS2wh" class="tag">Docker, </a>
                         
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">Linker 第 8 期  -  自由职业与数字货币</h2>
+            <h2 class="fh5co-article-title animate-box">Docker实践01 -- 图形管理工具Portainer的使用</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-02-22</li>
-                <li>288字</li>
+                <li>2020-03-06</li>
+                <li>250字</li>
                 <li>1 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h2 id="国外网站">国外网站</h2>
-<blockquote>
-<p><a href="https://gitcoin.co/">Gitcoin</a><br>
-通过GitHub登录，并完成开发任务，修复bug，完成开发需求，软件测试，代码review等都可以获取代币&gt;激励。我认为GitHub和数字货币结合有着天然的优势。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><a href="https://nomadlist.com/">全球数字游民</a><br>
-数字游民，有电脑，有网。世界哪里都是家。这里有更详细的信息，包括每个地方，舒适度，环境是否适宜&gt;办公，网络状态是否良好。或许还能相个亲。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><a href="https://remoteok.io/remote-dev-jobs">远程OK</a><br>
-一个提供远程办公的网站，有比较多远程办公需求提供。</p>
-</blockquote>
-<hr>
-<h2 id="代币经济下的自由职业">代币经济下的自由职业</h2>
-<blockquote>
-<p>*<a href="https://freelanceforcoins.com">数字货币自由职业平台-FreelanceForCoins</a></p>
-<p>*<a href="https://ethlance.com">以太坊自由职业平台-Ethlance</a></p>
-<p>*<a href="https://www.cryptogrind.com/">比特币自由职业平台-CryptoGrind</a></p>
-<p>*<a href="https://blocklancer.net/">区块链自由职业平台-Blocklancer</a></p>
-<p>*<a href="https://www.cryptotask.org/">区块链任务接单平台-cryptotask</a></p>
-</blockquote>
-<p>以上五个网站，均通过数字货币进行结算。我只是抱着探索的态度，去尝试了一些。我个人认为，远程创作者 + 区块链代币激励 将会成为很好的一种模式促进自由职业与远程办公的发展。</p>
+                        <p> <h1 id="一-解决问题">一、 解决问题？</h1>
+<p>Docker 在使用过程中，要在命令行中查看各种信息，非常的不方便，而且管理的效率不高，采用Portainer用来管理Docker和运行的项目足够了。</p>
+<h1 id="二-安装并运行-portainer">二、安装并运行 Portainer</h1>
+<p>Portainer 不用特意去安装，直接用Docker一行命令去运行就可以了。</p>
+<h2 id="dockerhub">DockerHub</h2>
+<p><a href="https://hub.docker.com/r/portainer/portainer">DockerHub</a> 上有很多镜像包可以直接使用，也包括Portainer的镜像。</p>
+<p>执行命令，先把镜像获取到本地：</p>
+<pre><code>docker pull portainer/portainer
+</code></pre>
+<p>运行 Portainer：</p>
+<pre><code>
+$ docker volume create portainer_data
+
+//创建一个portainer_data文件夹存储你容器的相关数据
+//一般它的地址是在： /var/lib/docker/volumes
+
+$ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+
+//其他参数暂时不用修改，就按照官方命令进行启动就可以了
+
+</code></pre>
+<h1 id="三-在线演示">三、在线演示</h1>
+<p>你可以在线查看效果</p>
+<p>访问地址:  http://demo.portainer.io/</p>
+<p>用户名：<code>admin</code><br>
+密码  ：<code>tryportainer</code></p>
+<h1 id="参考">参考</h1>
+<p><a href="https://portainer.readthedocs.io/en/latest/deployment.html">更多部署信息</a></p>
  </p>
                     </div>
                 </div>
@@ -239,9 +241,9 @@ var _hmt = _hmt || [];
                         
                             <div class="next-post">
                                 <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/qu-kuai-lian-zhou-kan-di-1-qi">
+                                <a href="https://aturx.github.io/post/wang-zhan-liu-liang-tong-ji-gong-neng-tian-jia">
                                     <h3 class="post-title">
-                                        区块链周刊 - 第 1 期
+                                        网站流量统计功能添加
                                     </h3>
                                 </a>
                             </div>
@@ -276,12 +278,14 @@ var _hmt = _hmt || [];
 
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E4%B8%80-%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98">一、 解决问题？</a></li>
+<li><a href="#%E4%BA%8C-%E5%AE%89%E8%A3%85%E5%B9%B6%E8%BF%90%E8%A1%8C-portainer">二、安装并运行 Portainer</a>
 <ul>
-<li><a href="#%E5%9B%BD%E5%A4%96%E7%BD%91%E7%AB%99">国外网站</a></li>
-<li><a href="#%E4%BB%A3%E5%B8%81%E7%BB%8F%E6%B5%8E%E4%B8%8B%E7%9A%84%E8%87%AA%E7%94%B1%E8%81%8C%E4%B8%9A">代币经济下的自由职业</a></li>
+<li><a href="#dockerhub">DockerHub</a></li>
 </ul>
 </li>
+<li><a href="#%E4%B8%89-%E5%9C%A8%E7%BA%BF%E6%BC%94%E7%A4%BA">三、在线演示</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 
 </div>
