@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-04-10T02:04:54.431Z</updated>
+    <updated>2020-04-23T07:41:25.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,143 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Python的多进程使用]]></title>
+        <id>https://aturx.github.io/post/python-de-duo-jin-cheng-shi-yong</id>
+        <link href="https://aturx.github.io/post/python-de-duo-jin-cheng-shi-yong">
+        </link>
+        <updated>2020-04-23T07:39:36.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="multiprocessing-模块">multiprocessing 模块</h1>
+<p>multiprocessing模块就是跨平台版本的多进程模块</p>
+<p>multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：</p>
+<pre><code>import hashlib
+from time import sleep
+
+# TODO  多进程
+from multiprocessing import Process
+import os
+# 演示函数 1 ： 工作量证明
+def proof_fo_work():
+	&quot;&quot;&quot;
+	简单的工作量证明:
+         - 查找一个 p' 使得 hash(pp') 以4个0开头
+         - p 是上一个块的证明,  p' 是当前的证明
+        :param last_proof: &lt;int&gt;
+        :return: &lt;int&gt;
+	:return:
+	&quot;&quot;&quot;
+	originHash = hashlib.sha256(&quot;lsy&quot;.encode()).hexdigest()
+	print(&quot;Origin Hash：&quot;, originHash)
+	proof = 0
+	hard = &quot;0&quot;
+	while True:
+		guessStr = f&quot;{originHash}{proof}&quot;.encode()
+		guessHash = hashlib.sha256(guessStr).hexdigest()
+		if guessHash[:1] == hard:
+			print(&quot;***符合要求***: &quot;, guessHash)
+			print(&quot;***Proof***: &quot;, proof)
+			sleep(6)
+			hard = hard + &quot;0&quot;
+		else:
+			print(guessHash)
+			proof = proof + 1
+
+# 演示函数 2 ： 打印
+def t(name):
+	print(f&quot;子进程： {name}, {os.getpid()}&quot;)
+
+# 进程的使用： 启动进程分别执行 函数1,2
+def use_process():
+	print(f&quot;主进程: {os.getpid()}&quot;)
+	# 创建test进程
+	p = Process(target=t, args=('testProcess',))
+	# 创建proof_fo_work 进程
+	p2 = Process(target=proof_fo_work)
+	p2.start()
+	#p2.join()   # 使用之后，p进程将等待p2结束才执行
+	print(&quot;启动测试进程&quot;)
+	p.start()
+
+
+</code></pre>
+<p>其中 <code>p.join()</code> 表示进程结束后，才会继续执行后续过程。如果该经常死循环了，那么后面的执行步骤将永远不会执行。</p>
+<h2 id="创建多个进程-进程池-pool">创建多个进程： 进程池 Pool</h2>
+<p>如果要启动大量的子进程，可以用进程池的方式批量创建子进程：</p>
+<pre><code>def t(name):
+	sleep(1)
+	print(f&quot;子进程： {name}, {os.getpid()}&quot;)
+	
+# 进程池的使用
+def pool_process():
+	from multiprocessing import Pool
+	#如果要启动大量的子进程，可以用进程池的方式批量创建子进程：
+	p = Pool(4)  # 4为 CPU 核心数， 四核CPU 最多执行4 ， 大于4 也只执行4个进程
+	for i in range(5):
+		p.apply_async(t, args=(i,))
+	print(&quot;完成全部进程的创建启动&quot;)
+	p.close()
+	p.join()
+</code></pre>
+<h2 id="进程通信-生产者消费者queue">进程通信： 生产者+消费者+Queue</h2>
+<pre><code># 进程的通信： 多线程 生成者+消费者 Queue 实现
+def message_process():
+	from multiprocessing import Queue
+
+	q = Queue()
+
+	pw = Process(target=producer, args=(q,))   # 生产进程
+	pr = Process(target=consumer, args=(q, &quot;P1&quot;))   # 消费进程 1
+	pr2 = Process(target=consumer, args=(q, &quot;P2&quot;))  # 消费进程 2
+	pr3 = Process(target=consumer, args=(q, &quot;P3&quot;))  # 消费进程 3
+	pr4 = Process(target=consumer, args=(q, &quot;P4&quot;))  # 消费进程 4
+	pr5 = Process(target=consumer, args=(q, &quot;P5&quot;))  # 消费进程 5
+
+	pw.start()
+	pr.start()
+	pr2.start()
+	pr3.start()
+	pr4.start()
+	pr5.start()
+
+	# 等待pw结束:
+	pw.join()
+	# 队列消费完成 结束进程
+	while True:
+		if q.qsize() == 0:
+			# pr,pr2进程里是死循环，无法等待其结束，只能强行终止:
+			pr.terminate()
+			pr2.terminate()
+			pr3.terminate()
+			pr4.terminate()
+			pr5.terminate()
+			print(&quot;队列数据： &quot;, q.qsize())
+			break
+
+ 
+# 往队列里生产数据
+def producer(q):
+	import random, time
+	print('Hash生成进程: %s' % os.getpid())
+	# 生产 100个
+	for i in range(100):
+		num = random.randint(0, 1000)
+		value_hash = hashlib.sha256(str(num).encode()).hexdigest()
+		print('生成地址：[ %s ] to queue...' % value_hash)
+		q.put(value_hash)  # 数据写入队列
+
+
+# 消费队列里的数据
+def consumer(q,name):
+	import random, time
+	print('获取地址消费: %s ' % os.getpid())
+	while True:
+		value = q.get(True)
+		print(f'**{name}-读取地址: [ {value} ] from queue.')
+		time.sleep(random.random())
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Docker实践01 -- 图形管理工具Portainer的使用]]></title>
         <id>https://aturx.github.io/post/docker-shi-jian-01-tu-xing-guan-li-gong-ju-portainer-de-shi-yong</id>
@@ -821,41 +958,6 @@ contract DemoTest {   // 测试函数命名
 <p><a href="https://www.remove.bg/zh">AI智能抠图</a></p>
 <h2 id="软-件-抠-图">😅  软 件 抠 图</h2>
 <p><a href="https://d.appinn.com/adobe-photoshop-mix/"> Photoshop Mix 应用 （软件）</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MetaMask（小狐狸）的学习与使用]]></title>
-        <id>https://aturx.github.io/post/metamaskxiao-hu-li-de-xue-xi-yu-shi-yong</id>
-        <link href="https://aturx.github.io/post/metamaskxiao-hu-li-de-xue-xi-yu-shi-yong">
-        </link>
-        <updated>2020-02-12T11:51:42.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="一-metamask-是什么并且有什么用">一、 MetaMask 是什么并且有什么用？</h2>
-<p>MetaMask 是一个浏览器插件。</p>
-<p>MetaMask是一个桥梁，允许你通过浏览器访问区块链所在的分布式网络。</p>
-<p>它允许你在你的浏览器中运行 Ethereum Dapps，而不需要运行一个完整的 Ethereum 节点。</p>
-<p>你可以在 Chrome、 Firefox、 Opera 和新的 Brave 浏览器中安装 MetaMask 插件。 如果你是一个开发人员，你可以现在就开始使用 MetaMask 进行开发。</p>
-<p>它包括一个安全的身份保密库，提供一个用户界面来管理不同站点的身份，并签署交易。</p>
-<p>它使命是让尽可能多的人能够轻松使用以太坊。</p>
-<p><a href="https://metamask.io/">MetaMask官网</a></p>
-<hr>
-<h2 id="二-chrome中metamask的安装">二、 Chrome中MetaMask的安装</h2>
-<p>从GitHub上下载插件源文件：<br>
-<a href="https://github.com/MetaMask/metamask-extension/releases">下载</a></p>
-<p>1.打开Settings&gt; Extensions。</p>
-<p>2.检查“开发人员模式”。</p>
-<p>3.或者，使用URL： chrome://extensions/输入在地址栏中访问插件管理页面</p>
-<p>4.点击顶部的“打包拓展程序”。</p>
-<p>5.导航到你的metamask-plugin/dist/chrome文件夹。</p>
-<p>6.点击Select进行选择你下载好的插件文件。</p>
-<p>7.通过chrome://settings/languages更改为您的语言环境</p>
-<p>8.重新启动浏览器并在您的语言环境中测试插件</p>
-<p>现在你已经有了MateMask插件，可以单击“检查视图”以查看其开发控制台，通过修改JavaScript 的 contexts 来找到MateMask的控制台。</p>
-<p>如果网络畅通，还有更简单的方式，就是直接从Chrome商店，搜索MateMask进行安装下载。</p>
-<hr>
-<h2 id="三-metamask的使用">三、MetaMask的使用</h2>
-<p>初次使用，只需安装提示，进行注册和密码的设定以及密钥的获取，最后必须将自己的密钥种子安全的保存好，丢了将无法找回自己的数字货币。</p>
-<p>成功登陆后，就可以切换到以太坊网络，发起自己的交易了。</p>
-<p>对于其他的区块链网络也同样使用，并且可以对自己开发的区块链项目进行测试。</p>
 ]]></content>
     </entry>
 </feed>
