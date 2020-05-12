@@ -187,42 +187,185 @@ var _hmt = _hmt || [];
         <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
             <figure class="animate-box">
                 
-                    <img src="https://aturx.github.io//post-images/works-show-zuo-pin-ji-ye-mian.PNG" alt="Works Show - 作品集" class="img-responsive">
-                
             </figure>
             <span class="fh5co-meta animate-box">
                 
                     <div class="tag-container">
                         
-                            <a href="https://aturx.github.io/tag/VX2ta3-Q1O" class="tag">代码, </a>
+                            <a href="https://aturx.github.io/tag/BYEPncV_B" class="tag">Python, </a>
                         
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">Works Show - 作品集</h2>
+            <h2 class="fh5co-article-title animate-box">Python 高阶函数及使用场景</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-05-08</li>
-                <li>73字</li>
-                <li>1 min read</li>
+                <li>2020-05-12</li>
+                <li>980字</li>
+                <li>5 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h1 id="️-预览">❤️ 预览</h1>
-<p>😎<a href="https://susuwataricoder.github.io/">在线地址</a></p>
-<hr>
-<h1 id="项目功能">✅ 项目功能</h1>
-<p>完成一个作品集页面，一些练习代码，功能页面的展示。<br>
-该页面是完成了FreeCodeCamp 中的一个项目练习。</p>
-<hr>
-<h1 id="️-使用技术">♻️ 使用技术</h1>
-<p>HTML / CSS</p>
-<p>部署在GitHub上的静态页面</p>
-<hr>
-<h1 id="参考资料">➿  参考资料</h1>
-<p><a href="https://learn.freecodecamp.one/">FreeCodeCamp</a></p>
-<p><a href="https://github.com/SusuwatariCoder">参考仓库</a></p>
+                        <p> <p>Python有一些高阶函数，能够非常容易的解决一些比较特殊的场景问题。常用的几个函数如下所示。</p>
+<h2 id="1-map">1. map</h2>
+<p>场景一：</p>
+<pre><code>有一批值或者数据，需要重复的执行同一个逻辑过程。用map函数把list中所有数字转为字符串：
+&gt;&gt;&gt; list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+
+实例场景：有一批用户名数据，现要求根据用户名，生成随机密码，给每个用户分配一个密码。
+</code></pre>
+<p>代码演示：</p>
+<pre><code># user = [&quot;xxxx&quot;,&quot;&quot;]
+def gen_password(user):
+    from random import randint
+    # 生成随机密码
+    str_password = &quot;&quot;
+    str_str = &quot;abcdefghij&quot;
+    for i in range(8):
+        num = randint(0, 9)
+        str_password = str_password + str_str[num]
+
+    password = str_password + user[0] + str_password    # 用用户名拼接一个密码
+    user[1] = password
+    print(&quot;用户生成的随机信息是: {}&quot;.format(user))
+    return user
+
+def demo1():
+    # 场景一： 密码生成
+    users_data = [
+        [&quot;admin&quot;, &quot;&quot;],
+        [&quot;userone&quot;, &quot;&quot;],
+        [&quot;aturx&quot;, &quot;&quot;],
+        [&quot;lisiyi&quot;, &quot;&quot;],
+        [&quot;whoareyou&quot;, &quot;&quot;]
+    ]
+
+    result = map(gen_password, users_data)
+    print(list(result))
+
+
+demo1()
+</code></pre>
+<h2 id="2-reduce">2. reduce</h2>
+<p>场景二：</p>
+<pre><code>reduce把一个函数作用在一个序列[x1, x2, x3, ...]上，这个函数必须接收两个参数，
+reduce把结果继续和序列的下一个元素做计算，其效果就是：
+
+reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+
+实例场景：现有一个软件系统一年内每个月利润值，想要统计全年总利润。
+</code></pre>
+<p>代码演示：</p>
+<pre><code>
+def new_add_user(before, now):
+    new_add = now + before
+    return new_add
+
+
+def demo2():
+    # 场景二： 累计统计
+    data = [
+        1000, 1300, 1500, 4572,
+        1976, 2230, 1212, 2222,
+        1567, 2621, 3000, 2320
+    ]
+    from functools import reduce
+    all = reduce(new_add_user, data)
+
+    print(all)
+
+demo2()
+</code></pre>
+<h2 id="3-filter">3. filter</h2>
+<p>场景三：</p>
+<pre><code>Python内建的filter()函数用于过滤序列。
+和map()类似，filter()也接收一个函数和一个序列。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。
+
+
+实例场景：某系统有大量注册用户，先需要在一批注册用户中，找到年龄为40岁以上的男性用户。该场景非常适合使用过滤器。 
+</code></pre>
+<p>代码演示：</p>
+<pre><code>
+def is_man(user):
+    # 过滤40岁以上男性
+    if user[0] == &quot;man&quot; and user[1] &gt; 40:
+        return True
+    else:
+        return False
+
+def demo3():
+    # 场景三： 过滤特定数据
+    data = [
+        [&quot;man&quot;, 30],
+        [&quot;woman&quot;, 22],
+        [&quot;woman&quot;, 22],
+        [&quot;man&quot;, 42],
+        [&quot;woman&quot;, 22],
+        [&quot;man&quot;, 52],
+        [&quot;woman&quot;, 22],
+        [&quot;man&quot;, 12],
+        [&quot;woman&quot;, 62],
+        [&quot;man&quot;, 48],
+        [&quot;man&quot;, 62],
+        [&quot;woman&quot;, 22],
+        [&quot;man&quot;, 39],
+        [&quot;woman&quot;, 22],
+    ]
+    result_data = filter(is_man, data)
+    print(list(result_data))
+
+demo3()
+</code></pre>
+<h2 id="4-sorted">4. sorted</h2>
+<p>场景四：</p>
+<pre><code>排序也是在程序中经常用到的算法。无论使用冒泡排序还是快速排序，排序的核心是比较两个元素的大小。如果是数字，我们可以直接比较，但如果是字符串或者两个dict呢？直接比较数学上的大小是没有意义的，因此，比较的过程必须通过函数抽象出来。
+
+sorted()函数是一个高阶函数，它还可以接收一个key函数来实现自定义的排序。
+
+实例场景： 现有一个班级学生的考试成绩单，先需要分别根据数学成绩排名（100分制）、英语成绩（ABCD制）排名。该场景适合自定义排序。
+</code></pre>
+<p>代码演示:</p>
+<pre><code>def get_m_sort(student):
+    # 返回数学分值
+    return student[1]
+
+def get_e_sort(student):
+    # 返回英语分值
+    return student[2]
+
+def sorted_by_math(students):
+    result = sorted(students, key=get_m_sort, reverse=True)  # 数字降序排列
+    return result
+
+def sorted_by_english(students):
+    result = sorted(students, key=get_e_sort)
+    return  result
+
+def demo4():
+    # 名字， 数学成绩， 英语成绩
+    students = [
+        [&quot;people1&quot;, 99, &quot;C&quot;],
+        [&quot;people2&quot;, 78, &quot;B&quot;],
+        [&quot;people3&quot;, 85, &quot;B&quot;],
+        [&quot;people4&quot;, 63, &quot;F&quot;],
+        [&quot;people5&quot;, 79, &quot;C&quot;],
+        [&quot;people6&quot;, 68, &quot;D&quot;],
+        [&quot;people7&quot;, 53, &quot;A&quot;],
+    ]
+
+    order_by_math = sorted_by_math(students)
+
+    order_by_english = sorted_by_english(students)
+
+    print(&quot;数学排名: &quot;, order_by_math)
+    print(&quot;*&quot; * 10)
+    print(&quot;英语排名: &quot;, order_by_english)
+
+demo4()
+</code></pre>
  </p>
                     </div>
                 </div>
@@ -232,9 +375,9 @@ var _hmt = _hmt || [];
                         
                             <div class="next-post">
                                 <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/python-de-duo-jin-cheng-shi-yong">
+                                <a href="https://aturx.github.io/post/bi-te-bi-ji-chu-zhi-shi">
                                     <h3 class="post-title">
-                                        Python的多进程使用
+                                        比特币基础知识
                                     </h3>
                                 </a>
                             </div>
@@ -269,10 +412,14 @@ var _hmt = _hmt || [];
 
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
-<li><a href="#%EF%B8%8F-%E9%A2%84%E8%A7%88">❤️ 预览</a></li>
-<li><a href="#%E9%A1%B9%E7%9B%AE%E5%8A%9F%E8%83%BD">✅ 项目功能</a></li>
-<li><a href="#%EF%B8%8F-%E4%BD%BF%E7%94%A8%E6%8A%80%E6%9C%AF">♻️ 使用技术</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">➿  参考资料</a></li>
+<li>
+<ul>
+<li><a href="#1-map">1. map</a></li>
+<li><a href="#2-reduce">2. reduce</a></li>
+<li><a href="#3-filter">3. filter</a></li>
+<li><a href="#4-sorted">4. sorted</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
