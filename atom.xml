@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-05-18T08:50:57.842Z</updated>
+    <updated>2020-05-20T07:10:30.356Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,166 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[比特币如何运作]]></title>
+        <id>https://aturx.github.io/post/bi-te-bi-ru-he-yun-zuo</id>
+        <link href="https://aturx.github.io/post/bi-te-bi-ru-he-yun-zuo">
+        </link>
+        <updated>2020-05-20T07:04:43.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="比特币如何运作">比特币如何运作?</h1>
+<p>如何对比特币进行准确的分类尚有争议。</p>
+<p>它是一种货币，一种价值存储物，一种支付网络工具还是一种虚拟资产？</p>
+<p>幸运的是，对比特币的定义相对更容易。 它是由软件程序构成，并非像金光闪闪的硬币图片所描绘的实物。</p>
+<p>比特币是一串纯粹的数字所组成的，是一组协议或者说是算法的计算结果。</p>
+<p>历史上数百次通过使用密码学（制作和破解密码的科学技术）创建虚拟货币的尝试中，它并非最早的一个，但却是最成功的。</p>
+<p>比特币之后，已经启发了数千种数字货币的创造，但就市值而言，它仍然是最大的加密货币，这使得它在其十多年历史中一直保持主导地位。</p>
+<p>（补充说明：根据比特币基金会的说法，“比特币-Bitcoin”一词在将加密货币称为实体时被大写，而在指代某种货币或单位本身时被称为“比特币-bitcoin”。比特币也缩写为“<br>
+BTC”。）</p>
+<ul>
+<li>重要要点</li>
+</ul>
+<pre><code>1. 比特币是一种数字货币，是一种去中心化系统，可在被称为区块链的分布式账本中记录交易。
+
+2. 比特币矿工使用复杂的计算机硬件来解决复杂的数学难题，以确认一个区块中的所有交易的有效性。完成
+后，这些区块将被添加到区块链记录中，并向该矿工奖励少量的比特币，这个过程被称为“挖矿”。
+
+3. 挖矿并不是获得比特币的唯一方式，比特币市场的其他参与者可以通过加密货币交易所或点对点方式买卖比特币。
+
+4. 比特币分布式账本通过无信任系统得到保护，以防欺诈行为。即便比特币交易所在进行高度安全防范的条件下，依然有潜在的盗窃行为，而备受瞩目的盗窃案已经发生数次。
+</code></pre>
+<h2 id="1-诞生">1. 诞生</h2>
+<p>比特币最早由自称中本聪的人在2008年的论文中首先提出，论文描述了区块链和比特币，有一段时间这两个术语几乎都是同义词。<br>
+自那以来，区块链已经发展成为一个独立的概念，并且人们随后使用类似的加密技术，创建数千个区块链。<br>
+因此此历史可能会使术语混淆，区块链有时是指原始的比特币区块链。<br>
+在其他时候，它通常是指区块链技术或任何其他特定的区块链技术，例如为以太坊提供底层的区块链技术。</p>
+<p>区块链技术的基础原理非常简单。<br>
+任何给定的区块链均由按时间顺序排列的离散信息块的单链组成。<br>
+原则上，此信息可以是1和0的任何字符串，这意味着它可以包括电子邮件，合同，土地所有权，结婚证书或债券交易。<br>
+从理论上讲，只要双方都同意合同，就可以在区块链上建立两方之间的任何类型的合同。<br>
+这消除了第三方参与任何合同的任何需要。<br>
+这就开辟了无限的可能性，其中包括点对点金融产品，例如贷款或分散式储蓄和支票账户，而与银行或任何中介机构无关。</p>
+<h2 id="2-后继者">2. 后继者</h2>
+<p>比特币的当前目标是价值存储和支付系统。<br>
+以太坊项目的主要目标是建立一个平台或者说世界计算机，在这个平台上可以执行“智能合约”，从而创建了一个去中心的金融基础设施，而没有任何中间商，但是随之而来的是存在费用和潜在的数据泄露风险。</p>
+<p>这种多样性的发展，成功的引起了政府和私人公司的注意。<br>
+实际上，一些分析人士认为，区块链技术最终将成为加密货币热潮中最具影响力的技术。<br>
+但是，就比特币而言，区块链上的信息主要是交易。<br>
+比特币实际上只是一个列表。A人向B人发送X比特币，B人向C人发送Y比特币，等等。<br>
+通过加密计算这些交易，使得分布式网络的每个人都知道并确认交易的准确性。<br>
+重要的是要注意，这些交易不一定是在人与人之间进行，可以是不同机构之间，不同系统之间，实现价值互通。</p>
+<p>任何人都可以访问和使用比特币网络，而你的种族，性别，宗教，物种或政治倾向完全不相关。<br>
+这为物联网创造了巨大的可能性。未来，我们会看到无人驾驶出租车或超大型汽车拥有自己的区块链钱包的系统。<br>
+该车将从乘客那里收到加密货币，并且直到收到资金后才可以行驶。<br>
+车辆将能够评估何时需要加油，并会自动使用钱包余额更方便的加油。</p>
+<h2 id="3-使命">3. 使命</h2>
+<p>尽管绝对公开，或者正因为如此，比特币极难篡改。比特币没有物理存在，因此你不能通过将其锁定在保险箱中或将其埋在树林中来保护它。</p>
+<p>从理论上讲，小偷要想从你手中夺走它，所需要做的就是在分布式账本上添加一行，以表示“你付给了他，你所拥有的一切”。</p>
+<p>一个令人担忧的是双重支付，即“双花问题”。如果一个有意破坏者想要花费一些比特币在两个或多个不同的地方，那么货币的价值信任将受到质疑。</p>
+<p>对货币价值的信心就会迅速消失。为了实现双花，恶意攻击者将需要至少占用特币采矿能力的51％。所以，比特币网络越大，现实就越不现实，因为所需的计算能力将是天文数字，而且非常昂贵。</p>
+<p>为了进一步防止任何一种情况的发生，您需要高度安全的信任机制。在这种情况下，使用传统货币的常规解决方案是通过中央，中立的仲裁员（例如银行）进行交易。比特币让这一过程变得不必要。（中本聪 最初的描述发表于2008年10月，这并非巧合，当时人们对银行的信任处于几代人的低谷。而当今的冠状病毒环境和政府债务不断增加的情况下，这显然又是一个反复出现的主题。）</p>
+<p>与其拥有可靠的权威来保持总账本一致，不如使得网络去中心化，将比特币网络分散。每个人都能够关注其他所有人的账本，没有人特别需要认识或信任任何人就能使系统正常运行，一切基于程序算法实现共识。</p>
+<p>假设一切都按预期进行，则加密协议可确保写在最长、时间最久的一条公开透明的区块链上的区块的可靠性是得到整个网络所认可的。</p>
+<h2 id="4-技术与安全">4. 技术与安全</h2>
+<ul>
+<li>矿业</li>
+</ul>
+<p>网络中的节点维护这个去中心的公共账本正常运作并获得比特币奖励的过程称为采矿。参与的节点被称为矿工，矿工网络建立在比特币用户网络的基础上，这些网络将这些用户的交易记录在区块链上。</p>
+<p>记录一串交易对于现代计算机而言是微不足道的，但是由于比特币的软件使该过程人为地耗时，因此挖矿过程是困难的。<br>
+如果没有额外的难道，人们就可以轻易伪造交易来欺骗他人。他们可以将欺诈交易记录在区块链中，并在此基础上增加更多的虚假交易，以至于让网络中的其他节点无法分辨是欺诈行为还是真实交易。</p>
+<p>同样，如果很容易就能创建欺诈交易并插入到区块中。那么网络将会变得非常庞大，充满了恶意制造的垃圾交易，而比特币将一文不值。</p>
+<p>比特币采用一种巧妙的算法来解决这个问题，将“工作量证明”与其他加密技术相结合就是“中本聪”的突破。<br>
+比特币的软件程序会调整矿工的工作难度，以便每10分钟左右网络会出一个1兆字节大小的交易块。<br>
+这样，这段时间内的交易量就可以被打包到块中。整个网络有时间审查新的区块和它之前的公共账本，并且每个人都可以就现状达成共识。<br>
+矿工希望看到比特币网络平稳运行，通过向分布式分类账中添加区块来验证交易。<br>
+他们的工作也将得到奖励。我们将在下面仔细研究采矿奖励。</p>
+<ul>
+<li>减半</li>
+</ul>
+<p>如前所述，矿工因验证交易区块而获得比特币奖励。每开采210,000个区块，或每四年大约减少一半的奖励。此事件称为“比特币减半”。比特币系统是作为通货紧缩系统设计的，新的比特币被释放到流通系统中。</p>
+<p>此过程对比特币采矿的奖励理论会持续到2140年左右。一旦从代码中开采了所有比特币并且完成了一半的交易，矿工将继续向网络用户收取交易打包费用作为激励。<br>
+希望那时候，健康的网络竞争能够使比特币网络的手续费能保持在较低水平。</p>
+<p>该系统提高了比特币的稀有率，并降低了通货膨胀率，直到最终为零。在2020年5月11日进行第三次减半之后，比特币开采每个区块的奖励是6.25比特币。</p>
+<ul>
+<li>哈希</li>
+</ul>
+<p>这是有关挖矿工作原理的一些技术性描述。遍布全球且不受个人或组织约束的矿工网络在接收到最新一批交易数据后，他们通过一种加密算法来运行数据，该算法最终生成一个“哈希值”，即一串数字和字母组成的，用于验证信息的有效性，但不会泄露信息本身。<br>
+（实际上，这种分散式挖矿的理想愿景不再是个人可行的了，工业规模的挖矿矿场的出现和强大的矿池构已经成了寡头垄断。）</p>
+<p>光有一个哈希值<br>
+<code>000000000000000000c2c4d562224f272bd33d64e2a7d2f2feb67c15e826118f</code>，<br>
+你是将无法知道相关区块（如＃1234）包含哪些事务或交易的。<br>
+但是，你可以通过验证一堆数据的最终哈希值是否与该哈希值相同，从而辨别是否这是相同的数据。并确保它（#1234）未被篡改。如果一个数字不对应，那么不管数据多么少，数据都会生成完全不同的哈希串。<br>
+例如，如果您通过哈希函数运行字符串“hello”，则可能会得到<code>2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</code>。<br>
+但是，删除“o”字母后，“hell”的哈希值将是<code>0ebdc3317b75839f643387d783535adc360ca01f33c75f7c1e7373adcd675c0b</code>。<br>
+尽管你只更改了原始文本中的一个字母，但得到的是完全不同的哈希。</p>
+<p>哈希技术使比特币网络能够立即检查区块的有效性，可防止篡改。</p>
+<p>为了保证新的区块得到之前区块的确认，前一个块的哈希将会作为一部分被写入新块内。如果在上一个块中的详细信息被篡改了，则该新的区块哈希也将被更改。即该区块的哈希值会引发一系列新的哈希值的变化，所以在比特币网络中进行历史数据的篡改几乎是无法实现的。</p>
+<p>但是，只是把数据生成哈希值只能防止篡改，并不能真正保证比特币交易的可靠性。<br>
+这个过程是如此简单快捷，以至于恶意破坏者仍然可以伪造哈希向网络发送垃圾信息，并且也许，如果有足够的计算能力，就可以将欺诈性交易写到之前的几个区块中，实现交易回滚。<br>
+因此，比特币协议的“工作量证明”是十分必要的机制。<br>
+通过向矿工指定一个非常苛刻满足条件，来达到这一效果，即他们的哈希值必须低于某个目标。</p>
+<pre><code>一串随机的哈希值如 ‘2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824’ 非常容易获得
+一串符合‘0000’ 开头的哈希值就没那么容易得到了。‘00004dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824’
+这需要大量的计算获得，相对如果条件是‘00000000’开头，那么找到这样一个哈希值的难度就变得更高了。
+
+'00000000111' &lt; '00001111111' 这就是“哈希值必须低于某个目标”的意义，“0”越多，值越小。
+</code></pre>
+<p>这就是块<code>＃1234</code> 的哈希值以一长串零开始的原因。由于每个数据字符串都将生成一个且仅一个哈希，因此，寻求足够小的哈希需要在数据末尾添加随机数。</p>
+<p>开采的区块将被广播到网络让其他节点接收确认，确认过程需要花费一个小时左右的时间，尽管有时需要更长的时间。<br>
+（同样，此描述也得到了简化。不对块进行整体哈希处理，而是将其分解为更有效的结构，称为Merkle树。）</p>
+<ul>
+<li>挖矿难度</li>
+</ul>
+<p>根据网络接收的流量大小，比特币的协议判断需要更长或更短的零开头字符串，从而调整至每10分钟达到一个新区块速率的难度。<br>
+截至2019年10月，当前的难度约为6.379万亿，高于2009年的1。这表明，自从十年前推出这种加密货币以来，算力的提升和难度的提升，开采比特币变得更加困难。</p>
+<p>挖矿是计算密集型的操作，需要大型，昂贵的计算设备和大量的电力来为其供电，而且需要更加高效的竞争力。<br>
+尚不清楚哪种随机数将会起作用，因此唯一目标就是尽可能多的进行尝试计算不同的哈希，直到找到符合条件的。</p>
+<p>早期，矿工们意识到，可以通过将多个计算设备合并成矿池，共享计算能力，最终将奖励分配给彼此来提高成功的机会。<br>
+即使多个挖矿者共同分配了这些奖励，但仍然有足够的动力促使矿工进行比特币挖矿。</p>
+<ul>
+<li>奖励减半</li>
+</ul>
+<p>每次开采新区块时，成功的矿工都会收到一笔奖励的比特币交易。<br>
+最初是50个，但后来减半到25个，之后是12.5个，截止2020年5月完成减半后仅为6.25个。<br>
+每210,000个区块（或大约每四年）会发生一次减半，直到达到零。届时，所有2100万个比特币将被开采完成，而矿工将仅依靠打包交易服务费用来维护网络。</p>
+<ul>
+<li>51% 攻击</li>
+</ul>
+<p>当比特币推出时，计划该加密货币的总供应量将是2100万个。<br>
+矿工们聚集起来挖矿的事实令人有些担忧，如果池超过网络挖掘能力的50％，则其参与者可能会有机会实现“双花”交易。<br>
+他们还可能会阻止他人的交易。简而言之，这批矿工将有能力改变系统的分布式特性，并凭借其拥有的多数权力来操作交易的验证。</p>
+<p>这可能意味着比特币的终结，但即使是所谓的51％攻击也可能无法使恶意攻击者撤消旧的交易，因为工作量证明要求使该过程非常耗费人力。<br>
+要回滚并更改区块链，池将需要控制网络的大部分，以至于可能毫无意义。<br>
+当你控制整个货币时，那你可以与谁进行交易呢？</p>
+<p>从矿工的角度来看，51％的攻击是一种经济自杀命题。当采矿池Ghash.io在2014年达到网络计算能力的51％时，它自愿承诺不超过比特币哈希率的39.99％，以保持对加密货币价值的信心。<br>
+与矿工有关的另一个令人担忧的问题是，实际趋势是他们集中在世界上电力价格相对便宜的部分地区，例如中国。</p>
+<ul>
+<li>比特币交易所</li>
+</ul>
+<p>对于大多数参与比特币网络的个人来说，区块链的来龙去脉，哈希率和挖掘并不是特别重要。<br>
+在采矿社区之外，比特币所有者通常通过比特币交易所购买其供应的加密货币。这些在线平台可以促进比特币和其他数字货币的交易。</p>
+<p>像Coinbase、币安、火币这样的比特币交易所汇聚了来自世界各地的市场参与者，进行买卖加密货币。<br>
+这些交易所不仅越来越受欢迎（近年来比特币的知名度不断提高），而且还面临监管，法律和安全方面的挑战。<br>
+随着世界各国政府以不同方式（以货币，资产类别或任何其他其他类别）审查加密货币，监管比特币买卖的法规非常复杂且不断变化。</p>
+<p>对于比特币交易所的参与者来说，也许比改变监管监督的威胁更为重要的是盗窃和其他犯罪活动。<br>
+尽管比特币网络本身在其整个发展历史上一直是安全的，但各个交易所不一定是安全的。<br>
+许多盗窃都针对知名度较高的加密货币交易下手，常常导致价值数百万美元的代币损失。</p>
+<p>最著名的交易所盗窃案，可能是2014年之前一直主导着比特币交易领域的Mt.Gox交易所被盗事件。<br>
+当时该平台宣布可能盗窃了大约850,000个BTC，当时价值近4.5亿美元。随后Mt.Gox交易所申请破产并关门。<br>
+直到今天，大部分被盗的赏金（现在价值约80亿美元）尚未被追回。</p>
+<ul>
+<li>私钥和钱包</li>
+</ul>
+<p>由于以上种种原因，理所当然的，比特币交易者和所有者将希望采取任何可能的安全措施来保护其资产。<br>
+为此，他们选择使用私钥和钱包。<br>
+比特币的所有权本质上可以归结为两个部分，即公共密钥和私有密钥。粗略的类比是用户名（公钥）和密码（私钥）。<br>
+公钥的哈希（称为地址）是在区块链上显示的哈希，使用哈希可提供一定的安全性。</p>
+<p>要接收比特币，发件人只需知道你的地址即可。公钥是从私钥派生的，你需要通过该私钥进行签名验证身份后，才能发送交易到另一个地址。</p>
+<p>要访问比特币，请使用一个钱包，钱包可以采用不同的形式，从提供保险和借记卡的第三方Web应用程序到打印在纸上的QR码。<br>
+最重要的区别是在“热”钱包和“冷”钱包之间的区别，“热”钱包已连接到Internet，因此容易受到黑客攻击，而“冷”钱包没有连接到Internet。</p>
+<p>在Mt.Gox交易所被盗案中，据信大部分被盗的BTC都是从热钱包里拿走的。<br>
+尽管如此，许多用户还是将自己的私钥委托给了加密货币交易所，这实际上是在押注，认为交易所将会比自己的计算机发生盗窃可能性更小，或者说交易所的安全性更高。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python面向对象编程：实现IoC控制反转]]></title>
         <id>https://aturx.github.io/post/python-mian-xiang-dui-xiang-bian-cheng-shi-xian-ioc-kong-zhi-fan-zhuan</id>
@@ -932,290 +1092,6 @@ var _hmt = _hmt || [];
 本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人&lt;/span&gt;| 
     Powered by &lt;a href=&quot;https://github.com/aturX&quot; target=&quot;_blank&quot;&gt;AturX&lt;/a&gt; 
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Maven 的基础知识]]></title>
-        <id>https://aturx.github.io/post/maven-de-ji-chu-zhi-shi</id>
-        <link href="https://aturx.github.io/post/maven-de-ji-chu-zhi-shi">
-        </link>
-        <updated>2020-03-04T04:54:47.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="maven-基-本-操-作">🐶 Maven 基 本 操 作</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="maven-基-本-操-作">🐶 Maven 基 本 操 作</h1>
-<!-- more -->
-<h2 id="构建">构建</h2>
-<p>要构建一个基于Maven的项目，打开控制台，进入到 pom.xml 文件所放的项目文件夹，并发出以下命令：</p>
-<pre><code>mvn package
-</code></pre>
-<!-- more -->
-<h2 id="清除">清除</h2>
-<p>在基于Maven的项目中，很多缓存输出在“target”文件夹中。如果想建立项目部署，必须确保清理所有缓存的输出，从面能够随时获得最新的部署。</p>
-<pre><code>mvn clean
-</code></pre>
-<p>要部署您的项目进行生产，它总是建议使用 “mvn clean package“, 以确保始终获得最新的部署。</p>
-<!-- more -->
-<h2 id="单元测试">单元测试</h2>
-<p>要通过Maven运行单元测试，发出此命令：</p>
-<pre><code>mvn test
-</code></pre>
-<p>这会在你的项目中运行整个单元测试。</p>
-<!-- more -->
-<h2 id="安装">安装</h2>
-<p>在Maven中，可以使用“mvn install”打包项目，并自动部署到本地资源库，让其他开发人员使用它。</p>
-<pre><code>mvn install
-</code></pre>
-<p>注意，<br>
-当“install”在执行阶段，上述所有阶段 “validate“, “compile“, “test“, “package“, “integration-test“, “verify” 阶段, 包括目前的“install”阶段将被执行有序。</p>
-<!-- more -->
-<h1 id="maven-的-pom-文-件">🦊 Maven 的 POM 文 件</h1>
-<h3 id="maven-项目唯一标识标签">Maven - 项目唯一标识标签：</h3>
-<ul>
-<li>
-<p>groupId：项目或者组织的唯一标志 ，如cn.gov.customs生成的相对路径为：/cn/gov/customs</p>
-</li>
-<li>
-<p>artifactId：项目的通用名称</p>
-</li>
-<li>
-<p>version：项目的版本</p>
-</li>
-<li>
-<p>packaging：打包机制，如pom,jar,maven-plugin,ejb,war,ear,rar,par</p>
-</li>
-<li>
-<p>name：用户描述项目的名称，无关紧要的东西，非必要</p>
-</li>
-<li>
-<p>url：开发团队官方地址 ，非必要</p>
-</li>
-<li>
-<p>classifer：分类</p>
-</li>
-</ul>
-<p><code>groupId,artifactId,version,packaging</code>作为项目唯一标识</p>
-<p>例子：</p>
-<pre><code>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
-   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0
-   http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
-   
-   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-   // 1. groupId 这是项目组的编号，这在组织或项目中通常是独一无二的。
-   // 例如:com.company.bank 某公司银行相关项目
-
-   &lt;groupId&gt;com.baidu.project-group&lt;/groupId&gt;
-   
-   // 2.项目ID。这通常是项目的名称。例如，springboot-demo。 
-   &lt;artifactId&gt;springboot-demo&lt;/artifactId&gt;
-   
-   // 3. 版本号与groupId 结合使用
-   &lt;version&gt;1.0&lt;/version&gt;
-   // 4. 打包类型 
-   &lt;packaging&gt;jar&lt;/packaging&gt;
-   
-   &lt;name&gt;springboot-demo&lt;/name&gt;
-&lt;project&gt; 
-
-</code></pre>
-<!-- more -->
-<h3 id="maven-依赖关系">Maven - 依赖关系：</h3>
-<p>POM文件中的关系，主要有依赖，继承，合成等关系。</p>
-<ul>
-<li>
-<p>scope：用来指定当前包的依赖范围</p>
-</li>
-<li>
-<p>optional：设置指依赖是否可选，默认为false,即子项目默认都继承，为true,则子项目必需显示的引入，与dependencyManagement里定义的依赖类似</p>
-</li>
-<li>
-<p>exclusions：如果X需要A,A包含B依赖，那么X可以声明不要B依赖，只要在exclusions中声明exclusion</p>
-</li>
-<li>
-<p>parent：如果一个工程作为父类工程，那就必须添加pom,子系统要继承父类，也必须使用parent标签。对于子系统使用如下所示：</p>
-</li>
-<li>
-<p>relativePath：为可选项，maven会首先搜索该地址，然后再搜索远程仓库。</p>
-</li>
-</ul>
-<pre><code>&lt;parent&gt; 
-    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt; 
-    &lt;artifactId&gt;my-parent&lt;/artifactId&gt; 
-    &lt;version&gt;2.0&lt;/version&gt; 
-    &lt;relativePath&gt;../my-parent&lt;/relativePath&gt; 
-&lt;/parent&gt;
-</code></pre>
-<p>依赖引入：</p>
-<pre><code>说明：properties 顾名思义就是配置文件，这里的 peoperties 是管理 jar 包的版本号的， 然后在后面的 dependencies 中 可以以 变量的形式调用 如： 
-&lt;properties&gt;
- &lt;!-- 框架版本 --&gt;
-	&lt;org.springframework.version&gt;3.2.4.RELEASE&lt;/org.springframework.version&gt;
- &lt;!-- Java版本 --&gt;
-   &lt;java.version&gt;1.8&lt;/java.version&gt;
-&lt;/properties&gt;
-
-&lt;dependencies&gt;
-    &lt;dependency&gt;
-    	&lt;groupId&gt;org.springframework&lt;/groupId&gt;
-    	&lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
-    	&lt;version&gt;${org.springframework.version}&lt;/version&gt;
-    &lt;/dependency&gt;
-&lt;/dependencies&gt;
-</code></pre>
-<ul>
-<li>modules：多模块项目的标签，顺序不重要，MAVEN会自动拓展排序。使用如下所示：</li>
-</ul>
-<pre><code>&lt;!--子模块--&gt;
-&lt;modules&gt;
-    &lt;module&gt;ygb-service-config&lt;/module&gt;
-    &lt;module&gt;ygb-service-bus&lt;/module&gt;
-    &lt;module&gt;ygb-service-policy-center&lt;/module&gt;
-    &lt;module&gt;ygb-service-letter-of-indemnity&lt;/module&gt;
-    &lt;module&gt;ygb-service-authentication-center&lt;/module&gt;
-&lt;/modules&gt;
-</code></pre>
-<!-- more -->
-<h3 id="maven-构建设置">Maven - 构建设置:</h3>
-<ul>
-<li>build 这部分主要是对项目的构建过程进行配置，包括打包的方式、插件的安装等。配置如下所示：</li>
-</ul>
-<pre><code>&lt;!-- 构建管理 --&gt;
-&lt;build&gt;
-    &lt;!--构建工具插件管理--&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre>
-<p>常用POM 文件：</p>
-<pre><code>完整 POM 参考：
-&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
-  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-	&lt;parent&gt;
-		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-		&lt;version&gt;2.1.4.RELEASE&lt;/version&gt;
-		&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
-	&lt;/parent&gt;
-  &lt;groupId&gt;cn.seisys.kafka&lt;/groupId&gt;
-  &lt;artifactId&gt;kafka-demo&lt;/artifactId&gt;
-  &lt;version&gt;1.0&lt;/version&gt;
-  &lt;packaging&gt;jar&lt;/packaging&gt;
-	&lt;name&gt;kafka-demo&lt;/name&gt;
-
-  &lt;properties&gt;
-   &lt;java.version&gt;1.8&lt;/java.version&gt;
-  &lt;/properties&gt;
-
-  &lt;dependencies&gt;
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-		  &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
-	  &lt;/dependency&gt;
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-		  &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-		  &lt;optional&gt;true&lt;/optional&gt;
-	  &lt;/dependency&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-		  &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
-		  &lt;scope&gt;test&lt;/scope&gt;
-	  &lt;/dependency&gt;
-
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-		  &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-		  &lt;optional&gt;true&lt;/optional&gt;
-	  &lt;/dependency&gt;
-	  &lt;!--引入第三方jar-Mas jar--&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.apache.kafka.clients&lt;/groupId&gt;
-		  &lt;artifactId&gt;kafka-clients&lt;/artifactId&gt;
-		  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-		  &lt;scope&gt;system&lt;/scope&gt;
-		  &lt;systemPath&gt;${project.basedir}/src/main/resources/lib/kafka-clients-0.11.0.1.jar&lt;/systemPath&gt;
-	  &lt;/dependency&gt;
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.apache.kafka.clients&lt;/groupId&gt;
-		  &lt;artifactId&gt;kafka&lt;/artifactId&gt;
-		  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-		  &lt;scope&gt;system&lt;/scope&gt;
-		  &lt;systemPath&gt;${project.basedir}/src/main/resources/lib/kafka_2.11-0.11.0.1.jar&lt;/systemPath&gt;
-	  &lt;/dependency&gt;
-
-	  &lt;!-- https://mvnrepository.com/artifact/commons-net/commons-net --&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;commons-net&lt;/groupId&gt;
-		  &lt;artifactId&gt;commons-net&lt;/artifactId&gt;
-		  &lt;version&gt;3.6&lt;/version&gt;
-	  &lt;/dependency&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;commons-io&lt;/groupId&gt;
-		  &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
-		  &lt;version&gt;1.3.1&lt;/version&gt;
-	  &lt;/dependency&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;cn.hutool&lt;/groupId&gt;
-		  &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;
-		  &lt;version&gt;4.5.7&lt;/version&gt;
-	  &lt;/dependency&gt;
-	  &lt;!-- https://mvnrepository.com/artifact/com.google.code.gson/gson --&gt;
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
-		  &lt;artifactId&gt;gson&lt;/artifactId&gt;
-		  &lt;version&gt;2.8.5&lt;/version&gt;
-	  &lt;/dependency&gt;
-
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
-		  &lt;artifactId&gt;druid&lt;/artifactId&gt;
-		  &lt;version&gt;1.0.10&lt;/version&gt;
-	  &lt;/dependency&gt;
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;com.oracle&lt;/groupId&gt;
-		  &lt;artifactId&gt;ojdbc6&lt;/artifactId&gt;
-		  &lt;version&gt;11.2.0&lt;/version&gt;
-	  &lt;/dependency&gt;
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;
-		  &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;
-		  &lt;version&gt;2.0.0&lt;/version&gt;
-	  &lt;/dependency&gt;
-
-  &lt;/dependencies&gt;
-
-	&lt;build&gt;
-		&lt;plugins&gt;
-			&lt;plugin&gt;
-				&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-				&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-				&lt;configuration&gt;
-					&lt;includeSystemScope&gt;true&lt;/includeSystemScope&gt;
-				&lt;/configuration&gt;
-			&lt;/plugin&gt;
-		&lt;/plugins&gt;
-	&lt;/build&gt;
-
-
-&lt;/project&gt;
-
-</code></pre>
-<!-- more -->
-<h1 id="参-考-资-料">🐼 参 考 资 料</h1>
-<p><a href="https://www.yiibai.com/maven">Maven教程</a></p>
-<p><a href="https://www.jianshu.com/p/242f2349eef1">POM配置标签</a></p>
 ]]></content>
     </entry>
 </feed>
