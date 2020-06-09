@@ -192,70 +192,248 @@ var _hmt = _hmt || [];
                 
                     <div class="tag-container">
                         
-                            <a href="https://aturx.github.io/tag/raV49g8qT" class="tag">Flask, </a>
+                            <a href="https://aturx.github.io/tag/BYEPncV_B" class="tag">Python, </a>
                         
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">最小的Flask Web应用</h2>
+            <h2 class="fh5co-article-title animate-box">Python 元类及ORM框架实现</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-05-09</li>
-                <li>168字</li>
-                <li>1 min read</li>
+                <li>2020-06-09</li>
+                <li>1478字</li>
+                <li>7 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h1 id="安装-flask">安装 Flask</h1>
-<pre><code>pip3 install flask
-
-或者
-
-pipenv install flask
-
-或者 [PyPI 网站](https://pypi.org/project/Flask/#files)下载源码包安装：
-
-pip3 install Flask-1.1.2-py2.py3-none-any.whl 
-</code></pre>
-<h1 id="编写代码">编写代码</h1>
-<pre><code>from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-# 运行
-app.run()
-</code></pre>
-<p>一些常用的配置：</p>
+                        <p> <h1 id="python-元类及orm框架实现">Python 元类及ORM框架实现</h1>
+<h2 id="python-数据库操作">Python 数据库操作</h2>
+<p>数据库操作的基本过程：</p>
 <ol>
-<li>端口设定</li>
+<li>要操作关系数据库，首先需要连接到数据库，一个数据库连接称为Connection</li>
 </ol>
-<pre><code>app.run(port=&quot;5001&quot;)
+<pre><code># 用 Python 的 sqlite 数据库举例
+
+import sqlite3   
+
+# 连接数据库，获得Connection
+db_con = sqlite3.connect('demo.db')
+
+print(type(db_con))  # &lt;class 'sqlite3.Connection'&gt;
 </code></pre>
 <ol start="2">
-<li>Debug 模式开启</li>
+<li>连接到数据库后，需要打开游标，称之为Cursor，通过Cursor执行SQL语句，然后，获得执行结果</li>
 </ol>
-<pre><code>app.run(port=&quot;5001&quot;, debug=True)
+<pre><code>sql = &quot;select * from user&quot;
+cur = db_con.execute(sql)
+print(type(cur))    # &lt;class 'sqlite3.Cursor'&gt;
 </code></pre>
 <ol start="3">
-<li>静态资源路径配置</li>
+<li>在Python中操作数据库时，要先导入数据库对应的<strong>驱动</strong>，然后，通过Connection对象和Cursor对象操作数据</li>
 </ol>
-<pre><code># 默认不设置则为当前路径下 template 和 static
-app = Flask(__name__,template_folder=&quot;F:\\templates&quot;, static_folder=&quot;F:\\static&quot;)
+<pre><code>import sqlite3    # 数据库驱动
+</code></pre>
+<h2 id="对象关系映射object-relational-mapperorm">对象关系映射（Object-Relational Mapper，ORM）</h2>
+<p>ORM 是一个数据抽象层，在ORM的概念中，类对应数据库中的表，属性对应列，<br>
+类的单个实例表示数据库中的一行数据。 Python 编程语言常用的ORM<br>
+框架是SQLAlchemy。，该框架建立在数据库API之上，使用关系对象映射进行数据库操作，<br>
+简言之便是：将对象转换成SQL，然后使用数据库API执行SQL并获取执行结果。<br>
+SQLAlchemy本身无法操作数据库，其必须以来pymsql等第三方插件，Dialect用于和数据API进行交流，<br>
+根据配置文件的不同调用不同的数据库API，从而实现对数据库的操作。</p>
+<pre><code>MySQL-Python
+    mysql+mysqldb://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;[:&lt;port&gt;]/&lt;dbname&gt;
+  
+pymysql
+    mysql+pymysql://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;/&lt;dbname&gt;[?&lt;options&gt;]
+  
+MySQL-Connector
+    mysql+mysqlconnector://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;[:&lt;port&gt;]/&lt;dbname&gt;
+  
+cx_Oracle
+    oracle+cx_oracle://user:pass@host:port/dbname[?key=value&amp;key=value...]
+  
+更多详见：http://docs.sqlalchemy.org/en/latest/dialects/index.html
+</code></pre>
+<ul>
+<li>SQLAlchemy 底层处理<br>
+使用 Engine/ConnectionPooling/Dialect 进行数据库操作，Engine使用ConnectionPooling连接数据库，然后再通过Dialect执行SQL语句。</li>
+</ul>
+<pre><code>def SQLAlchemy_demo():
+	from sqlalchemy import create_engine
+	import sqlalchemy
+	import pymysql
+	# 创建引擎
+	engine = create_engine(&quot;mysql+pymysql://xxxxx:xxxxx@127.0.0.1:3306/mysql&quot;, max_overflow=5)
+	# 执行sql语句
+	result = engine.execute(&quot;select * from searcher_websites&quot;)
+	res = result.fetchall()
+	print(res)
+</code></pre>
+<ul>
+<li>ORM 功能</li>
+</ul>
+<p>ORM 映射对象，完成建表，查询等，操作数据库方式</p>
+<pre><code>
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine, Column, Integer, String
+# ORM解决中文编码问题 sqlalchemy 默认使用latin-1进行编码。
+  
+engine = create_engine(&quot;mysql+pymysql://user:password@127.0.0.1:3306/mysql?charset=utf8&quot;, max_overflow=5,encoding='utf-8')
+Base = declarative_base()
+
+# 绑定数据库引擎
+Session = sessionmaker(bind=engine)
+session = Session()
 
 
+# 创建于表映射的 实体类
+class Webs(Base):
+	__tablename__ = 'webs'
+	id = Column(Integer, primary_key=True)    # 唯一编号
+	name = Column(String(50), default='', unique=False)
+	url = Column(String(50), default='', unique=True)
+	cent = Column(Integer, default=0)
+    
+    # 打印内容
+	def __str__(self):
+		return (f'id={self.id}, name={self.name}, url={self.url} cent={self.cent} ')
+
+
+def SQLAlchemy_ORM_demo(session):
+
+	# 创建表
+	Base.metadata.create_all(engine)  # 创建表
+	# Base.metadata.drop_all(engine)   #删除表
+	obj = Webs(name=&quot;baidu&quot;, url='http://www.baidu.com')
+
+	# 添加数据
+	session.add(obj)
+	session.commit()
+	# 查询 / 条件查询数据
+	# session.query(Webs).filter(Webs.id &gt; 2)
+	q = session.query(Webs).all()
+	for i in q:
+		print(i)
+
+SQLAlchemy_ORM_dem(session)
 </code></pre>
-<ol start="4">
-<li>所有IP可以访问(否则只能本机访问)</li>
-</ol>
-<pre><code>app.run(port=&quot;5001&quot;, debug=True, host=&quot;0.0.0.0&quot;)
+<h2 id="orm-框架实现">ORM 框架实现</h2>
+<p>Python 中可以使用metaclass （元类）进行创建class。<br>
+简单的解释就是：</p>
+<ul>
+<li>
+<p>定义了类以后，就可以根据这个类创建出实例，所以：先定义类，然后创建实例。</p>
+</li>
+<li>
+<p>metaclass(元类)以后，就可以根据这个元类创建出类，所以：先定义metaclass，然后创建类。<br>
+创建顺序是：先定义metaclass，就可以创建类，最后创建实例。<br>
+要编写一个ORM框架，所有的类都只能动态定义，因为只有使用者才能根据表的结构定义出对应的类来。</p>
+</li>
+</ul>
+<p>如上章所示，使用ORM框架提供的<code>Column</code>类或者'Field'类来对应数据库的表字段。</p>
+<p>首先来定义<code>Field</code>类，它负责保存数据库表的字段名和字段类型：</p>
+<pre><code># Field 类 它负责保存数据库表的字段名和字段类型：
+class Field(object):
+
+    def __init__(self, name, column_type):
+        self.name = name
+        self.column_type = column_type
+        self.default = None  # 字段默认值
+
+    def __str__(self):
+        return f'{self.__class__.__name__}:{self.name}'
+
+
+# 在Field的基础上，进一步定义各种类型的Field，比如StringField，IntegerField
+class StringField(Field):
+    # 实现 varchar 类型
+    def __init__(self, name):
+        super(StringField, self).__init__(name, 'varchar(256)')
+
+class IntegerField(Field):
+    # 实现 int 类型
+    def __init__(self, name):
+        super(IntegerField, self).__init__(name, 'bigint')
+
+# 编写 metaclass 类, 元类继承 type
+class ModelMetaclass(type):
+    # name 名字  bases  继承父类   attrs 继承属性
+    def __new__(cls, name, bases, attrs):
+        if name == 'Model':
+            return type.__new__(cls, name, bases, attrs)
+
+        # 重点理解： 不同的表 字段不同，添加的 方法 属性 也不同
+        mappings = dict()
+        for k, v in attrs.items():
+            # 在当前类（比如User）中查找定义的类的所有属性，如果找到一个Field属性，就把它保存到一个__mappings__的dict中
+            if isinstance(v, Field):
+                print('Found mapping: %s ==&gt; %s' % (k, v))
+                mappings[k] = v
+
+
+        for k in mappings.keys():
+            # 从类属性中删除该Field属性，否则，容易造成运行时错误（实例的属性会遮盖类的同名属性
+            attrs.pop(k)
+        attrs['__mappings__'] = mappings  # 保存属性和列的映射关系
+        attrs['__table__'] = name  # 假设表名和类名一致
+        return type.__new__(cls, name, bases, attrs)
+
+# 创建 基类
+class Model(dict, metaclass=ModelMetaclass):
+
+    def __init__(self, **kwargs):
+        super(Model, self).__init__(**kwargs)
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(r&quot;'Model' object has no attribute '%s'&quot; % key)
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+    def save(self):
+        fields = []
+        params = []
+        for k, v in self.__mappings__.items():
+            # 更加字段 建立映射  不满足条件的不映射
+            fields.append(v.name)
+            params.append(getattr(self, k, v.default))
+
+        sql = f'''insert into {self.__table__} ({&quot;,&quot;.join(fields)}) values ('{&quot;','&quot;.join(params)}')'''
+        print('SQL: %s' % sql)
+        print('ARGS: %s' % str(params))
+
+
+# 使用 ORM
+class User(Model):
+    # 定义类的属性到列的映射：
+    id = IntegerField('id')
+    name = StringField('username')
+    email = StringField('email')
+    password = StringField('password')
+
+# 创建一个实例：
+u = User(id='0000', name='admin', email='test@gmail.com', password='admin')
+# 保存到数据库：
+u.save()
+
+# 实现效果： ORM框架就是将实体类映射成可执行的SQL操作数据库
 </code></pre>
-<h1 id="参考内容">参考内容</h1>
-<p><a href="http://docs.jinkan.org/docs/flask/">Flask文档</a></p>
-<p><a href="https://www.w3cschool.cn/flask/flask_deployment.html">Flask教程</a></p>
+<h2 id="参考">参考</h2>
+<ul>
+<li>
+<p><a href="https://www.cnblogs.com/pycode/p/mysql-orm.html">使用Python ORM框架</a></p>
+</li>
+<li>
+<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1018490605531840">实现Python ORM框架</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/35746049">Djang ORM 源码分析</a></p>
+</li>
+</ul>
  </p>
                     </div>
                 </div>
@@ -265,9 +443,9 @@ app = Flask(__name__,template_folder=&quot;F:\\templates&quot;, static_folder=&q
                         
                             <div class="next-post">
                                 <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/works-show-zuo-pin-ji-ye-mian">
+                                <a href="https://aturx.github.io/post/bi-te-bi-wa-kuang-de-li-jie">
                                     <h3 class="post-title">
-                                        Works Show - 作品集
+                                        比特币挖矿的理解
                                     </h3>
                                 </a>
                             </div>
@@ -302,9 +480,14 @@ app = Flask(__name__,template_folder=&quot;F:\\templates&quot;, static_folder=&q
 
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
-<li><a href="#%E5%AE%89%E8%A3%85-flask">安装 Flask</a></li>
-<li><a href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81">编写代码</a></li>
-<li><a href="#%E5%8F%82%E8%80%83%E5%86%85%E5%AE%B9">参考内容</a></li>
+<li><a href="#python-%E5%85%83%E7%B1%BB%E5%8F%8Aorm%E6%A1%86%E6%9E%B6%E5%AE%9E%E7%8E%B0">Python 元类及ORM框架实现</a>
+<ul>
+<li><a href="#python-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C">Python 数据库操作</a></li>
+<li><a href="#%E5%AF%B9%E8%B1%A1%E5%85%B3%E7%B3%BB%E6%98%A0%E5%B0%84object-relational-mapperorm">对象关系映射（Object-Relational Mapper，ORM）</a></li>
+<li><a href="#orm-%E6%A1%86%E6%9E%B6%E5%AE%9E%E7%8E%B0">ORM 框架实现</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+</li>
 </ul>
 
 </div>

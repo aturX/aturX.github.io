@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-06-02T06:42:47.368Z</updated>
+    <updated>2020-06-09T02:23:01.103Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,334 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Python 多线程实践]]></title>
+        <id>https://aturx.github.io/post/python-duo-xian-cheng-shi-jian</id>
+        <link href="https://aturx.github.io/post/python-duo-xian-cheng-shi-jian">
+        </link>
+        <updated>2020-06-09T02:22:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-python-多线程标准库">1. Python 多线程标准库</h1>
+<p>Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，使用threading这个高级模块就足够了。</p>
+<h1 id="2-创建并使用多线程">2. 创建并使用多线程</h1>
+<pre><code>import time, threading
+
+
+# 新线程执行的代码:
+def say_some():
+	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
+	n = 0
+	while n &lt; 7:
+		n = n + 1
+		print('thread [{}] &gt;&gt;&gt; [{}]'.format(threading.current_thread().name, n))
+		time.sleep(n)
+	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
+
+
+def demo1():
+	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
+	t = threading.Thread(target=say_some, name='SaySomeThread')
+	t.start()
+	t.join()  # 线程结束后继续执行
+	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
+
+</code></pre>
+<h1 id="3-线程的锁">3. 线程的锁</h1>
+<p>多线程和多进程最大的不同在于，多进程中，同一个变量，<br>
+各自有一份拷贝存在于每个进程中，互不影响，而多线程中，<br>
+所有变量都由所有线程共享，所以，任何一个变量都可以被任何一个线程修改，<br>
+因此，线程之间共享数据最大的危险在于多个线程同时改一个变量，把内容给改乱了。<br>
+所以，和多进程相比，多线程需要对特定的变量加锁，保证其修该操作不会乱。</p>
+<pre><code># 锁
+lock = threading.Lock()
+
+
+def run_thread(n):
+	for i in range(100000):
+		# 先要获取锁:
+		lock.acquire()
+		try:
+			# 修改变量
+			n = n + 1
+		finally:
+			# 改完了一定要释放锁:
+			lock.release()
+
+</code></pre>
+<p>包含锁的某段代码实际上只能以单线程模式执行，效率就大大地下降了。</p>
+<h1 id="4-python-伪多线程原因gil锁">4. Python “伪”多线程原因：GIL锁</h1>
+<p>使用C、C++或Java来写特定死循环，直接可以把全部核心跑满，4核就跑到400%，<br>
+但是Python跑相同代码，只能将CPU跑到100%左右。</p>
+<p>Python的线程虽然是真正的线程，但解释器执行代码时，有一个GIL锁：Global Interpreter Lock，<br>
+任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，<br>
+解释器就自动释放GIL锁，让别的线程有机会执行。</p>
+<p>GIL全局锁实际上把所有线程的执行代码都给上了锁，<br>
+所以，多线程在Python中只能交替执行，<br>
+即使100个线程跑在100核CPU上，也只能用到1个核。</p>
+<p>解决方案： 多进程<br>
+Python虽然不能利用多线程实现多核任务，但可以通过多进程实现多核任务。<br>
+多个Python进程有各自独立的GIL锁，互不影响。</p>
+<h1 id="5-线程全局变量">5. 线程全局变量</h1>
+<pre><code># 创建全局ThreadLocal对象:
+local_something = threading.local()
+
+# 1  执行线程
+def process_say_someting():
+	# 获取当前线程关联的student:
+	text = local_something.content
+	print('Hello, %s (in %s)' % (text, threading.current_thread().name))
+
+
+# 2  赋值线程
+def process_thread(t):
+	# 为该线程，绑定ThreadLocal的值:
+	local_something.content = t
+	process_say_someting()
+
+
+t1 = threading.Thread(target=process_thread, args=('hhhhh',), name='Thread-A')
+t2 = threading.Thread(target=process_thread, args=('wwwwww',), name='Thread-B')
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 元类及ORM框架实现]]></title>
+        <id>https://aturx.github.io/post/python-yuan-lei-ji-orm-kuang-jia-shi-xian</id>
+        <link href="https://aturx.github.io/post/python-yuan-lei-ji-orm-kuang-jia-shi-xian">
+        </link>
+        <updated>2020-06-09T02:22:02.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="python-元类及orm框架实现">Python 元类及ORM框架实现</h1>
+<h2 id="python-数据库操作">Python 数据库操作</h2>
+<p>数据库操作的基本过程：</p>
+<ol>
+<li>要操作关系数据库，首先需要连接到数据库，一个数据库连接称为Connection</li>
+</ol>
+<pre><code># 用 Python 的 sqlite 数据库举例
+
+import sqlite3   
+
+# 连接数据库，获得Connection
+db_con = sqlite3.connect('demo.db')
+
+print(type(db_con))  # &lt;class 'sqlite3.Connection'&gt;
+</code></pre>
+<ol start="2">
+<li>连接到数据库后，需要打开游标，称之为Cursor，通过Cursor执行SQL语句，然后，获得执行结果</li>
+</ol>
+<pre><code>sql = &quot;select * from user&quot;
+cur = db_con.execute(sql)
+print(type(cur))    # &lt;class 'sqlite3.Cursor'&gt;
+</code></pre>
+<ol start="3">
+<li>在Python中操作数据库时，要先导入数据库对应的<strong>驱动</strong>，然后，通过Connection对象和Cursor对象操作数据</li>
+</ol>
+<pre><code>import sqlite3    # 数据库驱动
+</code></pre>
+<h2 id="对象关系映射object-relational-mapperorm">对象关系映射（Object-Relational Mapper，ORM）</h2>
+<p>ORM 是一个数据抽象层，在ORM的概念中，类对应数据库中的表，属性对应列，<br>
+类的单个实例表示数据库中的一行数据。 Python 编程语言常用的ORM<br>
+框架是SQLAlchemy。，该框架建立在数据库API之上，使用关系对象映射进行数据库操作，<br>
+简言之便是：将对象转换成SQL，然后使用数据库API执行SQL并获取执行结果。<br>
+SQLAlchemy本身无法操作数据库，其必须以来pymsql等第三方插件，Dialect用于和数据API进行交流，<br>
+根据配置文件的不同调用不同的数据库API，从而实现对数据库的操作。</p>
+<pre><code>MySQL-Python
+    mysql+mysqldb://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;[:&lt;port&gt;]/&lt;dbname&gt;
+  
+pymysql
+    mysql+pymysql://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;/&lt;dbname&gt;[?&lt;options&gt;]
+  
+MySQL-Connector
+    mysql+mysqlconnector://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;[:&lt;port&gt;]/&lt;dbname&gt;
+  
+cx_Oracle
+    oracle+cx_oracle://user:pass@host:port/dbname[?key=value&amp;key=value...]
+  
+更多详见：http://docs.sqlalchemy.org/en/latest/dialects/index.html
+</code></pre>
+<ul>
+<li>SQLAlchemy 底层处理<br>
+使用 Engine/ConnectionPooling/Dialect 进行数据库操作，Engine使用ConnectionPooling连接数据库，然后再通过Dialect执行SQL语句。</li>
+</ul>
+<pre><code>def SQLAlchemy_demo():
+	from sqlalchemy import create_engine
+	import sqlalchemy
+	import pymysql
+	# 创建引擎
+	engine = create_engine(&quot;mysql+pymysql://xxxxx:xxxxx@127.0.0.1:3306/mysql&quot;, max_overflow=5)
+	# 执行sql语句
+	result = engine.execute(&quot;select * from searcher_websites&quot;)
+	res = result.fetchall()
+	print(res)
+</code></pre>
+<ul>
+<li>ORM 功能</li>
+</ul>
+<p>ORM 映射对象，完成建表，查询等，操作数据库方式</p>
+<pre><code>
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine, Column, Integer, String
+# ORM解决中文编码问题 sqlalchemy 默认使用latin-1进行编码。
+  
+engine = create_engine(&quot;mysql+pymysql://user:password@127.0.0.1:3306/mysql?charset=utf8&quot;, max_overflow=5,encoding='utf-8')
+Base = declarative_base()
+
+# 绑定数据库引擎
+Session = sessionmaker(bind=engine)
+session = Session()
+
+
+# 创建于表映射的 实体类
+class Webs(Base):
+	__tablename__ = 'webs'
+	id = Column(Integer, primary_key=True)    # 唯一编号
+	name = Column(String(50), default='', unique=False)
+	url = Column(String(50), default='', unique=True)
+	cent = Column(Integer, default=0)
+    
+    # 打印内容
+	def __str__(self):
+		return (f'id={self.id}, name={self.name}, url={self.url} cent={self.cent} ')
+
+
+def SQLAlchemy_ORM_demo(session):
+
+	# 创建表
+	Base.metadata.create_all(engine)  # 创建表
+	# Base.metadata.drop_all(engine)   #删除表
+	obj = Webs(name=&quot;baidu&quot;, url='http://www.baidu.com')
+
+	# 添加数据
+	session.add(obj)
+	session.commit()
+	# 查询 / 条件查询数据
+	# session.query(Webs).filter(Webs.id &gt; 2)
+	q = session.query(Webs).all()
+	for i in q:
+		print(i)
+
+SQLAlchemy_ORM_dem(session)
+</code></pre>
+<h2 id="orm-框架实现">ORM 框架实现</h2>
+<p>Python 中可以使用metaclass （元类）进行创建class。<br>
+简单的解释就是：</p>
+<ul>
+<li>
+<p>定义了类以后，就可以根据这个类创建出实例，所以：先定义类，然后创建实例。</p>
+</li>
+<li>
+<p>metaclass(元类)以后，就可以根据这个元类创建出类，所以：先定义metaclass，然后创建类。<br>
+创建顺序是：先定义metaclass，就可以创建类，最后创建实例。<br>
+要编写一个ORM框架，所有的类都只能动态定义，因为只有使用者才能根据表的结构定义出对应的类来。</p>
+</li>
+</ul>
+<p>如上章所示，使用ORM框架提供的<code>Column</code>类或者'Field'类来对应数据库的表字段。</p>
+<p>首先来定义<code>Field</code>类，它负责保存数据库表的字段名和字段类型：</p>
+<pre><code># Field 类 它负责保存数据库表的字段名和字段类型：
+class Field(object):
+
+    def __init__(self, name, column_type):
+        self.name = name
+        self.column_type = column_type
+        self.default = None  # 字段默认值
+
+    def __str__(self):
+        return f'{self.__class__.__name__}:{self.name}'
+
+
+# 在Field的基础上，进一步定义各种类型的Field，比如StringField，IntegerField
+class StringField(Field):
+    # 实现 varchar 类型
+    def __init__(self, name):
+        super(StringField, self).__init__(name, 'varchar(256)')
+
+class IntegerField(Field):
+    # 实现 int 类型
+    def __init__(self, name):
+        super(IntegerField, self).__init__(name, 'bigint')
+
+# 编写 metaclass 类, 元类继承 type
+class ModelMetaclass(type):
+    # name 名字  bases  继承父类   attrs 继承属性
+    def __new__(cls, name, bases, attrs):
+        if name == 'Model':
+            return type.__new__(cls, name, bases, attrs)
+
+        # 重点理解： 不同的表 字段不同，添加的 方法 属性 也不同
+        mappings = dict()
+        for k, v in attrs.items():
+            # 在当前类（比如User）中查找定义的类的所有属性，如果找到一个Field属性，就把它保存到一个__mappings__的dict中
+            if isinstance(v, Field):
+                print('Found mapping: %s ==&gt; %s' % (k, v))
+                mappings[k] = v
+
+
+        for k in mappings.keys():
+            # 从类属性中删除该Field属性，否则，容易造成运行时错误（实例的属性会遮盖类的同名属性
+            attrs.pop(k)
+        attrs['__mappings__'] = mappings  # 保存属性和列的映射关系
+        attrs['__table__'] = name  # 假设表名和类名一致
+        return type.__new__(cls, name, bases, attrs)
+
+# 创建 基类
+class Model(dict, metaclass=ModelMetaclass):
+
+    def __init__(self, **kwargs):
+        super(Model, self).__init__(**kwargs)
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(r&quot;'Model' object has no attribute '%s'&quot; % key)
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+    def save(self):
+        fields = []
+        params = []
+        for k, v in self.__mappings__.items():
+            # 更加字段 建立映射  不满足条件的不映射
+            fields.append(v.name)
+            params.append(getattr(self, k, v.default))
+
+        sql = f'''insert into {self.__table__} ({&quot;,&quot;.join(fields)}) values ('{&quot;','&quot;.join(params)}')'''
+        print('SQL: %s' % sql)
+        print('ARGS: %s' % str(params))
+
+
+# 使用 ORM
+class User(Model):
+    # 定义类的属性到列的映射：
+    id = IntegerField('id')
+    name = StringField('username')
+    email = StringField('email')
+    password = StringField('password')
+
+# 创建一个实例：
+u = User(id='0000', name='admin', email='test@gmail.com', password='admin')
+# 保存到数据库：
+u.save()
+
+# 实现效果： ORM框架就是将实体类映射成可执行的SQL操作数据库
+</code></pre>
+<h2 id="参考">参考</h2>
+<ul>
+<li>
+<p><a href="https://www.cnblogs.com/pycode/p/mysql-orm.html">使用Python ORM框架</a></p>
+</li>
+<li>
+<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1018490605531840">实现Python ORM框架</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/35746049">Djang ORM 源码分析</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[比特币挖矿的理解]]></title>
         <id>https://aturx.github.io/post/bi-te-bi-wa-kuang-de-li-jie</id>
@@ -1013,165 +1341,6 @@ app = Flask(__name__,template_folder=&quot;F:\\templates&quot;, static_folder=&q
 <h1 id="参考内容">参考内容</h1>
 <p><a href="http://docs.jinkan.org/docs/flask/">Flask文档</a></p>
 <p><a href="https://www.w3cschool.cn/flask/flask_deployment.html">Flask教程</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Works Show - 作品集]]></title>
-        <id>https://aturx.github.io/post/works-show-zuo-pin-ji-ye-mian</id>
-        <link href="https://aturx.github.io/post/works-show-zuo-pin-ji-ye-mian">
-        </link>
-        <updated>2020-05-08T02:57:36.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="️-预览">❤️ 预览</h1>
-<p>😎<a href="https://susuwataricoder.github.io/">在线地址</a></p>
-<hr>
-<h1 id="项目功能">✅ 项目功能</h1>
-<p>完成一个作品集页面，一些练习代码，功能页面的展示。<br>
-该页面是完成了FreeCodeCamp 中的一个项目练习。</p>
-<hr>
-<h1 id="️-使用技术">♻️ 使用技术</h1>
-<p>HTML / CSS</p>
-<p>部署在GitHub上的静态页面</p>
-<hr>
-<h1 id="参考资料">➿  参考资料</h1>
-<p><a href="https://learn.freecodecamp.one/">FreeCodeCamp</a></p>
-<p><a href="https://github.com/SusuwatariCoder">参考仓库</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python的多进程使用]]></title>
-        <id>https://aturx.github.io/post/python-de-duo-jin-cheng-shi-yong</id>
-        <link href="https://aturx.github.io/post/python-de-duo-jin-cheng-shi-yong">
-        </link>
-        <updated>2020-04-23T07:39:36.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="multiprocessing-模块">multiprocessing 模块</h1>
-<p>multiprocessing模块就是跨平台版本的多进程模块</p>
-<p>multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：</p>
-<pre><code>import hashlib
-from time import sleep
-
-# TODO  多进程
-from multiprocessing import Process
-import os
-# 演示函数 1 ： 工作量证明
-def proof_fo_work():
-	&quot;&quot;&quot;
-	简单的工作量证明:
-         - 查找一个 p' 使得 hash(pp') 以4个0开头
-         - p 是上一个块的证明,  p' 是当前的证明
-        :param last_proof: &lt;int&gt;
-        :return: &lt;int&gt;
-	:return:
-	&quot;&quot;&quot;
-	originHash = hashlib.sha256(&quot;lsy&quot;.encode()).hexdigest()
-	print(&quot;Origin Hash：&quot;, originHash)
-	proof = 0
-	hard = &quot;0&quot;
-	while True:
-		guessStr = f&quot;{originHash}{proof}&quot;.encode()
-		guessHash = hashlib.sha256(guessStr).hexdigest()
-		if guessHash[:1] == hard:
-			print(&quot;***符合要求***: &quot;, guessHash)
-			print(&quot;***Proof***: &quot;, proof)
-			sleep(6)
-			hard = hard + &quot;0&quot;
-		else:
-			print(guessHash)
-			proof = proof + 1
-
-# 演示函数 2 ： 打印
-def t(name):
-	print(f&quot;子进程： {name}, {os.getpid()}&quot;)
-
-# 进程的使用： 启动进程分别执行 函数1,2
-def use_process():
-	print(f&quot;主进程: {os.getpid()}&quot;)
-	# 创建test进程
-	p = Process(target=t, args=('testProcess',))
-	# 创建proof_fo_work 进程
-	p2 = Process(target=proof_fo_work)
-	p2.start()
-	#p2.join()   # 使用之后，p进程将等待p2结束才执行
-	print(&quot;启动测试进程&quot;)
-	p.start()
-
-
-</code></pre>
-<p>其中 <code>p.join()</code> 表示进程结束后，才会继续执行后续过程。如果该经常死循环了，那么后面的执行步骤将永远不会执行。</p>
-<h2 id="创建多个进程-进程池-pool">创建多个进程： 进程池 Pool</h2>
-<p>如果要启动大量的子进程，可以用进程池的方式批量创建子进程：</p>
-<pre><code>def t(name):
-	sleep(1)
-	print(f&quot;子进程： {name}, {os.getpid()}&quot;)
-	
-# 进程池的使用
-def pool_process():
-	from multiprocessing import Pool
-	#如果要启动大量的子进程，可以用进程池的方式批量创建子进程：
-	p = Pool(4)  # 4为 CPU 核心数， 四核CPU 最多执行4 ， 大于4 也只执行4个进程
-	for i in range(5):
-		p.apply_async(t, args=(i,))
-	print(&quot;完成全部进程的创建启动&quot;)
-	p.close()
-	p.join()
-</code></pre>
-<h2 id="进程通信-生产者消费者queue">进程通信： 生产者+消费者+Queue</h2>
-<pre><code># 进程的通信： 多线程 生成者+消费者 Queue 实现
-def message_process():
-	from multiprocessing import Queue
-
-	q = Queue()
-
-	pw = Process(target=producer, args=(q,))   # 生产进程
-	pr = Process(target=consumer, args=(q, &quot;P1&quot;))   # 消费进程 1
-	pr2 = Process(target=consumer, args=(q, &quot;P2&quot;))  # 消费进程 2
-	pr3 = Process(target=consumer, args=(q, &quot;P3&quot;))  # 消费进程 3
-	pr4 = Process(target=consumer, args=(q, &quot;P4&quot;))  # 消费进程 4
-	pr5 = Process(target=consumer, args=(q, &quot;P5&quot;))  # 消费进程 5
-
-	pw.start()
-	pr.start()
-	pr2.start()
-	pr3.start()
-	pr4.start()
-	pr5.start()
-
-	# 等待pw结束:
-	pw.join()
-	# 队列消费完成 结束进程
-	while True:
-		if q.qsize() == 0:
-			# pr,pr2进程里是死循环，无法等待其结束，只能强行终止:
-			pr.terminate()
-			pr2.terminate()
-			pr3.terminate()
-			pr4.terminate()
-			pr5.terminate()
-			print(&quot;队列数据： &quot;, q.qsize())
-			break
-
- 
-# 往队列里生产数据
-def producer(q):
-	import random, time
-	print('Hash生成进程: %s' % os.getpid())
-	# 生产 100个
-	for i in range(100):
-		num = random.randint(0, 1000)
-		value_hash = hashlib.sha256(str(num).encode()).hexdigest()
-		print('生成地址：[ %s ] to queue...' % value_hash)
-		q.put(value_hash)  # 数据写入队列
-
-
-# 消费队列里的数据
-def consumer(q,name):
-	import random, time
-	print('获取地址消费: %s ' % os.getpid())
-	while True:
-		value = q.get(True)
-		print(f'**{name}-读取地址: [ {value} ] from queue.')
-		time.sleep(random.random())
-
-</code></pre>
 ]]></content>
     </entry>
 </feed>
