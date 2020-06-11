@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-06-09T02:26:13.294Z</updated>
+    <updated>2020-06-11T02:31:07.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[使用以太坊域名服务（ENS）的好处]]></title>
+        <id>https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu</id>
+        <link href="https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu">
+        </link>
+        <updated>2020-06-11T02:30:14.000Z</updated>
+        <content type="html"><![CDATA[<p>今天，介绍一下如何获取自己的ENS域名，以便其他人可以轻松地将Ether发送给您。</p>
+<h1 id="什么是以太坊域名服务ens">什么是以太坊域名服务（ENS）？</h1>
+<p>以太坊名称服务（Ethereum Name Service）是一个基于以太坊区块链的分布式、开放和可扩展的命名系统。ENS 域名让人们不用再复制或输入冗长的区块链地址。通俗地说，ENS 就是区块链中的域名系统。</p>
+<h1 id="使用ens的好处">使用ENS的好处？</h1>
+<p>ENS（以太坊域名服务的缩写）是基于智能合约的，建立在以太坊的去中心化应用程序（dApp）。</p>
+<p>ENS 可以让你采用类似<code>hello.eth</code>这种的域名来代替<code>0x21eb14be414eDC32A819525C231c3eE97dc811F8</code>这样长的十六进制地址。</p>
+<p>这意味着你将能够将数字货币直接转账到某个域名下而不需要记忆地址。但这还不是全部。ENS也可用于访问Swarm和IPFS内容哈希以及其他标识过程。它使用户可以轻松浏览并访问这些网络上的文件。可以在提供与元数据有关的名称（例如合同的ABI和用户的类似Whois的信息）的同时完成。</p>
+<h1 id="ens与dns之间的区别">ENS与DNS之间的区别</h1>
+<p>从某种意义上说，ENS的目标与互联网的DNS（域名服务）相似。然而，由于以太坊区块链提供的功能和限制，它们是截然不同的结构设计。<br>
+尽管ENS是基于以太坊智能合约构建的，但它不会遭受影响DNS系统的相同安全问题。因此，它能让域名正常工作。</p>
+<h1 id="为什么需要ens域名">为什么需要ENS域名？</h1>
+<p>如前所述，以太坊名称服务ENS摆脱了必须复制或输入冗长的十六进制地址的繁琐过程。而且使用ENS，您将可以轻松地将资金发送到域名。然后，您将在mycontract.eth上使用智能合约，并在swarmsite.eth上查看由集群托管的站点。</p>
+<p>获得ENS域后，您可以将其指向您选择的任何资金，还可以创建子域并根据需要分配它们。</p>
+<p>值得注意的是，ENS是一个完全分散的系统。因此，可以通过拍卖过程在<code>.eth</code>顶级域（例如<code>hello.eth</code>）下创建新的ENS域。这发生在以太坊区块链上。而且，任何人都可以自己参加和购买ENS域。</p>
+<h1 id="如何获得域名">如何获得域名？</h1>
+<h2 id="域名注册拍卖">域名注册拍卖</h2>
+<p>域名拍卖的运作方式，分为三个不同的阶段。</p>
+<ul>
+<li>
+<p>阶段1<br>
+您需要为要购买的名称进行拍卖，然后出价。完成此操作后，其他参与者将启动为期3天的计时器，以对标题进行出价。此时，投标人的详细信息已隐藏。因此，没有人能说出您的出价，甚至是出价的名称。</p>
+</li>
+<li>
+<p>第二阶段<br>
+在为期3天的拍卖结束后，又开始了2天的“展示”期。在此期间，每个投标人都必须透露其投标细节。否则，他们将失去全部出价。如果您不是出价最高的人，则会退还您的出价，减去0.5％的费用，该费用将被扣除。</p>
+</li>
+<li>
+<p>第三阶段<br>
+在为期2天的展示期过后，将宣布出价最高的获胜者。但是他或她将必须支付第二高的出价者的金额。<br>
+此金额在合同中指定。只要中标者控制ENS名称即可。获胜者被授权发送“最终”交易以退还任何额外资金。并且将为其分配新ENS域的命令。<br>
+赢得名称拍卖后，至少在域名用于期间，ENS域名就属于他们的域名。但是，获胜者可能会决定释放该名称。持有所有权至少一年后，他/她可能会收回全部押金。</p>
+</li>
+</ul>
+<p>请注意，并非所有ENS名称都可以立即进行出价，因为它们会在八周内逐步发布拍卖。原因是系统需要扩大规模，并且在此期间需要发现并修复错误。</p>
+<h2 id="域名购买">域名购买</h2>
+<p>现在让我们向您展示如何获得您的域名，以便其他人可以轻松地将Ether发送给您。</p>
+<p>您可以使用以下列出的四个用户友好界面自己购买ENS域：</p>
+<ul>
+<li>
+<p><a href="https://app.ens.domains/">registrar.ens.domains，</a>“官方” Dapp。这需要启用了区块链的浏览器（Mist，带有Metamask插件的chrome或带有浏览器插件的奇偶校验）。</p>
+</li>
+<li>
+<p><a href="https://www.myetherwallet.com/">My Ether</a> Wallet，一个完全在您自己设备中运行的开源钱包，它要求您上载和使用钱包的凭据。</p>
+</li>
+<li>
+<p>ETHTools的ENS集成是一个开源解决方案，可以指导您完成整个过程，并使用服务器端存储来简化招标。</p>
+</li>
+<li>
+<p>可以使用JavaScript控制台和web3.js中的命令行帮助您出价。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python 多线程实践]]></title>
         <id>https://aturx.github.io/post/python-duo-xian-cheng-shi-jian</id>
@@ -1284,63 +1343,6 @@ bytes 转换成 str：
 #  在bytes中，无法显示为ASCII字符的字节，用\x##显示 （\x## 是一个字节）
 
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最小的Flask Web应用]]></title>
-        <id>https://aturx.github.io/post/zui-xiao-de-flask-web-ying-yong</id>
-        <link href="https://aturx.github.io/post/zui-xiao-de-flask-web-ying-yong">
-        </link>
-        <updated>2020-05-09T07:09:47.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="安装-flask">安装 Flask</h1>
-<pre><code>pip3 install flask
-
-或者
-
-pipenv install flask
-
-或者 [PyPI 网站](https://pypi.org/project/Flask/#files)下载源码包安装：
-
-pip3 install Flask-1.1.2-py2.py3-none-any.whl 
-</code></pre>
-<h1 id="编写代码">编写代码</h1>
-<pre><code>from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-# 运行
-app.run()
-</code></pre>
-<p>一些常用的配置：</p>
-<ol>
-<li>端口设定</li>
-</ol>
-<pre><code>app.run(port=&quot;5001&quot;)
-</code></pre>
-<ol start="2">
-<li>Debug 模式开启</li>
-</ol>
-<pre><code>app.run(port=&quot;5001&quot;, debug=True)
-</code></pre>
-<ol start="3">
-<li>静态资源路径配置</li>
-</ol>
-<pre><code># 默认不设置则为当前路径下 template 和 static
-app = Flask(__name__,template_folder=&quot;F:\\templates&quot;, static_folder=&quot;F:\\static&quot;)
-
-
-</code></pre>
-<ol start="4">
-<li>所有IP可以访问(否则只能本机访问)</li>
-</ol>
-<pre><code>app.run(port=&quot;5001&quot;, debug=True, host=&quot;0.0.0.0&quot;)
-</code></pre>
-<h1 id="参考内容">参考内容</h1>
-<p><a href="http://docs.jinkan.org/docs/flask/">Flask文档</a></p>
-<p><a href="https://www.w3cschool.cn/flask/flask_deployment.html">Flask教程</a></p>
 ]]></content>
     </entry>
 </feed>
