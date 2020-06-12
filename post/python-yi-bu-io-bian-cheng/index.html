@@ -196,85 +196,159 @@ var _hmt = _hmt || [];
                 
                     <div class="tag-container">
                         
-                            <a href="https://aturx.github.io/tag/WJiT_obGT" class="tag">我, </a>
+                            <a href="https://aturx.github.io/tag/BYEPncV_B" class="tag">Python, </a>
                         
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">关于</h2>
+            <h2 class="fh5co-article-title animate-box">Python 异步IO编程</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-01-03</li>
-                <li>161字</li>
-                <li>1 min read</li>
+                <li>2020-06-12</li>
+                <li>853字</li>
+                <li>4 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h1 id="我的成长系统">我的成长系统</h1>
-<hr>
-<h2 id="成-长-实-践">🏋  成 长 实 践</h2>
-<h3 id="我-的-简-历"><strong>我  的  简  历</strong></h3>
-<p>🤓 个人导航  :    http://lisiyi.top</p>
-<p>😋 擅长技能<br>
-* Java  + Springboot  + MySQL + Maven  + Swagger  + Selenium</p>
-<pre><code>    *  JavaScript  | HTML | CSS  
-    
-    *  Python  + Flask + GUI开发
-    
-    *  GO 
-    
-    *  Vue   
-    
-    *  Docker
-    
-    *  Nginx
-    
-    *  Oracle、MySQL  
-
-    *  Jenkins 、Selenium 
-    
-    *  Blockchain    
+                        <p> <h1 id="1-什么是异步io">1. 什么是异步IO？</h1>
+<p>在IO操作的过程中，当前线程被挂起，而其他需要CPU执行的代码就无法被当前线程执行了。</p>
+<p>因为一个IO操作就阻塞了当前线程，导致其他代码无法执行，所以我们必须使用多线程或者多进程来并发执行代码，为多个用户服务。每个用户都会分配一个线程，如果遇到IO导致线程被挂起，其他用户的线程不受影响。</p>
+<p>多线程和多进程的模型虽然解决了并发问题，但是系统不能无上限地增加线程。由于系统切换线程的开销也很大，所以，一旦线程数量过多，CPU的时间就花在线程切换上了，真正运行代码的时间就少了，结果导致性能严重下降。</p>
+<p>有一种解决方案可以解决这个问题，即异步IO编程：</p>
+<p>当遇到IO操作时，代码只负责发出IO请求，不等待IO结果，然后直接结束本轮消息处理，进入下一轮消息处理过程。当IO操作完成后，将收到一条“IO完成”的消息，处理该消息时就可以直接获取IO操作结果。</p>
+<h1 id="2-python-中的协程及使用">2. Python 中的协程及使用</h1>
+<p>协程，又称微线程，英文名Coroutine。</p>
+<p>协程的特点是一个线程执行，但是达到多线程的效果。<br>
+正常程序A调用B，B调用C, <code>A -&gt; B -&gt; C</code> 函数层次调用，结果依次返回。但是采用协程后，B可中断，不必等待C执行完就能返回A，A可继续执行（A一般为循环，下个周期可接收到C完成的反馈结果）。</p>
+<ol>
+<li>普通函数</li>
+</ol>
+<pre><code>def function():
+    return 1
 </code></pre>
-<p>😝 关注领域</p>
-<pre><code>    *  Web网站开发
-
-    *  区块链
-
-    *  自由职业者
-
-    *  个人成长
-
-    *  自媒体人
+<ol start="2">
+<li>生成器函数</li>
+</ol>
+<pre><code>def generator():
+    yield 1
 </code></pre>
-<p>🤓 我的投入</p>
-<pre><code>  *  GitHub:  https://github.com/aturX
-
-  *  CryptoYC：https://github.com/CryptoYC
-
-  *  用爱发电：https://github.com/Programming-With-Love
-
-  *  我的博客： http://web4web.top/
-
-  *  今日头条：https://www.toutiao.com/c/user/4234965087436488/#mid=1651078930918404
+<ol start="3">
+<li>异步函数（协程）</li>
+</ol>
+<pre><code>async def async_function():
+    return 1
 </code></pre>
-<p>😬 活跃社区</p>
-<pre><code>  *  电鸭社区： https://eleduck.com/
+<ol start="4">
+<li>异步生成器</li>
+</ol>
+<pre><code>async def async_generator():
+    yield 1
 </code></pre>
-<h2 id="读-书-生-活">📖  读 书 生 活</h2>
-<p><a href="#">我的书单</a></p>
-<h2 id="收-益-获-利">💰  收 益 获 利</h2>
-<p><a href="#">我的实践</a></p>
-<h2 id="专-业-技-术">🔨  专 业 技 术</h2>
-<p><a href="#">技术文章</a></p>
-<h2 id="2020-年-度-目-标">🏁  2020 年 度 目 标</h2>
-<p><a href="#">年度目标</a></p>
+<p>在3.5过后，我们可以使用async修饰将普通函数和生成器函数包装成异步函数和异步生成器。</p>
+<h1 id="3-传统的同步io实现">3. 传统的同步IO实现</h1>
+<pre><code>from datetime import datetime
+from time import sleep
+import threading
+import asyncio
+
+def hello():
+   print(&quot;1111&quot;)
+   sleep(3)
+   print(&quot;2222&quot;)
+
+def world():
+   print(&quot;3333&quot;)
+   sleep(2)
+   print(&quot;4444&quot;)
+
+def demo_no_async():
+   start = datetime.now()
+   # 传统方式 顺序执行  耗时约 5 秒
+   hello()
+   world()
+   print(datetime.now() - start)
+
+demo_no_async()
+</code></pre>
+<h1 id="4-异步io-采用python-协程实现">4. 异步IO 采用Python 协程实现</h1>
+<h2 id="python-35-之前版本写法">Python 3.5 之前版本写法</h2>
+<p>Python 3.5 之前写法 ： 协程实现单线程并发， 最快继续边界是最大耗时操作时长  即 5秒</p>
+<pre><code>
+
+@asyncio.coroutine
+def hello0():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(5)
+	print('Hello again! (%s)' % threading.currentThread())
+
+@asyncio.coroutine
+def hello1():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(2)
+	print('Hello again! (%s)' % threading.currentThread())
+
+@asyncio.coroutine
+def hello2():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(3)
+	print('Hello again! (%s)' % threading.currentThread())
+
+
+def run():
+	start = datetime.now()
+	loop = asyncio.get_event_loop()
+	tasks = [hello0(), hello1(),hello1(),hello1(), hello2(), hello2(), hello2(), hello0()]
+	loop.run_until_complete(asyncio.wait(tasks))
+	loop.close()
+	print(datetime.now() - start)
+
+run()
+</code></pre>
+<h2 id="python-35-之后版本关键字写法">Python 3.5 之后版本关键字写法</h2>
+<p>python3.5 之后  异步IO 实现 单线程高并发效果</p>
+<pre><code>
+async def async_hello():
+	print('async_hello! (%s)' % threading.currentThread())
+	await asyncio.sleep(4)
+	print('async_hello again! (%s)' % threading.currentThread())
+
+async def async_world():
+	print('async_world! (%s)' % threading.currentThread())
+	await asyncio.sleep(7)
+	print('async_world again! (%s)' % threading.currentThread())
+
+def demo_async():
+	start = datetime.now()
+	loop = asyncio.get_event_loop()
+	# 异步IO方式 执行 任务
+	tasks = [async_hello(), async_world()]
+	loop.run_until_complete(asyncio.wait(tasks))
+	loop.close()
+	print(datetime.now() - start)
+
+demo_async()
+
+</code></pre>
+<h1 id="参考">参考</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/27258289">Python Async/Await入门指南</a></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1048430311230688">async/await</a></p>
+<p><a href="https://github.com/aturX/100DD100/tree/master/day059">本文源码</a></p>
  </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu">
+                                    <h3 class="post-title">
+                                        使用以太坊域名服务（ENS）的好处
+                                    </h3>
+                                </a>
+                            </div>
                         
                     </div>
                 </div>
@@ -306,19 +380,16 @@ var _hmt = _hmt || [];
 
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
-<li><a href="#%E6%88%91%E7%9A%84%E6%88%90%E9%95%BF%E7%B3%BB%E7%BB%9F">我的成长系统</a>
+<li><a href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%82%E6%AD%A5io">1. 什么是异步IO？</a></li>
+<li><a href="#2-python-%E4%B8%AD%E7%9A%84%E5%8D%8F%E7%A8%8B%E5%8F%8A%E4%BD%BF%E7%94%A8">2. Python 中的协程及使用</a></li>
+<li><a href="#3-%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%90%8C%E6%AD%A5io%E5%AE%9E%E7%8E%B0">3. 传统的同步IO实现</a></li>
+<li><a href="#4-%E5%BC%82%E6%AD%A5io-%E9%87%87%E7%94%A8python-%E5%8D%8F%E7%A8%8B%E5%AE%9E%E7%8E%B0">4. 异步IO 采用Python 协程实现</a>
 <ul>
-<li><a href="#%E6%88%90-%E9%95%BF-%E5%AE%9E-%E8%B7%B5">🏋  成 长 实 践</a>
-<ul>
-<li><a href="#%E6%88%91-%E7%9A%84-%E7%AE%80-%E5%8E%86"><strong>我  的  简  历</strong></a></li>
+<li><a href="#python-35-%E4%B9%8B%E5%89%8D%E7%89%88%E6%9C%AC%E5%86%99%E6%B3%95">Python 3.5 之前版本写法</a></li>
+<li><a href="#python-35-%E4%B9%8B%E5%90%8E%E7%89%88%E6%9C%AC%E5%85%B3%E9%94%AE%E5%AD%97%E5%86%99%E6%B3%95">Python 3.5 之后版本关键字写法</a></li>
 </ul>
 </li>
-<li><a href="#%E8%AF%BB-%E4%B9%A6-%E7%94%9F-%E6%B4%BB">📖  读 书 生 活</a></li>
-<li><a href="#%E6%94%B6-%E7%9B%8A-%E8%8E%B7-%E5%88%A9">💰  收 益 获 利</a></li>
-<li><a href="#%E4%B8%93-%E4%B8%9A-%E6%8A%80-%E6%9C%AF">🔨  专 业 技 术</a></li>
-<li><a href="#2020-%E5%B9%B4-%E5%BA%A6-%E7%9B%AE-%E6%A0%87">🏁  2020 年 度 目 标</a></li>
-</ul>
-</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 
 </div>

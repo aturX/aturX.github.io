@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-06-11T02:31:07.632Z</updated>
+    <updated>2020-06-12T06:28:46.312Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,137 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Python 异步IO编程]]></title>
+        <id>https://aturx.github.io/post/python-yi-bu-io-bian-cheng</id>
+        <link href="https://aturx.github.io/post/python-yi-bu-io-bian-cheng">
+        </link>
+        <updated>2020-06-12T06:28:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-什么是异步io">1. 什么是异步IO？</h1>
+<p>在IO操作的过程中，当前线程被挂起，而其他需要CPU执行的代码就无法被当前线程执行了。</p>
+<p>因为一个IO操作就阻塞了当前线程，导致其他代码无法执行，所以我们必须使用多线程或者多进程来并发执行代码，为多个用户服务。每个用户都会分配一个线程，如果遇到IO导致线程被挂起，其他用户的线程不受影响。</p>
+<p>多线程和多进程的模型虽然解决了并发问题，但是系统不能无上限地增加线程。由于系统切换线程的开销也很大，所以，一旦线程数量过多，CPU的时间就花在线程切换上了，真正运行代码的时间就少了，结果导致性能严重下降。</p>
+<p>有一种解决方案可以解决这个问题，即异步IO编程：</p>
+<p>当遇到IO操作时，代码只负责发出IO请求，不等待IO结果，然后直接结束本轮消息处理，进入下一轮消息处理过程。当IO操作完成后，将收到一条“IO完成”的消息，处理该消息时就可以直接获取IO操作结果。</p>
+<h1 id="2-python-中的协程及使用">2. Python 中的协程及使用</h1>
+<p>协程，又称微线程，英文名Coroutine。</p>
+<p>协程的特点是一个线程执行，但是达到多线程的效果。<br>
+正常程序A调用B，B调用C, <code>A -&gt; B -&gt; C</code> 函数层次调用，结果依次返回。但是采用协程后，B可中断，不必等待C执行完就能返回A，A可继续执行（A一般为循环，下个周期可接收到C完成的反馈结果）。</p>
+<ol>
+<li>普通函数</li>
+</ol>
+<pre><code>def function():
+    return 1
+</code></pre>
+<ol start="2">
+<li>生成器函数</li>
+</ol>
+<pre><code>def generator():
+    yield 1
+</code></pre>
+<ol start="3">
+<li>异步函数（协程）</li>
+</ol>
+<pre><code>async def async_function():
+    return 1
+</code></pre>
+<ol start="4">
+<li>异步生成器</li>
+</ol>
+<pre><code>async def async_generator():
+    yield 1
+</code></pre>
+<p>在3.5过后，我们可以使用async修饰将普通函数和生成器函数包装成异步函数和异步生成器。</p>
+<h1 id="3-传统的同步io实现">3. 传统的同步IO实现</h1>
+<pre><code>from datetime import datetime
+from time import sleep
+import threading
+import asyncio
+
+def hello():
+   print(&quot;1111&quot;)
+   sleep(3)
+   print(&quot;2222&quot;)
+
+def world():
+   print(&quot;3333&quot;)
+   sleep(2)
+   print(&quot;4444&quot;)
+
+def demo_no_async():
+   start = datetime.now()
+   # 传统方式 顺序执行  耗时约 5 秒
+   hello()
+   world()
+   print(datetime.now() - start)
+
+demo_no_async()
+</code></pre>
+<h1 id="4-异步io-采用python-协程实现">4. 异步IO 采用Python 协程实现</h1>
+<h2 id="python-35-之前版本写法">Python 3.5 之前版本写法</h2>
+<p>Python 3.5 之前写法 ： 协程实现单线程并发， 最快继续边界是最大耗时操作时长  即 5秒</p>
+<pre><code>
+
+@asyncio.coroutine
+def hello0():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(5)
+	print('Hello again! (%s)' % threading.currentThread())
+
+@asyncio.coroutine
+def hello1():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(2)
+	print('Hello again! (%s)' % threading.currentThread())
+
+@asyncio.coroutine
+def hello2():
+	print('Hello world! (%s)' % threading.currentThread())
+	yield from asyncio.sleep(3)
+	print('Hello again! (%s)' % threading.currentThread())
+
+
+def run():
+	start = datetime.now()
+	loop = asyncio.get_event_loop()
+	tasks = [hello0(), hello1(),hello1(),hello1(), hello2(), hello2(), hello2(), hello0()]
+	loop.run_until_complete(asyncio.wait(tasks))
+	loop.close()
+	print(datetime.now() - start)
+
+run()
+</code></pre>
+<h2 id="python-35-之后版本关键字写法">Python 3.5 之后版本关键字写法</h2>
+<p>python3.5 之后  异步IO 实现 单线程高并发效果</p>
+<pre><code>
+async def async_hello():
+	print('async_hello! (%s)' % threading.currentThread())
+	await asyncio.sleep(4)
+	print('async_hello again! (%s)' % threading.currentThread())
+
+async def async_world():
+	print('async_world! (%s)' % threading.currentThread())
+	await asyncio.sleep(7)
+	print('async_world again! (%s)' % threading.currentThread())
+
+def demo_async():
+	start = datetime.now()
+	loop = asyncio.get_event_loop()
+	# 异步IO方式 执行 任务
+	tasks = [async_hello(), async_world()]
+	loop.run_until_complete(asyncio.wait(tasks))
+	loop.close()
+	print(datetime.now() - start)
+
+demo_async()
+
+</code></pre>
+<h1 id="参考">参考</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/27258289">Python Async/Await入门指南</a></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1048430311230688">async/await</a></p>
+<p><a href="https://github.com/aturX/100DD100/tree/master/day059">本文源码</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用以太坊域名服务（ENS）的好处]]></title>
         <id>https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu</id>
@@ -1292,57 +1423,6 @@ Fast Company认为中本聪可能是由三个人组成的小组，小组成员�
 <p>自比特币推出以来，矿工与开发者之间的分歧引发了无数观点纠纷，引发了加密货币社区的大规模分裂。在某些情况下，一群比特币用户和矿工改变了比特币网络本身的协议。此过程称为“分叉”，通常会导致使用新名称创建新型比特币。这种拆分可能是“硬分叉”，其中新硬币与比特币共享交易历史，直到确定的拆分点为止，在该点上创建了新代币。由于硬分叉而创建的加密货币示例包括Bitcoin Cash（创建于2017年8月），Bitcoin Gold（创建于2017年10月）和Bitcoin SV（创建于2017年11月）。一个“软叉” 是对协议的更改，仍然与以前的系统规则兼容。例如，比特币软叉增加了块的总大小。</p>
 <h1 id="相关内容">相关内容</h1>
 <p><a href="https://learnblockchain.cn/article/854">什么是数字货币？</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 字符串与编码]]></title>
-        <id>https://aturx.github.io/post/python-zi-fu-chuan-yu-bian-ma</id>
-        <link href="https://aturx.github.io/post/python-zi-fu-chuan-yu-bian-ma">
-        </link>
-        <updated>2020-05-09T09:42:21.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="比特bit">比特（bit）</h1>
-<p>计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理，bit是计算机的最小单位。</p>
-<h1 id="字节byte">字节（byte）</h1>
-<p>最早的计算机在设计时采用8个比特（bit）作为一个字节（byte），一个字节能表示的最大的整数就是255（二进制11111111=十进制255）</p>
-<h1 id="ascii-编码">ASCII 编码</h1>
-<p>计算机最早发明，通用语言是英语，所以采用127个字符，表示大小写英文字母、数字和一些符号就足够了。这个编码表，就是<code>ASCII</code>编码，比如<code>A</code> 编码是<code>65</code>.<br>
-用一个字节（<code>0~255</code>）就能够表示。</p>
-<p>但是，对于其国家他语言来说，光常用的中文汉字就几千个，还有其他韩语、日语等等，一个字节（<code>0~255</code>）陷入是不够的，至少两个字节（<code>0~65535</code>），还不能和<code>ASCII</code>编码冲突，中国制定自己的<code>GB2312</code>编码,日文<code>Shift_JIS</code>,韩文<code>Euc-k</code>,各国各自的标准自然会出现冲突，所以多语言混合的内容中，经常会看到乱码出现。</p>
-<p>为了解决这个问题，出现了Unicode（万国码）编码。</p>
-<h1 id="unicode-编码">Unicode 编码</h1>
-<p>Unicode把所有语言都统一到一套编码里，这样就不会再有乱码问题了。现代操作系统和大多数编程语言都直接支持Unicode。最常用的是用两个字节（<code>0~65535</code>）表示一个字符（如果要用到非常偏僻的字符，就需要4个字节(<code>0~4294967295</code>)）</p>
-<p>乱码问题解决了，但是新的问题是，如果统一采用<code>Unicode</code>编码，存储将会是<code>ASCII</code>编码的至少两倍。</p>
-<p>本着节约的精神，又出现了把<code>Unicode</code>编码转化为“可变长编码”的<code>UTF-8</code>编码。</p>
-<h1 id="utf-8-编码">UTF-8 编码</h1>
-<p>UTF-8编码把一个Unicode字符根据不同的数字大小编码成1-6个字节，常用的英文字母被编码成1个字节，汉字通常是3个字节，只有很生僻的字符才会被编码成4-6个字节。如果你要传输的文本包含大量英文字符，用UTF-8编码就能节省空间。</p>
-<p>实际使用时，根据场景决定使用Unicode 还是 UTF-8，计算机内存中，统一使用Unicode编码（统一编码），当需要保存到硬盘或者需要传输的时候（节约空间），就转换为UTF-8编码。</p>
-<h1 id="python-字符串">Python 字符串</h1>
-<p>在Python 3版本中，把'xxx'和u'xxx'统一成Unicode编码，即写不写前缀u都是一样的。</p>
-<p>在Python 3版本中，所有的字符串都是使用Unicode编码的字符串序列。</p>
-<p>Python 3最重要的新特性之一是对字符串和二进制数据流做了明确的区分。文本总是 Unicode，由 str 类型表示，二进制数据则由 bytes 类型表示。</p>
-<p>Python的字符串类型是str，在内存中以Unicode表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把str变为以字节为单位的bytes。</p>
-<p>Unicode表示的str通过encode()方法可以编码为指定的bytes，例如：</p>
-<pre><code>str 转换成 bytes：
-
-&gt;&gt;&gt; 'ABC'.encode('ascii')
-b'ABC'     # 3个字节
-&gt;&gt;&gt; '中文'.encode('utf-8')
-b'\xe4\xb8\xad\xe6\x96\x87'  # 6个字节
-
-
-# 1个中文字符经过UTF-8编码后通常会占用3个字节，而1个英文字符只占用1个字节。
-
-
-bytes 转换成 str：
-
-&gt;&gt;&gt; b'ABC'.decode('ascii')
-'ABC'
-&gt;&gt;&gt; b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
-'中文
-
-#  在bytes中，无法显示为ASCII字符的字节，用\x##显示 （\x## 是一个字节）
-
-</code></pre>
 ]]></content>
     </entry>
 </feed>
