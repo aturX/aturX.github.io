@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-09-22T03:20:01.476Z</updated>
+    <updated>2020-09-23T04:42:33.223Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,112 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Git集中式工作流实践]]></title>
+        <id>https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian</id>
+        <link href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">
+        </link>
+        <updated>2020-09-23T02:48:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="模拟团队开发流程实践">模拟团队开发流程实践</h1>
+<h2 id="整体流程">整体流程</h2>
+<pre><code>1.  ssh user@host 
+
+2.  git init --bare /path/to/repo.git
+
+3.  git clone ssh://user@host/path/to/repo.git
+
+4. dev  ing...
+
+
+
+5.  A Coder
+
+git status # 查看本地仓库的修改状态
+git add # 暂存文件
+git commit # 提交文件
+git push origin master
+
+6. B Coder
+
+git pull --rebase origin master
+git status # 查看本地仓库的修改状态
+git add # 暂存文件
+git commit # 提交文件
+git push origin master
+
+7. 出现冲突，撤销 pull
+
+git rebase --abort
+
+</code></pre>
+<h2 id="分步骤实践">分步骤实践</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6404428"><label class="task-list-item-label" for="task-item-6404428"> 1.创建项目</label></li>
+</ul>
+<pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
+
+ssh user@host
+
+git init --bare /path/to/repo.git
+
+</code></pre>
+<p>团队开发人员有 coderA，coderB</p>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3777991"><label class="task-list-item-label" for="task-item-3777991"> 2. 克隆项目</label></li>
+</ul>
+<p>两人分别将git项目克隆至本地：</p>
+<pre><code>git clone ssh://user@host/path/to/repo.git
+</code></pre>
+<p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6784877"><label class="task-list-item-label" for="task-item-6784877"> 3. 开发程序并提交代码</label></li>
+</ul>
+<p>coderA 开发了功能 A.txt<br>
+coderB 正在开发功能 B.txt</p>
+<pre><code>git status # 查看本地仓库的修改状态
+git add # 暂存文件
+git commit # 提交文件
+</code></pre>
+<p>那么coderA 先将功能A.txt发布到master仓库:</p>
+<pre><code>coderA
+
+git status # 查看本地仓库的修改状态
+git add # 暂存文件
+git commit # 提交文件
+git push origin master
+</code></pre>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7389114"><label class="task-list-item-label" for="task-item-7389114"> 4. 更新代码，并提交代码</label></li>
+</ul>
+<p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
+<pre><code>git push origin master
+
+此时，会有消息提醒：你的代码和master相比不是最新的需要更新，因为coderA增加了新功能
+</code></pre>
+<p>错误提示：</p>
+<pre><code>error: failed to push some refs to '/path/to/repo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+<p>所以， 先<code>同步代码</code>, 后<code>提交代码</code>:</p>
+<pre><code>git pull --rebase origin master
+
+git status # 查看本地仓库的修改状态
+git add # 暂存文件
+git commit # 提交文件
+git push origin master
+</code></pre>
+<p>如果你忘加rebase这个选项，pull操作仍然可以完成，但每次pull操作要同步中央仓库中别人修改时，提交历史会以一个多余的『合并提交』结尾。 对于集中式工作流，最好是使用rebase而不是生成一个合并提交</p>
+<p>如果你碰到了冲突，但发现搞不定，不要惊慌。只要执行下面这条命令，就可以回到你执行<code>git pull --rebase</code>命令前的样子：</p>
+<pre><code>git rebase --abort
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[什么是Aragon？]]></title>
         <id>https://aturx.github.io/post/shi-me-shi-aragon</id>
@@ -753,99 +859,6 @@ demo_async()
 <p>可以使用JavaScript控制台和web3.js中的命令行帮助您出价。</p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 多线程实践]]></title>
-        <id>https://aturx.github.io/post/python-duo-xian-cheng-shi-jian</id>
-        <link href="https://aturx.github.io/post/python-duo-xian-cheng-shi-jian">
-        </link>
-        <updated>2020-06-09T02:22:31.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-python-多线程标准库">1. Python 多线程标准库</h1>
-<p>Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，使用threading这个高级模块就足够了。</p>
-<h1 id="2-创建并使用多线程">2. 创建并使用多线程</h1>
-<pre><code>import time, threading
-
-
-# 新线程执行的代码:
-def say_some():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	n = 0
-	while n &lt; 7:
-		n = n + 1
-		print('thread [{}] &gt;&gt;&gt; [{}]'.format(threading.current_thread().name, n))
-		time.sleep(n)
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-
-def demo1():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	t = threading.Thread(target=say_some, name='SaySomeThread')
-	t.start()
-	t.join()  # 线程结束后继续执行
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-</code></pre>
-<h1 id="3-线程的锁">3. 线程的锁</h1>
-<p>多线程和多进程最大的不同在于，多进程中，同一个变量，<br>
-各自有一份拷贝存在于每个进程中，互不影响，而多线程中，<br>
-所有变量都由所有线程共享，所以，任何一个变量都可以被任何一个线程修改，<br>
-因此，线程之间共享数据最大的危险在于多个线程同时改一个变量，把内容给改乱了。<br>
-所以，和多进程相比，多线程需要对特定的变量加锁，保证其修该操作不会乱。</p>
-<pre><code># 锁
-lock = threading.Lock()
-
-
-def run_thread(n):
-	for i in range(100000):
-		# 先要获取锁:
-		lock.acquire()
-		try:
-			# 修改变量
-			n = n + 1
-		finally:
-			# 改完了一定要释放锁:
-			lock.release()
-
-</code></pre>
-<p>包含锁的某段代码实际上只能以单线程模式执行，效率就大大地下降了。</p>
-<h1 id="4-python-伪多线程原因gil锁">4. Python “伪”多线程原因：GIL锁</h1>
-<p>使用C、C++或Java来写特定死循环，直接可以把全部核心跑满，4核就跑到400%，<br>
-但是Python跑相同代码，只能将CPU跑到100%左右。</p>
-<p>Python的线程虽然是真正的线程，但解释器执行代码时，有一个GIL锁：Global Interpreter Lock，<br>
-任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，<br>
-解释器就自动释放GIL锁，让别的线程有机会执行。</p>
-<p>GIL全局锁实际上把所有线程的执行代码都给上了锁，<br>
-所以，多线程在Python中只能交替执行，<br>
-即使100个线程跑在100核CPU上，也只能用到1个核。</p>
-<p>解决方案： 多进程<br>
-Python虽然不能利用多线程实现多核任务，但可以通过多进程实现多核任务。<br>
-多个Python进程有各自独立的GIL锁，互不影响。</p>
-<h1 id="5-线程全局变量">5. 线程全局变量</h1>
-<pre><code># 创建全局ThreadLocal对象:
-local_something = threading.local()
-
-# 1  执行线程
-def process_say_someting():
-	# 获取当前线程关联的student:
-	text = local_something.content
-	print('Hello, %s (in %s)' % (text, threading.current_thread().name))
-
-
-# 2  赋值线程
-def process_thread(t):
-	# 为该线程，绑定ThreadLocal的值:
-	local_something.content = t
-	process_say_someting()
-
-
-t1 = threading.Thread(target=process_thread, args=('hhhhh',), name='Thread-A')
-t2 = threading.Thread(target=process_thread, args=('wwwwww',), name='Thread-B')
-t1.start()
-t2.start()
-t1.join()
-t2.join()
-</code></pre>
 ]]></content>
     </entry>
 </feed>
