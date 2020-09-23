@@ -201,113 +201,104 @@ var _hmt = _hmt || [];
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">Git集中式工作流实践</h2>
+            <h2 class="fh5co-article-title animate-box">Git功能分支工作流实践</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
                 <li>2020-09-23</li>
-                <li>609字</li>
+                <li>563字</li>
                 <li>3 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h1 id="模拟团队开发流程实践">模拟团队开发流程实践</h1>
-<h2 id="整体流程">整体流程</h2>
-<pre><code>1.  ssh user@host 
-
-2.  git init --bare /path/to/repo.git
-
-3.  git clone ssh://user@host/path/to/repo.git
-
-4. dev  ing...
+                        <p> <h2 id="工作流">工作流</h2>
+<p><strong>核心思路</strong>:  所有的功能开发应该在一个专门的分支，而不是在master分支上。</p>
+<p>这个隔离可以方便多个开发者在各自的功能上开发而不会弄乱主干代码。 另外，也保证了master分支的代码一定不会是有问题的，极大有利于集成环境。</p>
+<pre><code>1. git checkout -b new-featureA master
 
 
+2. dev
 
-5.  A Coder
+3. git push -u origin new-featureA
 
-git status # 查看本地仓库的修改状态
-git add # 暂存文件
-git commit # 提交文件
-git push origin master
-
-6. B Coder
-
-git pull --rebase origin master
-git status # 查看本地仓库的修改状态
-git add # 暂存文件
-git commit # 提交文件
-git push origin master
-
-7. 出现冲突，撤销 pull
-
-git rebase --abort
+4. git merge new-featureA
+ 
 
 </code></pre>
-<h2 id="分步骤实践">分步骤实践</h2>
+<h2 id="功能分支实践">功能分支实践</h2>
+<p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1646494"><label class="task-list-item-label" for="task-item-1646494"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2706556"><label class="task-list-item-label" for="task-item-2706556"> 1. 现有远程主分支master</label></li>
 </ul>
-<pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
+<pre><code>coderA 拉取到本地
 
-ssh user@host
-
-git init --bare /path/to/repo.git
+git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
-<p>团队开发人员有 coderA，coderB</p>
-<hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8242515"><label class="task-list-item-label" for="task-item-8242515"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9113939"><label class="task-list-item-label" for="task-item-9113939"> 2. coderA  开发新功能</label></li>
 </ul>
-<p>两人分别将git项目克隆至本地：</p>
-<pre><code>git clone ssh://user@host/path/to/repo.git
+<p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
+<pre><code>git checkout -b new-featureA master
+
+
+dev ing...
+
+git status
+git add &lt;some-file&gt;
+git commit
+
 </code></pre>
-<p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
-<hr>
+<p>将新的功能push分支到中央仓库是很好的做法，这样可以方便地备份，如果和其它开发协作，也让他们可以看到coderA的提交。</p>
+<pre><code>git push -u origin new-featureA
+</code></pre>
+<p>这条命令push new-featureA分支到中央仓库（origin），-u选项设置本地分支去跟踪远程对应的分支。 设置好跟踪的分支后，coderA就可以使用git push命令省去指定推送分支的参数。</p>
+<pre><code>之后就可以在 new-featureA 分支下完成开发，最后推送到远程的分支上， 并可以向master 发起 Pull Request 
+
+git push 
+</code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1514396"><label class="task-list-item-label" for="task-item-1514396"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1344946"><label class="task-list-item-label" for="task-item-1344946"> 3. 接受 Pull Request</label></li>
 </ul>
-<p>coderA 开发了功能 A.txt<br>
-coderB 正在开发功能 B.txt</p>
-<pre><code>git status # 查看本地仓库的修改状态
-git add # 暂存文件
-git commit # 提交文件
-</code></pre>
-<p>那么coderA 先将功能A.txt发布到master仓库:</p>
-<pre><code>coderA
-
-git status # 查看本地仓库的修改状态
-git add # 暂存文件
-git commit # 提交文件
-git push origin master
-</code></pre>
-<hr>
+<p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6954710"><label class="task-list-item-label" for="task-item-6954710"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1989924"><label class="task-list-item-label" for="task-item-1989924"> 4. 分支合并到master</label></li>
 </ul>
-<p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
-<pre><code>git push origin master
+<pre><code>方法一：
+git checkout master
+git pull
+git pull origin new-featureA
+git push
 
-此时，会有消息提醒：你的代码和master相比不是最新的需要更新，因为coderA增加了新功能
+方法二：
+git merge new-featureA
 </code></pre>
-<p>错误提示：</p>
-<pre><code>error: failed to push some refs to '/path/to/repo.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
-hint: before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-</code></pre>
-<p>所以， 先<code>同步代码</code>, 后<code>提交代码</code>:</p>
-<pre><code>git pull --rebase origin master
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8531115"><label class="task-list-item-label" for="task-item-8531115"> 5. 其他补充操作</label></li>
+</ul>
+<pre><code>查看分支:
+$ git branch
 
-git status # 查看本地仓库的修改状态
-git add # 暂存文件
-git commit # 提交文件
-git push origin master
-</code></pre>
-<p>如果你忘加rebase这个选项，pull操作仍然可以完成，但每次pull操作要同步中央仓库中别人修改时，提交历史会以一个多余的『合并提交』结尾。 对于集中式工作流，最好是使用rebase而不是生成一个合并提交</p>
-<p>如果你碰到了冲突，但发现搞不定，不要惊慌。只要执行下面这条命令，就可以回到你执行<code>git pull --rebase</code>命令前的样子：</p>
-<pre><code>git rebase --abort
+切换分支：
+$ git checkout master
+
+删除分支：
+git branch -d (branchname)
+
+简化步骤:
+git commit -am &quot;可以提交跟踪过的文件&quot;
+
+版本回退至上个版本:
+$ git reset --hard HEAD^     
+
+退到/进到 指定commit的sha码:
+$ git reset --hard commit_id 
+
+强推到远程：
+$ git push origin HEAD --force
+
+查看命令历史：
+$ git reflog 
 </code></pre>
  </p>
                     </div>
@@ -318,9 +309,9 @@ git push origin master
                         
                             <div class="next-post">
                                 <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/shi-me-shi-aragon">
+                                <a href="https://aturx.github.io/post/about">
                                     <h3 class="post-title">
-                                        什么是Aragon？
+                                        AboutMe
                                     </h3>
                                 </a>
                             </div>
@@ -355,10 +346,10 @@ git push origin master
 
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
-<li><a href="#%E6%A8%A1%E6%8B%9F%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E5%AE%9E%E8%B7%B5">模拟团队开发流程实践</a>
+<li>
 <ul>
-<li><a href="#%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B">整体流程</a></li>
-<li><a href="#%E5%88%86%E6%AD%A5%E9%AA%A4%E5%AE%9E%E8%B7%B5">分步骤实践</a></li>
+<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81">工作流</a></li>
+<li><a href="#%E5%8A%9F%E8%83%BD%E5%88%86%E6%94%AF%E5%AE%9E%E8%B7%B5">功能分支实践</a></li>
 </ul>
 </li>
 </ul>

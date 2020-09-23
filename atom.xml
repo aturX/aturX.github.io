@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-09-23T04:42:33.223Z</updated>
+    <updated>2020-09-23T10:09:31.051Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,113 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[Git功能分支工作流实践]]></title>
+        <id>https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian</id>
+        <link href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">
+        </link>
+        <updated>2020-09-23T10:08:44.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="工作流">工作流</h2>
+<p><strong>核心思路</strong>:  所有的功能开发应该在一个专门的分支，而不是在master分支上。</p>
+<p>这个隔离可以方便多个开发者在各自的功能上开发而不会弄乱主干代码。 另外，也保证了master分支的代码一定不会是有问题的，极大有利于集成环境。</p>
+<pre><code>1. git checkout -b new-featureA master
+
+
+2. dev
+
+3. git push -u origin new-featureA
+
+4. git merge new-featureA
+ 
+
+</code></pre>
+<h2 id="功能分支实践">功能分支实践</h2>
+<p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2706556"><label class="task-list-item-label" for="task-item-2706556"> 1. 现有远程主分支master</label></li>
+</ul>
+<pre><code>coderA 拉取到本地
+
+git clone ssh://user@host/path/to/repo.git
+
+</code></pre>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9113939"><label class="task-list-item-label" for="task-item-9113939"> 2. coderA  开发新功能</label></li>
+</ul>
+<p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
+<pre><code>git checkout -b new-featureA master
+
+
+dev ing...
+
+git status
+git add &lt;some-file&gt;
+git commit
+
+</code></pre>
+<p>将新的功能push分支到中央仓库是很好的做法，这样可以方便地备份，如果和其它开发协作，也让他们可以看到coderA的提交。</p>
+<pre><code>git push -u origin new-featureA
+</code></pre>
+<p>这条命令push new-featureA分支到中央仓库（origin），-u选项设置本地分支去跟踪远程对应的分支。 设置好跟踪的分支后，coderA就可以使用git push命令省去指定推送分支的参数。</p>
+<pre><code>之后就可以在 new-featureA 分支下完成开发，最后推送到远程的分支上， 并可以向master 发起 Pull Request 
+
+git push 
+</code></pre>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1344946"><label class="task-list-item-label" for="task-item-1344946"> 3. 接受 Pull Request</label></li>
+</ul>
+<p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1989924"><label class="task-list-item-label" for="task-item-1989924"> 4. 分支合并到master</label></li>
+</ul>
+<pre><code>方法一：
+git checkout master
+git pull
+git pull origin new-featureA
+git push
+
+方法二：
+git merge new-featureA
+</code></pre>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8531115"><label class="task-list-item-label" for="task-item-8531115"> 5. 其他补充操作</label></li>
+</ul>
+<pre><code>查看分支:
+$ git branch
+
+切换分支：
+$ git checkout master
+
+删除分支：
+git branch -d (branchname)
+
+简化步骤:
+git commit -am &quot;可以提交跟踪过的文件&quot;
+
+版本回退至上个版本:
+$ git reset --hard HEAD^     
+
+退到/进到 指定commit的sha码:
+$ git reset --hard commit_id 
+
+强推到远程：
+$ git push origin HEAD --force
+
+查看命令历史：
+$ git reflog 
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AboutMe]]></title>
+        <id>https://aturx.github.io/post/about</id>
+        <link href="https://aturx.github.io/post/about">
+        </link>
+        <updated>2020-09-23T04:51:21.000Z</updated>
+        <content type="html"><![CDATA[<p>微信联系我：</p>
+<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1600836696477.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Git集中式工作流实践]]></title>
         <id>https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian</id>
@@ -50,7 +157,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6404428"><label class="task-list-item-label" for="task-item-6404428"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1646494"><label class="task-list-item-label" for="task-item-1646494"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -62,7 +169,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3777991"><label class="task-list-item-label" for="task-item-3777991"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8242515"><label class="task-list-item-label" for="task-item-8242515"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -70,7 +177,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6784877"><label class="task-list-item-label" for="task-item-6784877"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1514396"><label class="task-list-item-label" for="task-item-1514396"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -88,7 +195,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7389114"><label class="task-list-item-label" for="task-item-7389114"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6954710"><label class="task-list-item-label" for="task-item-6954710"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -667,196 +774,6 @@ shell时pipenv会自动在虚拟环境目录下搜索以当前目录名称开头
 </li>
 <li>
 <p><a href="https://blog.csdn.net/qq_20728575/article/details/82949529">Pycharm使用Pipenv</a></p>
-</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 异步IO编程]]></title>
-        <id>https://aturx.github.io/post/python-yi-bu-io-bian-cheng</id>
-        <link href="https://aturx.github.io/post/python-yi-bu-io-bian-cheng">
-        </link>
-        <updated>2020-06-12T06:28:01.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-什么是异步io">1. 什么是异步IO？</h1>
-<p>在IO操作的过程中，当前线程被挂起，而其他需要CPU执行的代码就无法被当前线程执行了。</p>
-<p>因为一个IO操作就阻塞了当前线程，导致其他代码无法执行，所以我们必须使用多线程或者多进程来并发执行代码，为多个用户服务。每个用户都会分配一个线程，如果遇到IO导致线程被挂起，其他用户的线程不受影响。</p>
-<p>多线程和多进程的模型虽然解决了并发问题，但是系统不能无上限地增加线程。由于系统切换线程的开销也很大，所以，一旦线程数量过多，CPU的时间就花在线程切换上了，真正运行代码的时间就少了，结果导致性能严重下降。</p>
-<p>有一种解决方案可以解决这个问题，即异步IO编程：</p>
-<p>当遇到IO操作时，代码只负责发出IO请求，不等待IO结果，然后直接结束本轮消息处理，进入下一轮消息处理过程。当IO操作完成后，将收到一条“IO完成”的消息，处理该消息时就可以直接获取IO操作结果。</p>
-<h1 id="2-python-中的协程及使用">2. Python 中的协程及使用</h1>
-<p>协程，又称微线程，英文名Coroutine。</p>
-<p>协程的特点是一个线程执行，但是达到多线程的效果。<br>
-正常程序A调用B，B调用C, <code>A -&gt; B -&gt; C</code> 函数层次调用，结果依次返回。但是采用协程后，B可中断，不必等待C执行完就能返回A，A可继续执行（A一般为循环，下个周期可接收到C完成的反馈结果）。</p>
-<ol>
-<li>普通函数</li>
-</ol>
-<pre><code>def function():
-    return 1
-</code></pre>
-<ol start="2">
-<li>生成器函数</li>
-</ol>
-<pre><code>def generator():
-    yield 1
-</code></pre>
-<ol start="3">
-<li>异步函数（协程）</li>
-</ol>
-<pre><code>async def async_function():
-    return 1
-</code></pre>
-<ol start="4">
-<li>异步生成器</li>
-</ol>
-<pre><code>async def async_generator():
-    yield 1
-</code></pre>
-<p>在3.5过后，我们可以使用async修饰将普通函数和生成器函数包装成异步函数和异步生成器。</p>
-<h1 id="3-传统的同步io实现">3. 传统的同步IO实现</h1>
-<pre><code>from datetime import datetime
-from time import sleep
-import threading
-import asyncio
-
-def hello():
-   print(&quot;1111&quot;)
-   sleep(3)
-   print(&quot;2222&quot;)
-
-def world():
-   print(&quot;3333&quot;)
-   sleep(2)
-   print(&quot;4444&quot;)
-
-def demo_no_async():
-   start = datetime.now()
-   # 传统方式 顺序执行  耗时约 5 秒
-   hello()
-   world()
-   print(datetime.now() - start)
-
-demo_no_async()
-</code></pre>
-<h1 id="4-异步io-采用python-协程实现">4. 异步IO 采用Python 协程实现</h1>
-<h2 id="python-35-之前版本写法">Python 3.5 之前版本写法</h2>
-<p>Python 3.5 之前写法 ： 协程实现单线程并发， 最快继续边界是最大耗时操作时长  即 5秒</p>
-<pre><code>
-
-@asyncio.coroutine
-def hello0():
-	print('Hello world! (%s)' % threading.currentThread())
-	yield from asyncio.sleep(5)
-	print('Hello again! (%s)' % threading.currentThread())
-
-@asyncio.coroutine
-def hello1():
-	print('Hello world! (%s)' % threading.currentThread())
-	yield from asyncio.sleep(2)
-	print('Hello again! (%s)' % threading.currentThread())
-
-@asyncio.coroutine
-def hello2():
-	print('Hello world! (%s)' % threading.currentThread())
-	yield from asyncio.sleep(3)
-	print('Hello again! (%s)' % threading.currentThread())
-
-
-def run():
-	start = datetime.now()
-	loop = asyncio.get_event_loop()
-	tasks = [hello0(), hello1(),hello1(),hello1(), hello2(), hello2(), hello2(), hello0()]
-	loop.run_until_complete(asyncio.wait(tasks))
-	loop.close()
-	print(datetime.now() - start)
-
-run()
-</code></pre>
-<h2 id="python-35-之后版本关键字写法">Python 3.5 之后版本关键字写法</h2>
-<p>python3.5 之后  异步IO 实现 单线程高并发效果</p>
-<pre><code>
-async def async_hello():
-	print('async_hello! (%s)' % threading.currentThread())
-	await asyncio.sleep(4)
-	print('async_hello again! (%s)' % threading.currentThread())
-
-async def async_world():
-	print('async_world! (%s)' % threading.currentThread())
-	await asyncio.sleep(7)
-	print('async_world again! (%s)' % threading.currentThread())
-
-def demo_async():
-	start = datetime.now()
-	loop = asyncio.get_event_loop()
-	# 异步IO方式 执行 任务
-	tasks = [async_hello(), async_world()]
-	loop.run_until_complete(asyncio.wait(tasks))
-	loop.close()
-	print(datetime.now() - start)
-
-demo_async()
-
-</code></pre>
-<h1 id="参考">参考</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/27258289">Python Async/Await入门指南</a></p>
-<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1048430311230688">async/await</a></p>
-<p><a href="https://github.com/aturX/100DD100/tree/master/day059">本文源码</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[使用以太坊域名服务（ENS）的好处]]></title>
-        <id>https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu</id>
-        <link href="https://aturx.github.io/post/shi-yong-yi-tai-fang-yu-ming-fu-wu-ensde-hao-chu">
-        </link>
-        <updated>2020-06-11T02:30:14.000Z</updated>
-        <content type="html"><![CDATA[<p>今天，介绍一下如何获取自己的ENS域名，以便其他人可以轻松地将Ether发送给您。</p>
-<h1 id="什么是以太坊域名服务ens">什么是以太坊域名服务（ENS）？</h1>
-<p>以太坊名称服务（Ethereum Name Service）是一个基于以太坊区块链的分布式、开放和可扩展的命名系统。ENS 域名让人们不用再复制或输入冗长的区块链地址。通俗地说，ENS 就是区块链中的域名系统。</p>
-<h1 id="使用ens的好处">使用ENS的好处？</h1>
-<p>ENS（以太坊域名服务的缩写）是基于智能合约的，建立在以太坊的去中心化应用程序（dApp）。</p>
-<p>ENS 可以让你采用类似<code>hello.eth</code>这种的域名来代替<code>0x21eb14be414eDC32A819525C231c3eE97dc811F8</code>这样长的十六进制地址。</p>
-<p>这意味着你将能够将数字货币直接转账到某个域名下而不需要记忆地址。但这还不是全部。ENS也可用于访问Swarm和IPFS内容哈希以及其他标识过程。它使用户可以轻松浏览并访问这些网络上的文件。可以在提供与元数据有关的名称（例如合同的ABI和用户的类似Whois的信息）的同时完成。</p>
-<h1 id="ens与dns之间的区别">ENS与DNS之间的区别</h1>
-<p>从某种意义上说，ENS的目标与互联网的DNS（域名服务）相似。然而，由于以太坊区块链提供的功能和限制，它们是截然不同的结构设计。<br>
-尽管ENS是基于以太坊智能合约构建的，但它不会遭受影响DNS系统的相同安全问题。因此，它能让域名正常工作。</p>
-<h1 id="为什么需要ens域名">为什么需要ENS域名？</h1>
-<p>如前所述，以太坊名称服务ENS摆脱了必须复制或输入冗长的十六进制地址的繁琐过程。而且使用ENS，您将可以轻松地将资金发送到域名。然后，您将在mycontract.eth上使用智能合约，并在swarmsite.eth上查看由集群托管的站点。</p>
-<p>获得ENS域后，您可以将其指向您选择的任何资金，还可以创建子域并根据需要分配它们。</p>
-<p>值得注意的是，ENS是一个完全分散的系统。因此，可以通过拍卖过程在<code>.eth</code>顶级域（例如<code>hello.eth</code>）下创建新的ENS域。这发生在以太坊区块链上。而且，任何人都可以自己参加和购买ENS域。</p>
-<h1 id="如何获得域名">如何获得域名？</h1>
-<h2 id="域名注册拍卖">域名注册拍卖</h2>
-<p>域名拍卖的运作方式，分为三个不同的阶段。</p>
-<ul>
-<li>
-<p>阶段1<br>
-您需要为要购买的名称进行拍卖，然后出价。完成此操作后，其他参与者将启动为期3天的计时器，以对标题进行出价。此时，投标人的详细信息已隐藏。因此，没有人能说出您的出价，甚至是出价的名称。</p>
-</li>
-<li>
-<p>第二阶段<br>
-在为期3天的拍卖结束后，又开始了2天的“展示”期。在此期间，每个投标人都必须透露其投标细节。否则，他们将失去全部出价。如果您不是出价最高的人，则会退还您的出价，减去0.5％的费用，该费用将被扣除。</p>
-</li>
-<li>
-<p>第三阶段<br>
-在为期2天的展示期过后，将宣布出价最高的获胜者。但是他或她将必须支付第二高的出价者的金额。<br>
-此金额在合同中指定。只要中标者控制ENS名称即可。获胜者被授权发送“最终”交易以退还任何额外资金。并且将为其分配新ENS域的命令。<br>
-赢得名称拍卖后，至少在域名用于期间，ENS域名就属于他们的域名。但是，获胜者可能会决定释放该名称。持有所有权至少一年后，他/她可能会收回全部押金。</p>
-</li>
-</ul>
-<p>请注意，并非所有ENS名称都可以立即进行出价，因为它们会在八周内逐步发布拍卖。原因是系统需要扩大规模，并且在此期间需要发现并修复错误。</p>
-<h2 id="域名购买">域名购买</h2>
-<p>现在让我们向您展示如何获得您的域名，以便其他人可以轻松地将Ether发送给您。</p>
-<p>您可以使用以下列出的四个用户友好界面自己购买ENS域：</p>
-<ul>
-<li>
-<p><a href="https://app.ens.domains/">registrar.ens.domains，</a>“官方” Dapp。这需要启用了区块链的浏览器（Mist，带有Metamask插件的chrome或带有浏览器插件的奇偶校验）。</p>
-</li>
-<li>
-<p><a href="https://www.myetherwallet.com/">My Ether</a> Wallet，一个完全在您自己设备中运行的开源钱包，它要求您上载和使用钱包的凭据。</p>
-</li>
-<li>
-<p>ETHTools的ENS集成是一个开源解决方案，可以指导您完成整个过程，并使用服务器端存储来简化招标。</p>
-</li>
-<li>
-<p>可以使用JavaScript控制台和web3.js中的命令行帮助您出价。</p>
 </li>
 </ul>
 ]]></content>
