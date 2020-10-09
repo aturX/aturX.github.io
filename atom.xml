@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-09-29T09:48:20.252Z</updated>
+    <updated>2020-10-09T06:29:05.238Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,57 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[什么是以太坊2.0及其重要性？]]></title>
+        <id>https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing</id>
+        <link href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">
+        </link>
+        <updated>2020-10-09T06:27:24.000Z</updated>
+        <content type="html"><![CDATA[<p>以太坊网络升级成以太坊2.0是一个长期计划。旨在解决当前网络的可扩展性和安全性问题。在以太坊2.0完成后，它将转换成为采用权益证明共识机制的区块链“世界计算机”。</p>
+<h2 id="简单介绍">简单介绍</h2>
+<ul>
+<li>
+<p>按市值计算的第二大加密货币以太坊正在计划对其网络进行重大更新。</p>
+</li>
+<li>
+<p>以太坊2.0升级旨在解决网络的可扩展性和安全性。</p>
+</li>
+<li>
+<p>升级的第一阶段将于2020年进行，以太坊将转向权益证明共识机制(PoS)。</p>
+</li>
+</ul>
+<h2 id="什么是以太坊20">什么是以太坊2.0？</h2>
+<p>以太坊2.0分多个阶段启动，首次升级预计将在2020年底启动。</p>
+<p>以太坊2.0与以太坊最大的不同在于，它将采用“权益证明（PoS）”机制替换当前采用的“工作量证明（PoW）”机制。</p>
+<h2 id="权益证明与工作证明有何不同">权益证明与工作证明有何不同？</h2>
+<p>对于以太坊等区块链，需要以去中心化的方式验证交易。与比特币一样，以太坊目前使用一种称为工作量证明（PoW）的共识机制。</p>
+<p>在该系统中，矿工使用计算机硬件的计算能力来解决复杂的数学难题并验证新交易。第一个解决难题的矿工将新交易添加到组成区块链的所有交易的记录中。然后用加密货币奖励他们。但是，此过程可能会消耗大量能源，效率并不乐观。</p>
+<p>权益证明（PoS）的不同之处在于，用交易验证程序代替矿工，向加密货币提供验证交易的权利。选择这些验证器以根据其持有的数量和持有的时间长短来选择一个区块。</p>
+<p>然后，其他验证者可以证明他们看到了一个验证结果。当有足够的证明时，可以将一个区块添加到区块链中。然后，验证者将因成功提出区块建议而获得奖励。此过程称为“锻造”或“铸造”。</p>
+<p>PoS的主要优点是，它比PoW的能源效率高得多，因为它将能源密集型计算机处理与共识算法分离开来。这也意味着你不需要大量的计算能力即可保护区块链。</p>
+<h2 id="以太坊20如何比以太坊10更好地扩展">以太坊2.0如何比以太坊1.0更好地扩展？</h2>
+<p>升级到以太坊2.0的主要原因之一是可拓展性。使用以太坊1.0，网络每秒只能支持大约30个事务。这会导致延误和拥堵。以太坊2.0承诺每秒最多交易100,000次。这种增加将通过实施分片技术来实现。</p>
+<p>当前的以太坊是由单个链和连续块组成的区块链。这是安全的，但是非常慢并且效率不高。随着分片链的引入，该区块链被拆分，从而使交易可以并行链而不是连续链进行处理。这样可以加快网络速度，并且可以更轻松地扩展。</p>
+<h2 id="以太坊20如何更安全">以太坊2.0如何更安全？</h2>
+<p>以太坊2.0的设计考虑了安全性。大多数权益证明网络都只有少量的验证器，这会使系统更集中并且网络安全性降低。以太坊2.0至少需要16,384个验证器，使其更加分散，因此更加安全。</p>
+<p>以太坊2.0代码的安全审核由包括区块链安全公司Least Authority在内的组织进行。</p>
+<p>以太坊基金会正在为以太坊2.0建立专门的安全团队，以研究加密货币中可能存在的网络安全问题。以太坊2.0研究人员贾斯汀·德雷克（Justin Drake）在一条推文中表示，这项研究将包括“模糊测试，赏金悬赏，加密经济建模，应用密码分析，形式验证等”。</p>
+<h2 id="以太坊20升级将如何进行">以太坊2.0升级将如何进行？</h2>
+<p>在Topaz，Medalla，Spadina和Zinken一系列测试网络发布之后，以太坊2.0的全面推出将分三个阶段进行：阶段0，阶段1和阶段2（开发人员希望从零开始计数）。阶段0的目标是在2020年启动，其他阶段则在接下来的几年中进行。</p>
+<p>阶段0，存储和管理验证者的注册表，并为以太坊2.0部署权益证明（PoS）共识机制。原始的以太坊PoW链将与此同时运行，因此数据连续性不会中断。</p>
+<p>阶段1，将于2021年进行，将整合权益分片链的证明。该网络预计将以64个分片启动（吞吐量是以太坊1.0的64倍），尽管在启动时它们尚不支持帐户或智能合约。并且，将于2021年进行一次临时更新，它将使以太坊主网正式过渡到权益证明。</p>
+<p>阶段2，计划于2021/22推出，将使分片变得功能齐全并与智能合约兼容。它还涉及添加以太坊帐户并启用转账和提款，实施跨分片转账以及签订合同。它将为基于以太坊2.0的可扩展应用程序构建执行环境。</p>
+<h2 id="以太坊20未来发展">以太坊2.0未来发展</h2>
+<p>2020年9月，有消息称Spadina测试网在启动时遇到了问题，迫使至少在发布前要再进行一次“彩排”。Spadina是旨在测试以太坊2.0的创世纪或第一个区块的创建的短期测试网。它与较大的Medalla测试网不同，后者是一个通用的沙箱，代表了网络的运行版本。Spadina测试网存在的问题主要包含用户参与度低，“混乱”和“无效存款”。</p>
+<p>更多的改进还在继续中，这种加密货币的未来将如何发展？</p>
+<p>以太坊联合创始人Vitalik Buterin制定了路线图，说明未来五到十年如何才能实现以太坊2.0。他说，在过去的两年中，试图了解可能的发展方向，到具体的研究与开发，试图优化我们知道可以实施的特定原语，以太坊已经发生了有效的转变。”</p>
+<p>他说，现在的挑战主要是“越来越多地围绕以太坊进行的应用在快速的发展，而发展的速度将随着时间的推移而继续增长，而以太坊2.0尚未准备好。”。</p>
+<p>2020年6月，Buterin指出，在实施分片链之前，以太坊2.0至少还需要依赖ZK-rollups等当前可行的扩展方法。</p>
+<p>ZK-rollups可以与当前的以太坊网络配合使用，并允许其处理更多交易。他们从实际的区块链上处理交易，然后每隔一段时间上传一次。这是一种快速增加以太坊交易数量的方式，而不会引起网络上的巨大膨胀。</p>
+<p>但是使用ZK-rollups存在潜在的缺陷，根据以太坊2.0路线图，建立ZK-rollups依赖于一个集中的参与者—通常是开发者。该路线图指出：“这会诱使开发人员操纵代码或提供漏洞信息，从而破坏了权力下放并增加了社交工程遭到黑客攻击的风险。”</p>
+<p>因此，从某种意义上说，这并不是一个完美的解决方案。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[什么是Decentraland？]]></title>
         <id>https://aturx.github.io/post/shi-me-shi-decentraland</id>
@@ -80,7 +131,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9709649"><label class="task-list-item-label" for="task-item-9709649"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5888932"><label class="task-list-item-label" for="task-item-5888932"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -88,7 +139,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6263051"><label class="task-list-item-label" for="task-item-6263051"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-600206"><label class="task-list-item-label" for="task-item-600206"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -110,11 +161,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9914148"><label class="task-list-item-label" for="task-item-9914148"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3921163"><label class="task-list-item-label" for="task-item-3921163"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4807332"><label class="task-list-item-label" for="task-item-4807332"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-35009"><label class="task-list-item-label" for="task-item-35009"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -126,7 +177,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9927017"><label class="task-list-item-label" for="task-item-9927017"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9136903"><label class="task-list-item-label" for="task-item-9136903"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -194,7 +245,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8722007"><label class="task-list-item-label" for="task-item-8722007"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6911590"><label class="task-list-item-label" for="task-item-6911590"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -206,7 +257,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9589429"><label class="task-list-item-label" for="task-item-9589429"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6711770"><label class="task-list-item-label" for="task-item-6711770"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -214,7 +265,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4676100"><label class="task-list-item-label" for="task-item-4676100"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3688167"><label class="task-list-item-label" for="task-item-3688167"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -232,7 +283,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4681476"><label class="task-list-item-label" for="task-item-4681476"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7803298"><label class="task-list-item-label" for="task-item-7803298"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -709,110 +760,6 @@ LavaMoat是官方正在构建的一组工具，这些工具在构建时使用Sec
 <p>第四，大多数知名的加密货币交易所都不提供对所有硬币的访问权限。但是，在许多情况下，交易者可以将资金从一个钱包转移到另一个钱包，并使用法定货币或加密货币为他们的交易账户注资。例如，希望以市值排名前15位的加密货币卡尔达诺（ADA）的交易者目前无法直接在流行的Coinbase交易所上进行交易。 但是，交易者可以使用法定货币在Coinbase上购买比特币。另一家交易所Binance已经为用户提供了从其他钱包中导入硬币的功能。一旦他们的Binance帐户中有比特币，他们就可以使用它购买交易所中列出的ADA。多个钱包在不同交易所之间的转账在每一端会产生少量费用。</p>
 <h1 id="总结">总结</h1>
 <p>对于个人资产的分配管理来说，用于交易的资产建议保留在交易所，很少交易的大额资产建议保留在个人钱包中。对于大额且进行交易的资产，可以分开分配在多个主流的交易所中。由于交易所被盗事件经常发生，加密货币放置在交易所中并不是万无一失的选择。分开管理，也同样分散了风险，主流交易所都被盗窃的概率还是很小的。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[使用Pipenv管理Python虚拟环境]]></title>
-        <id>https://aturx.github.io/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing</id>
-        <link href="https://aturx.github.io/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing">
-        </link>
-        <updated>2020-06-29T03:16:09.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-pipenv-的安装">1. Pipenv 的安装</h1>
-<p>python3+ 安装 pipenv 的依赖包</p>
-<pre><code>pip3 install pipenv
-</code></pre>
-<h1 id="2-创建pipenv-的虚拟环境">2. 创建Pipenv 的虚拟环境</h1>
-<p>具体执行步骤如下：</p>
-<p>（1）命令行进入项目目录下</p>
-<p>（2）创建Python虚拟环境</p>
-<p>执行<code>pipenv --python 3.7</code><br>
-生成Python 3.7 版本虚拟环境。（本地必须先具备该版本Python环境）<br>
-或者可以使用，<code>pipenv --three</code> 则使用系统当前的 python3 版本生成虚拟环境。</p>
-<p>完成创建后，项目目录下会产生<code>Pipfile</code>记录项目依赖。</p>
-<p>（3）验证环境</p>
-<p>执行<code>pipenv --venv</code>,显示当前虚拟环境所用的解释器位置。</p>
-<p>（4）配置Pycharm的虚拟环境</p>
-<p>根据（3）中获得的虚拟环境解释器位置，在Pycharm中进行配置，具体过程如下。</p>
-<h1 id="3-pycharm-连接虚拟环境">3. Pycharm 连接虚拟环境</h1>
-<p>（1）配置Pycharm项目虚拟环境</p>
-<p>打开 <code>Pycharm</code>，点击 <code>File -&gt; settings -&gt; Project</code> 选择你要更改的环境，如果没有或点击<code>+</code>进行环境添加。<br>
-命令行中用<code>pipenv --venv</code>,查看当前虚拟环境所用的解释器位置，查到项目的虚拟环境目录进行配置。</p>
-<p>在添加环境时，找到目录中<code>Script</code>文件夹中<code>python.exe</code>后点击确认。</p>
-<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1593401275807.PNG" alt="" loading="lazy"></figure>
-<p>现在就获得了一个干净的Python 3.7 虚拟环境。</p>
-<p>（2）配置Pycharm命令行环境</p>
-<p>避免命令行中Python执行环境和系统环境搞混淆，需要进行配置。</p>
-<p>设置修改项目中的 Python Console 控制台，避免和系统环境搞混<br>
-<code>File -&gt; settings -&gt; Project</code> 中<code>结构、执行、部署</code>进行修改<code>Console</code>,设置好工作目录为项目目录。</p>
-<figure data-type="image" tabindex="2"><img src="https://aturx.github.io//post-images/1593401293189.PNG" alt="" loading="lazy"></figure>
-<h1 id="4-安装项目依赖包">4. 安装项目依赖包</h1>
-<h3 id="下载慢修改源">下载慢，修改源</h3>
-<pre><code>[[source]]
-
-url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
-verify_ssl = true
-name = &quot;pypi&quot;
-</code></pre>
-<h3 id="命令">命令：</h3>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>进入pipenv的虚拟环境中。</p>
-<ul>
-<li>pipenv install</li>
-</ul>
-<p>安装<code>Pipfile</code>中的依赖包。</p>
-<ul>
-<li>pipenv install xxx</li>
-</ul>
-<p>安装指定依赖包，并更新至<code>Pipfile</code>。</p>
-<ul>
-<li>pipenv lock</li>
-</ul>
-<p>锁定项目依赖，生成<code>Pipfile.lock</code>文件。</p>
-<ul>
-<li>pipenv run xxx.py</li>
-</ul>
-<p>在虚拟环境下执行脚本。</p>
-<h1 id="5-常用操作">5. 常用操作</h1>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>pipenv新建的虚拟环境放在统一的目录下, 在某个目录下运行pipenv<br>
-shell时pipenv会自动在虚拟环境目录下搜索以当前目录名称开头的虚拟环境目录,如果没找到则判断为无虚拟环境。</p>
-<ul>
-<li>pipenv graph</li>
-</ul>
-<p>查看依赖包。</p>
-<ul>
-<li>pipenv install requests</li>
-</ul>
-<p>用Pipenv 安装包。</p>
-<ul>
-<li>pipenv install pytest --dev</li>
-</ul>
-<p>分环境配置包，有些包只在开发环境下使用dev</p>
-<ul>
-<li>pipenv uninstall requests</li>
-</ul>
-<p>卸载Python包</p>
-<ul>
-<li>pipenv uninstall --all</li>
-</ul>
-<p>卸载全部</p>
-<ul>
-<li>pipenv lock<br>
-有时lock文件不存在了，再次生成。</li>
-</ul>
-<h1 id="6-参考">6. 参考</h1>
-<ul>
-<li>
-<p><a href="https://cuiqingcai.com/5846.html">Pipenv的常用操作</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_20728575/article/details/82949529">Pycharm使用Pipenv</a></p>
-</li>
-</ul>
 ]]></content>
     </entry>
 </feed>

@@ -191,115 +191,71 @@ var _hmt = _hmt || [];
         <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
             <figure class="animate-box">
                 
+                    <img src="https://aturx.github.io//post-images/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing.jpg" alt="什么是以太坊2.0及其重要性？" class="img-responsive">
+                
             </figure>
             <span class="fh5co-meta animate-box">
                 
                     <div class="tag-container">
                         
-                            <a href="https://aturx.github.io/tag/0OvoQnRh4" class="tag">GitHub, </a>
+                            <a href="https://aturx.github.io/tag/pJWTDQOmu" class="tag">区块链周刊, </a>
                         
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">Git功能分支工作流实践</h2>
+            <h2 class="fh5co-article-title animate-box">什么是以太坊2.0及其重要性？</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-09-23</li>
-                <li>563字</li>
-                <li>3 min read</li>
+                <li>2020-10-09</li>
+                <li>1881字</li>
+                <li>7 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <h2 id="工作流">工作流</h2>
-<p><strong>核心思路</strong>:  所有的功能开发应该在一个专门的分支，而不是在master分支上。</p>
-<p>这个隔离可以方便多个开发者在各自的功能上开发而不会弄乱主干代码。 另外，也保证了master分支的代码一定不会是有问题的，极大有利于集成环境。</p>
-<pre><code>1. git checkout -b new-featureA master
-
-
-2. dev
-
-3. git push -u origin new-featureA
-
-4. git merge new-featureA
- 
-
-</code></pre>
-<h2 id="功能分支实践">功能分支实践</h2>
-<p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5888932"><label class="task-list-item-label" for="task-item-5888932"> 1. 现有远程主分支master</label></li>
+                        <p> <p>以太坊网络升级成以太坊2.0是一个长期计划。旨在解决当前网络的可扩展性和安全性问题。在以太坊2.0完成后，它将转换成为采用权益证明共识机制的区块链“世界计算机”。</p>
+<h2 id="简单介绍">简单介绍</h2>
+<ul>
+<li>
+<p>按市值计算的第二大加密货币以太坊正在计划对其网络进行重大更新。</p>
+</li>
+<li>
+<p>以太坊2.0升级旨在解决网络的可扩展性和安全性。</p>
+</li>
+<li>
+<p>升级的第一阶段将于2020年进行，以太坊将转向权益证明共识机制(PoS)。</p>
+</li>
 </ul>
-<pre><code>coderA 拉取到本地
-
-git clone ssh://user@host/path/to/repo.git
-
-</code></pre>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-600206"><label class="task-list-item-label" for="task-item-600206"> 2. coderA  开发新功能</label></li>
-</ul>
-<p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
-<pre><code>git checkout -b new-featureA master
-
-
-dev ing...
-
-git status
-git add &lt;some-file&gt;
-git commit
-
-</code></pre>
-<p>将新的功能push分支到中央仓库是很好的做法，这样可以方便地备份，如果和其它开发协作，也让他们可以看到coderA的提交。</p>
-<pre><code>git push -u origin new-featureA
-</code></pre>
-<p>这条命令push new-featureA分支到中央仓库（origin），-u选项设置本地分支去跟踪远程对应的分支。 设置好跟踪的分支后，coderA就可以使用git push命令省去指定推送分支的参数。</p>
-<pre><code>之后就可以在 new-featureA 分支下完成开发，最后推送到远程的分支上， 并可以向master 发起 Pull Request 
-
-git push 
-</code></pre>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3921163"><label class="task-list-item-label" for="task-item-3921163"> 3. 接受 Pull Request</label></li>
-</ul>
-<p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-35009"><label class="task-list-item-label" for="task-item-35009"> 4. 分支合并到master</label></li>
-</ul>
-<pre><code>方法一：
-git checkout master
-git pull
-git pull origin new-featureA
-git push
-
-方法二：
-git merge new-featureA
-</code></pre>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9136903"><label class="task-list-item-label" for="task-item-9136903"> 5. 其他补充操作</label></li>
-</ul>
-<pre><code>查看分支:
-$ git branch
-
-切换分支：
-$ git checkout master
-
-删除分支：
-git branch -d (branchname)
-
-简化步骤:
-git commit -am &quot;可以提交跟踪过的文件&quot;
-
-版本回退至上个版本:
-$ git reset --hard HEAD^     
-
-退到/进到 指定commit的sha码:
-$ git reset --hard commit_id 
-
-强推到远程：
-$ git push origin HEAD --force
-
-查看命令历史：
-$ git reflog 
-</code></pre>
+<h2 id="什么是以太坊20">什么是以太坊2.0？</h2>
+<p>以太坊2.0分多个阶段启动，首次升级预计将在2020年底启动。</p>
+<p>以太坊2.0与以太坊最大的不同在于，它将采用“权益证明（PoS）”机制替换当前采用的“工作量证明（PoW）”机制。</p>
+<h2 id="权益证明与工作证明有何不同">权益证明与工作证明有何不同？</h2>
+<p>对于以太坊等区块链，需要以去中心化的方式验证交易。与比特币一样，以太坊目前使用一种称为工作量证明（PoW）的共识机制。</p>
+<p>在该系统中，矿工使用计算机硬件的计算能力来解决复杂的数学难题并验证新交易。第一个解决难题的矿工将新交易添加到组成区块链的所有交易的记录中。然后用加密货币奖励他们。但是，此过程可能会消耗大量能源，效率并不乐观。</p>
+<p>权益证明（PoS）的不同之处在于，用交易验证程序代替矿工，向加密货币提供验证交易的权利。选择这些验证器以根据其持有的数量和持有的时间长短来选择一个区块。</p>
+<p>然后，其他验证者可以证明他们看到了一个验证结果。当有足够的证明时，可以将一个区块添加到区块链中。然后，验证者将因成功提出区块建议而获得奖励。此过程称为“锻造”或“铸造”。</p>
+<p>PoS的主要优点是，它比PoW的能源效率高得多，因为它将能源密集型计算机处理与共识算法分离开来。这也意味着你不需要大量的计算能力即可保护区块链。</p>
+<h2 id="以太坊20如何比以太坊10更好地扩展">以太坊2.0如何比以太坊1.0更好地扩展？</h2>
+<p>升级到以太坊2.0的主要原因之一是可拓展性。使用以太坊1.0，网络每秒只能支持大约30个事务。这会导致延误和拥堵。以太坊2.0承诺每秒最多交易100,000次。这种增加将通过实施分片技术来实现。</p>
+<p>当前的以太坊是由单个链和连续块组成的区块链。这是安全的，但是非常慢并且效率不高。随着分片链的引入，该区块链被拆分，从而使交易可以并行链而不是连续链进行处理。这样可以加快网络速度，并且可以更轻松地扩展。</p>
+<h2 id="以太坊20如何更安全">以太坊2.0如何更安全？</h2>
+<p>以太坊2.0的设计考虑了安全性。大多数权益证明网络都只有少量的验证器，这会使系统更集中并且网络安全性降低。以太坊2.0至少需要16,384个验证器，使其更加分散，因此更加安全。</p>
+<p>以太坊2.0代码的安全审核由包括区块链安全公司Least Authority在内的组织进行。</p>
+<p>以太坊基金会正在为以太坊2.0建立专门的安全团队，以研究加密货币中可能存在的网络安全问题。以太坊2.0研究人员贾斯汀·德雷克（Justin Drake）在一条推文中表示，这项研究将包括“模糊测试，赏金悬赏，加密经济建模，应用密码分析，形式验证等”。</p>
+<h2 id="以太坊20升级将如何进行">以太坊2.0升级将如何进行？</h2>
+<p>在Topaz，Medalla，Spadina和Zinken一系列测试网络发布之后，以太坊2.0的全面推出将分三个阶段进行：阶段0，阶段1和阶段2（开发人员希望从零开始计数）。阶段0的目标是在2020年启动，其他阶段则在接下来的几年中进行。</p>
+<p>阶段0，存储和管理验证者的注册表，并为以太坊2.0部署权益证明（PoS）共识机制。原始的以太坊PoW链将与此同时运行，因此数据连续性不会中断。</p>
+<p>阶段1，将于2021年进行，将整合权益分片链的证明。该网络预计将以64个分片启动（吞吐量是以太坊1.0的64倍），尽管在启动时它们尚不支持帐户或智能合约。并且，将于2021年进行一次临时更新，它将使以太坊主网正式过渡到权益证明。</p>
+<p>阶段2，计划于2021/22推出，将使分片变得功能齐全并与智能合约兼容。它还涉及添加以太坊帐户并启用转账和提款，实施跨分片转账以及签订合同。它将为基于以太坊2.0的可扩展应用程序构建执行环境。</p>
+<h2 id="以太坊20未来发展">以太坊2.0未来发展</h2>
+<p>2020年9月，有消息称Spadina测试网在启动时遇到了问题，迫使至少在发布前要再进行一次“彩排”。Spadina是旨在测试以太坊2.0的创世纪或第一个区块的创建的短期测试网。它与较大的Medalla测试网不同，后者是一个通用的沙箱，代表了网络的运行版本。Spadina测试网存在的问题主要包含用户参与度低，“混乱”和“无效存款”。</p>
+<p>更多的改进还在继续中，这种加密货币的未来将如何发展？</p>
+<p>以太坊联合创始人Vitalik Buterin制定了路线图，说明未来五到十年如何才能实现以太坊2.0。他说，在过去的两年中，试图了解可能的发展方向，到具体的研究与开发，试图优化我们知道可以实施的特定原语，以太坊已经发生了有效的转变。”</p>
+<p>他说，现在的挑战主要是“越来越多地围绕以太坊进行的应用在快速的发展，而发展的速度将随着时间的推移而继续增长，而以太坊2.0尚未准备好。”。</p>
+<p>2020年6月，Buterin指出，在实施分片链之前，以太坊2.0至少还需要依赖ZK-rollups等当前可行的扩展方法。</p>
+<p>ZK-rollups可以与当前的以太坊网络配合使用，并允许其处理更多交易。他们从实际的区块链上处理交易，然后每隔一段时间上传一次。这是一种快速增加以太坊交易数量的方式，而不会引起网络上的巨大膨胀。</p>
+<p>但是使用ZK-rollups存在潜在的缺陷，根据以太坊2.0路线图，建立ZK-rollups依赖于一个集中的参与者—通常是开发者。该路线图指出：“这会诱使开发人员操纵代码或提供漏洞信息，从而破坏了权力下放并增加了社交工程遭到黑客攻击的风险。”</p>
+<p>因此，从某种意义上说，这并不是一个完美的解决方案。</p>
  </p>
                     </div>
                 </div>
@@ -309,9 +265,9 @@ $ git reflog
                         
                             <div class="next-post">
                                 <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">
+                                <a href="https://aturx.github.io/post/shi-me-shi-decentraland">
                                     <h3 class="post-title">
-                                        Git集中式工作流实践
+                                        什么是Decentraland？
                                     </h3>
                                 </a>
                             </div>
@@ -348,8 +304,13 @@ $ git reflog
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81">工作流</a></li>
-<li><a href="#%E5%8A%9F%E8%83%BD%E5%88%86%E6%94%AF%E5%AE%9E%E8%B7%B5">功能分支实践</a></li>
+<li><a href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">简单介绍</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A5%E5%A4%AA%E5%9D%8A20">什么是以太坊2.0？</a></li>
+<li><a href="#%E6%9D%83%E7%9B%8A%E8%AF%81%E6%98%8E%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%AF%81%E6%98%8E%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C">权益证明与工作证明有何不同？</a></li>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A20%E5%A6%82%E4%BD%95%E6%AF%94%E4%BB%A5%E5%A4%AA%E5%9D%8A10%E6%9B%B4%E5%A5%BD%E5%9C%B0%E6%89%A9%E5%B1%95">以太坊2.0如何比以太坊1.0更好地扩展？</a></li>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A20%E5%A6%82%E4%BD%95%E6%9B%B4%E5%AE%89%E5%85%A8">以太坊2.0如何更安全？</a></li>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A20%E5%8D%87%E7%BA%A7%E5%B0%86%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C">以太坊2.0升级将如何进行？</a></li>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A20%E6%9C%AA%E6%9D%A5%E5%8F%91%E5%B1%95">以太坊2.0未来发展</a></li>
 </ul>
 </li>
 </ul>
