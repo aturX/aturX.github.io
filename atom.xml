@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-10-09T06:29:05.238Z</updated>
+    <updated>2020-10-10T04:30:05.965Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
@@ -10,6 +10,87 @@
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
+    <entry>
+        <title type="html"><![CDATA[什么是智能合约及其运作方式？]]></title>
+        <id>https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi</id>
+        <link href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">
+        </link>
+        <updated>2020-10-10T04:29:15.000Z</updated>
+        <content type="html"><![CDATA[<p>智能合约是执行一组指令的计算机代码。Dapps是去中心的应用程序，与智能合约相互结合在一起，让人们可以与之交互。</p>
+<h2 id="简单介绍">简单介绍</h2>
+<ul>
+<li>
+<p>智能合约是表示为一段代码的合约，旨在执行一组指令。</p>
+</li>
+<li>
+<p>“智能合约”一词是在1990年代由Nick Szabo撰写的学术论文中提出的。</p>
+</li>
+<li>
+<p>Dapps或去中心化应用程序本质上是一系列的智能合约交互。</p>
+</li>
+</ul>
+<p>我们都熟悉应用程序和应用程序商店。你通常是浏览各种软件，下载所需的应用程序，然后就离开了。</p>
+<p>在精美的UX和UI界面后面，这些应用程序正在执行其创建者制定的一组特定指令或程序。它可能是一款游戏，日历或商店服务等。</p>
+<p>智能合约的执行有与之非常相似的功能。但智能合约是指以一段代码表示的合约，旨在执行一组指令。</p>
+<p>Vitalik Buterin和以太坊社区相信这是区块链的未来。如果说比特币是商业世界的黄金，那么智能合约就是商业世界赖以生存的石油。</p>
+<h2 id="智能合约如何工作">智能合约如何工作？</h2>
+<p>因此，如果你想在没有智能合约的情况下在线购买汽车。为此，你需要：</p>
+<ol>
+<li>
+<p>找到一个汽车销售网站，列出或保存你想要查看的所有汽车的信息。</p>
+</li>
+<li>
+<p>与卖家沟通的购买支付方式等，确认了使用何种支付系统，可让你在见到车后进行支付。如果汽车不是你想要的，则有一定的退款能力。</p>
+</li>
+<li>
+<p>你还需要向当局注册汽车所有权。</p>
+</li>
+</ol>
+<p>所有这些点都要求你<strong>信任你正在访问的站点或服务，而且在很多时候，该过程的每个部分都由不同的公司或个人控制</strong>。</p>
+<p>行为不良的个人或组织无需花费太多时间即可更改上述任何一项的正常运作，从而使整个过程无效。</p>
+<p>签订智能合约可以消除在购买商品时解决多方信任的问题。</p>
+<p>为什么？智能合约的特点是：</p>
+<p>🔒安全 - 他们使用加密技术来阻止人们更改记录。</p>
+<p>🔍透明 - 每个人都可以在区块链上看到智能合约的含义以及它的用途。</p>
+<p>🙏不再需要中间商 - 智能合约不需要第三方进行验证。区块链为你做到这一点。</p>
+<p>🤖自治 - 它们会自动工作，因此你不必等待有人主动去执行。</p>
+<p>✅准确  - 因为智能合约是用代码编写的，所以它们不依赖于语言的灰色区域以及单词的含义。如果发生这种情况，请执行以下操作。</p>
+<p>智能合约的核心往往是一种机制（用计算机代码表示），“如果发生这种情况，那就这样做”。</p>
+<p>现在已经能够发现许多的自动化场景。假设你要使用借记卡或信用卡支付费用。你的银行所运行的软件将执行“如果发生这种情况，则执行此操作”：</p>
+<p>💸 如果银行帐户中的金额大于要求的金额，请释放资金</p>
+<p>💵 如果银行帐户中的金额少于要求的金额，请勿释放资金</p>
+<p><strong>智能合约的区别在于，该决定权属于区块链，而不是由银行（或任何第三方）来控制</strong>。</p>
+<p>因此，上述示例将其应用于基于区块链的智能合约中，将看到以下内容：</p>
+<p>💸 如果数字钱包中的金额较大且尚未用完，请释放资金。</p>
+<p>💵 如果数字钱包中的金额较小或已用完，请勿释放资金。</p>
+<p><strong>关于智能合约的令人兴奋的一点是，它意味着任何人都可以与任何其他人达成协议，而区块链会记录整个事情</strong>。</p>
+<h2 id="dapp如何使用智能合约">Dapp如何使用智能合约？</h2>
+<p>最好将Dapps或去中心化应用程序视为捆绑在一起的一堆智能合约。</p>
+<p>单独的智能合约只能用于一种类型的交易。但是，dapp可以将多个智能合约捆绑在一起以执行更复杂的事情。</p>
+<p>就像今天的应用程序一样，dapp也可以在合约之上放置友好的界面。</p>
+<p>一些著名的DAPP：</p>
+<p>📉 Augur - 一个市场预测工具，它允许任何人去预测事件并获得奖励。</p>
+<p>🏦 MakerDAO - 一种去中心化金融（DeFi） dapp，使用户无需中间人就可以借出和借用加密货币。</p>
+<p>🦄 Uniswap - 基于以太坊的去中心化交易所，无门槛，允许任何人去交换ERC20代币。</p>
+<p>🐱 CryptoKitties  - 独特的NFT为基础的加密收藏品可以使用智能合同，创造独一无二的加密宠物。</p>
+<p>👛 Argent - 一个使用智能合约管理地址和私钥的以太坊的钱包。</p>
+<h2 id="谁创建了智能合约">谁创建了智能合约？</h2>
+<p>就像用于支持大多数加密货币的区块链技术一样，智能合约是从不太完善的早期技术中衍生出来的。当下的智能合约，它们源自较早的电子指令执行程序，该程序使用if / else语句或使用其他条件逻辑，根据提供的信息自动产生结果。</p>
+<p>“智能合约”一词本身是在1990年代由著名的计算机科学家和密码学家Nick Szabo撰写的一篇学术论文中创造的，该科学家还是负责开发比特币的最早先驱之一，即Bit Gold。Szabo最初出于各种基本目的描述了智能合同，但后来在1996年的论文中详细阐述了该技术在数字现金，智能财产等方面的潜在用例。</p>
+<p>以太坊在其区块链上实施了图灵完备的语言，从而可以在其智能合约中实现了更复杂的逻辑。</p>
+<p>智能合约并不总是完美的，尽管智能合约通常被认为是执行协议和逻辑的“无需信任”的方式，但并非完全没有问题。</p>
+<p>一方面，智能合约在许多区块链上都是不可变的。这意味着一旦启动它们，就不能对其进行更改或升级，如果代码存在根本问题，则可能导致灾难性的后果。这可能是2016年以太坊The DAO黑客事件中最突出的一点原因，该黑客利用The DAO 合约功能中的漏洞，偷走了数百万以太坊（ETH）。</p>
+<p>未知和新颖的攻击媒介也经常被利用，通常以投资者亏本而告终。在2020年9月，随着Yearn Finance的Andre Cronje的一个项目Eminence的测试版本的崩溃。当时大量投资者将资金投入其中之后，它被一个未知的黑客盗取了1500万美元。</p>
+<p>同样，简单的错误代码很可能会使智能合约变得无用。这可以从2020年8月DeFi产量农业项目YAM的崩溃中看出，该项目使用未经审计的智能合约，并因严重的错误而崩溃，导致其治理功能毫无作用。</p>
+<h2 id="智能合约的未来">智能合约的未来</h2>
+<p>如今，大多数区块链都具有智能合约功能，活跃的开发者社区使用Cosmos，NEO和Hyperledger等区块链上的智能合约来创建dapp。智能合约的功能 范围从比特币或莱特币之类的非常简单的货币到以太坊，Tron和Polkadot等具有Dapp功能的更高级的区块链上。</p>
+<p>它们现在用于各种各样的任务，包括数字身份，供应链管理，保险，数据存储等等。</p>
+<p>我们仍处在可以使用智能合约和dapp的初期。但是已经有公司甚至政府在尝试其潜力。</p>
+<p>🏦 政府 - 爱沙尼亚等国家已经开始使用区块链来管理国家。</p>
+<p>🔗 供应链 - 像Provenance这样的初创公司正在帮助制造公司使用区块链来购买和运送商品。</p>
+<p>📓 保险 - 像Etherisc这样的新兴公司正在帮助为航空和农业行业创建保险平台。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[什么是以太坊2.0及其重要性？]]></title>
         <id>https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing</id>
@@ -131,7 +212,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5888932"><label class="task-list-item-label" for="task-item-5888932"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4909756"><label class="task-list-item-label" for="task-item-4909756"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -139,7 +220,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-600206"><label class="task-list-item-label" for="task-item-600206"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4251231"><label class="task-list-item-label" for="task-item-4251231"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -161,11 +242,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3921163"><label class="task-list-item-label" for="task-item-3921163"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2033263"><label class="task-list-item-label" for="task-item-2033263"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-35009"><label class="task-list-item-label" for="task-item-35009"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5067757"><label class="task-list-item-label" for="task-item-5067757"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -177,7 +258,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9136903"><label class="task-list-item-label" for="task-item-9136903"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4280197"><label class="task-list-item-label" for="task-item-4280197"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -245,7 +326,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6911590"><label class="task-list-item-label" for="task-item-6911590"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4713638"><label class="task-list-item-label" for="task-item-4713638"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -257,7 +338,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6711770"><label class="task-list-item-label" for="task-item-6711770"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1378715"><label class="task-list-item-label" for="task-item-1378715"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -265,7 +346,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3688167"><label class="task-list-item-label" for="task-item-3688167"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6964942"><label class="task-list-item-label" for="task-item-6964942"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -283,7 +364,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7803298"><label class="task-list-item-label" for="task-item-7803298"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2164520"><label class="task-list-item-label" for="task-item-2164520"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -645,121 +726,6 @@ LavaMoat是官方正在构建的一组工具，这些工具在构建时使用Sec
 <p>10.币安币（BNB）</p>
 <p>Binance Coin（BNB）是Binance加密货币交易所的官方令牌。币安成立于2017年，就整体交易量而言，币安已迅速成长为全球同类交易中最大的交易所。Binance Coin令牌使Binance用户可以在Binance平台上有效地交易数十种不同的加密货币。BNB用于简化交易所的交易费用，也可用于支付某些商品和服务，包括差旅费等。</p>
 <p>截至2020年1月8日，BNB的市值为23亿美元，每个令牌的价值为14.71美元。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[比特币交易所]]></title>
-        <id>https://aturx.github.io/post/bi-te-bi-jiao-yi-suo</id>
-        <link href="https://aturx.github.io/post/bi-te-bi-jiao-yi-suo">
-        </link>
-        <updated>2020-06-30T15:58:45.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-什么是比特币交易所">1. 什么是比特币交易所？</h1>
-<p>比特币交易所是一个数字市场，交易者可以在其中使用不同的法定货币或山寨币买卖比特币。它是一个在线平台，充当加密货币买卖双方之间的中介。</p>
-<pre><code>重要要点
-
-* 比特币交易所充当买卖双方之间的中介。
-
-* 比特币交易所就像经纪人一样，你可以通过银行转账，电汇和其他常见的存款方式来存钱。但是，你通常需要为此服务付出一定的代价。
-
-* 如果交易者想进行加密货币交易，他们需要支付一定的服务费，类似于你在不同国家/地区交易货币时银行收取的费用。
-
-* 买卖基于与现有的交易系统，买方（买主）下达限价订单，然后当卖方（制造商）可以使用相应的加密货币将其出售。
-</code></pre>
-<h1 id="2-了解比特币交易所">2. 了解比特币交易所</h1>
-<p>比特币交易平台使买家与卖家匹配。就像传统的证券交易所一样，交易者可以通过输入市场订单或限价订单来选择买卖比特币。当使用市场订单时，交易者授权交易所在最佳的价格时进行货币交易。设置了限价订单后，交易者将规定交易所在低于当前要价或高于当前出价的价格交易货币，具体高低取决于它们是在买还是卖。</p>
-<p>为了可以在交易所上进行比特币交易，用户必须在交易所进行注册并经过一系列的验证过程以验证其身份。验证成功后，将为用户开设一个帐户，然后用户必须先将资金转入该帐户，然后才能购买硬币。</p>
-<p>不同的交易所具有不同的付款方式，可用于存入资金，包括银行电汇，直接银行转账，信用卡或借记卡，银行汇票，汇票甚至礼品卡、支付宝、微信等。想要从其帐户中提款的交易者可以使用交易所提供的选项进行提款，包括银行转账，支付宝转账，微信转账，支票邮寄，现金交付，银行电汇或信用卡转账。</p>
-<h1 id="3-去中心化交易所">3. 去中心化交易所</h1>
-<p>去中心化的比特币交易所是在没有中央授权的情况下进行的交易。这种方式可以进行数字货币的点对点交易，而无需交换机构来促进交易。</p>
-<p>去中心化交易所有很多好处。首先，许多加密货币用户认为去中心化交易所更适合大多数数字货币本身的去中心化结构。与其他类型的交易所相比，许多去中心化交易所也要求其成员提供较少的个人信息。</p>
-<p>其次，如果用户将资产可以直接转让给其他用户，则无需将资产转让给交易所，从而降低了黑客和其他欺诈行为造成的盗窃风险。</p>
-<p>第三，去中心化交易所可能不太容易受到价格操纵和其他欺诈性交易活动的影响。</p>
-<p>另一方面，去中心化交易所（像所有加密货币交易所一样）必须以交易量和流动性的形式维持基本的用户量。并非所有的去中心化交易所都能实现这些重要的基础指标。</p>
-<p>此外，与使用中心化交易所的用户相比，去中心化交易所的用户如果是欺诈的受害者，他们的追回损失的可能性更小。</p>
-<h1 id="4-特别注意事项">4. 特别注意事项</h1>
-<h1 id="41-费用">4.1 费用</h1>
-<p>进行存款和取款需要付出一定的服务费，具体取决于转移资金的付款方式。</p>
-<p>除了交易费和资金转移费外，交易者还可能需要支付货币兑换费，具体取决于比特币交易所接受的货币。如果用户将人民币转帐到仅以美元进行交易的交易所，则银行或交易所将收取费用将人民币转换为美元。与接受您当地货币的交易所进行交易是避免外汇费用的最佳方法。</p>
-<p>所有比特币交易所都有交易费，该交易费适用于交易所内完成的每个买卖订单。收费率取决于所进行的比特币交易量。</p>
-<h1 id="42-比特币钱包">4.2 比特币钱包</h1>
-<p>请注意，比特币交易所不同于比特币钱包。前者提供了一个平台，供比特币买卖双方进行交易，而后者只是一种数字存储服务，供比特币持有者安全地存储其代币。从技术上讲，比特币钱包存储私钥，私钥用于授权交易和访问用户的比特币地址。大多数比特币交易所都为其用户提供比特币钱包，但可能会为此服务收费。</p>
-<h1 id="43-比特币交易所的例子">4.3 比特币交易所的例子</h1>
-<p>例如，在一个比特币交易所上，三个硬币卖家要求BTC / USD 8265.75，BTC / USD 8269.55和BTC / USD 8270.00。发起市场订单以购买比特币的交易员将以<code>8265.75</code>美元的最佳要价执行订单。如果仅五个比特币可用于最佳卖出价，而十个硬币可用于<code>$8269.55</code>，并且交易者希望以市场价格购买10个比特币，则该交易者的订单将以5个硬币（<code>$8265.75</code>）和其余5个硬币（<code>$8269.55</code>）成交。</p>
-<p>但是，一个认为自己可以以更好的价格获得比特币的交易者可以将一个<code>限价单</code>设定为<code>2260.10</code>美元。如果卖方将其要价与该订单相匹配或将价格设置为低于此数字，则该订单将被执行。所有这些都是通过交易所完成的，而交易所则需要为其业务收取一定比例的交易费。</p>
-<h1 id="5-最受欢迎的比特币交易所">5. 最受欢迎的比特币交易所</h1>
-<p>比特币（BTC）交易所是虚拟货币世界尤其是其生态系统不可或缺的一部分。实际上，交易所是世界上许多数字货币用户必须使用代币和法定货币进行交易的主要手段。当今的数字货币交易所必须成功地平衡各种监管措施，保持最新的安全保护措施以减少欺诈和黑客攻击的可能性，并吸引用户以确保生存能力和足够的流动性。</p>
-<p>Mt.Gox 交易所，昵称：门头沟。曾经享有垄断者地位的交易所。在2013年和2014年，它占据了BTC-USD交易量的80-90％。<br>
-然而这个传奇性的交易所并没有永恒的存在，在大量的比特币显然从其保险箱中被盗之后，这一次最受欢迎的交易所就面临灭顶之灾。“门头沟被盗事件”可以说是一个警示性的故事。</p>
-<p>现在，成功的交易所已经从其中学到了很多东西。</p>
-<p>（1）火币网</p>
-<ul>
-<li>地址：https://www.huobi.com</li>
-</ul>
-<p>火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产国际站，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务，总部位于新加坡，由火币全球专业站团队负责运营。火币集团是一家具有全球竞争力与影响力的数字资产综合服务商，为超过130个国家百万级用户提供优质服务。在新加坡、香港、韩国、日本等多个国家和地区均有独立的交易业务和运营中心</p>
-<p>（2）Binance 币安</p>
-<ul>
-<li>地址：https://www.binance.com</li>
-</ul>
-<p>币安(Binance)，国际领先的区块链数字资产国际站，向全球提供广泛的数字货币交易、区块链教育、区块链项目孵化、区块链资产发行平台、区块链研究院以及区块链公益慈善等服务，目前用户覆盖全球180多个国家和地区，以140万单/秒的核心内存撮合技术，是全球加密货币交易速度最快的平台之一，也是全球加密货币交易量最大的平台之一。</p>
-<p>（3）Gate 比特儿</p>
-<ul>
-<li>地址：https://www.gate.io</li>
-</ul>
-<p>Gate国际站，是一家有态度的全球区块链资产国际站。从13年创办至今，已为来自全球超过130个国家的数百万用户，提供了近百种优质区块链资产品类的交易和投资服务。Gate致力于做一家值得信赖的安全、稳定、有信誉的区块链资产国际站，不仅为用户提供安全、便捷、公平的区块链资产交易服务，同时全面保障用户的交易信息安全和资产安全。</p>
-<p>（4）OKEX</p>
-<ul>
-<li>地址：https://www.okex.com</li>
-</ul>
-<p>OKEX 是全球著名的数字资产国际站之一，主要面向全球用户提供比特币、莱特币、以太币等数字资产的现货和衍生品交易服务，隶属于OKEX Technology Company Limited。 OKEX创立时，获得了世界顶级投资人Tim Draper参与设立的创业工场百万美金的天使投资，Tim Draper先生同时也是Hotmail、百度、特斯拉等世界顶级企业的投资人。</p>
-<p>（5）ZB 中币</p>
-<ul>
-<li>地址：https://www.zb.com</li>
-</ul>
-<p>ZB集团成立于2012年，旨在区块链的发展提供领导力和更加稳定的环境。总部设立于瑞士苏黎世，ZB集团经营着包括数字资产国际站、电子钱包、投资基金、研究机构和媒体在内的业务网络。集团的旗舰平台是行业领先的数字资产国际站 ZB。自2013年初推出以来，该平台在创新方面一直处于领先地位。ZB集团还拥有全球创新加密货币国际站ZBG、全球首个基于矿池的国际站http://BW.com。</p>
-<p>（6）Bitfinex</p>
-<ul>
-<li>地址：https://www.bitfinex.com</li>
-</ul>
-<p>Bitfinex是全世界最大、最高级的比特币国际站之一，支持以太坊、比特币、莱特币、以太经典等虚拟币的交易，每天的成交量达30多亿人民币。提供币币交易，美元与币的交易。注册非常简单。2016年，Bitfinex大概有12万枚比特币通过社交媒体被盗。受此事件影响，当时比特币价格跌了20%。 优势： 支持美元交易 多种交易形式和功能 不足： 平台页面布局不符合国内用户使用习惯</p>
-<p>（7）MXC 抹茶</p>
-<ul>
-<li>地址：https://www.mxc.io</li>
-</ul>
-<p>MXC国际站是由华尔街以及日本欧洲资深量化交易团队联合区块链资深从业者通过去中心化自组织形式创立的一个专注于区块链资产交流和交换的平台。MXC将为用户提供更加安全、便捷、智能的区块链资产流通服务，聚合全球优质区块链资产，融合全球最顶尖的安全技术，致力于打造全球顶级的区块链资产国际站。</p>
-<p>（8）Dragonex 龙网</p>
-<ul>
-<li>地址：https://www.dragonex.io</li>
-</ul>
-<p>龙网（DragonEx）是新加坡虚拟货币国际站，2017年11月2日正式上线运营。上线同日发行平台币龙币（DT），持有其平台币DT可以获得平台收入分红。首创的开放平台引进的游戏应用爆红整个行业，同时开发了众多功能，如DK大乐透、扭龙蛋、期权预测、抵押借贷等等。目前支持C2C快速法币充提、USDT交易、ETH交易、BTC交易、DC交易、合约交易、杠杆交易。</p>
-<p>（9）Coinw 币赢国际站</p>
-<ul>
-<li>地址：https://www.coinw.ai</li>
-</ul>
-<p>币赢网Coinw是中国香港开设的著名数字资产国际站，面向全球用户提供BTC、ETH、HC、EOS、LEEK、ELF、MTC等优质主流数字资产的交易服务。币赢网Coinw提供移动端APP，方便用户随时随地操作。</p>
-<p>（10）ZBG</p>
-<ul>
-<li>地址： https://www.zbg.com</li>
-</ul>
-<p>ZBG 在2018年成立于香港，凭借创新、高效和全球化的运营，ZBG在短时间内迅速跻身行业世界前十，被誉为新一线国际站。 目前平台已支持七国语言访问，为全球180万加密资产投资者提供服务，平台日均活跃超过12万。在未来，ZBG将继续拓展全球市场，为全球区块链爱好者提供稳定、安全、快捷的区块链项目上市、加密资产投资等服务。</p>
-<h1 id="6-交易所购买比特币的成本">6. 交易所购买比特币的成本</h1>
-<p>交易比特币需要多少钱？除了比特币本身的价格外，每个加密货币交易所都会在客户购买和出售硬币时增加交易费用。这些费用包括制造商（通过限价订单增加订单簿流动性）和收取者（通过市场订单从订单簿中减去流动性）费用。在某些情况下，如果限价单已经存在于订单簿中，则加密货币交易者可能会产生制造商以及交易商的费用。</p>
-<p>加密货币交易所主要通过两种方式来计算费用：每笔交易采用固定的费用，或者采用帐户30天交易量的百分比收取费用。结合两种情况，他们根据交易量的大小决定具体的服务费用。</p>
-<pre><code>重要要点
-
-* 自从2009年首次推出比特币以来，买卖加密货币变得越来越受欢迎。
-
-* 现在存在数十种大型在线交易所，以帮助买卖数字货币以及彼此之间进行加密货币交易。
-
-* 所涉及的典型成本包括支付给交易所的交易佣金，买卖价差的宽度以及向您的银行帐户转移资金的费用。
-
-</code></pre>
-<p>在加密货币交易所进行交易时要考虑的四件事 交易者在购买加密货币时必须考虑四件事。</p>
-<p>首先，在大多数司法管辖区，加密货币交易所不受监管。全球一些国家/地区的大多数监管机构在其一些最大的交易市场中都采取了放任不管的方式来进行加密货币监管。例如，在最大的加密货币交易市场中，加密货币交易所受美国众多法规的约束。截至2017年初，中国禁止某些类型的加密货币交易，占总交易量的90％。</p>
-<p>其次，加密货币交易所的收费服务旨在鼓励频繁交易价值数千美元的大笔交易。费用通常随着交易量和交易频率的增加而降低。因此，在加密货币交易中，小的订单和不频繁的订单并不具有成本效益。例如，某些交易所对价值10,000,000美元及以上的交易不收取任何费用。</p>
-<p>第三，交易所鼓励使用加密货币进行交易。法定货币通常会在交易所产生存款和取款费，具体取决于付款方式。但是在大多数情况下，与其他硬币一起购买加密货币是免费的。在某些情况下，可能需要支付少量费用才能为所需的加密货币设置钱包。</p>
-<p>第四，大多数知名的加密货币交易所都不提供对所有硬币的访问权限。但是，在许多情况下，交易者可以将资金从一个钱包转移到另一个钱包，并使用法定货币或加密货币为他们的交易账户注资。例如，希望以市值排名前15位的加密货币卡尔达诺（ADA）的交易者目前无法直接在流行的Coinbase交易所上进行交易。 但是，交易者可以使用法定货币在Coinbase上购买比特币。另一家交易所Binance已经为用户提供了从其他钱包中导入硬币的功能。一旦他们的Binance帐户中有比特币，他们就可以使用它购买交易所中列出的ADA。多个钱包在不同交易所之间的转账在每一端会产生少量费用。</p>
-<h1 id="总结">总结</h1>
-<p>对于个人资产的分配管理来说，用于交易的资产建议保留在交易所，很少交易的大额资产建议保留在个人钱包中。对于大额且进行交易的资产，可以分开分配在多个主流的交易所中。由于交易所被盗事件经常发生，加密货币放置在交易所中并不是万无一失的选择。分开管理，也同样分散了风险，主流交易所都被盗窃的概率还是很小的。</p>
 ]]></content>
     </entry>
 </feed>
