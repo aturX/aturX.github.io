@@ -1,219 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" >
 
-<title>链 求 君</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>测试驱动开发（TDD）的好处 | 链 求 君</title>
+<meta name="description" content="Lsy 的个人网站">
 
-<meta name="description" content="AturX  的个人网站"/>
-<meta name="keywords" content="AturX  的个人网站"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605066734000">
 
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico">
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://aturx.github.io//styles/main.css">
 
-<!-- Modernizr JS -->
-<script src="https://aturx.github.io//media/scripts/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-<scripts src="https://aturx.github.io//media/scripts/respond.min.js"></scripts>
-<![endif]-->
 
-<!-- Comment -->
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
-
-<!-- katex -->
-<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
-
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-    <!-- 百度统计 -->
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?13ea7e585ad4fa34100390e5a6862c52";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-</head>
-<body>
-    <div id="fh5co-offcanvas">
-    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
-        <span><i class="icon-cross3"></i> <span>Close</span></span>
-    </a>
-    <div class="fh5co-bio">
-        <figure>
-            <img src="https://aturx.github.io//images/avatar.png" alt="链 求 君"
-                 class="img-responsive">
-        </figure>
-        <a href="https://aturx.github.io//post/about/"><h3 class="heading">ABOUT ME</h3></a>
-        <h2>链 求 君</h2>
-        <p>AturX  的个人网站</p>
-        <ul class="fh5co-social">
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://aturx.github.io/">链 求 君</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
             
-                <li>
-                    
-                        <a href="https://github.com/aturX" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    
-                </li>
+              <a href="/" class="menu">
+                首页
+              </a>
             
-                <li>
-                    
-                </li>
+          </li>
+        
+          <li>
             
-                <li>
-                    
-                </li>
+              <a href="/archives" class="menu">
+                归档
+              </a>
             
-                <li>
-                    
-                </li>
+          </li>
+        
+          <li>
             
-                <li>
-                    
-                </li>
+              <a href="/tag/c2EZW6nSY/" class="menu">
+                推荐
+              </a>
             
-        </ul>
+          </li>
+        
+          <li>
+            
+              <a href="/tag/VX2ta3-Q1O/" class="menu">
+                代码
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="fh5co-menu">
-
-        <!-- 标签 -->
-        <div class="fh5co-box">
-            <a href="https://aturx.github.io//tags/"><h3 class="heading">👉标签</h3></a>
-            <ul>
-                
-                    <li><a href="https://aturx.github.io/tag/zjY9xqWey">区块链开发</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/pJWTDQOmu">区块链周刊</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/0OvoQnRh4">GitHub</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/1ouSyFvRE">以太坊</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/ytQzP-m0v">区块链</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/BYEPncV_B">Python</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/i4Ywa6glq">ENS</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/raV49g8qT">Flask</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/VX2ta3-Q1O">代码</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/Zhe5lS2wh">Docker</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/HYJR1J4Qk">SEO</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/9wy5EMwvU">Java</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/c2EZW6nSY">善用佳软</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/uzZ16I6hq">测试</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/u6Gn7YGdL">个人成长</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/WJiT_obGT">我</a></li>
-                
-                    <li><a href="https://aturx.github.io/tag/Utp9E6V0u">开发工具</a></li>
-                
-            </ul>
-        </div>
-    </div>
-</div>
-
-<header id="fh5co-header">
-    <div class="container-fluid">
-        <div class="row">
-            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-            <ul class="fh5co-social">
-                
-                    <li>
-                        <a href="/"
-                        
-                        >
-                            首页
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives"
-                        
-                        >
-                            归档
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/tag/c2EZW6nSY/"
-                        
-                        >
-                            推荐
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/tag/VX2ta3-Q1O/"
-                        
-                        >
-                            代码
-                        </a>
-                    </li>
-                
-            </ul>
-            <div class="col-lg-12 col-md-12 text-center">
-                <h1 id="fh5co-logo">
-                    <a href="https://aturx.github.io/">链 求 君 </a>
-                </h1>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
-    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
-
-    <!-- 等gridea出自定义页面功能再优化一下 -->
-    
-        <div class="container-fluid">
-    <div class="row fh5co-post-entry single-entry">
-        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
-            <figure class="animate-box">
-                
-            </figure>
-            <span class="fh5co-meta animate-box">
-                
-                    <div class="tag-container">
-                        
-                            <a href="https://aturx.github.io/tag/uzZ16I6hq" class="tag">测试, </a>
-                        
-                    </div>
-                
-            </span>
-            <h2 class="fh5co-article-title animate-box">测试驱动开发（TDD）的好处</h2>
-            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-02-03</li>
-                <li>580字</li>
-                <li>2 min read</li>
-            </ol>
-
-            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
-                <div class="row">
-                    <div class="col-md-12 animate-box post-content">
-                        <p> <h2 id="一-传统瀑布式开发形式">一、传统瀑布式开发形式</h2>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>测试驱动开发（TDD）的好处</h1>
+            <p class="article-meta">
+              2020-02-03
+              
+                <a href="https://aturx.github.io/tag/uzZ16I6hq" class="badge warning">
+                  测试
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="一-传统瀑布式开发形式">一、传统瀑布式开发形式</h2>
 <p>瀑布式的开发，先写功能代码，遇到编译错误的地方，就直接Debug项目，然后让其编译通过即可。<br>
 其缺点明显：</p>
 <ol>
@@ -273,117 +152,315 @@ var _hmt = _hmt || [];
 </ol>
 <h2 id="最后">最后</h2>
 <p>测试驱动开发并不是唯一的选择，也要在合理的情况下使用。过度采用TDD开发模式，可能会造成开发效率低下，测试内容冗余的问题。</p>
- </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 animate-box">
-                        
-                            <div class="next-post">
-                                <div class="next">下一篇</div>
-                                <a href="https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi">
-                                    <h3 class="post-title">
-                                        如何通过GitHub学习？
-                                    </h3>
-                                </a>
-                            </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-    <div class="col-md-12 animate-box">
-        
-    </div>
-</div>
 
             </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://aturx.github.io/post/ru-he-tong-guo-github-xue-xi">
+                <h3 class="post-title">
+                  如何通过GitHub学习？
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
 
-        </article>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://aturx.github.io//images/avatar.png?v=1605066734000" class="no-responsive avatar">
+    <div class="text-muted">Lsy 的个人网站</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-</div>
-
-    
-
-    <!-- 返回顶部 -->
-    <div class="back-to-top">
-    
-        <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
-            <i class="fa fa-map"></i>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie">以太坊开发简介</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">什么是智能合约及其运作方式？</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">什么是以太坊2.0及其重要性？</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/shi-me-shi-decentraland">什么是Decentraland？</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">Git功能分支工作流实践</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/about">AboutMe</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">Git集中式工作流实践</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/shi-me-shi-aragon">什么是Aragon？</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/mo-ke-er-shu-merkle-trees">默克尔树（Merkle Trees）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi">量子计算和加密货币</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://aturx.github.io/tag/zjY9xqWey" class="badge secondary">
+          区块链开发
         </a>
-        <br>
-    
-    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+      
+        <a href="https://aturx.github.io/tag/pJWTDQOmu" class="badge warning">
+          区块链周刊
+        </a>
+      
+        <a href="https://aturx.github.io/tag/0OvoQnRh4" class="badge warning">
+          GitHub
+        </a>
+      
+        <a href="https://aturx.github.io/tag/1ouSyFvRE" class="badge ">
+          以太坊
+        </a>
+      
+        <a href="https://aturx.github.io/tag/ytQzP-m0v" class="badge warning">
+          区块链
+        </a>
+      
+        <a href="https://aturx.github.io/tag/BYEPncV_B" class="badge warning">
+          Python
+        </a>
+      
+        <a href="https://aturx.github.io/tag/i4Ywa6glq" class="badge success">
+          ENS
+        </a>
+      
+        <a href="https://aturx.github.io/tag/raV49g8qT" class="badge warning">
+          Flask
+        </a>
+      
+        <a href="https://aturx.github.io/tag/VX2ta3-Q1O" class="badge warning">
+          代码
+        </a>
+      
+        <a href="https://aturx.github.io/tag/Zhe5lS2wh" class="badge secondary">
+          Docker
+        </a>
+      
+        <a href="https://aturx.github.io/tag/HYJR1J4Qk" class="badge secondary">
+          SEO
+        </a>
+      
+        <a href="https://aturx.github.io/tag/9wy5EMwvU" class="badge secondary">
+          Java
+        </a>
+      
+        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge ">
+          善用佳软
+        </a>
+      
+        <a href="https://aturx.github.io/tag/uzZ16I6hq" class="badge secondary">
+          测试
+        </a>
+      
+        <a href="https://aturx.github.io/tag/u6Gn7YGdL" class="badge ">
+          个人成长
+        </a>
+      
+        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge secondary">
+          我
+        </a>
+      
+        <a href="https://aturx.github.io/tag/Utp9E6V0u" class="badge success">
+          开发工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
 </div>
 
-<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E4%B8%80-%E4%BC%A0%E7%BB%9F%E7%80%91%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E5%BD%A2%E5%BC%8F">一、传统瀑布式开发形式</a></li>
-<li><a href="#%E4%BA%8C-%E4%BB%80%E4%B9%88%E6%98%AFtdd">二、什么是TDD？</a></li>
-<li><a href="#%E4%B8%89-tdd%E5%BC%80%E5%8F%91%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84">三、TDD开发有什么好处？</a></li>
-<li><a href="#%E5%9B%9B-%E5%A6%82%E6%AD%A4%E5%BA%94%E7%94%A8%E8%BF%99%E7%A7%8D%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F">四、如此应用这种开发模式？</a></li>
-<li><a href="#%E4%BA%94-%E5%B8%B8%E8%A7%81%E7%9A%84%E9%99%B7%E9%98%B1%E9%94%99%E8%AF%AF%E7%9A%84%E5%AE%9E%E8%B7%B5">五、常见的陷阱（错误的实践）</a></li>
-<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
-</ul>
-</li>
-</ul>
 
-</div>
+    </div>
 
-
-    
-<footer id="fh5co-footer">
-  <p>Powered by <a href="https://github.com/aturX" target="_blank">AturX</a> </p>
-</footer>
-
-
-    <!-- jQuery -->
-<script src="https://aturx.github.io//media/scripts/jquery.min.js"></script>
-<!-- img lazy load -->
-<script src="https://aturx.github.io//media/scripts/jquery.lazyload.min.js"></script>
-<!-- jQuery Easing -->
-<script src="https://aturx.github.io//media/scripts/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="https://aturx.github.io//media/scripts/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="https://aturx.github.io//media/scripts/jquery.waypoints.min.js"></script>
-<!-- Main JS -->
-<script src="https://aturx.github.io//media/scripts/main.js"></script>
-<!-- Md5 Min JS -->
-<script src="https://aturx.github.io//media/scripts/md5.min.js"></script>
-<!-- katex -->
-<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
-<!-- highlight -->
-<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
-    // 代码高亮
-    hljs.initHighlightingOnLoad();
 
-    // img 懒加载
-    $(function () {
-        $("img.lazy").lazyload({
-            effect: "fadeIn",  // 懒加载动画
-            threshold: 180  // 在图片距离屏幕180px时提前载入
-        });
-        // tooltip
-        $('[data-toggle="tooltip"]').tooltip();
+AOS.init();
 
-        // 目录
-        $('#tool-toc').click(function () {
-            $('.post-toc').toggle();
-        });
-    });
+hljs.initHighlightingOnLoad()
 
-    
 </script>
 
 
 
 
-</body>
+  </body>
 </html>

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aturx.github.io/</id>
     <title>链 求 君</title>
-    <updated>2020-11-02T07:49:52.572Z</updated>
+    <updated>2020-11-11T03:52:18.053Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aturx.github.io/"/>
     <link rel="self" href="https://aturx.github.io/atom.xml"/>
-    <subtitle>AturX  的个人网站</subtitle>
+    <subtitle>Lsy 的个人网站</subtitle>
     <logo>https://aturx.github.io/images/avatar.png</logo>
     <icon>https://aturx.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君</rights>
@@ -317,7 +317,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8504985"><label class="task-list-item-label" for="task-item-8504985"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7652160"><label class="task-list-item-label" for="task-item-7652160"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -325,7 +325,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1848374"><label class="task-list-item-label" for="task-item-1848374"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9279696"><label class="task-list-item-label" for="task-item-9279696"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -347,11 +347,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1256385"><label class="task-list-item-label" for="task-item-1256385"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1558246"><label class="task-list-item-label" for="task-item-1558246"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-889612"><label class="task-list-item-label" for="task-item-889612"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-938737"><label class="task-list-item-label" for="task-item-938737"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -363,7 +363,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7617371"><label class="task-list-item-label" for="task-item-7617371"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2686223"><label class="task-list-item-label" for="task-item-2686223"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -431,7 +431,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6193303"><label class="task-list-item-label" for="task-item-6193303"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7110981"><label class="task-list-item-label" for="task-item-7110981"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -443,7 +443,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4877501"><label class="task-list-item-label" for="task-item-4877501"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6637397"><label class="task-list-item-label" for="task-item-6637397"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -451,7 +451,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6437439"><label class="task-list-item-label" for="task-item-6437439"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1845914"><label class="task-list-item-label" for="task-item-1845914"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -469,7 +469,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-946240"><label class="task-list-item-label" for="task-item-946240"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3124797"><label class="task-list-item-label" for="task-item-3124797"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
