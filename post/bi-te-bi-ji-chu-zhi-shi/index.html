@@ -1,98 +1,102 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>比特币基础知识 | 链 求 君</title>
 <meta name="description" content="Lsy 的个人网站">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605066734000">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605067069441">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://aturx.github.io//styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://aturx.github.io/">链 求 君</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/c2EZW6nSY/" class="menu">
-                推荐
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/VX2ta3-Q1O/" class="menu">
-                代码
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://aturx.github.io/">
+        <img class="avatar" src="https://aturx.github.io//images/avatar.png?v=1605067069441" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://aturx.github.io/">
+        <h1 class="site-title">链 求 君</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>比特币基础知识</h1>
-            <p class="article-meta">
-              2020-05-11
-              
-                <a href="https://aturx.github.io/tag/ytQzP-m0v" class="badge secondary">
-                  区块链
-                </a>
-              
-            </p>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tag/c2EZW6nSY/" class="menu purple-link">
+            推荐
+          </a>
+        
+      
+        
+          <a href="/tag/VX2ta3-Q1O/" class="menu purple-link">
+            代码
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">比特币基础知识</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-05-11</span>
             
-            <div class="post-content">
-              <h1 id="什么是比特币">什么是比特币？</h1>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://aturx.github.io/tag/ytQzP-m0v">
+                    区块链
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="什么是比特币">什么是比特币？</h1>
 <p>比特币是2009年1月创建的一种数字货币。它实现了一位神秘人物中本聪（Satoshi Nakamoto）在白皮书中提出的想法，其真实身份尚未得到验证。比特币有望提供比传统在线支付机制更低的交易费用，并且与政府发行的货币不同，它由一个去中心的机制运行。</p>
 <p>比特币并不是物理存在的，只是被保存在公共的分布式账本中，并且与所有比特币交易记录在一起，通过大量的计算进行验证。比特币不是由任何银行或政府发行或支持的，单个比特币也不是有价值的商品。尽管它不是法定货币，但比特币仍然受欢迎，并引发了数百种其他虚拟货币的发行，这些虚拟货币统称为“山寨币”。</p>
 <pre><code>重要要点:
@@ -182,309 +186,52 @@ Fast Company认为中本聪可能是由三个人组成的小组，小组成员�
 <h1 id="相关内容">相关内容</h1>
 <p><a href="https://learnblockchain.cn/article/854">什么是数字货币？</a></p>
 
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
-              </div>
-              <a href="https://aturx.github.io/post/python-zi-fu-chuan-yu-bian-ma">
-                <h3 class="post-title">
-                  Python 字符串与编码
-                </h3>
-              </a>
-            </div>
-          
-        </div>
+
         
+          <div class="next-post">
+            <a class="purple-link" href="https://aturx.github.io/post/python-zi-fu-chuan-yu-bian-ma">
+              <h3 class="post-title">
+                下一篇：Python 字符串与编码
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://aturx.github.io//images/avatar.png?v=1605066734000" class="no-responsive avatar">
-    <div class="text-muted">Lsy 的个人网站</div>
-    <div class="social-container">
       
-        
+
+      <div class="site-footer">
+  <div class="slogan">Lsy 的个人网站</div>
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie">以太坊开发简介</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">什么是智能合约及其运作方式？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">什么是以太坊2.0及其重要性？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-decentraland">什么是Decentraland？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">Git功能分支工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/about">AboutMe</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">Git集中式工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-aragon">什么是Aragon？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/mo-ke-er-shu-merkle-trees">默克尔树（Merkle Trees）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi">量子计算和加密货币</a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://aturx.github.io/tag/zjY9xqWey" class="badge ">
-          区块链开发
-        </a>
-      
-        <a href="https://aturx.github.io/tag/pJWTDQOmu" class="badge success">
-          区块链周刊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/0OvoQnRh4" class="badge warning">
-          GitHub
-        </a>
-      
-        <a href="https://aturx.github.io/tag/1ouSyFvRE" class="badge secondary">
-          以太坊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/ytQzP-m0v" class="badge secondary">
-          区块链
-        </a>
-      
-        <a href="https://aturx.github.io/tag/BYEPncV_B" class="badge ">
-          Python
-        </a>
-      
-        <a href="https://aturx.github.io/tag/i4Ywa6glq" class="badge secondary">
-          ENS
-        </a>
-      
-        <a href="https://aturx.github.io/tag/raV49g8qT" class="badge secondary">
-          Flask
-        </a>
-      
-        <a href="https://aturx.github.io/tag/VX2ta3-Q1O" class="badge secondary">
-          代码
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Zhe5lS2wh" class="badge warning">
-          Docker
-        </a>
-      
-        <a href="https://aturx.github.io/tag/HYJR1J4Qk" class="badge secondary">
-          SEO
-        </a>
-      
-        <a href="https://aturx.github.io/tag/9wy5EMwvU" class="badge secondary">
-          Java
-        </a>
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge secondary">
-          善用佳软
-        </a>
-      
-        <a href="https://aturx.github.io/tag/uzZ16I6hq" class="badge warning">
-          测试
-        </a>
-      
-        <a href="https://aturx.github.io/tag/u6Gn7YGdL" class="badge secondary">
-          个人成长
-        </a>
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge ">
-          我
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Utp9E6V0u" class="badge ">
-          开发工具
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
+  Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
 
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 

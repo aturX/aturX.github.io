@@ -1,247 +1,287 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>善用佳软 | 链 求 君</title>
 <meta name="description" content="Lsy 的个人网站">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605066734000">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605067069441">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://aturx.github.io//styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://aturx.github.io/">链 求 君</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/c2EZW6nSY/" class="menu">
-                推荐
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/VX2ta3-Q1O/" class="menu">
-                代码
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://aturx.github.io/">
+        <img class="avatar" src="https://aturx.github.io//images/avatar.png?v=1605067069441" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://aturx.github.io/">
+        <h1 class="site-title">链 求 君</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <h2 class="current-tag">标签: 善用佳软</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi">Linker 第 8 期  -  自由职业与数字货币</a>
-    </h2>
-    <p class="article-meta">
-      2020-02-22
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge warning">
-          善用佳软
-        </a>
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
       
-    </p>
-    <p class="text-lead">
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
       
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
+        
+          <a href="/tag/c2EZW6nSY/" class="menu purple-link">
+            推荐
+          </a>
+        
+      
+        
+          <a href="/tag/VX2ta3-Q1O/" class="menu purple-link">
+            代码
+          </a>
+        
+      
     </div>
-  </article>
+  </div>
+</transition>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker-di-7-qi-mian-fei-kou-tu-ruan-jian-tui-jian">Linker 第 7 期  -  免费抠图软件推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-02-13
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge success">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker-di-7-qi-mian-fei-kou-tu-ruan-jian-tui-jian" class="readmore-link">
-        <button>
-          更多
-        </button>
+
+      <div class="content-container">
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 善用佳软
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi">
+        <h2 class="post-title">Linker 第 8 期  -  自由职业与数字货币</h2>
       </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-02-22</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu">Linker 第 6 期  -  开启远程办公之旅</a>
-    </h2>
-    <p class="article-meta">
-      2020-02-09
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge secondary">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu" class="readmore-link">
-        <button>
-          更多
-        </button>
+    
+      <a href="https://aturx.github.io/post/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker-di-8-qi-zi-you-zhi-ye-yu-shu-zi-huo-bi.PNG')">
+        </div>
       </a>
-    </div>
-  </article>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian">Linker 第 5 期  -  数据分析神器推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-02-06
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge warning">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian" class="readmore-link">
-        <button>
-          更多
-        </button>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker-di-7-qi-mian-fei-kou-tu-ruan-jian-tui-jian">
+        <h2 class="post-title">Linker 第 7 期  -  免费抠图软件推荐</h2>
       </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-02-13</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker04">Linker 第 4 期  -  自媒体工具推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-20
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge ">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker04" class="readmore-link">
-        <button>
-          更多
-        </button>
+    
+      <a href="https://aturx.github.io/post/linker-di-7-qi-mian-fei-kou-tu-ruan-jian-tui-jian">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker-di-7-qi-mian-fei-kou-tu-ruan-jian-tui-jian.jpg')">
+        </div>
       </a>
-    </div>
-  </article>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker03">Linker 第 3 期  -  购物折扣网站推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-19
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge warning">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <h1 id="劵-妈-妈">🐶  劵 妈 妈</h1>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu">
+        <h2 class="post-title">Linker 第 6 期  -  开启远程办公之旅</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-02-09</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://aturx.github.io/post/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker-di-6-qi-kai-qi-yuan-cheng-ban-gong-zhi-lu.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian">
+        <h2 class="post-title">Linker 第 5 期  -  数据分析神器推荐</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-02-06</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://aturx.github.io/post/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker-di-5-qi-shu-ju-fen-xi-shen-qi-tui-jian.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker04">
+        <h2 class="post-title">Linker 第 4 期  -  自媒体工具推荐</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-20</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://aturx.github.io/post/linker04">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker04.png')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker03">
+        <h2 class="post-title">Linker 第 3 期  -  购物折扣网站推荐</h2>
+      </a>
+      <div class="post-abstract">
+        <h1 id="劵-妈-妈">🐶  劵 妈 妈</h1>
 <p><a href="http://m.quanmama.com/">在线访问</a></p>
 <p>券妈妈优惠券网是一家免费领取京东优惠券,唯品会优惠券,聚美优品优惠券,1号店优惠券,6pm优惠码,苏宁易购优惠券的优惠券网站。从开通至今，目前网站日访问人数已突破15万人次，每日发放近8万张优惠券。券妈妈拥有一套完善的商家促销以及消费者省钱购物的理念和经验，在券妈妈商家可以尽情促销，消费者可以自由筛选，券妈妈会对所有信息进行核实把关！</p>
 
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker03" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-19</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
+    
+      <a href="https://aturx.github.io/post/linker03">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker03.jpg')">
+        </div>
+      </a>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker02">Linker 第 2 期  -  搜索引擎网站推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-18
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge warning">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>本期主推10个搜索引擎网站。<br>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker02">
+        <h2 class="post-title">Linker 第 2 期  -  搜索引擎网站推荐</h2>
+      </a>
+      <div class="post-abstract">
+        <p>本期主推10个搜索引擎网站。<br>
 无论是搜索结果的质量还是准确率，都超过百度，速来分享！</p>
 <h2 id="多-吉-搜-索">🐶  多 吉 搜 索</h2>
 <p>国内中文搜索引擎，不追踪，不误导。</p>
@@ -285,331 +325,101 @@
 <p><a href="https://searx.elukerio.org/">访问地址</a></p>
 <hr>
 
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker02" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-18</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/linker01">Linker 第 1 期  -  在线视频网站推荐</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-17
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge secondary">
-          善用佳软
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
-
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/linker01" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+    
+      <a href="https://aturx.github.io/post/linker02">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker02.jpg')">
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/linker01">
+        <h2 class="post-title">Linker 第 1 期  -  在线视频网站推荐</h2>
+      </a>
+      <div class="post-abstract">
+        <p>😀😁😆本期主推10款电影相关网站。可帮助我在想看电影的时候，能解决我没有爱奇艺会员的困扰，速来分享！</p>
 
       </div>
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://aturx.github.io//images/avatar.png?v=1605066734000" class="no-responsive avatar">
-    <div class="text-muted">Lsy 的个人网站</div>
-    <div class="social-container">
-      
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-17</span>
         
-      
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/c2EZW6nSY">
+                善用佳软
+                
+              </a>
+            
+          </span>
         
-      
-        
-      
-        
-      
-        
-      
+      </div>
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie">以太坊开发简介</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">什么是智能合约及其运作方式？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">什么是以太坊2.0及其重要性？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-decentraland">什么是Decentraland？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">Git功能分支工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/about">AboutMe</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">Git集中式工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-aragon">什么是Aragon？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/mo-ke-er-shu-merkle-trees">默克尔树（Merkle Trees）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi">量子计算和加密货币</a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://aturx.github.io/tag/zjY9xqWey" class="badge ">
-          区块链开发
-        </a>
-      
-        <a href="https://aturx.github.io/tag/pJWTDQOmu" class="badge secondary">
-          区块链周刊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/0OvoQnRh4" class="badge warning">
-          GitHub
-        </a>
-      
-        <a href="https://aturx.github.io/tag/1ouSyFvRE" class="badge secondary">
-          以太坊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/ytQzP-m0v" class="badge secondary">
-          区块链
-        </a>
-      
-        <a href="https://aturx.github.io/tag/BYEPncV_B" class="badge ">
-          Python
-        </a>
-      
-        <a href="https://aturx.github.io/tag/i4Ywa6glq" class="badge success">
-          ENS
-        </a>
-      
-        <a href="https://aturx.github.io/tag/raV49g8qT" class="badge success">
-          Flask
-        </a>
-      
-        <a href="https://aturx.github.io/tag/VX2ta3-Q1O" class="badge warning">
-          代码
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Zhe5lS2wh" class="badge secondary">
-          Docker
-        </a>
-      
-        <a href="https://aturx.github.io/tag/HYJR1J4Qk" class="badge ">
-          SEO
-        </a>
-      
-        <a href="https://aturx.github.io/tag/9wy5EMwvU" class="badge warning">
-          Java
-        </a>
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge ">
-          善用佳软
-        </a>
-      
-        <a href="https://aturx.github.io/tag/uzZ16I6hq" class="badge ">
-          测试
-        </a>
-      
-        <a href="https://aturx.github.io/tag/u6Gn7YGdL" class="badge secondary">
-          个人成长
-        </a>
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge warning">
-          我
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Utp9E6V0u" class="badge ">
-          开发工具
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
+    
+      <a href="https://aturx.github.io/post/linker01">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/linker01.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
+  
 </div>
 
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">Lsy 的个人网站</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 

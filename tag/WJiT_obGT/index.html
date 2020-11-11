@@ -1,256 +1,262 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>我 | 链 求 君</title>
 <meta name="description" content="Lsy 的个人网站">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605066734000">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://aturx.github.io//favicon.ico?v=1605067069441">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://aturx.github.io//styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://aturx.github.io/">链 求 君</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/c2EZW6nSY/" class="menu">
-                推荐
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tag/VX2ta3-Q1O/" class="menu">
-                代码
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://aturx.github.io/">
+        <img class="avatar" src="https://aturx.github.io//images/avatar.png?v=1605067069441" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://aturx.github.io/">
+        <h1 class="site-title">链 求 君</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <h2 class="current-tag">标签: 我</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/成长技能训练">成长技能训练</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-17
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge secondary">
-          我
-        </a>
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
       
-    </p>
-    <p class="text-lead">
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
       
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/成长技能训练" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
+        
+          <a href="/tag/c2EZW6nSY/" class="menu purple-link">
+            推荐
+          </a>
+        
+      
+        
+          <a href="/tag/VX2ta3-Q1O/" class="menu purple-link">
+            代码
+          </a>
+        
+      
     </div>
-  </article>
+  </div>
+</transition>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/总结&amp;实践">总结&amp;实践</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-15
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge secondary">
-          我
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/总结&amp;实践" class="readmore-link">
-        <button>
-          更多
-        </button>
+
+      <div class="content-container">
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 我
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/成长技能训练">
+        <h2 class="post-title">成长技能训练</h2>
       </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-17</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/我&amp;生活">我&amp;生活</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-15
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge warning">
-          我
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/我&amp;生活" class="readmore-link">
-        <button>
-          更多
-        </button>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/总结&amp;实践">
+        <h2 class="post-title">总结&amp;实践</h2>
       </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-15</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/摘抄&amp;收藏">摘抄&amp;收藏</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-13
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge warning">
-          我
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/摘抄&amp;收藏" class="readmore-link">
-        <button>
-          更多
-        </button>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/我&amp;生活">
+        <h2 class="post-title">我&amp;生活</h2>
       </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-15</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
+    
+  </section>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/读书&amp;观影">读书&amp;观影</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-13
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge ">
-          我
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <h1 id="预-选-书-单">😲 预 选 书 单</h1>
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/摘抄&amp;收藏">
+        <h2 class="post-title">摘抄&amp;收藏</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-13</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/读书&amp;观影">
+        <h2 class="post-title">读书&amp;观影</h2>
+      </a>
+      <div class="post-abstract">
+        <h1 id="预-选-书-单">😲 预 选 书 单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7769585"><label class="task-list-item-label" for="task-item-7769585"> 《刻意练习》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2648950"><label class="task-list-item-label" for="task-item-2648950"> 《刻意练习》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-793415"><label class="task-list-item-label" for="task-item-793415"> 《精通比特币》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7782478"><label class="task-list-item-label" for="task-item-7782478"> 《精通比特币》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4733678"><label class="task-list-item-label" for="task-item-4733678"> 《剑指offer》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3899639"><label class="task-list-item-label" for="task-item-3899639"> 《剑指offer》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8114505"><label class="task-list-item-label" for="task-item-8114505"> 《充足理由率的四重根》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8799981"><label class="task-list-item-label" for="task-item-8799981"> 《充足理由率的四重根》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-126608"><label class="task-list-item-label" for="task-item-126608"> 《故事》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2372707"><label class="task-list-item-label" for="task-item-2372707"> 《故事》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6373109"><label class="task-list-item-label" for="task-item-6373109"> 《Django教程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2498453"><label class="task-list-item-label" for="task-item-2498453"> 《Django教程》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5744170"><label class="task-list-item-label" for="task-item-5744170"> 《数学是什么？》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6501154"><label class="task-list-item-label" for="task-item-6501154"> 《数学是什么？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1606457"><label class="task-list-item-label" for="task-item-1606457"> 《哥德尔、艾舍尔、巴赫》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6560790"><label class="task-list-item-label" for="task-item-6560790"> 《哥德尔、艾舍尔、巴赫》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1352962"><label class="task-list-item-label" for="task-item-1352962"> 《鸟哥Linux私房菜基础篇》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3473885"><label class="task-list-item-label" for="task-item-3473885"> 《鸟哥Linux私房菜基础篇》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7151121"><label class="task-list-item-label" for="task-item-7151121"> 《区块链：定义金融格局》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-264154"><label class="task-list-item-label" for="task-item-264154"> 《区块链：定义金融格局》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7076580"><label class="task-list-item-label" for="task-item-7076580"> 《编码》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1167434"><label class="task-list-item-label" for="task-item-1167434"> 《编码》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4643430"><label class="task-list-item-label" for="task-item-4643430"> 《程序员修炼之道》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1227394"><label class="task-list-item-label" for="task-item-1227394"> 《程序员修炼之道》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7939747"><label class="task-list-item-label" for="task-item-7939747"> 《像程序员一样思考》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1990452"><label class="task-list-item-label" for="task-item-1990452"> 《像程序员一样思考》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3372709"><label class="task-list-item-label" for="task-item-3372709"> 《黑客与画家》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-703730"><label class="task-list-item-label" for="task-item-703730"> 《黑客与画家》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2118018"><label class="task-list-item-label" for="task-item-2118018"> 《人件》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5958827"><label class="task-list-item-label" for="task-item-5958827"> 《人件》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5676878"><label class="task-list-item-label" for="task-item-5676878"> 《深入理解计算机系统》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9873947"><label class="task-list-item-label" for="task-item-9873947"> 《深入理解计算机系统》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6947683"><label class="task-list-item-label" for="task-item-6947683"> 《区块链社会》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7935130"><label class="task-list-item-label" for="task-item-7935130"> 《区块链社会》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8304343"><label class="task-list-item-label" for="task-item-8304343"> 《人类群星闪耀时》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1346809"><label class="task-list-item-label" for="task-item-1346809"> 《人类群星闪耀时》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6989747"><label class="task-list-item-label" for="task-item-6989747"> 《硅谷之火》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3693335"><label class="task-list-item-label" for="task-item-3693335"> 《硅谷之火》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6746703"><label class="task-list-item-label" for="task-item-6746703"> 《Python密码学编程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7938770"><label class="task-list-item-label" for="task-item-7938770"> 《Python密码学编程》</label></p>
 </li>
 </ul>
 <h1 id="优-选-资-源">😎 优 选 资 源</h1>
@@ -263,330 +269,95 @@
 </li>
 </ul>
 
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/读书&amp;观影" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-13</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
     </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://aturx.github.io/post/aboutN">关于</a>
-    </h2>
-    <p class="article-meta">
-      2020-01-03
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge secondary">
-          我
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://aturx.github.io/post/aboutN" class="readmore-link">
-        <button>
-          更多
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+    
+      <a href="https://aturx.github.io/post/读书&amp;观影">
+        <div class="feature-container" style="background-image: url('https://aturx.github.io//post-images/读书&amp;观影.jpg')">
         </div>
-        <div class="row flex-edges">
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://aturx.github.io/post/aboutN">
+        <h2 class="post-title">关于</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-01-03</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://aturx.github.io/tag/WJiT_obGT">
+                我
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+
+<div class="pagination-container">
   
   
 </div>
+
 
       </div>
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://aturx.github.io//images/avatar.png?v=1605066734000" class="no-responsive avatar">
-    <div class="text-muted">Lsy 的个人网站</div>
-    <div class="social-container">
+
+      <div class="site-footer">
+  <div class="slogan">Lsy 的个人网站</div>
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie">以太坊开发简介</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">什么是智能合约及其运作方式？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">什么是以太坊2.0及其重要性？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-decentraland">什么是Decentraland？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">Git功能分支工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/about">AboutMe</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">Git集中式工作流实践</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/shi-me-shi-aragon">什么是Aragon？</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/mo-ke-er-shu-merkle-trees">默克尔树（Merkle Trees）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi">量子计算和加密货币</a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://aturx.github.io/tag/zjY9xqWey" class="badge secondary">
-          区块链开发
-        </a>
-      
-        <a href="https://aturx.github.io/tag/pJWTDQOmu" class="badge warning">
-          区块链周刊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/0OvoQnRh4" class="badge warning">
-          GitHub
-        </a>
-      
-        <a href="https://aturx.github.io/tag/1ouSyFvRE" class="badge secondary">
-          以太坊
-        </a>
-      
-        <a href="https://aturx.github.io/tag/ytQzP-m0v" class="badge ">
-          区块链
-        </a>
-      
-        <a href="https://aturx.github.io/tag/BYEPncV_B" class="badge warning">
-          Python
-        </a>
-      
-        <a href="https://aturx.github.io/tag/i4Ywa6glq" class="badge success">
-          ENS
-        </a>
-      
-        <a href="https://aturx.github.io/tag/raV49g8qT" class="badge warning">
-          Flask
-        </a>
-      
-        <a href="https://aturx.github.io/tag/VX2ta3-Q1O" class="badge secondary">
-          代码
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Zhe5lS2wh" class="badge secondary">
-          Docker
-        </a>
-      
-        <a href="https://aturx.github.io/tag/HYJR1J4Qk" class="badge warning">
-          SEO
-        </a>
-      
-        <a href="https://aturx.github.io/tag/9wy5EMwvU" class="badge ">
-          Java
-        </a>
-      
-        <a href="https://aturx.github.io/tag/c2EZW6nSY" class="badge secondary">
-          善用佳软
-        </a>
-      
-        <a href="https://aturx.github.io/tag/uzZ16I6hq" class="badge secondary">
-          测试
-        </a>
-      
-        <a href="https://aturx.github.io/tag/u6Gn7YGdL" class="badge success">
-          个人成长
-        </a>
-      
-        <a href="https://aturx.github.io/tag/WJiT_obGT" class="badge warning">
-          我
-        </a>
-      
-        <a href="https://aturx.github.io/tag/Utp9E6V0u" class="badge warning">
-          开发工具
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
+  Powered by <a href="https://github.com/aturX" target="_blank">AturX</a>  | <a class="rss" href="https://aturx.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
+
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
