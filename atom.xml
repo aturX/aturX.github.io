@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://aturx.github.io/</id>
+    <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-13T03:43:33.425Z</updated>
+    <updated>2020-11-13T04:14:44.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://aturx.github.io/"/>
-    <link rel="self" href="https://aturx.github.io/atom.xml"/>
+    <link rel="alternate" href="https://lianqiujun.co"/>
+    <link rel="self" href="https://lianqiujun.co/atom.xml"/>
     <subtitle>实践更多区块链项目，探索更多Web3可能性！</subtitle>
-    <logo>https://aturx.github.io/images/avatar.png</logo>
-    <icon>https://aturx.github.io/favicon.ico</icon>
+    <logo>https://lianqiujun.co/images/avatar.png</logo>
+    <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
     <entry>
         <title type="html"><![CDATA[以太坊开发简介]]></title>
-        <id>https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie</id>
-        <link href="https://aturx.github.io/post/yi-tai-fang-kai-fa-jian-jie">
+        <id>https://lianqiujun.co/post/yi-tai-fang-kai-fa-jian-jie</id>
+        <link href="https://lianqiujun.co/post/yi-tai-fang-kai-fa-jian-jie">
         </link>
         <updated>2020-11-02T07:48:18.000Z</updated>
         <content type="html"><![CDATA[<h1 id="以太坊开发一览">以太坊开发一览</h1>
@@ -117,8 +117,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[什么是智能合约及其运作方式？]]></title>
-        <id>https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi</id>
-        <link href="https://aturx.github.io/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">
+        <id>https://lianqiujun.co/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi</id>
+        <link href="https://lianqiujun.co/post/shi-me-shi-zhi-neng-he-yue-ji-qi-yun-zuo-fang-shi">
         </link>
         <updated>2020-10-10T04:29:15.000Z</updated>
         <content type="html"><![CDATA[<p>智能合约是执行一组指令的计算机代码。Dapps是去中心的应用程序，与智能合约相互结合在一起，让人们可以与之交互。</p>
@@ -198,8 +198,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[什么是以太坊2.0及其重要性？]]></title>
-        <id>https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing</id>
-        <link href="https://aturx.github.io/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">
+        <id>https://lianqiujun.co/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing</id>
+        <link href="https://lianqiujun.co/post/shi-me-shi-yi-tai-fang-20-ji-qi-chong-yao-xing">
         </link>
         <updated>2020-10-09T06:27:24.000Z</updated>
         <content type="html"><![CDATA[<p>以太坊网络升级成以太坊2.0是一个长期计划。旨在解决当前网络的可扩展性和安全性问题。在以太坊2.0完成后，它将转换成为采用权益证明共识机制的区块链“世界计算机”。</p>
@@ -249,8 +249,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[什么是Decentraland？]]></title>
-        <id>https://aturx.github.io/post/shi-me-shi-decentraland</id>
-        <link href="https://aturx.github.io/post/shi-me-shi-decentraland">
+        <id>https://lianqiujun.co/post/shi-me-shi-decentraland</id>
+        <link href="https://lianqiujun.co/post/shi-me-shi-decentraland">
         </link>
         <updated>2020-09-29T09:31:08.000Z</updated>
         <content type="html"><![CDATA[<p><code>Decentraland是一个建立在以太坊区块链上的虚拟世界，人们可以在这里进行购买，出售，社交等活动。</code></p>
@@ -296,8 +296,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Git功能分支工作流实践]]></title>
-        <id>https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian</id>
-        <link href="https://aturx.github.io/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">
+        <id>https://lianqiujun.co/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian</id>
+        <link href="https://lianqiujun.co/post/git-gong-neng-fen-zhi-gong-zuo-liu-shi-jian">
         </link>
         <updated>2020-09-23T10:08:44.000Z</updated>
         <content type="html"><![CDATA[<h2 id="工作流">工作流</h2>
@@ -317,7 +317,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6910228"><label class="task-list-item-label" for="task-item-6910228"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1539937"><label class="task-list-item-label" for="task-item-1539937"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -325,7 +325,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5721207"><label class="task-list-item-label" for="task-item-5721207"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3069716"><label class="task-list-item-label" for="task-item-3069716"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -347,11 +347,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6132181"><label class="task-list-item-label" for="task-item-6132181"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4393603"><label class="task-list-item-label" for="task-item-4393603"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2786482"><label class="task-list-item-label" for="task-item-2786482"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3873359"><label class="task-list-item-label" for="task-item-3873359"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -363,7 +363,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8220710"><label class="task-list-item-label" for="task-item-8220710"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4766988"><label class="task-list-item-label" for="task-item-4766988"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -393,8 +393,8 @@ $ git reflog
     </entry>
     <entry>
         <title type="html"><![CDATA[Git集中式工作流实践]]></title>
-        <id>https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian</id>
-        <link href="https://aturx.github.io/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">
+        <id>https://lianqiujun.co/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian</id>
+        <link href="https://lianqiujun.co/post/git-ji-zhong-shi-gong-zuo-liu-shi-jian">
         </link>
         <updated>2020-09-23T02:48:48.000Z</updated>
         <content type="html"><![CDATA[<h1 id="模拟团队开发流程实践">模拟团队开发流程实践</h1>
@@ -431,7 +431,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-955778"><label class="task-list-item-label" for="task-item-955778"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4155006"><label class="task-list-item-label" for="task-item-4155006"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -443,7 +443,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6316320"><label class="task-list-item-label" for="task-item-6316320"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2826350"><label class="task-list-item-label" for="task-item-2826350"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -451,7 +451,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8873747"><label class="task-list-item-label" for="task-item-8873747"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-923204"><label class="task-list-item-label" for="task-item-923204"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -469,7 +469,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-653953"><label class="task-list-item-label" for="task-item-653953"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5354841"><label class="task-list-item-label" for="task-item-5354841"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -499,8 +499,8 @@ git push origin master
     </entry>
     <entry>
         <title type="html"><![CDATA[什么是Aragon？]]></title>
-        <id>https://aturx.github.io/post/shi-me-shi-aragon</id>
-        <link href="https://aturx.github.io/post/shi-me-shi-aragon">
+        <id>https://lianqiujun.co/post/shi-me-shi-aragon</id>
+        <link href="https://lianqiujun.co/post/shi-me-shi-aragon">
         </link>
         <updated>2020-07-25T03:14:51.000Z</updated>
         <content type="html"><![CDATA[<pre><code>Aragon Network 希望通过区块链技术改善我们的工作方式，创建有效的去中心化组织和数字法院。
@@ -552,8 +552,8 @@ git push origin master
     </entry>
     <entry>
         <title type="html"><![CDATA[默克尔树（Merkle Trees）]]></title>
-        <id>https://aturx.github.io/post/mo-ke-er-shu-merkle-trees</id>
-        <link href="https://aturx.github.io/post/mo-ke-er-shu-merkle-trees">
+        <id>https://lianqiujun.co/post/mo-ke-er-shu-merkle-trees</id>
+        <link href="https://lianqiujun.co/post/mo-ke-er-shu-merkle-trees">
         </link>
         <updated>2020-07-23T03:10:19.000Z</updated>
         <content type="html"><![CDATA[<p>默克尔树使区块链更加高效和值得信赖。Merkle树可以在保持安全性的同时节省内存和处理能力。</p>
@@ -580,8 +580,8 @@ git push origin master
     </entry>
     <entry>
         <title type="html"><![CDATA[量子计算和加密货币]]></title>
-        <id>https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi</id>
-        <link href="https://aturx.github.io/post/liang-zi-ji-suan-he-jia-mi-huo-bi">
+        <id>https://lianqiujun.co/post/liang-zi-ji-suan-he-jia-mi-huo-bi</id>
+        <link href="https://lianqiujun.co/post/liang-zi-ji-suan-he-jia-mi-huo-bi">
         </link>
         <updated>2020-07-22T03:04:10.000Z</updated>
         <content type="html"><![CDATA[<p>量子计算是计算领域的下一个巨大飞跃。但这也可能会造成加密技术的巨大破坏。我们来一起探索一下这项新技术。</p>
@@ -611,8 +611,8 @@ git push origin master
     </entry>
     <entry>
         <title type="html"><![CDATA[MetaMask v8 新版本]]></title>
-        <id>https://aturx.github.io/post/metamask-v8-xin-ban-ben</id>
-        <link href="https://aturx.github.io/post/metamask-v8-xin-ban-ben">
+        <id>https://lianqiujun.co/post/metamask-v8-xin-ban-ben</id>
+        <link href="https://lianqiujun.co/post/metamask-v8-xin-ban-ben">
         </link>
         <updated>2020-07-05T03:18:07.000Z</updated>
         <content type="html"><![CDATA[<p>现在，MetaMask 的新版本已经推出！<br>
@@ -621,37 +621,37 @@ MetaMask版本8的推出，是对MetaMask的重大升级，并提供了许多以
 <p>如今，大多数钱包要么管理一个帐户，要么将当前选择的用户的当前帐户暴露给所有连接的站点，从而暴露了用户的私人信息给第三方网站。</p>
 <p>在MetaMask v8中，当你连接到一个网站时，你可以选择一个或多个帐户与该网站相关联，或者仅为该网站创建一个新帐户。<br>
 这项新功能使你可以轻松地在帐户之间进行切换，从而可以控制那些帐户与去中心化网络中的不同站点进行交互，而不会在不同的网站直接暴露信息。如果你打开未与当前账户建立连接的站点，MetaMask会提醒你进行连接。<br>
-<img src="https://aturx.github.io//post-images/1593919144059.png" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919144059.png" alt="" loading="lazy"><br>
 增加了一个新的“提醒”标记在界面左上角（此处显示为“未连接”，表示你的连接状态为断开，并且点击后可以设置权限或者主动断开连接。）<br>
-<img src="https://aturx.github.io//post-images/1593919151223.png" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919151223.png" alt="" loading="lazy"><br>
 这些网站可以拥有哪些权限，具体可查看 <a href="https://github.com/ethereum/EIPs/issues/2255">EIP-2255权限系统</a>，后面会陆续丰富这些功能。这些新的权限管理功能会十分强大，例如包含解密授权，访问钱包信息（包含你喜欢的代币或联系人）等等。</p>
 <h1 id="2-新用户界面">2. 新用户界面</h1>
 <p>版本8最明显的变化可能是新的MetaMask UI。首次打开MetaMask版本8时，界面会提示一些新功能介绍的引导。<br>
-<img src="https://aturx.github.io//post-images/1593919161956.gif" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919161956.gif" alt="" loading="lazy"><br>
 重新设计了主屏幕，资产页面和交易历史记录，现在可以更轻松地访问资产。现在无需通过点击图标来查看你的资产，而是通过主屏幕上的“资产”标签访问它们。<br>
-<img src="https://aturx.github.io//post-images/1593919201662.gif" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919201662.gif" alt="" loading="lazy"><br>
 “资产”标签中包含了你当前持有的资产的列表。单击每个资产可以查看该资产交易历史记录的详细信息页面。<br>
-<img src="https://aturx.github.io//post-images/1593919214084.gif" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919214084.gif" alt="" loading="lazy"><br>
 新的“活动”标签是重新设计的交易记录视图。使用新的图标，可以更轻松地识别每种类型的交易。</p>
-<figure data-type="image" tabindex="1"><img src="https://aturx.github.io//post-images/1593919224307.gif" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1593919224307.gif" alt="" loading="lazy"></figure>
 <h1 id="3-开发者的新功能">3. 开发者的新功能</h1>
 <p>（1）Web3信息加密<br>
 MetaMask现在提供了两种新方法，这些方法使网站可以加密和解密Web3用户的消息。<br>
-<img src="https://aturx.github.io//post-images/1593919234860.png" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919234860.png" alt="" loading="lazy"><br>
 目前，这些解密请求每个都需要用户确认，因此最适合解密不常看的重要消息（例如电子邮件）。稍后，我们将有机会在上述权限系统中提供相同的解密策略。<br>
 具体API可以<a href="https://docs.metamask.io/guide/experimental-apis.html#eth-rpc-methods">查看</a>。</p>
 <p>（2）首次使用时无缝登录</p>
 <p>用户首次访问我们的Web3网站时，可能没有安装过MetaMask插件，需要经过一系列的安装步骤，并且为了更好地用户体验，在安装好插件后，会自动跳回到用户访问的网站，这就是新版本的优化之处。<br>
-<img src="https://aturx.github.io//post-images/1593919241694.gif" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919241694.gif" alt="" loading="lazy"><br>
 为此，官方创建了一个新的<a href="https://github.com/MetaMask/metamask-onboarding">入门库</a>，使应用程序可以实现自己的连接按钮。它允许用户无缝地登陆你的网站，安装MetaMask，并自动重定向回你的应用程序，以便他们继续访问。在<a href="https://docs.metamask.io/guide/onboarding-library.html">此处</a>了解有关使用官方新入门库的更多信息。</p>
 <p>（3）Web3网站开发将发生的变更<br>
-<img src="https://aturx.github.io//post-images/1593919263397.png" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919263397.png" alt="" loading="lazy"><br>
 如果你是依靠MetaMask注入的window.web3对象的进行开发的网站，则需要进行一些更改，最好删除注入的web3对象，否则你的网站未来可能会崩溃。建议尽快迁移到使用window.ethereum或ethers.js，官方会在不久的将来宣布弃用日期。如果你要选择新的开发库，建议使用ethers。</p>
 <h1 id="4-安全">4. 安全</h1>
 <p>LavaMoat已投入生产！<br>
 新的工具LavaMoat有助于提高几乎所有JavaScript项目的安全性。<br>
 MetaMask是一个基于Web和JavaScript的钱包。JavaScript通常会因为代码可见，经常面临生成环境上的安全问题。对于钱包来说，这比其他任何程序都更加危险。<br>
-<img src="https://aturx.github.io//post-images/1593919272303.png" alt="" loading="lazy"><br>
+<img src="https://lianqiujun.co/post-images/1593919272303.png" alt="" loading="lazy"><br>
 LavaMoat是官方正在构建的一组工具，这些工具在构建时使用Secure EcmaScript 将每个第三方依赖限制在一段JavaScript代码中。希望最终将每个依赖项限制在整个钱包中，从而极大地保护钱包和用户免受“攻击”的侵害。</p>
 <p>现在已有第一个受LavaMoat保护的应用投入生产和生产！</p>
 <h1 id="5-下载与安装">5. 下载与安装</h1>
