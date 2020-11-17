@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>Python 多线程实践 | 链 求 君 | 区 块 链</title>
+<title>FlowChain | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Python 多线程实践 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="FlowChain | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,66 +38,9 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="Python 多线程实践" />
-  <meta property="og:url" content="https://lianqiujun.co/post/python-duo-xian-cheng-shi-jian" />
-  <meta property="og:locale" content="zh-CN" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
-  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-      aria-label="Toggle navigation">
-      Menu
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        
-        <li class="nav-item">
-          
-          <a class="nav-link" href="/">教程</a>
-          
-        </li>
-        
-        <li class="nav-item">
-          
-          <a class="nav-link" href="/archives">文章</a>
-          
-        </li>
-        
-        <li class="nav-item">
-          
-          <a class="nav-link" href="/tags">分类</a>
-          
-        </li>
-        
-        <li class="nav-item">
-          
-          <a class="nav-link" href="/about">实践</a>
-          
-        </li>
-        
-        <li class="nav-item">
-          <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
-              action="/search/index.html">
-              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <!-- Page Header -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
@@ -155,18 +98,9 @@
         
           <!-- 没Title为其他页面Header -->
           
-            <!-- 没Title并且有headerType为Post：文章Header -->
-            <div class="post-heading">
-              <span class="tags">
-                
-                <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">Python</a>
-                
-              </span>
-              <h1>Python 多线程实践</h1>
-              <span class="meta">
-                Posted on
-                2020-06-09，3 min read
-              </span>
+            <!-- 其他页面（archives、tags、about...）Header -->
+            <div class="sub-site-heading">
+              <h1 class="tag-tl">#FlowChain</h1>
             </div>
           
         
@@ -174,158 +108,55 @@
     </div>
   </div>
 </header>
-  <!-- Post Content -->
-  <article id="post-content-article">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
-          
-          <h1 id="1-python-多线程标准库">1. Python 多线程标准库</h1>
-<p>Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，使用threading这个高级模块就足够了。</p>
-<h1 id="2-创建并使用多线程">2. 创建并使用多线程</h1>
-<pre><code>import time, threading
-
-
-# 新线程执行的代码:
-def say_some():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	n = 0
-	while n &lt; 7:
-		n = n + 1
-		print('thread [{}] &gt;&gt;&gt; [{}]'.format(threading.current_thread().name, n))
-		time.sleep(n)
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-
-def demo1():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	t = threading.Thread(target=say_some, name='SaySomeThread')
-	t.start()
-	t.join()  # 线程结束后继续执行
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-</code></pre>
-<h1 id="3-线程的锁">3. 线程的锁</h1>
-<p>多线程和多进程最大的不同在于，多进程中，同一个变量，<br>
-各自有一份拷贝存在于每个进程中，互不影响，而多线程中，<br>
-所有变量都由所有线程共享，所以，任何一个变量都可以被任何一个线程修改，<br>
-因此，线程之间共享数据最大的危险在于多个线程同时改一个变量，把内容给改乱了。<br>
-所以，和多进程相比，多线程需要对特定的变量加锁，保证其修该操作不会乱。</p>
-<pre><code># 锁
-lock = threading.Lock()
-
-
-def run_thread(n):
-	for i in range(100000):
-		# 先要获取锁:
-		lock.acquire()
-		try:
-			# 修改变量
-			n = n + 1
-		finally:
-			# 改完了一定要释放锁:
-			lock.release()
-
-</code></pre>
-<p>包含锁的某段代码实际上只能以单线程模式执行，效率就大大地下降了。</p>
-<h1 id="4-python-伪多线程原因gil锁">4. Python “伪”多线程原因：GIL锁</h1>
-<p>使用C、C++或Java来写特定死循环，直接可以把全部核心跑满，4核就跑到400%，<br>
-但是Python跑相同代码，只能将CPU跑到100%左右。</p>
-<p>Python的线程虽然是真正的线程，但解释器执行代码时，有一个GIL锁：Global Interpreter Lock，<br>
-任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，<br>
-解释器就自动释放GIL锁，让别的线程有机会执行。</p>
-<p>GIL全局锁实际上把所有线程的执行代码都给上了锁，<br>
-所以，多线程在Python中只能交替执行，<br>
-即使100个线程跑在100核CPU上，也只能用到1个核。</p>
-<p>解决方案： 多进程<br>
-Python虽然不能利用多线程实现多核任务，但可以通过多进程实现多核任务。<br>
-多个Python进程有各自独立的GIL锁，互不影响。</p>
-<h1 id="5-线程全局变量">5. 线程全局变量</h1>
-<pre><code># 创建全局ThreadLocal对象:
-local_something = threading.local()
-
-# 1  执行线程
-def process_say_someting():
-	# 获取当前线程关联的student:
-	text = local_something.content
-	print('Hello, %s (in %s)' % (text, threading.current_thread().name))
-
-
-# 2  赋值线程
-def process_thread(t):
-	# 为该线程，绑定ThreadLocal的值:
-	local_something.content = t
-	process_say_someting()
-
-
-t1 = threading.Thread(target=process_thread, args=('hhhhh',), name='Thread-A')
-t2 = threading.Thread(target=process_thread, args=('wwwwww',), name='Thread-B')
-t1.start()
-t2.start()
-t1.join()
-t2.join()
-</code></pre>
-
-          <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#1-python-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A0%87%E5%87%86%E5%BA%93">1. Python 多线程标准库</a></li>
-<li><a href="#2-%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%BD%BF%E7%94%A8%E5%A4%9A%E7%BA%BF%E7%A8%8B">2. 创建并使用多线程</a></li>
-<li><a href="#3-%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%94%81">3. 线程的锁</a></li>
-<li><a href="#4-python-%E4%BC%AA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%9B%A0gil%E9%94%81">4. Python “伪”多线程原因：GIL锁</a></li>
-<li><a href="#5-%E7%BA%BF%E7%A8%8B%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">5. 线程全局变量</a></li>
-</ul>
-</div>
-          
-          <hr />
-          <p class="next-post">下一篇：
-            <a href="https://lianqiujun.co/post/python-yuan-lei-ji-orm-kuang-jia-shi-xian">
-              <span class="post-title">
-                Python 元类及ORM框架实现&rarr;
-              </span>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      
+      <!-- 每行的总容器 -->
+      <div class="post-row-container">
+        <!-- 第0层；标题 -->
+        <div class="title-floor">
+          <div class="post-title-container">
+            
+            <a href="https://lianqiujun.co/post/flow-go-sdk-kai-fa-shi-jian">
+              <h2 class="post-title">
+                Flow Go SDK 开发实践
+              </h2>
             </a>
-          </p>
-          
-          <div class="comment" style="text-align: center;">
-            
-            <span id="/post/python-duo-xian-cheng-shi-jian/" class="leancloud_visitors"
-              data-flag-title="Python 多线程实践">
-              <em class="post-meta-item-text">阅读量 </em>
-              <i class="leancloud-visitors-count">loading...</i>
-            </span>
-            
-
-            
-            
-            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
-
-<style>
-	div#vcomments{
-		width:100%;
-		max-width: 1000px;
-		padding: 2.5%
-	}
-</style>
-
-
-	<div id="vcomments"></div>
-
-<script>
-	new Valine({
-		el: '#vcomments',
-		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
-		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
-		avatar: 'retro',
-		pageSize: 5,
-		recordIp: true,
-		placeholder: 'Just Go Go',
-		visitor: true,
-	});
-</script>
-
-            
           </div>
         </div>
+        <!-- 第一层：包含文章描述、时间信息、封面图 -->
+        <div class="post-row-first-floor">
+          <div class="post-preview">
+            <h3 class="post-subtitle">
+              
+            </h3>
+            <p class="post-meta">
+              <span class="time">2020-11-17</span>
+              <span>,</span>
+              <span class="post-stats">14 min read</span>
+            </p>
+          </div>
+          
+        </div>
+        <!-- 第二层：下划线、占位标签、tags -->
+        <div class="post-row-sec-floor">
+          <hr>
+          <div class="clearfix"></div>
+          
+          <a href="https://lianqiujun.co/tag/OlPQmpzE-" class="post-tag">
+            FlowChain
+          </a>
+          
+        </div>
       </div>
-  </article>
+      </>
+      
+      <!-- 
+       -->
+    </div>
+  </div>
+</div>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -432,7 +263,7 @@ t2.join()
     }
   })(this));</script>
   
-  <div id="landlord-parent">
+    <div id="landlord-parent">
     <div id="landlord">
         <div class="message" style="opacity:0"></div>
         <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
@@ -473,7 +304,6 @@ t2.join()
     }
 </script>
   
-  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
 </body>
 
 </html>

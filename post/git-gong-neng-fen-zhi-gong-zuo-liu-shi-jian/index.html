@@ -62,25 +62,31 @@
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/">首页</a>
+          <a class="nav-link" href="/">教程</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/archives">归档</a>
+          <a class="nav-link" href="/archives">文章</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/tags">标签</a>
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
           
         </li>
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1605240867061"
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -106,25 +112,31 @@
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/">首页</a>
+          <a class="nav-link" href="/">教程</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/archives">归档</a>
+          <a class="nav-link" href="/archives">文章</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/tags">标签</a>
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
           
         </li>
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1605240867061"
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -185,7 +197,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1539937"><label class="task-list-item-label" for="task-item-1539937"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9488460"><label class="task-list-item-label" for="task-item-9488460"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -193,7 +205,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3069716"><label class="task-list-item-label" for="task-item-3069716"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2739226"><label class="task-list-item-label" for="task-item-2739226"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -215,11 +227,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4393603"><label class="task-list-item-label" for="task-item-4393603"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5250939"><label class="task-list-item-label" for="task-item-5250939"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3873359"><label class="task-list-item-label" for="task-item-3873359"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2556321"><label class="task-list-item-label" for="task-item-2556321"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -231,7 +243,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4766988"><label class="task-list-item-label" for="task-item-4766988"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1770254"><label class="task-list-item-label" for="task-item-1770254"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch

@@ -62,25 +62,31 @@
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/">首页</a>
+          <a class="nav-link" href="/">教程</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/archives">归档</a>
+          <a class="nav-link" href="/archives">文章</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/tags">标签</a>
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
           
         </li>
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1605240867061"
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -106,25 +112,31 @@
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/">首页</a>
+          <a class="nav-link" href="/">教程</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/archives">归档</a>
+          <a class="nav-link" href="/archives">文章</a>
           
         </li>
         
         <li class="nav-item">
           
-          <a class="nav-link" href="/tags">标签</a>
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
           
         </li>
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1605240867061"
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -202,7 +214,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4155006"><label class="task-list-item-label" for="task-item-4155006"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7127786"><label class="task-list-item-label" for="task-item-7127786"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -214,7 +226,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2826350"><label class="task-list-item-label" for="task-item-2826350"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7771145"><label class="task-list-item-label" for="task-item-7771145"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -222,7 +234,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-923204"><label class="task-list-item-label" for="task-item-923204"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9569198"><label class="task-list-item-label" for="task-item-9569198"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -240,7 +252,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5354841"><label class="task-list-item-label" for="task-item-5354841"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2829160"><label class="task-list-item-label" for="task-item-2829160"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master

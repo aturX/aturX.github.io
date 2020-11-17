@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-13T04:14:44.646Z</updated>
+    <updated>2020-11-17T15:50:00.188Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,694 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[Flow Go SDK 开发实践]]></title>
+        <id>https://lianqiujun.co/post/flow-go-sdk-kai-fa-shi-jian</id>
+        <link href="https://lianqiujun.co/post/flow-go-sdk-kai-fa-shi-jian">
+        </link>
+        <updated>2020-11-17T09:07:07.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="flow-go-sdk">Flow Go SDK</h1>
+<p>Flow Go SDK 提供相关开发包帮助 Golang 开发者完成在 Flow network 上进行应用的构建和开发。</p>
+<p><em>注意: 这个 SDK 通过 <a href="https://github.com/onflow/flow/blob/master/docs/emulator.md">Flow Emulator</a>完成实现，并且可以被用于本地开发。</em></p>
+<h2 id="英文"><a href="/README.md">英文</a> | <a href="#">中文（简体）</a></h2>
+<h2 id="什么是-flow">什么是 Flow ?</h2>
+<p>Flow is a new blockchain for open worlds. Read more about it <a href="https://github.com/onflow/flow">here</a>.</p>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#getting-started">开始</a>
+<ul>
+<li><a href="#installing">安装</a></li>
+<li><a href="#generating-keys">生成密钥</a>
+<ul>
+<li><a href="#supported-curves">支持的曲线</a></li>
+</ul>
+</li>
+<li><a href="#creating-an-account">创建一个帐户</a></li>
+<li><a href="#signing-a-transaction">签名一个交易</a>
+<ul>
+<li><a href="#how-signatures-work-in-flow">Flow中的签名是如何在工作的</a>
+<ul>
+<li><a href="#single-party-single-signature">一人一签</a></li>
+<li><a href="#single-party-multiple-signatures">多人签名</a></li>
+<li><a href="#multiple-parties">多方</a></li>
+<li><a href="#multiple-parties-two-autorizers">多方参与，两个自动执行器</a></li>
+<li><a href="#multiple-parties-multiple-signatures">多方参与，多个签名</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sending-a-transaction">发起一笔交易</a></li>
+<li><a href="#querying-transaction-results">查询交易结果</a></li>
+<li><a href="#querying-blocks">查询块</a></li>
+<li><a href="#executing-a-script">执行一个脚本</a></li>
+<li><a href="#querying-events">查询事件</a>
+<ul>
+<li><a href="#event-query-format">事件查询格式</a></li>
+<li><a href="#event-results">事件的结果</a></li>
+</ul>
+</li>
+<li><a href="#querying-accounts">查询账户</a></li>
+</ul>
+</li>
+<li><a href="#examples">例子</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="开始">开始</h2>
+<h3 id="安装">安装</h3>
+<p>开始使用 SDK, 首先安装 Go 1.13+ 版本， 并且运行 <code>go get</code>:</p>
+<pre><code class="language-sh">go get github.com/onflow/flow-go-sdk
+</code></pre>
+<h3 id="生成密钥">生成密钥</h3>
+<p>Flow 使用 <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a><br>
+去控制用户的账户权限。 每一个密钥都使用了 <code>SHA2-256</code> 或者 <code>SHA3-256</code> 哈希算法实现了。</p>
+<p>这里有关于如何生成 ECDSA，采用P-256 (secp256r1) 曲线及私钥的相关方法:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+
+// 种子 短语
+// 注意: 这只是一个例子, 请使用安全的方式随机生成种子
+seed := []byte(&quot;elephant ears space cowboy octopus rodeo potato cannon pineapple&quot;)
+
+privateKey, err := crypto.GeneratePrivateKey(crypto.ECDSA_P256, seed)
+</code></pre>
+<p>这个私钥可以被编码成  bytes 类型 (i.e. for storage):</p>
+<pre><code class="language-go">encPrivateKey := privateKey.Encode()
+</code></pre>
+<p>可以为一个私钥创建一个对应的公钥:</p>
+<pre><code class="language-go">publicKey := privateKey.PublicKey()
+</code></pre>
+<h4 id="支持的曲线">支持的曲线</h4>
+<p>例子部分使用了 ECDSA 密钥， 采用的曲线算法是 P-256 (secp256r1) 。<br>
+Flow 也支持 Bitcoin 和 Ethereum 所使用的 secp256k1 曲线算法</p>
+<p>这里展示如何采用secp256k1 曲线生成一个 ECDSA 私钥:</p>
+<pre><code class="language-go">privateKey, err := crypto.GeneratePrivateKey(crypto.ECDSA_secp256k1, seed)
+</code></pre>
+<p>这里是支持的签名哈希算法的完整列表:<a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#supported-signature--hash-algorithms">Flow 签名 &amp; 哈希算法</a></p>
+<h3 id="创建一个帐户">创建一个帐户</h3>
+<p>一旦你完成了 <a href="#generating-keys">生成一个密钥对</a>, 您可以使用它的公钥，创建一个新帐户。</p>
+<pre><code class="language-go">import (
+    &quot;github.com/onflow/flow-go-sdk&quot;
+    &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+    &quot;github.com/onflow/flow-go-sdk/templates&quot;
+)
+
+ctx := context.Background()
+
+// 为账户生成一个新的私钥
+// 注意: 这只是一个例子, 请使用安全的方式随机生成种子
+seed := []byte(&quot;elephant ears space cowboy octopus rodeo potato cannon pineapple&quot;)
+privateKey, _ := crypto.GeneratePrivateKey(crypto.ECDSA_P256, seed)
+
+// 得到公钥
+publicKey := privateKey.PublicKey()
+
+// 从公钥中构建一个用户密钥
+accountKey := flow.NewAccountKey().
+    SetPublicKey(publicKey).
+    SetHashAlgo(crypto.SHA3_256).        // SHA3_256 哈希算法生成的密钥对
+    SetWeight(flow.AccountKeyWeightThreshold) // 授予这个密钥签名权重
+
+// 生成一个帐户创建脚本
+// 这将创建一个帐户，该帐户只有一个公钥，没有代码
+script, _ := templates.CreateAccount([]*flow.AccountKey{accountKey}, nil)
+
+// 连接到本地运行的模拟器
+c, err := client.New(&quot;localhost:3569&quot;)
+if err != nil {
+    panic(&quot;failed to connect to emulator&quot;)
+}
+
+payer, payerKey, payerSigner := examples.ServiceAccount(c)
+
+tx := flow.NewTransaction().
+    SetScript(script).
+    SetGasLimit(100).
+    SetProposalKey(payer, payerKey.Index, payerKey.SequenceNumber).
+    SetPayer(payer)
+
+err = tx.SignEnvelope(payer, payerKey.Index, payerSigner)
+if err != nil {
+    panic(&quot;failed to sign transaction&quot;)
+}
+
+err = c.SendTransaction(ctx, *tx)
+if err != nil {
+    panic(&quot;failed to send transaction&quot;)
+}
+
+result, err := c.GetTransactionResult(ctx, tx.ID())
+if err != nil {
+    panic(&quot;failed to get transaction result&quot;)
+}
+
+var myAddress flow.Address
+
+if result.Status == flow.TransactionStatusSealed {
+    for _, event := range result.Events {
+        if event.Type == flow.EventAccountCreated {
+            accountCreatedEvent := flow.AccountCreatedEvent(event)
+            myAddress = accountCreatedEvent.Address()
+        }
+	}
+}
+</code></pre>
+<h3 id="签名一个交易">签名一个交易</h3>
+<p>下面是一个简单的例子使用 <code>crypto.PrivateKey</code> 签名一个交易.</p>
+<pre><code class="language-go">import (
+    &quot;github.com/onflow/flow-go-sdk&quot;
+    &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+)
+
+var (
+    myAddress    flow.Address
+    myAccountKey flow.AccountKey
+    myPrivateKey crypto.PrivateKey
+)
+
+tx := flow.NewTransaction().
+    SetScript([]byte(&quot;transaction { execute { log(\&quot;Hello, World!\&quot;) } }&quot;)).
+    SetGasLimit(100).
+    SetProposalKey(myAddress, myAccountKey.Index, myAccountKey.SequenceNumber).
+    SetPayer(myAddress)
+</code></pre>
+<p>交易签名通过 <code>crypto.Signer</code> 接口完成.  <code>crypto.Signer</code> 最安全、最简单的接口实现方法是 <code>crypto.InMemorySigner</code>.</p>
+<p>使用这样的签名，可以更安全地生成密钥存储在硬件设备中，如 <a href="https://en.wikipedia.org/wiki/Hardware_security_module">HSM</a>.  <code>crypto.Signer</code><br>
+就是这样的签名接口的简单实现。</p>
+<pre><code class="language-go">// 通过你的私钥构造一个签名器，通过哈希算法完成签名
+mySigner := crypto.NewInMemorySigner(myPrivateKey, myAccountKey.HashAlgo)
+
+err := tx.SignEnvelope(myAddress, myAccountKey.Index, mySigner)
+if err != nil {
+    panic(&quot;failed to sign transaction&quot;)
+}
+</code></pre>
+<h4 id="flow-中的签名是如何在工作的">Flow 中的签名是如何在工作的</h4>
+<p>Flow 引入了新的概念，允许在创建和签署事务时具有更大的灵活性。</p>
+<p>在尝试下面的示例之前，我们建议您阅读<a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#signing-a-transaction">事务签名文档</a>.</p>
+<hr>
+<h5 id="一人一签"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#single-party-single-signature">一人一签</a></h5>
+<ul>
+<li>Proposer, payer, authorizer是同一个account (<code>0x01</code>)</li>
+<li>只要交易必须签名</li>
+<li>提案密钥必须有充分的签名权重。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+
+key1 := account1.Keys[0]
+
+// 安全的通过私钥创建一个签名器
+key1Signer := getSignerForKey1()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account1.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignEnvelope(account1.Address, key1.Index, key1Signer)
+</code></pre>
+<p><a href="/examples#single-party-single-signature">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多人签名"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#single-party-multiple-signatures">多人签名</a></h5>
+<ul>
+<li>
+<p>Proposer, payer, authorizer是同一个account (<code>0x01</code>)</p>
+</li>
+<li>
+<p>只要交易必须签名</p>
+</li>
+<li>
+<p>每个密钥的权重为0.5，因此需要两个签名者。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x01</code></td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+
+key1 := account1.Keys[0]
+key2 := account1.Keys[1]
+
+//  安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key2Signer := getSignerForKey2()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account1.Address).
+    AddAuthorizer(account1.Address)
+
+//  账户1 使用 key 1 进行交易的签名
+err := tx.SignEnvelope(account1.Address, key1.Index, key1Signer)
+
+//  账户1 使用 key 2 进行交易的签名
+err = tx.SignEnvelope(account1.Address, key2.Index, key2Signer)
+</code></pre>
+<p><a href="/examples#single-party-multiple-signatures">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties">多方</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>).</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对有效支付签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key3 := account2.Keys[0]
+
+// 安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+// 账户2 使用 key 3 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方参与两个自动执行器"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties">多方参与，两个自动执行器</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>)</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对支付签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+</ul>
+<p>-帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+<p>-帐户<code>0x02</code>也是一个授权器，用于展示如何将两个authaccount包含到一个事务中</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key3 := account2.Keys[0]
+
+// 安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction {
+            prepare(signer1: AuthAccount, signer2: AuthAccount) {
+              log(signer.address)
+              log(signer2.address)
+          }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address).
+    AddAuthorizer(account2.Address)
+
+//  账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+//  账户2 使用 key 3 进行交易的签名
+//  注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties-two-authorizers">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方参与多个签名"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties-multiple-signatures">多方参与，多个签名</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>)</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对有效付款签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+</li>
+<li>
+<p>两个账户都必须签名两次(每个密钥签名一次)。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x01</code></td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>4</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key2 := account1.Keys[1]
+key3 := account2.Keys[0]
+key4 := account2.Keys[1]
+
+// 安全的通过私钥创建4个签名器
+key1Signer := getSignerForKey1()
+key2Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+key4Signer := getSignerForKey4()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+// 账户1 使用 key 2 进行交易的签名
+err = tx.SignPayload(account1.Address, key2.Index, key2Signer)
+
+// 账户2 使用 key 3 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+
+// 账户2 使用 key 4 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key4.Index, key4Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties-multiple-signatures">完整的可运行的例子</a></p>
+<h3 id="发起一笔交易">发起一笔交易</h3>
+<p>You can submit a transaction to the network using the Access API client.</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/client&quot;
+
+// 连接本地服务
+c, err := client.New(&quot;localhost:3569&quot;)
+if err != nil {
+    panic(&quot;failed to connect to emulator&quot;)
+}
+
+ctx := context.Background()
+
+err = c.SendTransaction(ctx, tx)
+if err != nil {
+    panic(&quot;failed to send transaction&quot;)
+}
+</code></pre>
+<h3 id="查询交易结果">查询交易结果</h3>
+<p>提交交易后，您可以通过ID查询交易状态:</p>
+<pre><code class="language-go">result, err := c.GetTransactionResult(ctx, tx.ID())
+if err != nil {
+    panic(&quot;failed to fetch transaction result&quot;)
+}
+</code></pre>
+<p>结果包括一个“Status”字段，该字段将是以下值之一:</p>
+<ul>
+<li>
+<p><code>UNKNOWN</code> - 该交易尚未被网络看到。</p>
+</li>
+<li>
+<p><code>PENDING</code> - 交易尚未包含在一个块中。</p>
+</li>
+<li>
+<p><code>FINALIZED</code> - 交易已包含在一个区块中。</p>
+</li>
+<li>
+<p><code>EXECUTED</code> - 交易已执行，但结果尚未打包。</p>
+</li>
+<li>
+<p><code>SEALED</code> - 事务已经被执行并且结果被打包在一个块中。</p>
+</li>
+</ul>
+<pre><code class="language-go">if result.Status == flow.TransactionStatusSealed {
+  fmt.Println(&quot;Transaction is sealed!&quot;)
+}
+</code></pre>
+<p>结果还包含一个“Error”，该“Error”包含失败事务的错误信息。</p>
+<pre><code class="language-go">if result.Error != nil {
+    fmt.Printf(&quot;Transaction failed with error: %v\n&quot;, result.Error)
+}
+</code></pre>
+<h3 id="查询区块">查询区块</h3>
+<p>你可以使用' GetLatestBlock '方法来获取最新的打包或未打包的区块:</p>
+<pre><code class="language-go"> 
+isSealed := true
+latestBlock, err := c.GetLatestBlock(ctx, isSealed)
+if err != nil {
+    panic(&quot;failed to fetch latest sealed block&quot;)
+}
+
+ 
+isSealed := false
+latestBlock, err := c.GetLatestBlock(ctx, isSealed)
+if err != nil {
+    panic(&quot;failed to fetch latest unsealed block&quot;)
+}
+</code></pre>
+<p>一个块包含以下字段:</p>
+<ul>
+<li>
+<p><code>ID</code> - 块的ID(散列)</p>
+</li>
+<li>
+<p><code>ParentBlockID</code> - 链中前一个块的ID。</p>
+</li>
+<li>
+<p><code>Height</code> - 链条中区块的高度。</p>
+</li>
+<li>
+<p><code>collectionguarantee</code> - 集合中包含的集合列表。</p>
+</li>
+</ul>
+<h3 id="执行一个脚本">执行一个脚本</h3>
+<p>可以使用“ExecuteScriptAtLatestBlock”方法根据最新的密封执行状态执行只读脚本。</p>
+<p>此功能可用于从区块链读取状态。</p>
+<p>脚本必须采用以下形式:</p>
+<ul>
+<li>具有单一返回值的单一<code>main</code>函数</li>
+</ul>
+<p>这是一个有效脚本的例子:</p>
+<pre><code>fun main(): Int { return 1 }
+</code></pre>
+<pre><code class="language-go">import &quot;github.com/onflow/cadence&quot;
+
+script := []byte(&quot;fun main(): Int { return 1 }&quot;)
+
+value, err := c.ExecuteScript(ctx, script)
+if err != nil {
+    panic(&quot;failed to execute script&quot;)
+}
+
+ID := value.(cadence.Int)
+
+// 转换成  Go int 类型
+myID := ID.Int()
+</code></pre>
+<h3 id="查询事件">查询事件</h3>
+<p>你可以查询事件与' GetEventsForHeightRange '函数:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/client&quot;
+
+blocks, err := c.GetEventsForHeightRange(ctx, client.EventRangeQuery{
+    Type:       &quot;flow.AccountCreated&quot;,
+    StartHeight: 10,
+    EndHeight:   15,
+})
+if err != nil {
+    panic(&quot;failed to query events&quot;)
+}
+</code></pre>
+<h4 id="事件查询格式">事件查询格式</h4>
+<p>一个事件查询包括以下字段:</p>
+<p><strong>Type</strong></p>
+<p>要筛选的事件类型。事件类型由声明它们的帐户和合约命名。</p>
+<p>例如, 一个 <code>Transfer</code> 被定义在一个 <code>Token</code> 合约中，该合约被部署在账户 <code>0x55555555555555555555</code> 中， 将会得到一个类型 <code>A.0x55555555555555555555.Token.Transfer</code>.</p>
+<p>阅读 <a href="https://github.com/onflow/cadence/blob/master/docs/language.md#events">语言文档</a> 关于 Cadence 语言.</p>
+<p><strong>StartHeight, EndHeight</strong></p>
+<p>要过滤的块。事件将从“StartHeight”到“EndHeight”范围内的块返回。</p>
+<h4 id="事件的结果">事件的结果</h4>
+<p>函数的作用是: 返回按块分组的事件。</p>
+<p>每个块包含一个按执行顺序匹配查询的事件列表。</p>
+<pre><code class="language-go">for _, block := range blocks {
+    fmt.Printf(&quot;Events for block %s:\n&quot;, block.BlockID)
+    for _, event := range block.Events {
+        fmt.Printf(&quot; - %s&quot;, event)
+    }
+}
+</code></pre>
+<!--
+#### Decoding an Event
+
+TODO: 事件解码示例
+-->
+<h3 id="查询账户">查询账户</h3>
+<p>您可以查询帐户的状态用 <code>GetAccount</code> 函数:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk&quot;
+
+address := flow.HexToAddress(&quot;01&quot;)
+
+account, err := c.GetAccount(ctx, address)
+if err != nil {
+    panic(&quot;failed to fetch account&quot;)
+}
+</code></pre>
+<p>A <code>flow.Account</code> contains the following fields:</p>
+<ul>
+<li><code>Address: flow.Address</code> - The account address.</li>
+<li><code>Balance: uint64</code> - The account balance.</li>
+<li><code>Code: []byte</code> - The code deployed at this account.</li>
+<li><code>Keys: []flow.AccountKey</code> - A list of the public keys associated with this account.</li>
+</ul>
+<h2 id="例子">例子</h2>
+<p><a href="/examples">examples</a>目录包含使用SDK与控件交互的代码示例</p>
+<p><a href="https://github.com/onflow/flow/blob/master/docs/emulator.md">Flow Emulator</a>.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[以太坊开发简介]]></title>
         <id>https://lianqiujun.co/post/yi-tai-fang-kai-fa-jian-jie</id>
@@ -317,7 +1005,7 @@
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1539937"><label class="task-list-item-label" for="task-item-1539937"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9488460"><label class="task-list-item-label" for="task-item-9488460"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -325,7 +1013,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3069716"><label class="task-list-item-label" for="task-item-3069716"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2739226"><label class="task-list-item-label" for="task-item-2739226"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -347,11 +1035,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4393603"><label class="task-list-item-label" for="task-item-4393603"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5250939"><label class="task-list-item-label" for="task-item-5250939"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3873359"><label class="task-list-item-label" for="task-item-3873359"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2556321"><label class="task-list-item-label" for="task-item-2556321"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -363,7 +1051,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4766988"><label class="task-list-item-label" for="task-item-4766988"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1770254"><label class="task-list-item-label" for="task-item-1770254"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -431,7 +1119,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4155006"><label class="task-list-item-label" for="task-item-4155006"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7127786"><label class="task-list-item-label" for="task-item-7127786"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -443,7 +1131,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2826350"><label class="task-list-item-label" for="task-item-2826350"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7771145"><label class="task-list-item-label" for="task-item-7771145"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -451,7 +1139,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-923204"><label class="task-list-item-label" for="task-item-923204"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9569198"><label class="task-list-item-label" for="task-item-9569198"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -469,7 +1157,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5354841"><label class="task-list-item-label" for="task-item-5354841"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2829160"><label class="task-list-item-label" for="task-item-2829160"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -607,57 +1295,6 @@ git push origin master
 <p>换言之，量子计算机不仅可以用来破解密码，而且还可以帮助构建更强大的量子加密。为比特币以太坊等区块链抵制量子计算机制定了升级计划。</p>
 <h2 id="未来发展">未来发展</h2>
 <p>即使我们现在很安全，加密货币世界也已经有人开始未雨绸缪了。Praxxis和QAN等抗量子区块链已经在开发中，以准备对抗潜在的量子危机。我们可以放心地知道，即使量子计算机开始占领世界，我们的加密货币也将是安全的。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MetaMask v8 新版本]]></title>
-        <id>https://lianqiujun.co/post/metamask-v8-xin-ban-ben</id>
-        <link href="https://lianqiujun.co/post/metamask-v8-xin-ban-ben">
-        </link>
-        <updated>2020-07-05T03:18:07.000Z</updated>
-        <content type="html"><![CDATA[<p>现在，MetaMask 的新版本已经推出！<br>
-MetaMask版本8的推出，是对MetaMask的重大升级，并提供了许多以前钱包没有的新功能，在这里来介绍一下。</p>
-<h1 id="1-隐私控制">1. 隐私控制</h1>
-<p>如今，大多数钱包要么管理一个帐户，要么将当前选择的用户的当前帐户暴露给所有连接的站点，从而暴露了用户的私人信息给第三方网站。</p>
-<p>在MetaMask v8中，当你连接到一个网站时，你可以选择一个或多个帐户与该网站相关联，或者仅为该网站创建一个新帐户。<br>
-这项新功能使你可以轻松地在帐户之间进行切换，从而可以控制那些帐户与去中心化网络中的不同站点进行交互，而不会在不同的网站直接暴露信息。如果你打开未与当前账户建立连接的站点，MetaMask会提醒你进行连接。<br>
-<img src="https://lianqiujun.co/post-images/1593919144059.png" alt="" loading="lazy"><br>
-增加了一个新的“提醒”标记在界面左上角（此处显示为“未连接”，表示你的连接状态为断开，并且点击后可以设置权限或者主动断开连接。）<br>
-<img src="https://lianqiujun.co/post-images/1593919151223.png" alt="" loading="lazy"><br>
-这些网站可以拥有哪些权限，具体可查看 <a href="https://github.com/ethereum/EIPs/issues/2255">EIP-2255权限系统</a>，后面会陆续丰富这些功能。这些新的权限管理功能会十分强大，例如包含解密授权，访问钱包信息（包含你喜欢的代币或联系人）等等。</p>
-<h1 id="2-新用户界面">2. 新用户界面</h1>
-<p>版本8最明显的变化可能是新的MetaMask UI。首次打开MetaMask版本8时，界面会提示一些新功能介绍的引导。<br>
-<img src="https://lianqiujun.co/post-images/1593919161956.gif" alt="" loading="lazy"><br>
-重新设计了主屏幕，资产页面和交易历史记录，现在可以更轻松地访问资产。现在无需通过点击图标来查看你的资产，而是通过主屏幕上的“资产”标签访问它们。<br>
-<img src="https://lianqiujun.co/post-images/1593919201662.gif" alt="" loading="lazy"><br>
-“资产”标签中包含了你当前持有的资产的列表。单击每个资产可以查看该资产交易历史记录的详细信息页面。<br>
-<img src="https://lianqiujun.co/post-images/1593919214084.gif" alt="" loading="lazy"><br>
-新的“活动”标签是重新设计的交易记录视图。使用新的图标，可以更轻松地识别每种类型的交易。</p>
-<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1593919224307.gif" alt="" loading="lazy"></figure>
-<h1 id="3-开发者的新功能">3. 开发者的新功能</h1>
-<p>（1）Web3信息加密<br>
-MetaMask现在提供了两种新方法，这些方法使网站可以加密和解密Web3用户的消息。<br>
-<img src="https://lianqiujun.co/post-images/1593919234860.png" alt="" loading="lazy"><br>
-目前，这些解密请求每个都需要用户确认，因此最适合解密不常看的重要消息（例如电子邮件）。稍后，我们将有机会在上述权限系统中提供相同的解密策略。<br>
-具体API可以<a href="https://docs.metamask.io/guide/experimental-apis.html#eth-rpc-methods">查看</a>。</p>
-<p>（2）首次使用时无缝登录</p>
-<p>用户首次访问我们的Web3网站时，可能没有安装过MetaMask插件，需要经过一系列的安装步骤，并且为了更好地用户体验，在安装好插件后，会自动跳回到用户访问的网站，这就是新版本的优化之处。<br>
-<img src="https://lianqiujun.co/post-images/1593919241694.gif" alt="" loading="lazy"><br>
-为此，官方创建了一个新的<a href="https://github.com/MetaMask/metamask-onboarding">入门库</a>，使应用程序可以实现自己的连接按钮。它允许用户无缝地登陆你的网站，安装MetaMask，并自动重定向回你的应用程序，以便他们继续访问。在<a href="https://docs.metamask.io/guide/onboarding-library.html">此处</a>了解有关使用官方新入门库的更多信息。</p>
-<p>（3）Web3网站开发将发生的变更<br>
-<img src="https://lianqiujun.co/post-images/1593919263397.png" alt="" loading="lazy"><br>
-如果你是依靠MetaMask注入的window.web3对象的进行开发的网站，则需要进行一些更改，最好删除注入的web3对象，否则你的网站未来可能会崩溃。建议尽快迁移到使用window.ethereum或ethers.js，官方会在不久的将来宣布弃用日期。如果你要选择新的开发库，建议使用ethers。</p>
-<h1 id="4-安全">4. 安全</h1>
-<p>LavaMoat已投入生产！<br>
-新的工具LavaMoat有助于提高几乎所有JavaScript项目的安全性。<br>
-MetaMask是一个基于Web和JavaScript的钱包。JavaScript通常会因为代码可见，经常面临生成环境上的安全问题。对于钱包来说，这比其他任何程序都更加危险。<br>
-<img src="https://lianqiujun.co/post-images/1593919272303.png" alt="" loading="lazy"><br>
-LavaMoat是官方正在构建的一组工具，这些工具在构建时使用Secure EcmaScript 将每个第三方依赖限制在一段JavaScript代码中。希望最终将每个依赖项限制在整个钱包中，从而极大地保护钱包和用户免受“攻击”的侵害。</p>
-<p>现在已有第一个受LavaMoat保护的应用投入生产和生产！</p>
-<h1 id="5-下载与安装">5. 下载与安装</h1>
-<p>如果Chrome没有最新8版本，可以通过如下链接进行<a href="https://github.com/MetaMask/metamask-extension/releases/tag/v8.0.2">下载Version 8.0.2</a><br>
-，下载其中的zip到本地后。打开Chrome：<code>设置 -&gt; 高级 -&gt; 扩展程序</code>页面后，将本地zip压缩包直接拖入，即可完成安装。</p>
-<p>（注： 安装前请注意备份好自己钱包种子！）</p>
 ]]></content>
     </entry>
 </feed>

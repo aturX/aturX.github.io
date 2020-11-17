@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
+<meta name="author" content="kveln">
+<title>Flow Go SDK 开发实践 | 链 求 君 | 区 块 链</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="Flow Go SDK 开发实践 | 链 求 君 | 区 块 链 » Feed"
+  href="https://lianqiujun.co/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://lianqiujun.co/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJX498H9SN"></script>
+<script>window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-HJX498H9SN');</script>
+
+  <meta property="og:description" content="Flow Go SDK 开发实践" />
+  <meta property="og:url" content="https://lianqiujun.co/post/flow-go-sdk-kai-fa-shi-jian" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1605628170416"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://lianqiujun.co/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://lianqiujun.co/tag/OlPQmpzE-" class="tag">FlowChain</a>
+                
+              </span>
+              <h1>Flow Go SDK 开发实践</h1>
+              <span class="meta">
+                Posted on
+                2020-11-17，14 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="flow-go-sdk">Flow Go SDK</h1>
+<p>Flow Go SDK 提供相关开发包帮助 Golang 开发者完成在 Flow network 上进行应用的构建和开发。</p>
+<p><em>注意: 这个 SDK 通过 <a href="https://github.com/onflow/flow/blob/master/docs/emulator.md">Flow Emulator</a>完成实现，并且可以被用于本地开发。</em></p>
+<h2 id="英文"><a href="/README.md">英文</a> | <a href="#">中文（简体）</a></h2>
+<h2 id="什么是-flow">什么是 Flow ?</h2>
+<p>Flow is a new blockchain for open worlds. Read more about it <a href="https://github.com/onflow/flow">here</a>.</p>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#getting-started">开始</a>
+<ul>
+<li><a href="#installing">安装</a></li>
+<li><a href="#generating-keys">生成密钥</a>
+<ul>
+<li><a href="#supported-curves">支持的曲线</a></li>
+</ul>
+</li>
+<li><a href="#creating-an-account">创建一个帐户</a></li>
+<li><a href="#signing-a-transaction">签名一个交易</a>
+<ul>
+<li><a href="#how-signatures-work-in-flow">Flow中的签名是如何在工作的</a>
+<ul>
+<li><a href="#single-party-single-signature">一人一签</a></li>
+<li><a href="#single-party-multiple-signatures">多人签名</a></li>
+<li><a href="#multiple-parties">多方</a></li>
+<li><a href="#multiple-parties-two-autorizers">多方参与，两个自动执行器</a></li>
+<li><a href="#multiple-parties-multiple-signatures">多方参与，多个签名</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sending-a-transaction">发起一笔交易</a></li>
+<li><a href="#querying-transaction-results">查询交易结果</a></li>
+<li><a href="#querying-blocks">查询块</a></li>
+<li><a href="#executing-a-script">执行一个脚本</a></li>
+<li><a href="#querying-events">查询事件</a>
+<ul>
+<li><a href="#event-query-format">事件查询格式</a></li>
+<li><a href="#event-results">事件的结果</a></li>
+</ul>
+</li>
+<li><a href="#querying-accounts">查询账户</a></li>
+</ul>
+</li>
+<li><a href="#examples">例子</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="开始">开始</h2>
+<h3 id="安装">安装</h3>
+<p>开始使用 SDK, 首先安装 Go 1.13+ 版本， 并且运行 <code>go get</code>:</p>
+<pre><code class="language-sh">go get github.com/onflow/flow-go-sdk
+</code></pre>
+<h3 id="生成密钥">生成密钥</h3>
+<p>Flow 使用 <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a><br>
+去控制用户的账户权限。 每一个密钥都使用了 <code>SHA2-256</code> 或者 <code>SHA3-256</code> 哈希算法实现了。</p>
+<p>这里有关于如何生成 ECDSA，采用P-256 (secp256r1) 曲线及私钥的相关方法:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+
+// 种子 短语
+// 注意: 这只是一个例子, 请使用安全的方式随机生成种子
+seed := []byte(&quot;elephant ears space cowboy octopus rodeo potato cannon pineapple&quot;)
+
+privateKey, err := crypto.GeneratePrivateKey(crypto.ECDSA_P256, seed)
+</code></pre>
+<p>这个私钥可以被编码成  bytes 类型 (i.e. for storage):</p>
+<pre><code class="language-go">encPrivateKey := privateKey.Encode()
+</code></pre>
+<p>可以为一个私钥创建一个对应的公钥:</p>
+<pre><code class="language-go">publicKey := privateKey.PublicKey()
+</code></pre>
+<h4 id="支持的曲线">支持的曲线</h4>
+<p>例子部分使用了 ECDSA 密钥， 采用的曲线算法是 P-256 (secp256r1) 。<br>
+Flow 也支持 Bitcoin 和 Ethereum 所使用的 secp256k1 曲线算法</p>
+<p>这里展示如何采用secp256k1 曲线生成一个 ECDSA 私钥:</p>
+<pre><code class="language-go">privateKey, err := crypto.GeneratePrivateKey(crypto.ECDSA_secp256k1, seed)
+</code></pre>
+<p>这里是支持的签名哈希算法的完整列表:<a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#supported-signature--hash-algorithms">Flow 签名 &amp; 哈希算法</a></p>
+<h3 id="创建一个帐户">创建一个帐户</h3>
+<p>一旦你完成了 <a href="#generating-keys">生成一个密钥对</a>, 您可以使用它的公钥，创建一个新帐户。</p>
+<pre><code class="language-go">import (
+    &quot;github.com/onflow/flow-go-sdk&quot;
+    &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+    &quot;github.com/onflow/flow-go-sdk/templates&quot;
+)
+
+ctx := context.Background()
+
+// 为账户生成一个新的私钥
+// 注意: 这只是一个例子, 请使用安全的方式随机生成种子
+seed := []byte(&quot;elephant ears space cowboy octopus rodeo potato cannon pineapple&quot;)
+privateKey, _ := crypto.GeneratePrivateKey(crypto.ECDSA_P256, seed)
+
+// 得到公钥
+publicKey := privateKey.PublicKey()
+
+// 从公钥中构建一个用户密钥
+accountKey := flow.NewAccountKey().
+    SetPublicKey(publicKey).
+    SetHashAlgo(crypto.SHA3_256).        // SHA3_256 哈希算法生成的密钥对
+    SetWeight(flow.AccountKeyWeightThreshold) // 授予这个密钥签名权重
+
+// 生成一个帐户创建脚本
+// 这将创建一个帐户，该帐户只有一个公钥，没有代码
+script, _ := templates.CreateAccount([]*flow.AccountKey{accountKey}, nil)
+
+// 连接到本地运行的模拟器
+c, err := client.New(&quot;localhost:3569&quot;)
+if err != nil {
+    panic(&quot;failed to connect to emulator&quot;)
+}
+
+payer, payerKey, payerSigner := examples.ServiceAccount(c)
+
+tx := flow.NewTransaction().
+    SetScript(script).
+    SetGasLimit(100).
+    SetProposalKey(payer, payerKey.Index, payerKey.SequenceNumber).
+    SetPayer(payer)
+
+err = tx.SignEnvelope(payer, payerKey.Index, payerSigner)
+if err != nil {
+    panic(&quot;failed to sign transaction&quot;)
+}
+
+err = c.SendTransaction(ctx, *tx)
+if err != nil {
+    panic(&quot;failed to send transaction&quot;)
+}
+
+result, err := c.GetTransactionResult(ctx, tx.ID())
+if err != nil {
+    panic(&quot;failed to get transaction result&quot;)
+}
+
+var myAddress flow.Address
+
+if result.Status == flow.TransactionStatusSealed {
+    for _, event := range result.Events {
+        if event.Type == flow.EventAccountCreated {
+            accountCreatedEvent := flow.AccountCreatedEvent(event)
+            myAddress = accountCreatedEvent.Address()
+        }
+	}
+}
+</code></pre>
+<h3 id="签名一个交易">签名一个交易</h3>
+<p>下面是一个简单的例子使用 <code>crypto.PrivateKey</code> 签名一个交易.</p>
+<pre><code class="language-go">import (
+    &quot;github.com/onflow/flow-go-sdk&quot;
+    &quot;github.com/onflow/flow-go-sdk/crypto&quot;
+)
+
+var (
+    myAddress    flow.Address
+    myAccountKey flow.AccountKey
+    myPrivateKey crypto.PrivateKey
+)
+
+tx := flow.NewTransaction().
+    SetScript([]byte(&quot;transaction { execute { log(\&quot;Hello, World!\&quot;) } }&quot;)).
+    SetGasLimit(100).
+    SetProposalKey(myAddress, myAccountKey.Index, myAccountKey.SequenceNumber).
+    SetPayer(myAddress)
+</code></pre>
+<p>交易签名通过 <code>crypto.Signer</code> 接口完成.  <code>crypto.Signer</code> 最安全、最简单的接口实现方法是 <code>crypto.InMemorySigner</code>.</p>
+<p>使用这样的签名，可以更安全地生成密钥存储在硬件设备中，如 <a href="https://en.wikipedia.org/wiki/Hardware_security_module">HSM</a>.  <code>crypto.Signer</code><br>
+就是这样的签名接口的简单实现。</p>
+<pre><code class="language-go">// 通过你的私钥构造一个签名器，通过哈希算法完成签名
+mySigner := crypto.NewInMemorySigner(myPrivateKey, myAccountKey.HashAlgo)
+
+err := tx.SignEnvelope(myAddress, myAccountKey.Index, mySigner)
+if err != nil {
+    panic(&quot;failed to sign transaction&quot;)
+}
+</code></pre>
+<h4 id="flow-中的签名是如何在工作的">Flow 中的签名是如何在工作的</h4>
+<p>Flow 引入了新的概念，允许在创建和签署事务时具有更大的灵活性。</p>
+<p>在尝试下面的示例之前，我们建议您阅读<a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#signing-a-transaction">事务签名文档</a>.</p>
+<hr>
+<h5 id="一人一签"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#single-party-single-signature">一人一签</a></h5>
+<ul>
+<li>Proposer, payer, authorizer是同一个account (<code>0x01</code>)</li>
+<li>只要交易必须签名</li>
+<li>提案密钥必须有充分的签名权重。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+
+key1 := account1.Keys[0]
+
+// 安全的通过私钥创建一个签名器
+key1Signer := getSignerForKey1()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account1.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignEnvelope(account1.Address, key1.Index, key1Signer)
+</code></pre>
+<p><a href="/examples#single-party-single-signature">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多人签名"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#single-party-multiple-signatures">多人签名</a></h5>
+<ul>
+<li>
+<p>Proposer, payer, authorizer是同一个account (<code>0x01</code>)</p>
+</li>
+<li>
+<p>只要交易必须签名</p>
+</li>
+<li>
+<p>每个密钥的权重为0.5，因此需要两个签名者。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x01</code></td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+
+key1 := account1.Keys[0]
+key2 := account1.Keys[1]
+
+//  安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key2Signer := getSignerForKey2()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account1.Address).
+    AddAuthorizer(account1.Address)
+
+//  账户1 使用 key 1 进行交易的签名
+err := tx.SignEnvelope(account1.Address, key1.Index, key1Signer)
+
+//  账户1 使用 key 2 进行交易的签名
+err = tx.SignEnvelope(account1.Address, key2.Index, key2Signer)
+</code></pre>
+<p><a href="/examples#single-party-multiple-signatures">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties">多方</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>).</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对有效支付签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key3 := account2.Keys[0]
+
+// 安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+// 账户2 使用 key 3 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方参与两个自动执行器"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties">多方参与，两个自动执行器</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>)</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对支付签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+</ul>
+<p>-帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+<p>-帐户<code>0x02</code>也是一个授权器，用于展示如何将两个authaccount包含到一个事务中</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key3 := account2.Keys[0]
+
+// 安全的通过私钥创建两个签名器
+key1Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction {
+            prepare(signer1: AuthAccount, signer2: AuthAccount) {
+              log(signer.address)
+              log(signer2.address)
+          }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address).
+    AddAuthorizer(account2.Address)
+
+//  账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+//  账户2 使用 key 3 进行交易的签名
+//  注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties-two-authorizers">完整的可运行的例子</a></p>
+<hr>
+<h5 id="多方参与多个签名"><a href="https://github.com/onflow/flow/blob/master/docs/accounts-and-keys.md#multiple-parties-multiple-signatures">多方参与，多个签名</a></h5>
+<ul>
+<li>
+<p>Proposer和authorizer是同一个账号(<code>0x01</code>)</p>
+</li>
+<li>
+<p>Payer是一个单独的帐户(<code>0x02</code>)</p>
+</li>
+<li>
+<p>帐户<code>0x01</code>对有效付款签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>在交易上签名。</p>
+</li>
+<li>
+<p>帐户<code>0x02</code>必须最后签名，因为它是付款人。</p>
+</li>
+<li>
+<p>两个账户都必须签名两次(每个密钥签名一次)。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Key ID</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x01</code></td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x01</code></td>
+<td>2</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>3</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><code>0x02</code></td>
+<td>4</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-go">account1, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;01&quot;))
+account2, _ := c.GetAccount(ctx, flow.HexToAddress(&quot;02&quot;))
+
+key1 := account1.Keys[0]
+key2 := account1.Keys[1]
+key3 := account2.Keys[0]
+key4 := account2.Keys[1]
+
+// 安全的通过私钥创建4个签名器
+key1Signer := getSignerForKey1()
+key2Signer := getSignerForKey1()
+key3Signer := getSignerForKey3()
+key4Signer := getSignerForKey4()
+
+tx := flow.NewTransaction().
+    SetScript([]byte(`
+        transaction { 
+            prepare(signer: AuthAccount) { log(signer.address) }
+        }
+    `)).
+    SetGasLimit(100).
+    SetProposalKey(account1.Address, key1.Index, key1.SequenceNumber).
+    SetPayer(account2.Address).
+    AddAuthorizer(account1.Address)
+
+// 账户1 使用 key 1 进行交易的签名
+err := tx.SignPayload(account1.Address, key1.Index, key1Signer)
+
+// 账户1 使用 key 2 进行交易的签名
+err = tx.SignPayload(account1.Address, key2.Index, key2Signer)
+
+// 账户2 使用 key 3 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key3.Index, key3Signer)
+
+// 账户2 使用 key 4 进行交易的签名
+// 注意: 付款者总是最后一个签名
+err = tx.SignEnvelope(account2.Address, key4.Index, key4Signer)
+</code></pre>
+<p><a href="/examples#multiple-parties-multiple-signatures">完整的可运行的例子</a></p>
+<h3 id="发起一笔交易">发起一笔交易</h3>
+<p>You can submit a transaction to the network using the Access API client.</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/client&quot;
+
+// 连接本地服务
+c, err := client.New(&quot;localhost:3569&quot;)
+if err != nil {
+    panic(&quot;failed to connect to emulator&quot;)
+}
+
+ctx := context.Background()
+
+err = c.SendTransaction(ctx, tx)
+if err != nil {
+    panic(&quot;failed to send transaction&quot;)
+}
+</code></pre>
+<h3 id="查询交易结果">查询交易结果</h3>
+<p>提交交易后，您可以通过ID查询交易状态:</p>
+<pre><code class="language-go">result, err := c.GetTransactionResult(ctx, tx.ID())
+if err != nil {
+    panic(&quot;failed to fetch transaction result&quot;)
+}
+</code></pre>
+<p>结果包括一个“Status”字段，该字段将是以下值之一:</p>
+<ul>
+<li>
+<p><code>UNKNOWN</code> - 该交易尚未被网络看到。</p>
+</li>
+<li>
+<p><code>PENDING</code> - 交易尚未包含在一个块中。</p>
+</li>
+<li>
+<p><code>FINALIZED</code> - 交易已包含在一个区块中。</p>
+</li>
+<li>
+<p><code>EXECUTED</code> - 交易已执行，但结果尚未打包。</p>
+</li>
+<li>
+<p><code>SEALED</code> - 事务已经被执行并且结果被打包在一个块中。</p>
+</li>
+</ul>
+<pre><code class="language-go">if result.Status == flow.TransactionStatusSealed {
+  fmt.Println(&quot;Transaction is sealed!&quot;)
+}
+</code></pre>
+<p>结果还包含一个“Error”，该“Error”包含失败事务的错误信息。</p>
+<pre><code class="language-go">if result.Error != nil {
+    fmt.Printf(&quot;Transaction failed with error: %v\n&quot;, result.Error)
+}
+</code></pre>
+<h3 id="查询区块">查询区块</h3>
+<p>你可以使用' GetLatestBlock '方法来获取最新的打包或未打包的区块:</p>
+<pre><code class="language-go"> 
+isSealed := true
+latestBlock, err := c.GetLatestBlock(ctx, isSealed)
+if err != nil {
+    panic(&quot;failed to fetch latest sealed block&quot;)
+}
+
+ 
+isSealed := false
+latestBlock, err := c.GetLatestBlock(ctx, isSealed)
+if err != nil {
+    panic(&quot;failed to fetch latest unsealed block&quot;)
+}
+</code></pre>
+<p>一个块包含以下字段:</p>
+<ul>
+<li>
+<p><code>ID</code> - 块的ID(散列)</p>
+</li>
+<li>
+<p><code>ParentBlockID</code> - 链中前一个块的ID。</p>
+</li>
+<li>
+<p><code>Height</code> - 链条中区块的高度。</p>
+</li>
+<li>
+<p><code>collectionguarantee</code> - 集合中包含的集合列表。</p>
+</li>
+</ul>
+<h3 id="执行一个脚本">执行一个脚本</h3>
+<p>可以使用“ExecuteScriptAtLatestBlock”方法根据最新的密封执行状态执行只读脚本。</p>
+<p>此功能可用于从区块链读取状态。</p>
+<p>脚本必须采用以下形式:</p>
+<ul>
+<li>具有单一返回值的单一<code>main</code>函数</li>
+</ul>
+<p>这是一个有效脚本的例子:</p>
+<pre><code>fun main(): Int { return 1 }
+</code></pre>
+<pre><code class="language-go">import &quot;github.com/onflow/cadence&quot;
+
+script := []byte(&quot;fun main(): Int { return 1 }&quot;)
+
+value, err := c.ExecuteScript(ctx, script)
+if err != nil {
+    panic(&quot;failed to execute script&quot;)
+}
+
+ID := value.(cadence.Int)
+
+// 转换成  Go int 类型
+myID := ID.Int()
+</code></pre>
+<h3 id="查询事件">查询事件</h3>
+<p>你可以查询事件与' GetEventsForHeightRange '函数:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk/client&quot;
+
+blocks, err := c.GetEventsForHeightRange(ctx, client.EventRangeQuery{
+    Type:       &quot;flow.AccountCreated&quot;,
+    StartHeight: 10,
+    EndHeight:   15,
+})
+if err != nil {
+    panic(&quot;failed to query events&quot;)
+}
+</code></pre>
+<h4 id="事件查询格式">事件查询格式</h4>
+<p>一个事件查询包括以下字段:</p>
+<p><strong>Type</strong></p>
+<p>要筛选的事件类型。事件类型由声明它们的帐户和合约命名。</p>
+<p>例如, 一个 <code>Transfer</code> 被定义在一个 <code>Token</code> 合约中，该合约被部署在账户 <code>0x55555555555555555555</code> 中， 将会得到一个类型 <code>A.0x55555555555555555555.Token.Transfer</code>.</p>
+<p>阅读 <a href="https://github.com/onflow/cadence/blob/master/docs/language.md#events">语言文档</a> 关于 Cadence 语言.</p>
+<p><strong>StartHeight, EndHeight</strong></p>
+<p>要过滤的块。事件将从“StartHeight”到“EndHeight”范围内的块返回。</p>
+<h4 id="事件的结果">事件的结果</h4>
+<p>函数的作用是: 返回按块分组的事件。</p>
+<p>每个块包含一个按执行顺序匹配查询的事件列表。</p>
+<pre><code class="language-go">for _, block := range blocks {
+    fmt.Printf(&quot;Events for block %s:\n&quot;, block.BlockID)
+    for _, event := range block.Events {
+        fmt.Printf(&quot; - %s&quot;, event)
+    }
+}
+</code></pre>
+<!--
+#### Decoding an Event
+
+TODO: 事件解码示例
+-->
+<h3 id="查询账户">查询账户</h3>
+<p>您可以查询帐户的状态用 <code>GetAccount</code> 函数:</p>
+<pre><code class="language-go">import &quot;github.com/onflow/flow-go-sdk&quot;
+
+address := flow.HexToAddress(&quot;01&quot;)
+
+account, err := c.GetAccount(ctx, address)
+if err != nil {
+    panic(&quot;failed to fetch account&quot;)
+}
+</code></pre>
+<p>A <code>flow.Account</code> contains the following fields:</p>
+<ul>
+<li><code>Address: flow.Address</code> - The account address.</li>
+<li><code>Balance: uint64</code> - The account balance.</li>
+<li><code>Code: []byte</code> - The code deployed at this account.</li>
+<li><code>Keys: []flow.AccountKey</code> - A list of the public keys associated with this account.</li>
+</ul>
+<h2 id="例子">例子</h2>
+<p><a href="/examples">examples</a>目录包含使用SDK与控件交互的代码示例</p>
+<p><a href="https://github.com/onflow/flow/blob/master/docs/emulator.md">Flow Emulator</a>.</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#flow-go-sdk">Flow Go SDK</a>
+<ul>
+<li><a href="#%E8%8B%B1%E6%96%87">英文</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-flow">什么是 Flow ?</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5">生成密钥</a>
+<ul>
+<li><a href="#%E6%94%AF%E6%8C%81%E7%9A%84%E6%9B%B2%E7%BA%BF">支持的曲线</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B8%90%E6%88%B7">创建一个帐户</a></li>
+<li><a href="#%E7%AD%BE%E5%90%8D%E4%B8%80%E4%B8%AA%E4%BA%A4%E6%98%93">签名一个交易</a>
+<ul>
+<li><a href="#flow-%E4%B8%AD%E7%9A%84%E7%AD%BE%E5%90%8D%E6%98%AF%E5%A6%82%E4%BD%95%E5%9C%A8%E5%B7%A5%E4%BD%9C%E7%9A%84">Flow 中的签名是如何在工作的</a>
+<ul>
+<li><a href="#%E4%B8%80%E4%BA%BA%E4%B8%80%E7%AD%BE">一人一签</a></li>
+<li><a href="#%E5%A4%9A%E4%BA%BA%E7%AD%BE%E5%90%8D">多人签名</a></li>
+<li><a href="#%E5%A4%9A%E6%96%B9">多方</a></li>
+<li><a href="#%E5%A4%9A%E6%96%B9%E5%8F%82%E4%B8%8E%E4%B8%A4%E4%B8%AA%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C%E5%99%A8">多方参与，两个自动执行器</a></li>
+<li><a href="#%E5%A4%9A%E6%96%B9%E5%8F%82%E4%B8%8E%E5%A4%9A%E4%B8%AA%E7%AD%BE%E5%90%8D">多方参与，多个签名</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8F%91%E8%B5%B7%E4%B8%80%E7%AC%94%E4%BA%A4%E6%98%93">发起一笔交易</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E4%BA%A4%E6%98%93%E7%BB%93%E6%9E%9C">查询交易结果</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E5%8C%BA%E5%9D%97">查询区块</a></li>
+<li><a href="#%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC">执行一个脚本</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E4%BA%8B%E4%BB%B6">查询事件</a>
+<ul>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E6%9F%A5%E8%AF%A2%E6%A0%BC%E5%BC%8F">事件查询格式</a></li>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%93%E6%9E%9C">事件的结果</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E8%B4%A6%E6%88%B7">查询账户</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BE%8B%E5%AD%90">例子</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://lianqiujun.co/post/yi-tai-fang-kai-fa-jian-jie">
+              <span class="post-title">
+                以太坊开发简介&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/flow-go-sdk-kai-fa-shi-jian/" class="leancloud_visitors"
+              data-flag-title="Flow Go SDK 开发实践">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
+		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
+		avatar: 'retro',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/aturX" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://w3c.group/g/1124892" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://learnblockchain.cn/people/600" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://www.zhihu.com/people/li-si-yi-88-83" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-zhihu fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://lianqiujun.co/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>链 求 君 | 区 块 链</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://lianqiujun.co/media/live2d/assets/hijiki.model.json");
+        });
+
+        var home_Path = "https://lianqiujun.co/";
+        addScript("https://lianqiujun.co/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
+</body>
+
+</html>
