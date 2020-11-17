@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-17T15:50:00.188Z</updated>
+    <updated>2020-11-17T16:22:14.295Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[区块链周刊 - Web3项目系列文章]]></title>
+        <id>https://lianqiujun.co/post/qu-kuai-lian-zhou-kan-web3-xiang-mu-xi-lie-wen-zhang</id>
+        <link href="https://lianqiujun.co/post/qu-kuai-lian-zhou-kan-web3-xiang-mu-xi-lie-wen-zhang">
+        </link>
+        <updated>2020-11-17T16:14:14.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1605629914438.PNG" alt="" loading="lazy"></figure>
+<h1 id="web3项目系列文章"><a href="https://lianqiujun.co/tag/pJWTDQOmu/">Web3项目系列文章</a></h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Flow Go SDK 开发实践]]></title>
         <id>https://lianqiujun.co/post/flow-go-sdk-kai-fa-shi-jian</id>
@@ -1005,7 +1016,7 @@ if err != nil {
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9488460"><label class="task-list-item-label" for="task-item-9488460"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2871152"><label class="task-list-item-label" for="task-item-2871152"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -1013,7 +1024,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2739226"><label class="task-list-item-label" for="task-item-2739226"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4155355"><label class="task-list-item-label" for="task-item-4155355"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -1035,11 +1046,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5250939"><label class="task-list-item-label" for="task-item-5250939"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5767254"><label class="task-list-item-label" for="task-item-5767254"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2556321"><label class="task-list-item-label" for="task-item-2556321"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9058009"><label class="task-list-item-label" for="task-item-9058009"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -1051,7 +1062,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1770254"><label class="task-list-item-label" for="task-item-1770254"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4768149"><label class="task-list-item-label" for="task-item-4768149"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -1119,7 +1130,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7127786"><label class="task-list-item-label" for="task-item-7127786"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1237949"><label class="task-list-item-label" for="task-item-1237949"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -1131,7 +1142,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7771145"><label class="task-list-item-label" for="task-item-7771145"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-529327"><label class="task-list-item-label" for="task-item-529327"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -1139,7 +1150,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9569198"><label class="task-list-item-label" for="task-item-9569198"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3894756"><label class="task-list-item-label" for="task-item-3894756"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -1157,7 +1168,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2829160"><label class="task-list-item-label" for="task-item-2829160"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1157553"><label class="task-list-item-label" for="task-item-1157553"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -1264,37 +1275,6 @@ git push origin master
 <p>Merkle证明用于区块链轻客户端。这些较少占用内存的程序使人们可以参与区块链，而无需下载每个交易和每个区块的所有数据。轻量级客户只需要知道每个块的根哈希，然后在需要时使用Merkle证明来验证信息。</p>
 <h2 id="未来发展">未来发展</h2>
 <p>像以太坊这样的区块链即使使用Merkle Trees 仍然无法扩展，因此这种基本的加密工具不会很快消失。不管森林有多大，它都将永远需要它的根。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[量子计算和加密货币]]></title>
-        <id>https://lianqiujun.co/post/liang-zi-ji-suan-he-jia-mi-huo-bi</id>
-        <link href="https://lianqiujun.co/post/liang-zi-ji-suan-he-jia-mi-huo-bi">
-        </link>
-        <updated>2020-07-22T03:04:10.000Z</updated>
-        <content type="html"><![CDATA[<p>量子计算是计算领域的下一个巨大飞跃。但这也可能会造成加密技术的巨大破坏。我们来一起探索一下这项新技术。</p>
-<p>量子计算和量子物理学听起来像是科幻小说中的东西：一切都是由波和粒子组成的，物质可以同时存在于同一位置，粒子可以被发送到星系的另一侧，但仍然保持连接。本文探讨什么是量子计算机以及它们对加密行业造成什么样的威胁。</p>
-<p>科学家和研究人员开始利用量子物理学的力量来构建功能强大的计算机，并具有破解世界级别的加密算法的能力。除了区块链以外，量子计算还可能威胁全球金融系统，机密情报机构以及手机上所有数据的安全。</p>
-<h2 id="什么是量子物理学">什么是量子物理学？</h2>
-<p>量子物理学也称为量子力学，是仅适用于足够小的物体以适用其规则的一种物理学。在经典物理学中，几乎所有事物都以可预测的方式运行-计算和测量可以精确进行。一旦你开始研究量子物理学大小的物体，事情将变得更加不可预测。也就是说，量子力学研究的对象是不可预测的。</p>
-<p>既然，不能保证量子物理学中的测量和计算是准确的，则只能使用概率来猜测。在量子水平上，粒子可以像波一样开始表现，甚至根据是否被观察而突然改变其状态。在量子领域，一切都变得不确定。</p>
-<h2 id="什么是量子计算机">什么是量子计算机？</h2>
-<p>通过利用量子力学定律，量子计算机可以比我们最先进的现代计算机强大得多。关于量子计算机，最重要的理解是量子位。经典计算机使用由“0”和“1”表示的位。普通位是二进制的-每次打开或关闭-一次处于一种状态，“是”或者“否”。量子位可以为“0”，“1”，以及在它们之间切换或同时为两者。由于量子计算机的基本单位是这些神奇的量子位，因此量子计算机可以以普通计算机甚至无法接近的速度执行功能或计算-这也是为什么它们有一天可能能够破解加密货币。</p>
-<p>举个例子：如果我们从一台普通计算机上得到四个比特，它们可以是16种组合中的任何一种，即1000、1100、1110，但是在进行计算时只能选择将其合为一体。但是，有了四个bit位时，它们可以同时处于这16个位置中的所有位置，并且所表示的数量会成倍增加。仅20个量子位就可以并行存储超过一百万个值，这使量子计算机能够通过并行执行而不是一次单独进行计算来解决问题。</p>
-<p>量子力学的思想可以追溯到1900年被认为是量子理论之父的马克斯·普朗克（Max Planck）进行的研究。量子计算机将在1980年代和1970年代晚些时候出现，当时保罗·贝尼奥夫（Paul Benioff）证明有可能制造出一种在量子物理学定律下运行的计算机。</p>
-<h2 id="量子计算有什么特别之处">量子计算有什么特别之处？</h2>
-<p>由于量子位可以在状态之间切换（可以是“ 1”，“ 0”，也可以同时处于多个状态），因此量子位可以并行或同时执行多个计算。量子比特使量子计算机能够如此快速地处理复杂的计算，以至于普通计算机要花费超过5亿年才能破解比特币的加密，而量子计算机则可以在10分钟之内破解它。</p>
-<p>“量子计算机中工作的确切物理机制在理论上有些复杂，并且直观上令人难以理解。通常，用量子物理学的多世界维度来解释它，其中计算机不仅在我们的宇宙中而且还在其他宇宙中同时执行计算。” - 安德鲁·齐默曼·琼斯（Andrew Zimmerman Jones）（《傻瓜弦理论》的作者）</p>
-<h2 id="量子计算机是如何制造的">量子计算机是如何制造的？</h2>
-<p>传统计算机基本上由数百万个管理电子流的微型开关组成。但是，当我们将这些门缩小到亚原子水平时，控制电流是否流过门的能力变得有些奇怪。通过称为量子隧穿的想法，当我们到达亚原子水平时，电子可以随意跳过闸门，从而使机器处理这种流动的能力变得毫无用处。结果，使得量子计算机的制造方式大不相同。</p>
-<p>它们在亚原子粒子的奇异而有趣的微观世界中工作，在量子世界中，量子比特会做奇怪的事情，例如同时处于16个状态中的任何一个状态，直到观察到它们塌陷为一个状态为止。结果，与传统计算中使用的“逻辑门”相对，“量子门”经历了一个过程，即它设置了一些量子位，应用量子门来“纠缠”它们，操纵可能的概率，并然后测量结果。看到这里感到困惑？是的，这是一个真正的伤脑筋的场景。</p>
-<p>但是，你需要了解的是，为了能够控制此过程，例如Google正在使用一种特殊的超导金属，该金属的工作温度比空间低八倍，与现在摆在桌上的计算机相去甚远。所以结论就是，量子计算机不太可能很快走出实验室面向大众。</p>
-<h2 id="我们应该担心吗">我们应该担心吗？</h2>
-<p>根据以太坊创始人Vitalik Buterin和加密传教士Andreas Antonopolous的这些聪明人的说法，目前还没有必要对量子计算机感到恐慌。据Antonopolous称，量子计算机目前还远没有强大到足以破坏比特币之类的东西。</p>
-<p>从理论上讲，量子计算可能会破坏加密技术，但换个角度想可能也在保护像比特币和以太坊这样的加密资产，Vitalik认为，像Google宣布的那样，量子计算机的概念尚没有完全实现并被证明。当前在区块链中使用的加密技术也可能是足够强大的，甚至可以抵抗完全实现的量子计算机，这意味着并非所有的加密技术都容易受到攻击。</p>
-<p>换言之，量子计算机不仅可以用来破解密码，而且还可以帮助构建更强大的量子加密。为比特币以太坊等区块链抵制量子计算机制定了升级计划。</p>
-<h2 id="未来发展">未来发展</h2>
-<p>即使我们现在很安全，加密货币世界也已经有人开始未雨绸缪了。Praxxis和QAN等抗量子区块链已经在开发中，以准备对抗潜在的量子危机。我们可以放心地知道，即使量子计算机开始占领世界，我们的加密货币也将是安全的。</p>
 ]]></content>
     </entry>
 </feed>
