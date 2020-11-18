@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-17T16:22:49.844Z</updated>
+    <updated>2020-11-18T02:11:53.287Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[克服拖延症：框时工作法]]></title>
+        <id>https://lianqiujun.co/post/ke-fu-tuo-yan-zheng-kuang-shi-gong-zuo-fa</id>
+        <link href="https://lianqiujun.co/post/ke-fu-tuo-yan-zheng-kuang-shi-gong-zuo-fa">
+        </link>
+        <updated>2020-11-18T02:00:27.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="框时工作法">框时工作法</h2>
+<h3 id="目标-克服拖延症提高专注力">目标： 克服拖延症，提高专注力</h3>
+<p>在管理任务方面，框时工作是非常有用的技巧。当我需要完成一项任务时，我主要在两种不同的情形下利用此技巧。</p>
+<p><strong>1. 确定最终结果及过程的任务</strong>：<br>
+🐱即： 限定目标</p>
+<p>给自己框定明确时间量，绝不超出特定时长，只在这段时间内尽最大努力工作，如果进度落后，你就必须砍除某些功能， 确保该目标必须完成。</p>
+<p><strong>简单讲， 就是定好目标，不论如何都要完成。</strong></p>
+<p>😁例子： 每天坚持俯卧撑 50， 突然某天来不及做了，  请不要中断： <strong>做 1 个</strong><br>
+即便如此，你也完成了你的【每日俯卧撑任务】</p>
+<hr>
+<p><strong>2. 不明确最终结果及实现过程的任务</strong>：</p>
+<p>🐱即： 限定时间</p>
+<p>遇到想完成的任务或项目，但自己并不确定该从何开始时。或这份工作似乎在做出有意义结果前，需要花去很长时间。或者这份工作可能非常枯燥，会有拖延倾向。此时就用框时工作方式，直接承诺在当前任务上只工作限定的时长，以便取得些进展。<br>
+<strong>简单讲， 就是限定时间，不论结果如何，任务能否按时完成，先行动起来。</strong></p>
+<p>😁例子：用新的编程语言学习开发一个Blog网站， 你不知道如何开始，也不知道会用时多久，那么不要考虑这些，直接开始定时 30分钟， 随便去学去尝试，至少30分钟内你是在行动的。（一般30分钟后，你会取得一些进展，并知道下一步该如何做了）</p>
+<p><code>框时工作能够绕开完美主义陷阱，避免拖延行为。这使之成为极其有用的时间管理技巧。</code></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[区块链周刊 - Web3项目系列文章]]></title>
         <id>https://lianqiujun.co/post/qu-kuai-lian-zhou-kan-web3-xiang-mu-xi-lie-wen-zhang</id>
@@ -1014,7 +1038,7 @@ if err != nil {
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1034785"><label class="task-list-item-label" for="task-item-1034785"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9492830"><label class="task-list-item-label" for="task-item-9492830"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -1022,7 +1046,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7689365"><label class="task-list-item-label" for="task-item-7689365"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5754819"><label class="task-list-item-label" for="task-item-5754819"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -1044,11 +1068,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9657204"><label class="task-list-item-label" for="task-item-9657204"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6314184"><label class="task-list-item-label" for="task-item-6314184"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9288881"><label class="task-list-item-label" for="task-item-9288881"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1489406"><label class="task-list-item-label" for="task-item-1489406"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -1060,7 +1084,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7831532"><label class="task-list-item-label" for="task-item-7831532"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7455617"><label class="task-list-item-label" for="task-item-7455617"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -1128,7 +1152,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1877542"><label class="task-list-item-label" for="task-item-1877542"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5653710"><label class="task-list-item-label" for="task-item-5653710"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -1140,7 +1164,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6401083"><label class="task-list-item-label" for="task-item-6401083"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-16678"><label class="task-list-item-label" for="task-item-16678"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -1148,7 +1172,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4812728"><label class="task-list-item-label" for="task-item-4812728"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2403728"><label class="task-list-item-label" for="task-item-2403728"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -1166,7 +1190,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7125092"><label class="task-list-item-label" for="task-item-7125092"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8867101"><label class="task-list-item-label" for="task-item-8867101"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -1245,34 +1269,6 @@ git push origin master
 <p><a href="https://aragon.org/token/ant">ANT</a></p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[默克尔树（Merkle Trees）]]></title>
-        <id>https://lianqiujun.co/post/mo-ke-er-shu-merkle-trees</id>
-        <link href="https://lianqiujun.co/post/mo-ke-er-shu-merkle-trees">
-        </link>
-        <updated>2020-07-23T03:10:19.000Z</updated>
-        <content type="html"><![CDATA[<p>默克尔树使区块链更加高效和值得信赖。Merkle树可以在保持安全性的同时节省内存和处理能力。</p>
-<p>要深入了解区块链的工作原理，你需要了解其一些基本的基础架构，并且没有比Merkle Trees更基本的基础了。在本文中，我们通过深入研究Merkle树来了解区块链的工作原理。</p>
-<h2 id="什么是默克尔树">什么是默克尔树？</h2>
-<p>默克尔树使区块链更加高效和值得信赖。通过以某种方式组织数据，默克尔树可以节省内存和处理能力，同时还能确保所有内容的安全。安全性来自加密和哈希函数，我们将在下文中进行详细说明。</p>
-<h2 id="哈希函数">哈希函数</h2>
-<p>通常，Merkle树和密码学的关键组成部分是哈希。  哈希函数是一种将信息转换为一组唯一的字母和数字的过程。唯一的字符串称为哈希。即使输入的内容其一小部分发生变化，哈希输出也会完全改变。加密散列函数是一种单向函数，易于输入信息，但几乎无法获取信息。Merkle树依赖于这两种功能来组织和验证数据。</p>
-<h2 id="默克尔树如何组织">默克尔树如何组织？</h2>
-<p>默克尔树通过将数据分成不同的部分，使区块链更具可扩展性。在最基本的形式中，默克尔树看起来有点像圣诞树，每个“父”节点都恰好有两个“子”节点。两个子节点的哈希创建父节点的哈希。散列的过程一直遍历整个树，直到最终到达顶部的一个“根”散列为止。几乎任何数量的数据都可以放入Merkle树中，但它总是以顶部的根哈希结尾。</p>
-<h2 id="它是如何工作的">它是如何工作的？</h2>
-<p>在Merkle树中，诸如智能合约中或帐户之间的交易之类的数据被散列或转换为一串数字和字母。然后，再次对该散列进行散列，但是这次与树中它旁边的数据的散列（其“同级”）结合在一起。两个兄弟姐妹的新哈希创建“父母”的新哈希。散列的这一过程一直遍历树，直到到达最顶部的一个根散列为止。</p>
-<p>请记住，更改哈希输入的任何部分都会极大地改变其输出。知道了这一点，我们还知道更改Merkle树中的任何数据都会导致其哈希值发生变化，而父节点的哈希值也会发生变化，最终导致根哈希值发生变化。此属性确保Merkle树中的信息被冻结并且无法更改，但可以对其进行检查和验证。</p>
-<h2 id="什么是默克尔证明">什么是默克尔证明？</h2>
-<p>Merkle Trees巧妙地组织了数据以备以后恢复，但是Merkle Proofs用于实际验证信息是否正确。Merkle证明使用你正在检查的信息，以及与之相连的树的所有“分支”，直至根哈希。如果哈希从该分支到根是一致的，则为true。如果根哈希值不匹配，则表明数据已被篡改。</p>
-<p>Merkle Proofs不需要验证整个树中的所有信息，只需要足够的计算能力即可验证少量数据以查看其是否为真。</p>
-<h2 id="谁发明了默克尔树">谁发明了默克尔树？</h2>
-<p>Merkle Trees以计算机科学家兼教授Ralph Merkle的名字命名，他与Merkle Trees本身一起发明了公钥加密和加密哈希，该概念于1987年被发明出来。</p>
-<p>我们的示例引用了Merkle树的最基本版本，即Binary Merkle Trees，每个父节点只有两个子节点，但是每个父节点具有更多子节点的情况要复杂得多。由于以太坊必须处理智能合约的交易，因此它使用了更为复杂的Merkle树类型，称为Patricia树。</p>
-<p>Merkle证明用于区块链轻客户端。这些较少占用内存的程序使人们可以参与区块链，而无需下载每个交易和每个区块的所有数据。轻量级客户只需要知道每个块的根哈希，然后在需要时使用Merkle证明来验证信息。</p>
-<h2 id="未来发展">未来发展</h2>
-<p>像以太坊这样的区块链即使使用Merkle Trees 仍然无法扩展，因此这种基本的加密工具不会很快消失。不管森林有多大，它都将永远需要它的根。</p>
 ]]></content>
     </entry>
 </feed>
