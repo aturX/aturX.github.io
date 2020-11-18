@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-18T02:19:28.546Z</updated>
+    <updated>2020-11-18T06:07:17.825Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[以太坊简介]]></title>
+        <id>https://lianqiujun.co/post/yi-tai-fang-jian-jie</id>
+        <link href="https://lianqiujun.co/post/yi-tai-fang-jian-jie">
+        </link>
+        <updated>2020-11-18T06:06:19.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="什么是区块链">什么是区块链？</h2>
+<p>最好将区块链描述为一个公共数据库，该数据库在网络中的许多计算机之间进行更新和共享。</p>
+<p>“区块” 是指数据和状态以连续的批次或“块”的形式存储。如果你将 ETH 发送给其他人，则交易数据需要添加到区块中才能成功。</p>
+<p>“链” 是指每个块以密码学的方式引用其父对象的结果，即上一个区块产生的结果。所以修改一个块的数据，会造成后续块的全部更改，这一过程需要整个网络的共识，并没有那么容易实现。</p>
+<p>网络中的每个节点共同决定每个新块的产生和整个链的延续。这样为了确保每个人都有相同的数据。为此，区块链需要一种共识机制。</p>
+<p>以太坊目前使用工作量证明共识机制。这意味着任何想要向链中添加新块的人都必须解决一个难题，即您需要大量的计算能力才能进行工作。解决难题“证明”您已经花费了计算资源。这样做被称为采矿。挖掘可以是反复试验的，但是成功添加一个区块会得到Eth的奖励。另一方面，考虑到您在生产该区块上花费的资源，提交欺诈性的区块并不是一个轻松选择。</p>
+<p>新块将会广播到网络中的其他节点，进行检查和验证，为每个人更新状态。</p>
+<p>综上所述，当您向某人发送ETH时，必须进行交易并包含在新区块中。然后，更新后的状态将与整个网络共享。</p>
+<h2 id="什么是以太坊">什么是以太坊？</h2>
+<p>在以太坊世界中，有一台规范的计算机（称为以太坊虚拟机或EVM），以太坊网络上每个人的状态都一致。参与以太坊网络的每个人（每个以太坊节点）都保留此计算机状态的副本。此外，任何参与者都可以广播此计算机执行任意计算的请求。每当广播此类请求时，网络上的其他参与者就会验证，确认并执行（“执行”）计算。这会导致EVM发生状态更改，该状态更改会在整个网络中提交并传播。</p>
+<p>计算请求称为事务请求；所有交易的记录以及EVM的当前状态都存储在区块链中，而区块链又被所有节点存储并达成共识。</p>
+<p>加密机制确保一旦交易被验证为有效并添加到区块链中，便不会在以后被篡改。相同的机制还可以确保所有交易都以适当的“权限”进行签名和执行（除了你自己之外，任何人都不能从你的帐户发送数字资产）。</p>
+<h2 id="什么是ether">什么是Ether？</h2>
+<p>以太币（加密货币）的目的是为网络中的参与者提供经济上的激励，使其可以验证/执行交易请求并向网络提供计算资源。</p>
+<p>广播交易请求的任何参与者还必须向网络提供一定数量的以太币，以奖励最终从事验证交易，执行交易，将交易提交到区块链并将其广播到网络的工作的任何人。 。</p>
+<p>所支付的以太币是作为计算资源的度量。这还可以防止恶意参与者通过请求执行无限循环或资源密集型脚本来故意阻塞网络，因为这些行为者将不断消耗计算资源。</p>
+<h2 id="什么是dapp">什么是DAPP？</h2>
+<p>在实践中，参与者并不是每次想要在EVM上请求计算时都编写新代码。而是，应用程序开发人员将程序（可重复使用的代码段）上载到EVM存储中，然后用户请求使用不同的参数来执行这些代码段。我们将程序上载到网络智能合约并由其执行。</p>
+<p>从最基本的层面上讲，您可以将智能合约视为一种自动售货机：一个脚本，当使用特定参数调用该脚本时，如果满足特定条件，该脚本便会执行某些操作或计算。例如，如果呼叫者将以太币发送给特定的接收者，那么简单的卖方智能合约就可以创建并分配数字资产的所有权给收款方。</p>
+<p>任何开发人员都可以创建智能合约，并使用区块链作为其数据层将其公开给网络，但要支付给网络相应的以太币。然后，任何用户都可以调用智能合约来执行其代码，但需要再次向网络支付费用。</p>
+<p>因此，借助智能合约，开发人员可以构建和部署任意复杂的面向用户的应用程序和服务：市场，金融工具，游戏等。</p>
+<h2 id="术语">术语</h2>
+<ul>
+<li>区块链</li>
+</ul>
+<p>网络历史中已提交给以太坊网络的所有块的顺序链接形成的数据结构。之所以这么称呼，是因为每个块都包含对前一个块的引用，这有助于我们在所有块（从而在精确的历史记录）上保持排序。</p>
+<ul>
+<li>ETH</li>
+</ul>
+<p>以太坊的原生加密货币。用户向其他用户付费以使其代码执行请求得到满足。</p>
+<ul>
+<li>EVM</li>
+</ul>
+<p>以太坊虚拟机是全球性的虚拟机，它声明以太坊网络上的每个参与者都存储并同意。任何参与者都可以请求在EVM上执行任意代码；代码执行会更改EVM的状态。</p>
+<ul>
+<li>节点数</li>
+</ul>
+<p>实际机器正在存储EVM状态。节点相互通信以传播有关EVM状态和新状态更改的信息。任何用户还可以通过广播来自节点的代码执行请求来请求代码执行。以太坊网络本身是所有以太坊节点及其通信的集合。</p>
+<ul>
+<li>账户</li>
+</ul>
+<p>存放ETH的地方。用户可以初始化帐户，将以太币存入帐户，以及将以太币从其帐户转移到其他用户。帐户和帐户余额存储在EVM中的一个大表中；它们是整个EVM状态的一部分。</p>
+<ul>
+<li>交易次数</li>
+</ul>
+<p>“交易请求”是在EVM上执行代码的请求的正式术语，“交易”是已履行的交易请求以及EVM状态中的相关更改。任何用户都可以从节点向网络广播交易请求。为了使事务请求实际影响商定的EVM状态，必须由其他某个节点对其进行验证，执行和“提交给网络”。任何代码的执行都会导致EVM中的状态改变；承诺后，此状态更改将广播到网络中的所有节点。一些交易示例：</p>
+<ol>
+<li>
+<p>将X个 ETH 从A的帐户发送到B的帐户。</p>
+</li>
+<li>
+<p>将一些智能合约代码发布到EVM内存中。</p>
+</li>
+<li>
+<p>使用参数Y在EVM中的地址X处执行智能合约的代码。</p>
+</li>
+</ol>
+<ul>
+<li>智能合约</li>
+</ul>
+<p>开发人员将其发布到EVM内存中的可重用代码段（程序）。任何人都可以通过发出交易请求来请求执行智能合约代码。因为开发人员可以通过发布智能合约将任意可执行应用程序写入EVM（游戏，市场，金融工具等），所以这些通常也称为dapps或Decentralized Apps。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[克服拖延症：框时工作法]]></title>
         <id>https://lianqiujun.co/post/ke-fu-tuo-yan-zheng-kuang-shi-gong-zuo-fa</id>
@@ -1039,7 +1108,7 @@ if err != nil {
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7589340"><label class="task-list-item-label" for="task-item-7589340"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9098414"><label class="task-list-item-label" for="task-item-9098414"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -1047,7 +1116,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8803446"><label class="task-list-item-label" for="task-item-8803446"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9188413"><label class="task-list-item-label" for="task-item-9188413"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -1069,11 +1138,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2000068"><label class="task-list-item-label" for="task-item-2000068"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2909025"><label class="task-list-item-label" for="task-item-2909025"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9634988"><label class="task-list-item-label" for="task-item-9634988"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5322774"><label class="task-list-item-label" for="task-item-5322774"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -1085,7 +1154,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-330316"><label class="task-list-item-label" for="task-item-330316"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6006726"><label class="task-list-item-label" for="task-item-6006726"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -1153,7 +1222,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2071876"><label class="task-list-item-label" for="task-item-2071876"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7594468"><label class="task-list-item-label" for="task-item-7594468"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -1165,7 +1234,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3187560"><label class="task-list-item-label" for="task-item-3187560"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8807570"><label class="task-list-item-label" for="task-item-8807570"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -1173,7 +1242,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6317037"><label class="task-list-item-label" for="task-item-6317037"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3284991"><label class="task-list-item-label" for="task-item-3284991"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -1191,7 +1260,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5545752"><label class="task-list-item-label" for="task-item-5545752"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9897324"><label class="task-list-item-label" for="task-item-9897324"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
@@ -1217,59 +1286,6 @@ git push origin master
 <p>如果你碰到了冲突，但发现搞不定，不要惊慌。只要执行下面这条命令，就可以回到你执行<code>git pull --rebase</code>命令前的样子：</p>
 <pre><code>git rebase --abort
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[什么是Aragon？]]></title>
-        <id>https://lianqiujun.co/post/shi-me-shi-aragon</id>
-        <link href="https://lianqiujun.co/post/shi-me-shi-aragon">
-        </link>
-        <updated>2020-07-25T03:14:51.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>Aragon Network 希望通过区块链技术改善我们的工作方式，创建有效的去中心化组织和数字法院。
-</code></pre>
-<h1 id="什么是-aragon-network">什么是 Aragon Network ？</h1>
-<p>人类喜欢一起工作。多年来，我们建立了无数的组织，使我们所有人彼此协作。实际上，几乎没有人能称自己为独狼。问题是：组织人是一项昂贵的工作。公司每年留出数十亿美元用于管理费用。决策会产生摩擦成本。没有总体架构，文件可能会重复或丢失；项目被推迟；有时双方要花费数年的时间才能解决争端。Aragon Network 认为他们找到了解决方案。</p>
-<h1 id="什么是-aragon">什么是 Aragon ？</h1>
-<p>Aragon使用区块链来提高公司和组织的效率和透明度。公司可以使用Aragon彼此签署智能合约协议。然后可以将它们安全地存储在区块链上，以供任何一方在需要时访问。Aragon喜欢视自己为数字司法管辖区。该网络正在创建一个去中心化的结算系统，该系统可用于在相关各方之间快速有效地进行仲裁。该平台具有自己的Token 令牌 Aragon Network Token - 简称“ANT” - 用于支付费用，并托管在第三方中以提供激励给良好诚实的用户行为。</p>
-<h1 id="谁创造了aragon">谁创造了Aragon ？</h1>
-<p>Aragon Network是Luis Cuende和Jorge Izquierdo的创意。Cuende之前曾帮助在区块链上建立时间戳技术，还与Microsoft，Telefonica和爱沙尼亚政府等公司合作。伊兹奎尔多（Izquierdo）15岁时获得了苹果奖学金。Aragon目前由Aragon基金会（Aragon Foundation）管理，该基金会是一个致力于建立和推广网络的非营利组织。</p>
-<p>阿拉贡（Aragon）这个名字来自两位创始人共同成长的西班牙地区。它不是以《指环王》角色命名的；那只是一个巧合。</p>
-<h1 id="aragon-简史">Aragon 简史</h1>
-<p>2017年2月 - Aragon Network 诞生。<br>
-2017年5月 - Aragon推出其ICO。<br>
-2017年6月 - Aragon 与去中心化交易平台0x签署了合作伙伴协议。<br>
-2018年2月 - Aragon Architect 推出，这是公司在平台上构建自己的个人资料的一种方式。<br>
-2019年 - Aragon 成为全球最负盛名的 DAO 解决方案服务商。<br>
-2020年7月 - Aragon China 成立了， 共同构建 Aragon 的东方生态。</p>
-<h1 id="aragon-有什么特别之处">Aragon 有什么特别之处？</h1>
-<p><strong>安全性</strong> - 用户需要先抵押Aragon代币，然后才能帮助其参与网络。这有助于创建一个诚实开放的生态系统，并使智能合约具有可执行性。由于不良或不诚实的行为，代币将被没收。</p>
-<p><strong>简洁性</strong>-Aragon的智能合约必须易于阅读。这使技术知识很少的用户可以有效地使用该平台。</p>
-<p><strong>稳定性</strong>-加密货币是易变资产。作为抵押品的金额最终可能会变得比最初存入时少很多。Aragon代币保持稳定的价值。该网络可以回购代币以保持价格浮动，也可以出售以阻止币值升得过高。</p>
-<p><strong>隐私</strong>-Aragon上的用户无需泄露私人或机密信息。这使人们能够维护与个人身份的同时关联不同的单独的区块链身份，可用于制定协议和开展业务。</p>
-<h1 id="aragon代币如何生产">Aragon代币如何生产？</h1>
-<p>Aragon团队最初铸造了将近4000万个ANT代币，在ICO中出售了其中的70％。Aragon基于以太坊网络，所以这些是ERC20代币。网络完全启动并运行后，计划将根据社区的需求铸造或销毁代币。而这些决定将会由Aragon用户自己决定。</p>
-<p>阿拉贡（Aragon）的ICO最初定于6月中旬运行，但这一时间被缩短了。该项目在不到15分钟的时间内达到了2500万美元的高峰。</p>
-<h1 id="aragon如何运作">Aragon如何运作？</h1>
-<p><strong>智能合约</strong>-Aragon使用智能合约；就像其他协议一样，它们是协议。最大的区别是它们自动实现的。他们可以自主执行交易。合同将资金托管在托管机构中，只要部分协议得到满足，它们便可以自动支付。</p>
-<p><strong>预言机</strong>-需要将人类可读的合同和现实事件转换为区块链可以理解的数据。Aragon使用预言机使平台上持有的协议能够响应实际操作。</p>
-<p><strong>去中心治理</strong>-在Aragon网络中，没有集中式的权力来做出决定并执行裁决。用户作为分散的自治组织或DAO的一部分来管理自己。这使他们能够通过简单的共识解决分歧。</p>
-<p><strong>权力下放</strong>-每当发生纠纷时，网络都会任命一个该案的陪审员。双方将提供证据，然后陪审员将作出决定，就像在真正的法院中一样。双方均有权对该决定提出上诉；如果获得批准，将把案件提交上级法院。</p>
-<h1 id="你可以使用aragon代币ant做什么">你可以使用Aragon代币（ANT）做什么？</h1>
-<p>Aragon令牌用作平台上达成的协议的抵押。它们还用于支付因使用网络而产生的费用和成本。参与网络治理的陪审员和用户在ANT方面的时间投入和专业知识也将获得补偿。</p>
-<h1 id="aragon-china-诞生">Aragon China 诞生</h1>
-<p>Aragon China 2020年7月正式成立，Aragon China将和DAOSquare联手推进DAO在中国的发展。Aragon的成功将完全取决于有多少企业开始使用它。如果它被证明很受欢迎，它将构成一种全新的模型的基础，以使公司能够相互组织和交互，如今Aragon 在中国的发展势必让人充满期待。</p>
-<h1 id="了解更多">了解更多</h1>
-<ul>
-<li>
-<p><a href="https://aragon.org/">Aragon</a></p>
-</li>
-<li>
-<p><a href="http://dao.aragonchina.xyz">Aragon China DAO</a></p>
-</li>
-<li>
-<p><a href="https://aragon.org/token/ant">ANT</a></p>
-</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
