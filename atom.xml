@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-18T02:11:53.287Z</updated>
+    <updated>2020-11-18T02:18:50.592Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -16,21 +16,22 @@
         <link href="https://lianqiujun.co/post/ke-fu-tuo-yan-zheng-kuang-shi-gong-zuo-fa">
         </link>
         <updated>2020-11-18T02:00:27.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="框时工作法">框时工作法</h2>
-<h3 id="目标-克服拖延症提高专注力">目标： 克服拖延症，提高专注力</h3>
+        <content type="html"><![CDATA[<h2 id="目标-克服拖延症提高专注力">目标： 克服拖延症，提高专注力</h2>
 <p>在管理任务方面，框时工作是非常有用的技巧。当我需要完成一项任务时，我主要在两种不同的情形下利用此技巧。</p>
-<p><strong>1. 确定最终结果及过程的任务</strong>：<br>
-🐱即： 限定目标</p>
+<hr>
+<h3 id="1-确定最终结果及过程的任务"><strong>1. 确定最终结果及过程的任务</strong></h3>
+<p>🐱即： 限定目标</p>
 <p>给自己框定明确时间量，绝不超出特定时长，只在这段时间内尽最大努力工作，如果进度落后，你就必须砍除某些功能， 确保该目标必须完成。</p>
 <p><strong>简单讲， 就是定好目标，不论如何都要完成。</strong></p>
 <p>😁例子： 每天坚持俯卧撑 50， 突然某天来不及做了，  请不要中断： <strong>做 1 个</strong><br>
 即便如此，你也完成了你的【每日俯卧撑任务】</p>
 <hr>
-<p><strong>2. 不明确最终结果及实现过程的任务</strong>：</p>
+<h3 id="2-不明确最终结果及实现过程的任务"><strong>2. 不明确最终结果及实现过程的任务</strong></h3>
 <p>🐱即： 限定时间</p>
 <p>遇到想完成的任务或项目，但自己并不确定该从何开始时。或这份工作似乎在做出有意义结果前，需要花去很长时间。或者这份工作可能非常枯燥，会有拖延倾向。此时就用框时工作方式，直接承诺在当前任务上只工作限定的时长，以便取得些进展。<br>
 <strong>简单讲， 就是限定时间，不论结果如何，任务能否按时完成，先行动起来。</strong></p>
 <p>😁例子：用新的编程语言学习开发一个Blog网站， 你不知道如何开始，也不知道会用时多久，那么不要考虑这些，直接开始定时 30分钟， 随便去学去尝试，至少30分钟内你是在行动的。（一般30分钟后，你会取得一些进展，并知道下一步该如何做了）</p>
+<hr>
 <p><code>框时工作能够绕开完美主义陷阱，避免拖延行为。这使之成为极其有用的时间管理技巧。</code></p>
 ]]></content>
     </entry>
@@ -1038,7 +1039,7 @@ if err != nil {
 <h2 id="功能分支实践">功能分支实践</h2>
 <p>功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用Pull Requests的方式讨论变更。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9492830"><label class="task-list-item-label" for="task-item-9492830"> 1. 现有远程主分支master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2349843"><label class="task-list-item-label" for="task-item-2349843"> 1. 现有远程主分支master</label></li>
 </ul>
 <pre><code>coderA 拉取到本地
 
@@ -1046,7 +1047,7 @@ git clone ssh://user@host/path/to/repo.git
 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5754819"><label class="task-list-item-label" for="task-item-5754819"> 2. coderA  开发新功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7016591"><label class="task-list-item-label" for="task-item-7016591"> 2. coderA  开发新功能</label></li>
 </ul>
 <p>coderA 将代码拉取到本地，将要开发新功能featureA</p>
 <pre><code>git checkout -b new-featureA master
@@ -1068,11 +1069,11 @@ git commit
 git push 
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6314184"><label class="task-list-item-label" for="task-item-6314184"> 3. 接受 Pull Request</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2903405"><label class="task-list-item-label" for="task-item-2903405"> 3. 接受 Pull Request</label></li>
 </ul>
 <p>adminCoder 看到 coderA 开发的新功能，可以review并在该分支上进行修改，讨论，最后接受Pull Request</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1489406"><label class="task-list-item-label" for="task-item-1489406"> 4. 分支合并到master</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2494988"><label class="task-list-item-label" for="task-item-2494988"> 4. 分支合并到master</label></li>
 </ul>
 <pre><code>方法一：
 git checkout master
@@ -1084,7 +1085,7 @@ git push
 git merge new-featureA
 </code></pre>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7455617"><label class="task-list-item-label" for="task-item-7455617"> 5. 其他补充操作</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4098343"><label class="task-list-item-label" for="task-item-4098343"> 5. 其他补充操作</label></li>
 </ul>
 <pre><code>查看分支:
 $ git branch
@@ -1152,7 +1153,7 @@ git rebase --abort
 </code></pre>
 <h2 id="分步骤实践">分步骤实践</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5653710"><label class="task-list-item-label" for="task-item-5653710"> 1.创建项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5730013"><label class="task-list-item-label" for="task-item-5730013"> 1.创建项目</label></li>
 </ul>
 <pre><code>明确项目后，先初始化好中央仓库 裸仓库（bare repository）
 
@@ -1164,7 +1165,7 @@ git init --bare /path/to/repo.git
 <p>团队开发人员有 coderA，coderB</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-16678"><label class="task-list-item-label" for="task-item-16678"> 2. 克隆项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9211857"><label class="task-list-item-label" for="task-item-9211857"> 2. 克隆项目</label></li>
 </ul>
 <p>两人分别将git项目克隆至本地：</p>
 <pre><code>git clone ssh://user@host/path/to/repo.git
@@ -1172,7 +1173,7 @@ git init --bare /path/to/repo.git
 <p>克隆仓库时Git会自动添加远程别名origin指回『父』仓库</p>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2403728"><label class="task-list-item-label" for="task-item-2403728"> 3. 开发程序并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8666336"><label class="task-list-item-label" for="task-item-8666336"> 3. 开发程序并提交代码</label></li>
 </ul>
 <p>coderA 开发了功能 A.txt<br>
 coderB 正在开发功能 B.txt</p>
@@ -1190,7 +1191,7 @@ git push origin master
 </code></pre>
 <hr>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8867101"><label class="task-list-item-label" for="task-item-8867101"> 4. 更新代码，并提交代码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5066192"><label class="task-list-item-label" for="task-item-5066192"> 4. 更新代码，并提交代码</label></li>
 </ul>
 <p>此时coderB完成了，B.txt功能的开发，并准备发布至master</p>
 <pre><code>git push origin master
