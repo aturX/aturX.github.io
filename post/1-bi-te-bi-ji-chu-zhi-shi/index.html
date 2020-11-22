@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
+<meta name="author" content="kveln">
+<title>1. 比特币基础知识 | 链 求 君 | 区 块 链</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="1. 比特币基础知识 | 链 求 君 | 区 块 链 » Feed"
+  href="https://lianqiujun.co/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://lianqiujun.co/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJX498H9SN"></script>
+<script>window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-HJX498H9SN');</script>
+
+  <meta property="og:description" content="1. 比特币基础知识" />
+  <meta property="og:url" content="https://lianqiujun.co/post/1-bi-te-bi-ji-chu-zhi-shi" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1606060835803"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1606060835803"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://lianqiujun.co/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://lianqiujun.co/tag/SMFQf8g_2" class="tag">比特币</a>
+                
+              </span>
+              <h1>1. 比特币基础知识</h1>
+              <span class="meta">
+                Posted on
+                2020-11-22，20 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="什么是比特币">什么是比特币？</h1>
+<p>比特币是2009年1月创建的一种数字货币。它实现了一位神秘人物中本聪（Satoshi Nakamoto）在白皮书中提出的想法，其真实身份尚未得到验证。比特币有望提供比传统在线支付机制更低的交易费用，并且与政府发行的货币不同，它由一个去中心的机制运行。</p>
+<p>比特币并不是物理存在的，只是被保存在公共的分布式账本中，并且与所有比特币交易记录在一起，通过大量的计算进行验证。比特币不是由任何银行或政府发行或支持的，单个比特币也不是有价值的商品。尽管它不是法定货币，但比特币仍然受欢迎，并引发了数百种其他虚拟货币的发行，这些虚拟货币统称为“山寨币”。</p>
+<pre><code>重要要点:
+
+- 按市值计算，比特币于2009年推出，是世界上最大的加密货币。
+- 与法定货币不同，比特币是通过使用称为区块链的去中心化分布式系统来创建，分配，交易和存储的。
+- 比特币作为价值存储并不稳定，一直处于动荡不定的状态。2017年，加密货币的价格飙升至每枚硬币约20,000美元，但截至两年后，其货币交易量不到其中的一半。
+- 作为最为广泛流行和成功的最早的加密货币，比特币启发了许多分支和模仿者。
+</code></pre>
+<h1 id="了解比特币">了解比特币</h1>
+<p>比特币是一种加密货币。比特币数值的余额使用公共地址和私有“密钥”来保存，这是通过数学加密的长串数字和字母构成的。公钥（相当于银行帐号）用作发布给全世界的地址，其他人可以将他的比特币发送到该地址。私钥（与ATM PIN相对应）是受保护的密码，仅用于授权比特币传输。比特币密钥不应与比特币钱包混淆，后者是一种物理或数字设备，可促进比特币交易并允许用户跟踪硬币的所有权。术语“钱包”有点误导，因为比特币的去中心化性质意味着它永远不会存储在钱包中，而是分散地存储在区块链中。</p>
+<p>风格注释：根据官方比特币基金会的说法，“比特币”一词在提及实体或概念时大写，而“比特币”在指代某种货币时用小写（例如，我购买了20个btc）或单位本身，比特币通常也缩写为“BTC”。</p>
+<h1 id="比特币如何运作">比特币如何运作</h1>
+<p>比特币是最早使用点对点技术促进即时付款的数字货币之一。拥有主导计算能力并参与比特币网络的独立个人和公司，也称为“矿工”，其主要动机是比特币奖励（释放新的比特币）和以比特币支付的交易费。这些矿工可以被视为强化比特币网络的信任机制。新的比特币将以固定的价格发布给矿工，但比特币的周期性奖励减半，使得比特币的总供应量接近2100万。目前，大约有300万比特币尚未开采。这样，比特币（以及通过类似过程生成的任何加密货币）的运行方式就不同于法定货币货币；在中心化的银行系统中，货币以与商品增长相匹配的速率释放，以维持价格稳定，而像比特币这样的去中心系统则根据算法预先设置释放率。</p>
+<p>比特币挖矿是比特币发行流通的过程。通常，挖掘需要解决计算难题，以便发现新的区块，将其添加到区块链中。在为区块链做贡献的同时，挖矿还会在整个网络中添加和验证交易记录。如果成功向区块链中添加了新的区块，该矿工将会获得了一些比特币的奖励；每产生210,000个区块奖励会减少一半。在2009年，区块奖励是50个新的比特币，目前为12.5。随着越来越多的比特币被创建，挖掘过程的难度（即所涉及的计算能力）增加了。挖矿难度始于2009年比特币首次亮相时的1.0；到年底，只有1.18。截至2019年10月，采矿难度超过12万亿。曾经，一台普通的台式计算机足以满足采矿过程的需要；现在，为了克服难度，矿工必须使用昂贵的硬件，例如专用集成电路（ASIC）和更高级的处理单元，例如图形处理单元（GPU）。这些精心制作的挖矿处理器被称为“矿机”。</p>
+<p>一个比特币可整除到小数点后八位（一个比特币的百万分之一），而这个最小的单位称为“聪”。如果有必要，并且如果参与的矿工接受更改，则最终可以将比特币整除为甚至更多的小数位。</p>
+<h1 id="比特币的价格变化">比特币的价格变化</h1>
+<p>仅在2017年，比特币的价格就从年初的不到1000美元上涨到接近19000美元，到年末上涨了1400％以上。最近，加密货币的价值已经下降并且或多或少处于稳定状态，除了一些相对较低的价格数据（2019年初，价格徘徊在3500美元左右）和相对较高的价格（2019年6月和7月），当时价格一度达到13,000美元以上的峰值）。截至2019年10月，比特币似乎稳定在了一个新的价格点，范围在8,000美元至9,000美元之间。</p>
+<p>比特币的价格在很大程度上取决于其采矿网络的规模，因为网络规模越大，生产新比特币就越困难-因此成本也更高。结果，随着其生产成本的上升，比特币的价格也不得不上涨。比特币采矿网络的总处理能力称为“哈希率”，是指在将区块添加到区块链之前，网络每秒可以尝试完成必要的哈希难题的次数。截至2019年10月23日，该网络每秒达到114亿个哈希的创纪录新高。</p>
+<h1 id="比特币的开端">比特币的开端</h1>
+<ul>
+<li>
+<p>2008年8月18日：域名<code>bitcoin.org</code>已被注册。至少到今天，该域名的主人的身份仍不是公共信息。</p>
+</li>
+<li>
+<p>2008年10月31日：有人使用中本聪（Satoshi Nakamoto）的名字在metzdowd.com上的“密码学邮件”列表中宣布：“我一直在研究一种完全对等，没有可信任第三方的新型电子现金系统该文件可从  http://www.bitcoin.org/bitcoin.pdf 获得。” 该链接指向在bitcoin.org上发布的著名白皮书，标题为“ Bitcoin：P2P电子现金系统”。本文将成为当今比特币运作方式的“大宪章”。</p>
+</li>
+<li>
+<p>2009年1月3日：开采了第一个比特币区块，即区块0。这也被称为“创世区块”，其中包含以下文字：“泰晤士报2009年1月3日 总理正处于对银行的第二轮纾困之际”，这也许是为了作为该区块是在该日期被开采的证据，也可能单纯的政治评论。</p>
+</li>
+<li>
+<p>2009年1月8日：加密邮件列表中宣布了比特币软件的第一个版本。</p>
+</li>
+<li>
+<p>2009年1月9日：第1区块被开采，比特币正式的开采开始了。</p>
+</li>
+</ul>
+<h1 id="谁发明了比特币">谁发明了比特币？</h1>
+<p>没有人知道谁发明了比特币，或者至少不是结论性的。中本聪（Satoshi Nakamoto）是与在2008年发布原始比特币白皮书并致力于2009年发行的原始比特币软件的个人或组织相关的名称。比特币协议要求用户在注册时输入生日，我们知道中本聪（Satoshi Nakamoto）的个人注册并记下4月5日为生日。自那时以来的几年中，出现许多人冒充者，欺世盗名之徒，但截至2020年5月，中本聪背后的真实身份仍然被掩盖而无法确认。</p>
+<h1 id="中本聪之前">中本聪之前</h1>
+<p>尽管人们很容易相信媒体的说法，认为中本聪是一个孤独的天才，他凭空创造了比特币，但这种创新通常不会在真的凭空被创造。所有主要的科学发现，无论是多么原始的发现，都是建立在先前已有的研究之上。比特币的先驱是：亚当·巴克（Adam Back）于1997年发明的Hashcash，随后是戴维（Wei Dai）的b-money，尼克·萨博（Nick Szabo）的比特黄金和哈尔·芬尼（Hal Finney）的可重复使用工作量证明。比特币白皮书本身引用了Hashcash和b-money，以及涉及多个研究领域的其他各种著作。这不足为奇，上面提到的其他项目背后的许多人被推测也参与了比特币的创建。</p>
+<h1 id="为什么中本聪要匿名">为什么中本聪要匿名？</h1>
+<p>比特币发明人对其身份保持保密的主要动机有两个。</p>
+<p>一种是隐私。随着比特币的流行（成为一种全球现象），中本聪（Satoshi Nakamoto）可能会引起媒体和政府的广泛关注。</p>
+<p>另一个原因是安全性。仅2009年一年，就开采了32,489个区块。以当时每块50 BTC的回报率，2009年的总支出为1,624,500 BTC，截至2019年10月25日，价值为139亿美元。所以可能得出结论，到2009年，中本聪和其他一些早期参与者，他们拥有大量的BTC。拥有这么多比特币的人可能会成为犯罪分子的目标，尤其是因为比特币不像股票，而更像现金，可以打印出授权支出所需的私钥，并将其字面上保存在床垫下。虽然比特币的发明者可能会采取预防措施以使任何敲诈勒索引起的转移都可追溯，但保持匿名是中本聪限制暴露的好方法。</p>
+<h1 id="谁是中本聪">谁是中本聪？</h1>
+<p>主要媒体，加密货币专家和其他狂热者对中本聪（Satoshi Nakamoto）角色背后的个人或组织进行了猜测。2011年10月10日，《纽约客》 发表了一篇文章，推测中本聪可能是爱尔兰密码学学生迈克尔·克莱尔（Michael Clear）或经济社会学家维利·莱顿维尔塔（Vili Lehdonvirta）。<br>
+Fast Company认为中本聪可能是由三个人组成的小组，小组成员是-Neal King，Vladimir Oksman和Charles Bry，他们一起出现在与<code>bitcoin.org</code>注册有关的安全通信相关专利中。2013年5月发表的一篇文章将更多嫌疑人添加到了名单中，其中包括比特币项目的主要开发人员Gavin Andresen；现已解散的比特币交易所Mt.的联合创始人Jed McCaleb x; 以及著名的日本数学家望月新一（Shinichi Mochizuki）。</p>
+<p>2013年12月，Techcrunch发表了对研究员Skye Gray的采访，后者声称对发表的著作进行了文字分析，显示中本聪与比特现金的创作者Nick Szabo之间的联系。在2014年3月，《新闻周刊》刊登了一篇封面文章，声称中本聪实际上是一个名叫中本聪的人，中本聪是现居加利福尼亚的64岁的日裔美国工程师。之后，澳大利亚计算机科学家和加密货币支持者克雷格·赖特（Craig Wright）声称自己是中本聪（Satoshi Nakamoto），他也是后面官司不断的“澳本聪”。</p>
+<p>在比特币十多年之后，世界仍然不知道谁是世界顶级数字货币的背后人物，而且这个谜团可能永远无法解决。</p>
+<h1 id="可以证明中本聪的身份吗">可以证明中本聪的身份吗？</h1>
+<p>似乎甚至早期的项目合作者都没有可验证“中本聪”真实身份的证明。为了最终确定中本聪是谁，需要在他/她与比特币的活动与他/她的身份之间建立明确的联系。这可以通过链接bitcoin.org的域名注册来追寻，中本聪使用的电子邮件和论坛帐户或使用拥有最早开采的比特币地址的所有权来证明。尽管“中本聪”拥有的比特币可以在区块链上追踪到，但他/她似乎还没有用以能揭示其身份的方式去兑现这些比特币。如果“中本聪”今天将其比特币转移到交易所，这一定会引起人们的注意，但是资金充裕且成功的交易所似乎不太可能出卖任何客户的隐私。</p>
+<h1 id="用比特币作为付款方式">用比特币作为付款方式</h1>
+<p>比特币可以作为销售产品或提供的服务的付款方式。如果您有一家实体店，只需显示一个标语“此处接受比特币”，您的许多客户很可能会被吸引过来；交易方式可以通过QR码（二维码）和触摸屏应用程序使用必要的硬件终端或钱包地址进行处理。只需将支付选项添加到它提供的其他选项（例如信用卡，支付宝、微信支付等）中，在线业务就可以轻松接受比特币。</p>
+<h1 id="获得比特币报酬的工作">获得比特币报酬的工作</h1>
+<p>那些自由职业者可以通过比特币作为工作报酬。有几个专门针对数字货币的网站：</p>
+<ul>
+<li><a href="https://www.cryptogrind.com/">Cryptogrind</a> 网站汇集了大量求职者和潜在雇主，支持通过比特币结算。</li>
+<li><a href="https://freelanceforcoins.com/">freelanceforcoins</a> 用加密货币付费的自由职业 （比特币，以太坊等）</li>
+<li><a href="https://ethlance.com">ethlance</a> Ethlance数据库分布在以太坊公共区块链上，源文件位于IPFS上。所有人都可以永远使用Ethlance，而没有任何中央机构对其进行控制。</li>
+</ul>
+<h1 id="投资比特币">投资比特币</h1>
+<p>许多比特币支持者认为数字货币是未来。许多支持比特币的人认为，它为全球交易提供了更快，更免费的支付系统。尽管没有任何政府或中央银行的支持，但比特币可以兑换成传统货币。实际上，其兑美元的汇率吸引了对货币交易感兴趣的潜在投资者和交易员。确实，比特币等数字货币增长的主要原因之一是，它们可以替代国家法定货币和黄金等传统商品。</p>
+<p>2014年3月，美国国税局指出，所有虚拟货币（包括比特币）都将作为财产而不是货币征税。作为资本持有的比特币的收益或损失将被实现为资本收益或损失，而作为库存持有的比特币将产生普通的收益或损失。您从另一方开采或购买的比特币的销售，或使用比特币支付商品或服务的费用，都是可以征税的交易案例。</p>
+<p>像任何其他资产一样，低买高卖的原理也适用于比特币。积累货币的最流行方法是在比特币交易所购买，但是还有许多其他赚钱和拥有比特币的方法。</p>
+<h1 id="比特币投资的风险">比特币投资的风险</h1>
+<p>尽管比特币并非被设计为正常的股权投资（没有发行股票），但在2011年5月和2013年11月再次迅速升值后，一些投机者被数字货币吸引。因此，许多人购买比特币来获得其投资价值而不是作为交易的媒介。</p>
+<p>但是，它缺乏稳定的价值保证，意味着购买和使用比特币存在若干固有风险。证券交易委员会（SEC），金融业监管局（FINRA），消费者金融保护局（CFPB）和其他机构已经发布了许多投资者警报。</p>
+<p>虚拟货币的概念仍然很新颖，与传统投资相比，比特币没有太多的长期追踪记录或可信度的历史。随着比特币的日益普及，比特币每天都变得越来越缺乏实验性。十年后，它们（像所有数字货币一样）仍处于发展阶段，并且一直在不断发展。 建立和投资于比特币和区块链公司的数字货币集团首席执行官巴里·席尔伯特（Barry Silbert）说：“这几乎是您可能做出的最高风险，最高回报的投资。”</p>
+<h1 id="比特币监管风险">比特币监管风险</h1>
+<p>以多种形式向比特币投资并不是为了规避风险。比特币是政府货币的竞争对手，可用于黑市交易，洗钱，非法活动或逃税。结果，各国政府可能寻求规范，限制或禁止使用和出售比特币，有些已经这样做。其他人提出了各种规则。例如，在2015年，纽约州金融服务部最终确定了法规，该法规要求与比特币的购买，出售，转移或存储打交道的公司必须记录客户的身份，拥有合规官并保持资本储备。价值10,000美元或以上的交易必须进行记录和报告。</p>
+<p>由于缺乏有关比特币（和其他虚拟货币）的统一法规，引发了人们对它们的寿命，流动性和普遍性的质疑。</p>
+<h1 id="比特币的安全风险">比特币的安全风险</h1>
+<p>拥有和使用比特币的大多数个人并非通过“挖矿”获得其代币。相反，他们在称为“比特币交易所”的许多流行在线市场中的任何一个上买卖比特币和其他数字货币。比特币交易所完全是数字化的，并且与任何虚拟系统一样，受到黑客，恶意软件和操作故障的威胁。如果小偷可以访问比特币所有者的计算机硬盘并窃取了他的私有加密密钥，则他可以将被盗的比特币转移到另一个帐户。（只有当比特币存储在未连接到互联网的计算机上，或者选择使用纸钱包时，用户才能阻止此操作–打印出比特币的私钥和地址，而根本解决方案就是不将其保存在计算机上。）黑客还可以将比特币交易作为目标，从而可以访问成千上万的帐户和存储比特币的数字钱包。2014年发生了一起特别臭名昭著的骇客事件，当时 Gox是日本的一家比特币交易所，在价值数百万美元的比特币被盗后，被迫关闭。</p>
+<p>你需要记住所有比特币交易都是永久且不可逆的。这就像处理现金一样：使用比特币进行的任何交易只有在收到比特币的人退款后才能撤消。就像借记卡或信用卡一样，没有第三方或付款处理者，因此，如果有问题，就没有办法保护或追溯来源。</p>
+<h1 id="保险风险">保险风险</h1>
+<p>一些投资是通过证券投资者保护公司进行担保的。正常的银行帐户通过联邦存款保险公司（FDIC）进行最高限额的保险，具体取决于司法管辖区。一般来说，比特币交易所和比特币账户不受任何类型的联邦或政府计划的保险。在2019年，主要交易商和交易平台SFOX宣布将能够为比特币投资者提供FDIC保险，但仅适用于涉及现金的部分交易。</p>
+<h1 id="比特币欺诈的风险">比特币欺诈的风险</h1>
+<p>比特币使用私钥加密来验证所有者并注册交易，欺诈者和骗子可能会尝试出售虚假的比特币。例如，2013年7月，SEC对与比特币相关的庞氏骗局的运营商提起了法律诉讼。还记录了另一种常见欺诈形式的比特币价格操纵案件。</p>
+<h1 id="市场风险">市场风险</h1>
+<p>像任何投资一样，比特币价值可能会波动。确实，该货币的价值在其短暂存续期间已经出现了剧烈的价格波动。根据交易所的大量买卖，它对“新闻”具有很高的敏感性。根据CFPB，比特币的价格在2013年单日下跌了61％，而在2014年则是单日价格下跌的记录。高达80％</p>
+<p>如果越来越少的人开始接受比特币作为货币，那么这些数字单位可能会失去价值，并变得一文不值。确实，有人猜测，当价格在2017年底和2018年初的加密货币高峰期间从历史最高点下跌时，“比特币泡沫”就破灭了。已经有足够的竞争，尽管比特币在比特币价格上有巨大的领先优势。得益于其品牌知名度和风险投资资金，数以百计的其他数字货币如雨后春笋般涌现，其他更好的虚拟硬币形式的技术突破始终是威胁。</p>
+<h1 id="比特币的税收风险">比特币的税收风险</h1>
+<p>由于比特币没有资格包含在任何税收优惠的退休账户中，因此没有很好的法律选择来保护投资免税。</p>
+<h1 id="比特币的分叉">比特币的分叉</h1>
+<p>自比特币推出以来，矿工与开发者之间的分歧引发了无数观点纠纷，引发了加密货币社区的大规模分裂。在某些情况下，一群比特币用户和矿工改变了比特币网络本身的协议。此过程称为“分叉”，通常会导致使用新名称创建新型比特币。这种拆分可能是“硬分叉”，其中新硬币与比特币共享交易历史，直到确定的拆分点为止，在该点上创建了新代币。由于硬分叉而创建的加密货币示例包括Bitcoin Cash（创建于2017年8月），Bitcoin Gold（创建于2017年10月）和Bitcoin SV（创建于2017年11月）。一个“软叉” 是对协议的更改，仍然与以前的系统规则兼容。例如，比特币软叉增加了块的总大小。</p>
+<h1 id="相关内容">相关内容</h1>
+<p><a href="https://learnblockchain.cn/article/854">什么是数字货币？</a></p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AF%94%E7%89%B9%E5%B8%81">什么是比特币？</a></li>
+<li><a href="#%E4%BA%86%E8%A7%A3%E6%AF%94%E7%89%B9%E5%B8%81">了解比特币</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C">比特币如何运作</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8C%96">比特币的价格变化</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%BC%80%E7%AB%AF">比特币的开端</a></li>
+<li><a href="#%E8%B0%81%E5%8F%91%E6%98%8E%E4%BA%86%E6%AF%94%E7%89%B9%E5%B8%81">谁发明了比特币？</a></li>
+<li><a href="#%E4%B8%AD%E6%9C%AC%E8%81%AA%E4%B9%8B%E5%89%8D">中本聪之前</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%AD%E6%9C%AC%E8%81%AA%E8%A6%81%E5%8C%BF%E5%90%8D">为什么中本聪要匿名？</a></li>
+<li><a href="#%E8%B0%81%E6%98%AF%E4%B8%AD%E6%9C%AC%E8%81%AA">谁是中本聪？</a></li>
+<li><a href="#%E5%8F%AF%E4%BB%A5%E8%AF%81%E6%98%8E%E4%B8%AD%E6%9C%AC%E8%81%AA%E7%9A%84%E8%BA%AB%E4%BB%BD%E5%90%97">可以证明中本聪的身份吗？</a></li>
+<li><a href="#%E7%94%A8%E6%AF%94%E7%89%B9%E5%B8%81%E4%BD%9C%E4%B8%BA%E4%BB%98%E6%AC%BE%E6%96%B9%E5%BC%8F">用比特币作为付款方式</a></li>
+<li><a href="#%E8%8E%B7%E5%BE%97%E6%AF%94%E7%89%B9%E5%B8%81%E6%8A%A5%E9%85%AC%E7%9A%84%E5%B7%A5%E4%BD%9C">获得比特币报酬的工作</a></li>
+<li><a href="#%E6%8A%95%E8%B5%84%E6%AF%94%E7%89%B9%E5%B8%81">投资比特币</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E6%8A%95%E8%B5%84%E7%9A%84%E9%A3%8E%E9%99%A9">比特币投资的风险</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9B%91%E7%AE%A1%E9%A3%8E%E9%99%A9">比特币监管风险</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9">比特币的安全风险</a></li>
+<li><a href="#%E4%BF%9D%E9%99%A9%E9%A3%8E%E9%99%A9">保险风险</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E6%AC%BA%E8%AF%88%E7%9A%84%E9%A3%8E%E9%99%A9">比特币欺诈的风险</a></li>
+<li><a href="#%E5%B8%82%E5%9C%BA%E9%A3%8E%E9%99%A9">市场风险</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E7%A8%8E%E6%94%B6%E9%A3%8E%E9%99%A9">比特币的税收风险</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%88%86%E5%8F%89">比特币的分叉</a></li>
+<li><a href="#%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9">相关内容</a></li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://lianqiujun.co/post/qu-kuai-lian-kai-fa-yi-tai-fang-kai-fa-jiao-cheng">
+              <span class="post-title">
+                区块链开发 - 以太坊开发教程&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/1-bi-te-bi-ji-chu-zhi-shi/" class="leancloud_visitors"
+              data-flag-title="1. 比特币基础知识">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
+		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
+		avatar: 'retro',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/aturX" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://w3c.group/g/1124892" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://learnblockchain.cn/people/600" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://www.zhihu.com/people/li-si-yi-88-83" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-zhihu fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://lianqiujun.co/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>链 求 君 | 区 块 链</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://lianqiujun.co/media/live2d/assets/hijiki.model.json");
+        });
+
+        var home_Path = "https://lianqiujun.co/";
+        addScript("https://lianqiujun.co/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

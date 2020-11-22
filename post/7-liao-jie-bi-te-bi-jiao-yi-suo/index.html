@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
+<meta name="author" content="kveln">
+<title>7. 了解比特币交易所 | 链 求 君 | 区 块 链</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="7. 了解比特币交易所 | 链 求 君 | 区 块 链 » Feed"
+  href="https://lianqiujun.co/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://lianqiujun.co/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJX498H9SN"></script>
+<script>window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-HJX498H9SN');</script>
+
+  <meta property="og:description" content="7. 了解比特币交易所" />
+  <meta property="og:url" content="https://lianqiujun.co/post/7-liao-jie-bi-te-bi-jiao-yi-suo" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1606060835803"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1606060835803"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://lianqiujun.co/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://lianqiujun.co/tag/SMFQf8g_2" class="tag">比特币</a>
+                
+              </span>
+              <h1>7. 了解比特币交易所</h1>
+              <span class="meta">
+                Posted on
+                2020-11-22，15 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="1-什么是比特币交易所">1. 什么是比特币交易所？</h1>
+<p>比特币交易所是一个数字市场，交易者可以在其中使用不同的法定货币或山寨币买卖比特币。它是一个在线平台，充当加密货币买卖双方之间的中介。</p>
+<pre><code>重要要点
+
+* 比特币交易所充当买卖双方之间的中介。
+
+* 比特币交易所就像经纪人一样，你可以通过银行转账，电汇和其他常见的存款方式来存钱。但是，你通常需要为此服务付出一定的代价。
+
+* 如果交易者想进行加密货币交易，他们需要支付一定的服务费，类似于你在不同国家/地区交易货币时银行收取的费用。
+
+* 买卖基于与现有的交易系统，买方（买主）下达限价订单，然后当卖方（制造商）可以使用相应的加密货币将其出售。
+</code></pre>
+<h1 id="2-了解比特币交易所">2. 了解比特币交易所</h1>
+<p>比特币交易平台使买家与卖家匹配。就像传统的证券交易所一样，交易者可以通过输入市场订单或限价订单来选择买卖比特币。当使用市场订单时，交易者授权交易所在最佳的价格时进行货币交易。设置了限价订单后，交易者将规定交易所在低于当前要价或高于当前出价的价格交易货币，具体高低取决于它们是在买还是卖。</p>
+<p>为了可以在交易所上进行比特币交易，用户必须在交易所进行注册并经过一系列的验证过程以验证其身份。验证成功后，将为用户开设一个帐户，然后用户必须先将资金转入该帐户，然后才能购买硬币。</p>
+<p>不同的交易所具有不同的付款方式，可用于存入资金，包括银行电汇，直接银行转账，信用卡或借记卡，银行汇票，汇票甚至礼品卡、支付宝、微信等。想要从其帐户中提款的交易者可以使用交易所提供的选项进行提款，包括银行转账，支付宝转账，微信转账，支票邮寄，现金交付，银行电汇或信用卡转账。</p>
+<h1 id="3-去中心化交易所">3. 去中心化交易所</h1>
+<p>去中心化的比特币交易所是在没有中央授权的情况下进行的交易。这种方式可以进行数字货币的点对点交易，而无需交换机构来促进交易。</p>
+<p>去中心化交易所有很多好处。首先，许多加密货币用户认为去中心化交易所更适合大多数数字货币本身的去中心化结构。与其他类型的交易所相比，许多去中心化交易所也要求其成员提供较少的个人信息。</p>
+<p>其次，如果用户将资产可以直接转让给其他用户，则无需将资产转让给交易所，从而降低了黑客和其他欺诈行为造成的盗窃风险。</p>
+<p>第三，去中心化交易所可能不太容易受到价格操纵和其他欺诈性交易活动的影响。</p>
+<p>另一方面，去中心化交易所（像所有加密货币交易所一样）必须以交易量和流动性的形式维持基本的用户量。并非所有的去中心化交易所都能实现这些重要的基础指标。</p>
+<p>此外，与使用中心化交易所的用户相比，去中心化交易所的用户如果是欺诈的受害者，他们的追回损失的可能性更小。</p>
+<h1 id="4-特别注意事项">4. 特别注意事项</h1>
+<h1 id="41-费用">4.1 费用</h1>
+<p>进行存款和取款需要付出一定的服务费，具体取决于转移资金的付款方式。</p>
+<p>除了交易费和资金转移费外，交易者还可能需要支付货币兑换费，具体取决于比特币交易所接受的货币。如果用户将人民币转帐到仅以美元进行交易的交易所，则银行或交易所将收取费用将人民币转换为美元。与接受您当地货币的交易所进行交易是避免外汇费用的最佳方法。</p>
+<p>所有比特币交易所都有交易费，该交易费适用于交易所内完成的每个买卖订单。收费率取决于所进行的比特币交易量。</p>
+<h1 id="42-比特币钱包">4.2 比特币钱包</h1>
+<p>请注意，比特币交易所不同于比特币钱包。前者提供了一个平台，供比特币买卖双方进行交易，而后者只是一种数字存储服务，供比特币持有者安全地存储其代币。从技术上讲，比特币钱包存储私钥，私钥用于授权交易和访问用户的比特币地址。大多数比特币交易所都为其用户提供比特币钱包，但可能会为此服务收费。</p>
+<h1 id="43-比特币交易所的例子">4.3 比特币交易所的例子</h1>
+<p>例如，在一个比特币交易所上，三个硬币卖家要求BTC / USD 8265.75，BTC / USD 8269.55和BTC / USD 8270.00。发起市场订单以购买比特币的交易员将以<code>8265.75</code>美元的最佳要价执行订单。如果仅五个比特币可用于最佳卖出价，而十个硬币可用于<code>$8269.55</code>，并且交易者希望以市场价格购买10个比特币，则该交易者的订单将以5个硬币（<code>$8265.75</code>）和其余5个硬币（<code>$8269.55</code>）成交。</p>
+<p>但是，一个认为自己可以以更好的价格获得比特币的交易者可以将一个<code>限价单</code>设定为<code>2260.10</code>美元。如果卖方将其要价与该订单相匹配或将价格设置为低于此数字，则该订单将被执行。所有这些都是通过交易所完成的，而交易所则需要为其业务收取一定比例的交易费。</p>
+<h1 id="5-最受欢迎的比特币交易所">5. 最受欢迎的比特币交易所</h1>
+<p>比特币（BTC）交易所是虚拟货币世界尤其是其生态系统不可或缺的一部分。实际上，交易所是世界上许多数字货币用户必须使用代币和法定货币进行交易的主要手段。当今的数字货币交易所必须成功地平衡各种监管措施，保持最新的安全保护措施以减少欺诈和黑客攻击的可能性，并吸引用户以确保生存能力和足够的流动性。</p>
+<p>Mt.Gox 交易所，昵称：门头沟。曾经享有垄断者地位的交易所。在2013年和2014年，它占据了BTC-USD交易量的80-90％。<br>
+然而这个传奇性的交易所并没有永恒的存在，在大量的比特币显然从其保险箱中被盗之后，这一次最受欢迎的交易所就面临灭顶之灾。“门头沟被盗事件”可以说是一个警示性的故事。</p>
+<p>现在，成功的交易所已经从其中学到了很多东西。</p>
+<p>（1）火币网</p>
+<ul>
+<li>地址：https://www.huobi.com</li>
+</ul>
+<p>火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产国际站，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务，总部位于新加坡，由火币全球专业站团队负责运营。火币集团是一家具有全球竞争力与影响力的数字资产综合服务商，为超过130个国家百万级用户提供优质服务。在新加坡、香港、韩国、日本等多个国家和地区均有独立的交易业务和运营中心</p>
+<p>（2）Binance 币安</p>
+<ul>
+<li>地址：https://www.binance.com</li>
+</ul>
+<p>币安(Binance)，国际领先的区块链数字资产国际站，向全球提供广泛的数字货币交易、区块链教育、区块链项目孵化、区块链资产发行平台、区块链研究院以及区块链公益慈善等服务，目前用户覆盖全球180多个国家和地区，以140万单/秒的核心内存撮合技术，是全球加密货币交易速度最快的平台之一，也是全球加密货币交易量最大的平台之一。</p>
+<p>（3）Gate 比特儿</p>
+<ul>
+<li>地址：https://www.gate.io</li>
+</ul>
+<p>Gate国际站，是一家有态度的全球区块链资产国际站。从13年创办至今，已为来自全球超过130个国家的数百万用户，提供了近百种优质区块链资产品类的交易和投资服务。Gate致力于做一家值得信赖的安全、稳定、有信誉的区块链资产国际站，不仅为用户提供安全、便捷、公平的区块链资产交易服务，同时全面保障用户的交易信息安全和资产安全。</p>
+<p>（4）OKEX</p>
+<ul>
+<li>地址：https://www.okex.com</li>
+</ul>
+<p>OKEX 是全球著名的数字资产国际站之一，主要面向全球用户提供比特币、莱特币、以太币等数字资产的现货和衍生品交易服务，隶属于OKEX Technology Company Limited。 OKEX创立时，获得了世界顶级投资人Tim Draper参与设立的创业工场百万美金的天使投资，Tim Draper先生同时也是Hotmail、百度、特斯拉等世界顶级企业的投资人。</p>
+<p>（5）ZB 中币</p>
+<ul>
+<li>地址：https://www.zb.com</li>
+</ul>
+<p>ZB集团成立于2012年，旨在区块链的发展提供领导力和更加稳定的环境。总部设立于瑞士苏黎世，ZB集团经营着包括数字资产国际站、电子钱包、投资基金、研究机构和媒体在内的业务网络。集团的旗舰平台是行业领先的数字资产国际站 ZB。自2013年初推出以来，该平台在创新方面一直处于领先地位。ZB集团还拥有全球创新加密货币国际站ZBG、全球首个基于矿池的国际站http://BW.com。</p>
+<p>（6）Bitfinex</p>
+<ul>
+<li>地址：https://www.bitfinex.com</li>
+</ul>
+<p>Bitfinex是全世界最大、最高级的比特币国际站之一，支持以太坊、比特币、莱特币、以太经典等虚拟币的交易，每天的成交量达30多亿人民币。提供币币交易，美元与币的交易。注册非常简单。2016年，Bitfinex大概有12万枚比特币通过社交媒体被盗。受此事件影响，当时比特币价格跌了20%。 优势： 支持美元交易 多种交易形式和功能 不足： 平台页面布局不符合国内用户使用习惯</p>
+<p>（7）MXC 抹茶</p>
+<ul>
+<li>地址：https://www.mxc.io</li>
+</ul>
+<p>MXC国际站是由华尔街以及日本欧洲资深量化交易团队联合区块链资深从业者通过去中心化自组织形式创立的一个专注于区块链资产交流和交换的平台。MXC将为用户提供更加安全、便捷、智能的区块链资产流通服务，聚合全球优质区块链资产，融合全球最顶尖的安全技术，致力于打造全球顶级的区块链资产国际站。</p>
+<p>（8）Dragonex 龙网</p>
+<ul>
+<li>地址：https://www.dragonex.io</li>
+</ul>
+<p>龙网（DragonEx）是新加坡虚拟货币国际站，2017年11月2日正式上线运营。上线同日发行平台币龙币（DT），持有其平台币DT可以获得平台收入分红。首创的开放平台引进的游戏应用爆红整个行业，同时开发了众多功能，如DK大乐透、扭龙蛋、期权预测、抵押借贷等等。目前支持C2C快速法币充提、USDT交易、ETH交易、BTC交易、DC交易、合约交易、杠杆交易。</p>
+<p>（9）Coinw 币赢国际站</p>
+<ul>
+<li>地址：https://www.coinw.ai</li>
+</ul>
+<p>币赢网Coinw是中国香港开设的著名数字资产国际站，面向全球用户提供BTC、ETH、HC、EOS、LEEK、ELF、MTC等优质主流数字资产的交易服务。币赢网Coinw提供移动端APP，方便用户随时随地操作。</p>
+<p>（10）ZBG</p>
+<ul>
+<li>地址： https://www.zbg.com</li>
+</ul>
+<p>ZBG 在2018年成立于香港，凭借创新、高效和全球化的运营，ZBG在短时间内迅速跻身行业世界前十，被誉为新一线国际站。 目前平台已支持七国语言访问，为全球180万加密资产投资者提供服务，平台日均活跃超过12万。在未来，ZBG将继续拓展全球市场，为全球区块链爱好者提供稳定、安全、快捷的区块链项目上市、加密资产投资等服务。</p>
+<h1 id="6-交易所购买比特币的成本">6. 交易所购买比特币的成本</h1>
+<p>交易比特币需要多少钱？除了比特币本身的价格外，每个加密货币交易所都会在客户购买和出售硬币时增加交易费用。这些费用包括制造商（通过限价订单增加订单簿流动性）和收取者（通过市场订单从订单簿中减去流动性）费用。在某些情况下，如果限价单已经存在于订单簿中，则加密货币交易者可能会产生制造商以及交易商的费用。</p>
+<p>加密货币交易所主要通过两种方式来计算费用：每笔交易采用固定的费用，或者采用帐户30天交易量的百分比收取费用。结合两种情况，他们根据交易量的大小决定具体的服务费用。</p>
+<pre><code>重要要点
+
+* 自从2009年首次推出比特币以来，买卖加密货币变得越来越受欢迎。
+
+* 现在存在数十种大型在线交易所，以帮助买卖数字货币以及彼此之间进行加密货币交易。
+
+* 所涉及的典型成本包括支付给交易所的交易佣金，买卖价差的宽度以及向您的银行帐户转移资金的费用。
+
+</code></pre>
+<p>在加密货币交易所进行交易时要考虑的四件事 交易者在购买加密货币时必须考虑四件事。</p>
+<p>首先，在大多数司法管辖区，加密货币交易所不受监管。全球一些国家/地区的大多数监管机构在其一些最大的交易市场中都采取了放任不管的方式来进行加密货币监管。例如，在最大的加密货币交易市场中，加密货币交易所受美国众多法规的约束。截至2017年初，中国禁止某些类型的加密货币交易，占总交易量的90％。</p>
+<p>其次，加密货币交易所的收费服务旨在鼓励频繁交易价值数千美元的大笔交易。费用通常随着交易量和交易频率的增加而降低。因此，在加密货币交易中，小的订单和不频繁的订单并不具有成本效益。例如，某些交易所对价值10,000,000美元及以上的交易不收取任何费用。</p>
+<p>第三，交易所鼓励使用加密货币进行交易。法定货币通常会在交易所产生存款和取款费，具体取决于付款方式。但是在大多数情况下，与其他硬币一起购买加密货币是免费的。在某些情况下，可能需要支付少量费用才能为所需的加密货币设置钱包。</p>
+<p>第四，大多数知名的加密货币交易所都不提供对所有硬币的访问权限。但是，在许多情况下，交易者可以将资金从一个钱包转移到另一个钱包，并使用法定货币或加密货币为他们的交易账户注资。例如，希望以市值排名前15位的加密货币卡尔达诺（ADA）的交易者目前无法直接在流行的Coinbase交易所上进行交易。 但是，交易者可以使用法定货币在Coinbase上购买比特币。另一家交易所Binance已经为用户提供了从其他钱包中导入硬币的功能。一旦他们的Binance帐户中有比特币，他们就可以使用它购买交易所中列出的ADA。多个钱包在不同交易所之间的转账在每一端会产生少量费用。</p>
+<h1 id="总结">总结</h1>
+<p>对于个人资产的分配管理来说，用于交易的资产建议保留在交易所，很少交易的大额资产建议保留在个人钱包中。对于大额且进行交易的资产，可以分开分配在多个主流的交易所中。由于交易所被盗事件经常发生，加密货币放置在交易所中并不是万无一失的选择。分开管理，也同样分散了风险，主流交易所都被盗窃的概率还是很小的。</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E6%89%80">1. 什么是比特币交易所？</a></li>
+<li><a href="#2-%E4%BA%86%E8%A7%A3%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E6%89%80">2. 了解比特币交易所</a></li>
+<li><a href="#3-%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%BA%A4%E6%98%93%E6%89%80">3. 去中心化交易所</a></li>
+<li><a href="#4-%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">4. 特别注意事项</a></li>
+<li><a href="#41-%E8%B4%B9%E7%94%A8">4.1 费用</a></li>
+<li><a href="#42-%E6%AF%94%E7%89%B9%E5%B8%81%E9%92%B1%E5%8C%85">4.2 比特币钱包</a></li>
+<li><a href="#43-%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E6%89%80%E7%9A%84%E4%BE%8B%E5%AD%90">4.3 比特币交易所的例子</a></li>
+<li><a href="#5-%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E6%89%80">5. 最受欢迎的比特币交易所</a></li>
+<li><a href="#6-%E4%BA%A4%E6%98%93%E6%89%80%E8%B4%AD%E4%B9%B0%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E6%88%90%E6%9C%AC">6. 交易所购买比特币的成本</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://lianqiujun.co/post/6-bi-te-bi-shi-ji-shi-yong-de-you-que-dian">
+              <span class="post-title">
+                6. 比特币实际使用的优缺点&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/7-liao-jie-bi-te-bi-jiao-yi-suo/" class="leancloud_visitors"
+              data-flag-title="7. 了解比特币交易所">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
+		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
+		avatar: 'retro',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/aturX" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://w3c.group/g/1124892" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://learnblockchain.cn/people/600" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://www.zhihu.com/people/li-si-yi-88-83" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-zhihu fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://lianqiujun.co/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>链 求 君 | 区 块 链</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://lianqiujun.co/media/live2d/assets/hijiki.model.json");
+        });
+
+        var home_Path = "https://lianqiujun.co/";
+        addScript("https://lianqiujun.co/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
+</body>
+
+</html>
