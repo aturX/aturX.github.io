@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-11-22T16:17:13.553Z</updated>
+    <updated>2020-11-23T02:30:15.258Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[最优思维法]]></title>
+        <id>https://lianqiujun.co/post/zui-you-si-wei-fa</id>
+        <link href="https://lianqiujun.co/post/zui-you-si-wei-fa">
+        </link>
+        <updated>2020-11-23T02:29:43.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="什么是最优思维">什么是最优思维</h3>
+<p>在思维方式上，质问自己，训练最优思维。对自己的要求始终保持较高的水平，然后让自己尽力去完成。</p>
+<h3 id="最优思维法">最优思维法</h3>
+<p>目的： 训练高标准执行力</p>
+<ol>
+<li>次优方案：</li>
+</ol>
+<p>“做某事的好/极好办法是什么？”</p>
+<ol start="2">
+<li>最优方案：</li>
+</ol>
+<p>“做某事的最好办法是什么？”</p>
+<p>有时你没法立刻知晓某个问题的最佳解决方案。这时你可以自问：“最佳解决方案看起来如何？”然后就开始列出最佳解决方案需要表现的属性和约束条件。</p>
+<p>这能帮你缩小选择范围。若你知道最佳解决方案的某种特定属性，便可排除所有缺乏此属性的可能方案。</p>
+<p>请记住最佳解决方案总需考虑现实可用资源。若一份可能解决方案不切实际，它当然就非最佳方案。</p>
+<p>在最初问题中加入<strong>关键约束条件</strong>： “我能在20分钟或更少时间内，做某事的最好办法是什么？”</p>
+<hr>
+<p>只有询问才能收获答案。</p>
+<p>所以请直接询求那最佳答案。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[全面了解比特币系列]]></title>
         <id>https://lianqiujun.co/post/quan-mian-liao-jie-bi-te-bi-xi-lie</id>
@@ -1010,15 +1037,6 @@ Fast Company认为中本聪可能是由三个人组成的小组，小组成员�
 <p>自比特币推出以来，矿工与开发者之间的分歧引发了无数观点纠纷，引发了加密货币社区的大规模分裂。在某些情况下，一群比特币用户和矿工改变了比特币网络本身的协议。此过程称为“分叉”，通常会导致使用新名称创建新型比特币。这种拆分可能是“硬分叉”，其中新硬币与比特币共享交易历史，直到确定的拆分点为止，在该点上创建了新代币。由于硬分叉而创建的加密货币示例包括Bitcoin Cash（创建于2017年8月），Bitcoin Gold（创建于2017年10月）和Bitcoin SV（创建于2017年11月）。一个“软叉” 是对协议的更改，仍然与以前的系统规则兼容。例如，比特币软叉增加了块的总大小。</p>
 <h1 id="相关内容">相关内容</h1>
 <p><a href="https://learnblockchain.cn/article/854">什么是数字货币？</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[区块链开发 - 以太坊开发教程]]></title>
-        <id>https://lianqiujun.co/post/qu-kuai-lian-kai-fa-yi-tai-fang-kai-fa-jiao-cheng</id>
-        <link href="https://lianqiujun.co/post/qu-kuai-lian-kai-fa-yi-tai-fang-kai-fa-jiao-cheng">
-        </link>
-        <updated>2020-11-18T06:08:11.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="以太坊开发教程"><a href="https://lianqiujun.co/tag/pJWTDQOmu/">以太坊开发教程</a></h1>
 ]]></content>
     </entry>
 </feed>
