@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-12-02T05:50:25.683Z</updated>
+    <updated>2020-12-02T05:51:02.422Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
     <entry>
-        <title type="html"><![CDATA[DAPP简介]]></title>
+        <title type="html"><![CDATA[Dapp简介]]></title>
         <id>https://lianqiujun.co/post/dapp-jian-jie</id>
         <link href="https://lianqiujun.co/post/dapp-jian-jie">
         </link>
