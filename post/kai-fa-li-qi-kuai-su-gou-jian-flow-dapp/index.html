@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>Python 多线程实践 | 链 求 君 | 区 块 链</title>
+<title>开发利器：快速构建 Flow Dapp | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Python 多线程实践 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="开发利器：快速构建 Flow Dapp | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,8 +38,8 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="Python 多线程实践" />
-  <meta property="og:url" content="https://lianqiujun.co/post/python-duo-xian-cheng-shi-jian" />
+  <meta property="og:description" content="开发利器：快速构建 Flow Dapp" />
+  <meta property="og:url" content="https://lianqiujun.co/post/kai-fa-li-qi-kuai-su-gou-jian-flow-dapp" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="链 求 君 | 区 块 链" />
@@ -159,13 +159,11 @@
             <div class="post-heading">
               <span class="tags">
                 
-                <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">Python</a>
-                
               </span>
-              <h1>Python 多线程实践</h1>
+              <h1>开发利器：快速构建 Flow Dapp</h1>
               <span class="meta">
                 Posted on
-                2020-06-09，3 min read
+                2020-12-15，2 min read
               </span>
             </div>
           
@@ -180,114 +178,61 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <h1 id="1-python-多线程标准库">1. Python 多线程标准库</h1>
-<p>Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，使用threading这个高级模块就足够了。</p>
-<h1 id="2-创建并使用多线程">2. 创建并使用多线程</h1>
-<pre><code>import time, threading
-
-
-# 新线程执行的代码:
-def say_some():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	n = 0
-	while n &lt; 7:
-		n = n + 1
-		print('thread [{}] &gt;&gt;&gt; [{}]'.format(threading.current_thread().name, n))
-		time.sleep(n)
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-
-def demo1():
-	print('--------线程 [{}] 开始运行...'.format(threading.current_thread().name))
-	t = threading.Thread(target=say_some, name='SaySomeThread')
-	t.start()
-	t.join()  # 线程结束后继续执行
-	print('线程 [{}] 结束运行...'.format(threading.current_thread().name))
-
-</code></pre>
-<h1 id="3-线程的锁">3. 线程的锁</h1>
-<p>多线程和多进程最大的不同在于，多进程中，同一个变量，<br>
-各自有一份拷贝存在于每个进程中，互不影响，而多线程中，<br>
-所有变量都由所有线程共享，所以，任何一个变量都可以被任何一个线程修改，<br>
-因此，线程之间共享数据最大的危险在于多个线程同时改一个变量，把内容给改乱了。<br>
-所以，和多进程相比，多线程需要对特定的变量加锁，保证其修该操作不会乱。</p>
-<pre><code># 锁
-lock = threading.Lock()
-
-
-def run_thread(n):
-	for i in range(100000):
-		# 先要获取锁:
-		lock.acquire()
-		try:
-			# 修改变量
-			n = n + 1
-		finally:
-			# 改完了一定要释放锁:
-			lock.release()
-
-</code></pre>
-<p>包含锁的某段代码实际上只能以单线程模式执行，效率就大大地下降了。</p>
-<h1 id="4-python-伪多线程原因gil锁">4. Python “伪”多线程原因：GIL锁</h1>
-<p>使用C、C++或Java来写特定死循环，直接可以把全部核心跑满，4核就跑到400%，<br>
-但是Python跑相同代码，只能将CPU跑到100%左右。</p>
-<p>Python的线程虽然是真正的线程，但解释器执行代码时，有一个GIL锁：Global Interpreter Lock，<br>
-任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，<br>
-解释器就自动释放GIL锁，让别的线程有机会执行。</p>
-<p>GIL全局锁实际上把所有线程的执行代码都给上了锁，<br>
-所以，多线程在Python中只能交替执行，<br>
-即使100个线程跑在100核CPU上，也只能用到1个核。</p>
-<p>解决方案： 多进程<br>
-Python虽然不能利用多线程实现多核任务，但可以通过多进程实现多核任务。<br>
-多个Python进程有各自独立的GIL锁，互不影响。</p>
-<h1 id="5-线程全局变量">5. 线程全局变量</h1>
-<pre><code># 创建全局ThreadLocal对象:
-local_something = threading.local()
-
-# 1  执行线程
-def process_say_someting():
-	# 获取当前线程关联的student:
-	text = local_something.content
-	print('Hello, %s (in %s)' % (text, threading.current_thread().name))
-
-
-# 2  赋值线程
-def process_thread(t):
-	# 为该线程，绑定ThreadLocal的值:
-	local_something.content = t
-	process_say_someting()
-
-
-t1 = threading.Thread(target=process_thread, args=('hhhhh',), name='Thread-A')
-t2 = threading.Thread(target=process_thread, args=('wwwwww',), name='Thread-B')
-t1.start()
-t2.start()
-t1.join()
-t2.join()
-</code></pre>
+          <h2 id="decentology介绍">Decentology介绍</h2>
+<p>Decentology是一个帮助开发者快速进行Dapp构建的网站，可以在10分钟内构建一套全栈Dapp应用程序。</p>
+<p>当我们开始学习一个新的，可扩展的应用程序时，都会想获得一些“快速可见的效果”。也就是说，我想进行一些细微的细微更改，以查看该应用程序是否正常运行，并且期望并查看我的操作是如何进行的。结果通常是需要花费不少时间，才能将应用程序正常的运行起来。但是，正确的学习方法，应该是尽可能的缩短反馈周期，进行一些小的更改并获得这些“快速的胜利”不可避免地会帮助我们学习并拥有更多的理解。</p>
+<p>这正是我推荐的Decentology要尝试帮助我们做的事情：</p>
+<ul>
+<li><a href="https://dappstarter.decentology.com/">Decentology</a></li>
+</ul>
+<h2 id="flow-dapp-的快速构建">Flow Dapp 的快速构建</h2>
+<p>该网站已经免费提供了基于Flow的项目生成，步骤十分简单：</p>
+<ul>
+<li>第1步，智能合约栈</li>
+</ul>
+<p>DappStarter是用于区块链的全栈开发环境。它支持您选择的区块链和区块链语言，并在您选择客户端框架时提供集成的前端用户体验。</p>
+<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1608042585291.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>第2步，智能合约功能</li>
+</ul>
+<p>您选择的功能将为您提供定制的智能合约，以获取应用程序所需的一切。</p>
+<figure data-type="image" tabindex="2"><img src="https://lianqiujun.co/post-images/1608042597635.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>第3步，Dapp定制</li>
+</ul>
+<p>量身定制适合你业务的区块链应用</p>
+<figure data-type="image" tabindex="3"><img src="https://lianqiujun.co/post-images/1608042610399.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>第4步，生成应用仓库</li>
+</ul>
+<p>最终全栈源码会被生成在Github 仓库， 开发者可以自行下载至本地，运行开发。</p>
+<figure data-type="image" tabindex="4"><img src="https://lianqiujun.co/post-images/1608042677675.jpg" alt="" loading="lazy"></figure>
+<p>项目仓库：<br>
+<em>Github： https://github.com/DappStarter</em></p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#1-python-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A0%87%E5%87%86%E5%BA%93">1. Python 多线程标准库</a></li>
-<li><a href="#2-%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%BD%BF%E7%94%A8%E5%A4%9A%E7%BA%BF%E7%A8%8B">2. 创建并使用多线程</a></li>
-<li><a href="#3-%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%94%81">3. 线程的锁</a></li>
-<li><a href="#4-python-%E4%BC%AA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8E%9F%E5%9B%A0gil%E9%94%81">4. Python “伪”多线程原因：GIL锁</a></li>
-<li><a href="#5-%E7%BA%BF%E7%A8%8B%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">5. 线程全局变量</a></li>
+<li>
+<ul>
+<li><a href="#decentology%E4%BB%8B%E7%BB%8D">Decentology介绍</a></li>
+<li><a href="#flow-dapp-%E7%9A%84%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA">Flow Dapp 的快速构建</a></li>
+</ul>
+</li>
 </ul>
 </div>
           
           <hr />
           <p class="next-post">下一篇：
-            <a href="https://lianqiujun.co/post/python-yuan-lei-ji-orm-kuang-jia-shi-xian">
+            <a href="https://lianqiujun.co/post/yi-mian-xiang-zi-yuan-bian-cheng-geng-hao-de-shu-zi-suo-you-quan-mo-xing">
               <span class="post-title">
-                Python 元类及ORM框架实现&rarr;
+                [译] 面向资源编程：更好的数字所有权模型&rarr;
               </span>
             </a>
           </p>
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/python-duo-xian-cheng-shi-jian/" class="leancloud_visitors"
-              data-flag-title="Python 多线程实践">
+            <span id="/post/kai-fa-li-qi-kuai-su-gou-jian-flow-dapp/" class="leancloud_visitors"
+              data-flag-title="开发利器：快速构建 Flow Dapp">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
