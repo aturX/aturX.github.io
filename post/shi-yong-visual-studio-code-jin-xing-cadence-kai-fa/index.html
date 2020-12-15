@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>标签列表 | 链 求 君 | 区 块 链</title>
+<title>使用Visual Studio Code 进行 Cadence 开发 | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="标签列表 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="使用Visual Studio Code 进行 Cadence 开发 | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,9 +38,66 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
+  <meta property="og:description" content="使用Visual Studio Code 进行 Cadence 开发" />
+  <meta property="og:url" content="https://lianqiujun.co/post/shi-yong-visual-studio-code-jin-xing-cadence-kai-fa" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1608023538827"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
@@ -98,9 +155,18 @@
         
           <!-- 没Title为其他页面Header -->
           
-            <!-- 其他页面（archives、tags、about...）Header -->
-            <div class="sub-site-heading">
-              <h1 class="tag-tl">Tags</h1>
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://lianqiujun.co/tag/OlPQmpzE-" class="tag">FlowChain</a>
+                
+              </span>
+              <h1>使用Visual Studio Code 进行 Cadence 开发</h1>
+              <span class="meta">
+                Posted on
+                2020-12-15，4 min read
+              </span>
             </div>
           
         
@@ -108,133 +174,138 @@
     </div>
   </div>
 </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/OlPQmpzE-" class="tag">
-            FlowChain
-          </a>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h2 id="cadence-编程语言简介">Cadence 编程语言简介</h2>
+<p>Cadence 编程语言是一种用于智能合约开发的新型高级编程语言。</p>
+<p>该编程语言的重要特性如下：</p>
+<ul>
+<li>
+<p>安全：它提供了强大的静态类型系统，按合约进行设计（前提条件和后置条件）和资源（受线性类型启发）。</p>
+</li>
+<li>
+<p>可审核：关注其可读性，使验证代码的工作变得容易，并使程序表达的意图明确，而花费的时间成本很小。</p>
+</li>
+<li>
+<p>简单：专注于开发人员的生产力和可用性，简化编写代码的过程，并提供良好的开发工具。</p>
+</li>
+</ul>
+<h2 id="cadence-开发">Cadence 开发</h2>
+<p>在Flow官网可以看到Cadence的在线 Playground ，开发者可以轻松学习开发Cadence 在 Flow 的链上完成货币、收藏品和集市等智能合约的编写与测试。</p>
+<p><em>Playground :  https://play.onflow.org/</em></p>
+<p>对于更复杂多样的功能，开发者需要在本地进行开发时，首先可以选择用 Visual Studio Code 开发Cadence。 那么，需要先安装 Visual Studio Code，并且要为它安装开发插件才能支持 Cadence的开发，</p>
+<p>Visual Studio Code  Cadence插件是与Flow CLI 捆绑在一起，而Flow CLI是用于处理Flow指令的命令行工具。所以我们必须先要安装  <code>flow-cli</code>：</p>
+<ul>
+<li>Windows 安装 <code>flow-cli</code></li>
+</ul>
+<pre><code>iex &quot;&amp; { $(irm 'https://storage.googleapis.com/flow-cli/install.ps1') }&quot;
+</code></pre>
+<ul>
+<li>Linux 或 macOS 安装 <code>flow-cli</code></li>
+</ul>
+<pre><code>sh -ci &quot;$(curl -fsSL https://storage.googleapis.com/flow-cli/install.sh)&quot;
+</code></pre>
+<p><em>Github： https://github.com/onflow/flow-cli</em></p>
+<p>使用如下命令，查看一下 <code>flow</code> 版本，检测是否安装成功了。</p>
+<pre><code>flow version
+</code></pre>
+<p>成功安装后，再来安装 <code>Cadence</code> 的 <code>Visual Studio Code 插件</code>, 请在 <code>macOS / Linux</code> 上的终端或 Windows 上的 <code>PowerShell</code> 中运行以下命令：</p>
+<pre><code>flow cadence install-vscode-extension
+</code></pre>
+<p>重新启动 Visual Studio Code 以完成插件的安装。</p>
+<h2 id="运行区块链模拟器">运行区块链模拟器</h2>
+<p>可以直接从 Visual Studio Code 运行模拟器。</p>
+<p>请打开命令面板（在<code>macOS和Linux / Windows</code>上按），然后按 <code>Shift+Command+P</code> 或 <code>Shift+Ctrl+P</code> 后，输入  <code>run emulator</code> 启动本地区块链模拟器。</p>
+<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1608021954016.jpg" alt="" loading="lazy"></figure>
+<p>这将打开一个新终端并启动 Flow 区块链的仿真版本。</p>
+<p>另外，模拟器也可以在命令行上运行。</p>
+<p>在<code>macOS / Linux</code>上的终端或<code>Windows</code>上的<code>PowerShell</code>中，运行：</p>
+<pre><code>flow emulator start --init
+</code></pre>
+<p>模拟器运行后，您可以开始部署代码和提交事务。</p>
+<ul>
+<li>活跃账户</li>
+</ul>
+<p>当模拟器在 VSCode 中运行时，活动帐户显示在编辑器的右下角。这表明要部署到哪个帐户合约，哪个帐户是提交交易的签名者。</p>
+<ul>
+<li>变更账户</li>
+</ul>
+<p>要更改帐户，请单击屏幕右下角的活动帐户按钮。这将显示一个帐户列表供您选择。单击其中一个帐户，该帐户将被选为活动帐户。显示的第一个帐户是服务帐户，这是Flow的特殊帐户。不要将代码部署到该帐户，否则它将使模拟器混乱。切换到帐户1部署您的第一个合约。</p>
+<figure data-type="image" tabindex="2"><img src="https://lianqiujun.co/post-images/1608022320831.jpg" alt="" loading="lazy"></figure>
+<h2 id="部署合约">部署合约</h2>
+<p>当模拟器运行时，您可以将合约部署到活动帐户。您应该在编辑器的合约定义上方看到一个按钮，显示。单击该按钮以部署合约。这将覆盖以前部署到该帐户的所有合约。</p>
+<figure data-type="image" tabindex="3"><img src="https://lianqiujun.co/post-images/1608023177804.jpg" alt="" loading="lazy"></figure>
+<pre><code>Deploy contract to account 0xf3fcd2c1a78f5eee
+</code></pre>
+<p><em>VScode 插件 Github： https://github.com/onflow/vscode-flow</em></p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#cadence-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B">Cadence 编程语言简介</a></li>
+<li><a href="#cadence-%E5%BC%80%E5%8F%91">Cadence 开发</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A8%A1%E6%8B%9F%E5%99%A8">运行区块链模拟器</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E5%90%88%E7%BA%A6">部署合约</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://lianqiujun.co/post/dapp-jian-jie">
+              <span class="post-title">
+                Dapp简介&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/shi-yong-visual-studio-code-jin-xing-cadence-kai-fa/" class="leancloud_visitors"
+              data-flag-title="使用Visual Studio Code 进行 Cadence 开发">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
+		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
+		avatar: 'retro',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
         </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/1ouSyFvRE" class="tag">
-            以太坊
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/ytQzP-m0v" class="tag">
-            区块链
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/u6Gn7YGdL" class="tag">
-            个人成长
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/SMFQf8g_2" class="tag">
-            比特币
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/49Z-msIxp" class="tag">
-            系列教程
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/zjY9xqWey" class="tag">
-            区块链开发
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/pJWTDQOmu" class="tag">
-            区块链周刊
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/0OvoQnRh4" class="tag">
-            GitHub
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">
-            Python
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/i4Ywa6glq" class="tag">
-            ENS
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/raV49g8qT" class="tag">
-            Flask
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/Zhe5lS2wh" class="tag">
-            Docker
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/HYJR1J4Qk" class="tag">
-            SEO
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/9wy5EMwvU" class="tag">
-            Java
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/c2EZW6nSY" class="tag">
-            善用佳软
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/uzZ16I6hq" class="tag">
-            测试
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/WJiT_obGT" class="tag">
-            我
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/Utp9E6V0u" class="tag">
-            开发工具
-          </a>
-        </div>
-        
-        <div class="post-preview tag-list">
-          <a href="https://lianqiujun.co/tag/VX2ta3-Q1O" class="tag">
-            代码
-          </a>
-        </div>
-        
       </div>
-    </div>
-  </div>
+  </article>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -382,6 +453,7 @@
     }
 </script>
   
+  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
 </body>
 
 </html>
