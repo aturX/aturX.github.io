@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>Maven 的基础知识 | 链 求 君 | 区 块 链</title>
+<title>Maven 的基本使用 | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Maven 的基础知识 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="Maven 的基本使用 | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,7 +38,7 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="Maven 的基础知识" />
+  <meta property="og:description" content="Maven 的基本使用" />
   <meta property="og:url" content="https://lianqiujun.co/post/maven-de-ji-chu-zhi-shi" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
@@ -86,7 +86,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1608043145723"
+            <form id="gridea-search-form" style="position: relative" data-update="1609917247481"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -136,7 +136,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1608043145723"
+            <form id="gridea-search-form" style="position: relative" data-update="1609917247481"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -159,10 +159,12 @@
             <div class="post-heading">
               <span class="tags">
                 
+                <a href="https://lianqiujun.co/tag/qozy0sVAg" class="tag">Maven</a>
+                
                 <a href="https://lianqiujun.co/tag/9wy5EMwvU" class="tag">Java</a>
                 
               </span>
-              <h1>Maven 的基础知识</h1>
+              <h1>Maven 的基本使用</h1>
               <span class="meta">
                 Posted on
                 2020-03-04，10 min read
@@ -204,7 +206,7 @@
 <pre><code>mvn install
 </code></pre>
 <p>注意，<br>
-当“install”在执行阶段，上述所有阶段 “validate“, “compile“, “test“, “package“, “integration-test“, “verify” 阶段, 包括目前的“install”阶段将被执行有序。</p>
+当“install”在执行阶段，上述所有阶段 “validate“, “compile“, “test“, “package“, “integration-test“, “verify” 阶段, 包括目前的“install”阶段将被有序执行。</p>
 <!-- more -->
 <h1 id="maven-的-pom-文-件">🦊 Maven 的 POM 文 件</h1>
 <h3 id="maven-项目唯一标识标签">Maven - 项目唯一标识标签：</h3>
@@ -242,7 +244,7 @@
    // 1. groupId 这是项目组的编号，这在组织或项目中通常是独一无二的。
    // 例如:com.company.bank 某公司银行相关项目
 
-   &lt;groupId&gt;com.baidu.project-group&lt;/groupId&gt;
+   &lt;groupId&gt;com.company.bank&lt;/groupId&gt;
    
    // 2.项目ID。这通常是项目的名称。例如，springboot-demo。 
    &lt;artifactId&gt;springboot-demo&lt;/artifactId&gt;
@@ -289,7 +291,7 @@
  &lt;!-- 框架版本 --&gt;
 	&lt;org.springframework.version&gt;3.2.4.RELEASE&lt;/org.springframework.version&gt;
  &lt;!-- Java版本 --&gt;
-   &lt;java.version&gt;1.8&lt;/java.version&gt;
+     &lt;java.version&gt;1.8&lt;/java.version&gt;
 &lt;/properties&gt;
 
 &lt;dependencies&gt;
@@ -361,18 +363,13 @@
 		  &lt;artifactId&gt;lombok&lt;/artifactId&gt;
 		  &lt;optional&gt;true&lt;/optional&gt;
 	  &lt;/dependency&gt;
+
 	  &lt;dependency&gt;
 		  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
 		  &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
 		  &lt;scope&gt;test&lt;/scope&gt;
 	  &lt;/dependency&gt;
-
-
-	  &lt;dependency&gt;
-		  &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-		  &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-		  &lt;optional&gt;true&lt;/optional&gt;
-	  &lt;/dependency&gt;
+ 
 	  &lt;!--引入第三方jar-Mas jar--&gt;
 	  &lt;dependency&gt;
 		  &lt;groupId&gt;org.apache.kafka.clients&lt;/groupId&gt;
@@ -488,7 +485,7 @@
           <div class="comment" style="text-align: center;">
             
             <span id="/post/maven-de-ji-chu-zhi-shi/" class="leancloud_visitors"
-              data-flag-title="Maven 的基础知识">
+              data-flag-title="Maven 的基本使用">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>

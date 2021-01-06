@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
+<meta name="author" content="kveln">
+<title>编程要素：入门 | 链 求 君 | 区 块 链</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="编程要素：入门 | 链 求 君 | 区 块 链 » Feed"
+  href="https://lianqiujun.co/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://lianqiujun.co/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJX498H9SN"></script>
+<script>window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-HJX498H9SN');</script>
+
+  <meta property="og:description" content="编程要素：入门" />
+  <meta property="og:url" content="https://lianqiujun.co/post/bian-cheng-yao-su-ru-men" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="链 求 君 | 区 块 链" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1609917247481"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://lianqiujun.co">链 求 君 | 区 块 链</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tag/49Z-msIxp/">教程</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">文章</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">分类</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/about">实践</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1609917247481"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://lianqiujun.co/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://lianqiujun.co/tag/eurXHvn5E" class="tag">原理</a>
+                
+                <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">Python</a>
+                
+              </span>
+              <h1>编程要素：入门</h1>
+              <span class="meta">
+                Posted on
+                2021-01-06，8 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <p><a href="http://pythontutor.com/composingprograms.html#mode=edit">在线环境</a> |<br>
+<a href="https://docs.python.org/zh-cn/3.8/">Python文档</a></p>
+<h3 id="1-抽象是什么">1. 抽象是什么？</h3>
+<p>抽象就是人对世间万物的一种感受，通过符号表达出来的过程。就像&quot;红色&quot;就是一个抽象的概念，你脑海中不存在&quot;色彩&quot;这种概念的时候，它就是一个很抽象的东西，当我们第一次接触&quot;红色&quot;这个词语时，并不清楚，&quot;红色&quot;是甜的，酸的，软的，硬的？还是说是一种&quot;颜色&quot;，这是通过我们在生活中不断的从周围的环境中慢慢感知出来的。</p>
+<p><strong>简单来说，抽象就是将内心的感受使用一种特定的符号表示出来的”过程“。</strong></p>
+<p><strong>数学</strong> 就是一门抽象的学科， 0,1,2,3,4,+,-,*,=,&gt;,&lt; 这些符号本身是没有意义的，他们是一种抽象的表现，就像我们前面提到的“红色”。 人有2只眼睛，1个嘴巴，这里的“数量” 是人类对生活的观察和感受，“2”，“1”则是人类对“数量”的抽象符号表示。</p>
+<h3 id="2-数学为什么是抽象的">2. 数学为什么是抽象的？</h3>
+<p>数学的发展史告诉我们，数学起源于“算”，即起源于物体个数、田亩面积、物体长度等的计算。要计算就要有计算方法，当各种计算方法积累到一定数量的时候，数学家就进行分类，抽象出某类问题的计算公式、法则、原理，统称为算法。所以数学的童年时期叫做算术，它表现为一种经验知识。</p>
+<h3 id="3-计算机和编程与抽象的关系">3. 计算机和编程与抽象的关系</h3>
+<p>通过理解了抽象是什么，应该明白：<strong>“编程语言”不应该是你要学习的东西，而是用来理解表达你经验知识的工具。</strong><br>
+计算机，则是你掌握和控制这些抽象概念的一个机器。<br>
+如果做比喻的话:</p>
+<ul>
+<li>“1,2,3,4” 经过人脑的转换，被理解成人脑海中所理解的“数量”</li>
+<li>“编程语言” 经过计算机的转换，变成了计算机执行的一系列“操作”</li>
+</ul>
+<p>而“编程”就是，人类将自己对于世界的感受，用自己能够理解的方式整理之后（算法+数据结构），然后通过语言符号和基本规则（a,b,c,d,1,2,3,4，+，-，%）抽象成计算机能够理解和执行的程序代码。</p>
+<h3 id="4-编程语言">4.  编程语言</h3>
+<p>不同的编程语言，有着自己的规范或是规则。但是它们的本质是一样的，就是对数学计算的抽象。我们采用的编程语言Python，就是一种“简单”的编程语言，为什么说它简单，就是因为Python的抽象更加接近人类理解的语言“英语”。</p>
+<ul>
+<li>注意：人类的语言“汉语”，“英语”也是一种抽象的表现。</li>
+</ul>
+<p>“红” 和 “red” 只是两个不同的符号，但它们的意义是一样的。<br>
+就像Java中的“true” 和 Python中的“True”，代表的意义没什么不同。</p>
+<h3 id="5-实践">5. 实践</h3>
+<pre><code>from urllib.request import urlopen    # (2)
+
+# 计算机程序只干两件事：
+# (1) 计算一些值    
+# (2) 执行一些动作
+
+# 后面用符号标记每行代码的功能： （1），（2）
+
+tianqi = urlopen('http://t.weather.sojson.com/api/weather/city/101020100')  # (2)
+
+# 一、 什么是函数（function） ？
+# 函数就是将处理数据的过程封装起来，“抽象”成一个符号来代替这些过程。
+# urlopen() 就是Python库中的一个函数，url网址是一条数据，返回的结果
+# 是另外一条数据,也就获得了内容，简化： B = urlopen(A)  
+# 这就用了简单的一句话完成了一些动作，而复杂的过程存在于函数中。
+# 这里将这些复杂过程抽象成一个函数名“urlopen”
+
+data = set(tianqi.read().decode().split(',')) # (1)
+
+# 二、 什么是对象（object）？
+# set() 函数中经过 read() decode() split() 等一系列函数的复杂计算
+# 最终得到data （对象），将“数据”和“处理数据的逻辑”紧密的联系在一起
+# 最终简化： C = set(B)    B是开始的数据，C是“抽象”处理后的数据。
+
+
+result = [w for w in data if len(w) &gt; 0]    # (2)
+
+# 三、 计算机如何理解程序？解释器 （Interpreters）
+# 语法中的表达式： result是经过了语言特定的表达式，获得的数据。
+# 而在不同的编程语言，可能会有着各自的语法规则（特色）
+# 那么计算机是如何理解不同的编程语言的？ 解释器/编译器
+# Python、Java、Go、C# 每种语言都有自己特定的解释器。
+
+
+# 最后， 我们将发现所有这些核心概念都是紧密相关的：
+# 函数就是对象，对象就是函数，解释器是两者的实现表达的过程。
+# 这些概念的清晰理解对于掌握编程技术至关重要。
+
+</code></pre>
+<h3 id="6-学习">6. 学习</h3>
+<ul>
+<li>实例1  双指针法</li>
+</ul>
+<pre><code>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+示例 1:
+给定数组 nums = [1,1,2], 
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+你不需要考虑数组中超出新长度后面的元素。
+示例 2:
+给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+说明:
+为什么返回数值是整数，但输出的答案是数组呢?
+请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
+你可以想象内部操作如下:
+
+// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
+}
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -&gt; int:
+        # 先排序
+        nums.sort()
+        i = 0
+        while i &lt; len(nums) - 1:
+            if nums[i] == nums[i + 1]:
+                nums.remove(nums[i])
+            else:
+                i = i + 1
+        return len(nums)
+
+
+</code></pre>
+<ul>
+<li>实例2  哈希表遍历</li>
+</ul>
+<pre><code>&quot;&quot;&quot;
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/two-sum
+
+&quot;&quot;&quot;
+
+class Solution:
+    def twoSum(self, nums: list, target: int) -&gt; list:
+        nl = []
+        k = {}
+        if len(nums) &lt; 2:
+            return []
+        elif (len(nums) == 2) and (target == nums[0] + nums[1]):
+            return [0, 1]
+
+        for i in range(len(nums)):
+            k[nums[i]] = i
+
+        for i in range(len(nums)):
+            c = target - nums[i]  # 差值
+            if (c in nums) and (k[c] != i):
+                # 添加下标
+                nl.append(k[c])
+                nl.append(i)
+        nl = list(set(nl))
+        return nl
+
+nums = [3, 2, 3]
+target = 6
+# [0, 2]
+r = Solution().twoSum(nums, target)
+print(r)
+
+</code></pre>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-%E6%8A%BD%E8%B1%A1%E6%98%AF%E4%BB%80%E4%B9%88">1. 抽象是什么？</a></li>
+<li><a href="#2-%E6%95%B0%E5%AD%A6%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E6%8A%BD%E8%B1%A1%E7%9A%84">2. 数学为什么是抽象的？</a></li>
+<li><a href="#3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%92%8C%E7%BC%96%E7%A8%8B%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB">3. 计算机和编程与抽象的关系</a></li>
+<li><a href="#4-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80">4.  编程语言</a></li>
+<li><a href="#5-%E5%AE%9E%E8%B7%B5">5. 实践</a></li>
+<li><a href="#6-%E5%AD%A6%E4%B9%A0">6. 学习</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://lianqiujun.co/post/python-bian-cheng-yao-su">
+              <span class="post-title">
+                Python 编程要素&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post/bian-cheng-yao-su-ru-men/" class="leancloud_visitors"
+              data-flag-title="编程要素：入门">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'G41g1MRLu7N6fbJgvz2HCfb7-gzGzoHsz',
+		appKey: 'xe6FC9q0N0X7lmdKzTdWzF53',
+		avatar: 'retro',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/aturX" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://w3c.group/g/1124892" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://learnblockchain.cn/people/600" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+            <li class="list-inline-item">
+              <a href="https://www.zhihu.com/people/lianqiujun" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-zhihu fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://lianqiujun.co/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>链 求 君 | 区 块 链</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://lianqiujun.co/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://lianqiujun.co/media/live2d/assets/hijiki.model.json");
+        });
+
+        var home_Path = "https://lianqiujun.co/";
+        addScript("https://lianqiujun.co/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://lianqiujun.co/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

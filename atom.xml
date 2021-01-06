@@ -2,14 +2,311 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2020-12-15T14:39:10.262Z</updated>
+    <updated>2021-01-06T07:14:11.871Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
     <subtitle>实践更多区块链项目，探索更多Web3可能性！</subtitle>
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
-    <rights>All rights reserved 2020, 链 求 君 | 区 块 链</rights>
+    <rights>All rights reserved 2021, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[编程要素：函数和数据]]></title>
+        <id>https://lianqiujun.co/post/bian-cheng-yao-su-han-shu-he-shu-ju</id>
+        <link href="https://lianqiujun.co/post/bian-cheng-yao-su-han-shu-he-shu-ju">
+        </link>
+        <updated>2021-01-06T07:13:07.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://docs.python.org/zh-cn/3.8/library/index.html">Python 官方文档</a><br>
+| <a href="http://composingprograms.com/pages/12-elements-of-programming.html">教程文档</a></p>
+<h2 id="函数和数据">函数和数据</h2>
+<p>计算机编程语言的作用，除了让计算机执行一些任务以外。更大的作用是整理计算过程，并且表达出编程者思想以供其他人阅读。<br>
+所以，<strong>程序主要是写给人看的，恰好还能够让机器执行。</strong></p>
+<p>“将简单的想法，通过组合成更复杂的想法，是编程语言的核心”  --- 抽象</p>
+<p>任何一门功能强大的编程语言，都具有以下三种机制：</p>
+<ul>
+<li>“基本表达式”和“语句”： 表示语言提供的最简单的语法</li>
+<li>“组合”手段： 通过这些手段可以从简单的元素构建复合元素</li>
+<li>“抽象”手段： 通过该手段可以将复合元素命名给变量并进行操作</li>
+</ul>
+<h3 id="11-什么是表达式">1.1 什么是&quot;表达式&quot;？</h3>
+<p>每一门语言都有它最原始的表达式，比如数字。</p>
+<pre><code># 数字
+&gt;&gt;&gt; 42 
+42
+
+&gt;&gt;&gt; 1 + 1 
+2 
+
+# 运算符和标记符号 
++ - * / &gt; &lt;  
+{} [] ''  &quot;&quot;
+# 保留字
+if  for  while 
+
+
+</code></pre>
+<h3 id="12-什么是调用表达式">1.2 什么是&quot;调用表达式&quot;?</h3>
+<p>复合表达式中，最重要的一种是：调用表达式<br>
+它将一个函数对某些参数进行一些特定的处理。</p>
+<pre><code>a = max(4,5)  # a = 5
+b = min(3,9)  # b = 3 
+c = str(3)    # c = '3'
+</code></pre>
+<h3 id="13-库函数">1.3 库函数</h3>
+<ul>
+<li>库函数，就是许多函数被组合在各种模块中，然后这些模块共同构成了Python的库</li>
+<li>Python标准库， 就是安装Python时一起被安装的库函数，可以直接import然后使用</li>
+<li>第三方库， 根据需求不同，自行下载导入的第三方写好的库函数包。</li>
+</ul>
+<p>详细的内容可以参考：<br>
+<a href="https://docs.python.org/zh-cn/3.8/library/index.html">Python 官方文档</a></p>
+<h3 id="21-变量与环境">2.1 变量与环境</h3>
+<p>编程语言中，如果要对一些值进行计算操作，会使用变量作为值的引用。给定一个值的变量名，就是将这个值绑定给这个变量了。</p>
+<pre><code>&gt;&gt;&gt; radius = 10
+&gt;&gt;&gt; radius
+10
+
+&gt;&gt;&gt; from math import pi
+&gt;&gt;&gt; pi * 71 / 223
+1.0002380197528042
+</code></pre>
+<p>= ,即赋值号。是最简单的“抽象”方式，可以通过赋值号，将一系列复合运算的结果值与某个变量绑定，完成一次简化的过程。</p>
+<p>通过上述的方式： 计算机完成将变量的值绑定在变量上，然后通过访问这些变量来获取其对应的值。<br>
+这意味着，解释器/编译器必须维护某些内存，以保证维持“变量”与“值”直接这样的绑定关系，这就是程序的运行“环境”。</p>
+<h3 id="22-解析表达式与表达树">2.2 解析表达式与表达树</h3>
+<p>多个基础的表达式，通过嵌套组合成复杂表达式，再由复杂的表达式，逐层拆解为基础表达式，这个过程类似一颗倒立的树木。<br>
+表达树：<br>
+max(min(a,b), max(c,d))</p>
+<p>↓</p>
+<p>max() → min(a,b), max(c,d)</p>
+<p>↓</p>
+<p>min() → a,b 和 max() → c,d</p>
+<p>↓</p>
+<p>a,b,c,d</p>
+<p>直到不可拆分，就达到了树的节点，也就是最基础的表达式了。</p>
+<pre><code>x = 3
+
+sum(x,1)
+</code></pre>
+<p>每一行代码，只会执行得的两种结局： 1.执行过程 2.解析表达式</p>
+<pre><code>x = 3 # 此时单纯的“赋值” ， 对“环境” 中的值不做影响， 不产生任何新的结果
+
+y = sum(x,1) # 表达式解析后，对“环境”中的“值”： x 对应的值3 进行 加法运算，加1后，新的结果值从函数中返回并绑定给变量名y
+</code></pre>
+<h3 id="23-纯功能函数">2.3 纯功能函数</h3>
+<p>纯函数就是有一些输入值，经过函数处理后，返回一些输出值。而且使用同样的值调用同一个函数两次，返回的值都是相同的。<br>
+纯函数更加容易测试，而且可以更加稳定的构建复合表达式。</p>
+<h3 id="24-非纯功能函数">2.4 非纯功能函数</h3>
+<p>非纯函数就是除了会返回值以外，还会有其他的行为，比如“打印”或者“文件生成”，总之可能会造成计算机状态发生变化的行为。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[编程要素：入门]]></title>
+        <id>https://lianqiujun.co/post/bian-cheng-yao-su-ru-men</id>
+        <link href="https://lianqiujun.co/post/bian-cheng-yao-su-ru-men">
+        </link>
+        <updated>2021-01-06T07:03:20.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="http://pythontutor.com/composingprograms.html#mode=edit">在线环境</a> |<br>
+<a href="https://docs.python.org/zh-cn/3.8/">Python文档</a></p>
+<h3 id="1-抽象是什么">1. 抽象是什么？</h3>
+<p>抽象就是人对世间万物的一种感受，通过符号表达出来的过程。就像&quot;红色&quot;就是一个抽象的概念，你脑海中不存在&quot;色彩&quot;这种概念的时候，它就是一个很抽象的东西，当我们第一次接触&quot;红色&quot;这个词语时，并不清楚，&quot;红色&quot;是甜的，酸的，软的，硬的？还是说是一种&quot;颜色&quot;，这是通过我们在生活中不断的从周围的环境中慢慢感知出来的。</p>
+<p><strong>简单来说，抽象就是将内心的感受使用一种特定的符号表示出来的”过程“。</strong></p>
+<p><strong>数学</strong> 就是一门抽象的学科， 0,1,2,3,4,+,-,*,=,&gt;,&lt; 这些符号本身是没有意义的，他们是一种抽象的表现，就像我们前面提到的“红色”。 人有2只眼睛，1个嘴巴，这里的“数量” 是人类对生活的观察和感受，“2”，“1”则是人类对“数量”的抽象符号表示。</p>
+<h3 id="2-数学为什么是抽象的">2. 数学为什么是抽象的？</h3>
+<p>数学的发展史告诉我们，数学起源于“算”，即起源于物体个数、田亩面积、物体长度等的计算。要计算就要有计算方法，当各种计算方法积累到一定数量的时候，数学家就进行分类，抽象出某类问题的计算公式、法则、原理，统称为算法。所以数学的童年时期叫做算术，它表现为一种经验知识。</p>
+<h3 id="3-计算机和编程与抽象的关系">3. 计算机和编程与抽象的关系</h3>
+<p>通过理解了抽象是什么，应该明白：<strong>“编程语言”不应该是你要学习的东西，而是用来理解表达你经验知识的工具。</strong><br>
+计算机，则是你掌握和控制这些抽象概念的一个机器。<br>
+如果做比喻的话:</p>
+<ul>
+<li>“1,2,3,4” 经过人脑的转换，被理解成人脑海中所理解的“数量”</li>
+<li>“编程语言” 经过计算机的转换，变成了计算机执行的一系列“操作”</li>
+</ul>
+<p>而“编程”就是，人类将自己对于世界的感受，用自己能够理解的方式整理之后（算法+数据结构），然后通过语言符号和基本规则（a,b,c,d,1,2,3,4，+，-，%）抽象成计算机能够理解和执行的程序代码。</p>
+<h3 id="4-编程语言">4.  编程语言</h3>
+<p>不同的编程语言，有着自己的规范或是规则。但是它们的本质是一样的，就是对数学计算的抽象。我们采用的编程语言Python，就是一种“简单”的编程语言，为什么说它简单，就是因为Python的抽象更加接近人类理解的语言“英语”。</p>
+<ul>
+<li>注意：人类的语言“汉语”，“英语”也是一种抽象的表现。</li>
+</ul>
+<p>“红” 和 “red” 只是两个不同的符号，但它们的意义是一样的。<br>
+就像Java中的“true” 和 Python中的“True”，代表的意义没什么不同。</p>
+<h3 id="5-实践">5. 实践</h3>
+<pre><code>from urllib.request import urlopen    # (2)
+
+# 计算机程序只干两件事：
+# (1) 计算一些值    
+# (2) 执行一些动作
+
+# 后面用符号标记每行代码的功能： （1），（2）
+
+tianqi = urlopen('http://t.weather.sojson.com/api/weather/city/101020100')  # (2)
+
+# 一、 什么是函数（function） ？
+# 函数就是将处理数据的过程封装起来，“抽象”成一个符号来代替这些过程。
+# urlopen() 就是Python库中的一个函数，url网址是一条数据，返回的结果
+# 是另外一条数据,也就获得了内容，简化： B = urlopen(A)  
+# 这就用了简单的一句话完成了一些动作，而复杂的过程存在于函数中。
+# 这里将这些复杂过程抽象成一个函数名“urlopen”
+
+data = set(tianqi.read().decode().split(',')) # (1)
+
+# 二、 什么是对象（object）？
+# set() 函数中经过 read() decode() split() 等一系列函数的复杂计算
+# 最终得到data （对象），将“数据”和“处理数据的逻辑”紧密的联系在一起
+# 最终简化： C = set(B)    B是开始的数据，C是“抽象”处理后的数据。
+
+
+result = [w for w in data if len(w) &gt; 0]    # (2)
+
+# 三、 计算机如何理解程序？解释器 （Interpreters）
+# 语法中的表达式： result是经过了语言特定的表达式，获得的数据。
+# 而在不同的编程语言，可能会有着各自的语法规则（特色）
+# 那么计算机是如何理解不同的编程语言的？ 解释器/编译器
+# Python、Java、Go、C# 每种语言都有自己特定的解释器。
+
+
+# 最后， 我们将发现所有这些核心概念都是紧密相关的：
+# 函数就是对象，对象就是函数，解释器是两者的实现表达的过程。
+# 这些概念的清晰理解对于掌握编程技术至关重要。
+
+</code></pre>
+<h3 id="6-学习">6. 学习</h3>
+<ul>
+<li>实例1  双指针法</li>
+</ul>
+<pre><code>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+示例 1:
+给定数组 nums = [1,1,2], 
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+你不需要考虑数组中超出新长度后面的元素。
+示例 2:
+给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+说明:
+为什么返回数值是整数，但输出的答案是数组呢?
+请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
+你可以想象内部操作如下:
+
+// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
+}
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -&gt; int:
+        # 先排序
+        nums.sort()
+        i = 0
+        while i &lt; len(nums) - 1:
+            if nums[i] == nums[i + 1]:
+                nums.remove(nums[i])
+            else:
+                i = i + 1
+        return len(nums)
+
+
+</code></pre>
+<ul>
+<li>实例2  哈希表遍历</li>
+</ul>
+<pre><code>&quot;&quot;&quot;
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/two-sum
+
+&quot;&quot;&quot;
+
+class Solution:
+    def twoSum(self, nums: list, target: int) -&gt; list:
+        nl = []
+        k = {}
+        if len(nums) &lt; 2:
+            return []
+        elif (len(nums) == 2) and (target == nums[0] + nums[1]):
+            return [0, 1]
+
+        for i in range(len(nums)):
+            k[nums[i]] = i
+
+        for i in range(len(nums)):
+            c = target - nums[i]  # 差值
+            if (c in nums) and (k[c] != i):
+                # 添加下标
+                nl.append(k[c])
+                nl.append(i)
+        nl = list(set(nl))
+        return nl
+
+nums = [3, 2, 3]
+target = 6
+# [0, 2]
+r = Solution().twoSum(nums, target)
+print(r)
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 编程要素]]></title>
+        <id>https://lianqiujun.co/post/python-bian-cheng-yao-su</id>
+        <link href="https://lianqiujun.co/post/python-bian-cheng-yao-su">
+        </link>
+        <updated>2021-01-06T07:01:37.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="目录">目录</h1>
+<h2 id="1-入门">1. <a href="#">入门</a></h2>
+<h2 id="2-函数和数据">2. <a href="#">函数和数据</a></h2>
+<h2 id="3-定义新功能">3. <a href="#">定义新功能</a></h2>
+<h2 id="4-设计功能">4. <a href="#">设计功能</a></h2>
+<h2 id="5-控制">5. <a href="#">控制</a></h2>
+<h2 id="6-高阶函数">6. <a href="#">高阶函数</a></h2>
+<h2 id="7-递归函数">7. <a href="#">递归函数</a></h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Golang 快速上手]]></title>
+        <id>https://lianqiujun.co/post/golang-kuai-su-shang-shou</id>
+        <link href="https://lianqiujun.co/post/golang-kuai-su-shang-shou">
+        </link>
+        <updated>2021-01-06T06:41:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="参考">参考</h2>
+<ul>
+<li>
+<p><a href="https://draveness.me/golang-101/">如何写出优雅的 Go 语言代码</a></p>
+</li>
+<li>
+<p><a href="https://draveness.me/golang/docs/part1-prerequisite/ch02-compile/golang-compile-intro/">Go 语言设计与实现</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Golang 常见问题汇总]]></title>
+        <id>https://lianqiujun.co/post/golang-chang-jian-wen-ti-hui-zong</id>
+        <link href="https://lianqiujun.co/post/golang-chang-jian-wen-ti-hui-zong">
+        </link>
+        <updated>2021-01-06T06:37:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="语法问题">语法问题</h1>
+<ol>
+<li>变量定义简写</li>
+</ol>
+<p><code>:=</code> 只能在函数内部使用，如果声明全局变量需要使用<code>var</code>关键字,否则会出现报错，例如 <code>syntax error: non-declaration statement outside function bod</code></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[开发利器：快速构建 Flow Dapp]]></title>
         <id>https://lianqiujun.co/post/kai-fa-li-qi-kuai-su-gou-jian-flow-dapp</id>
@@ -468,884 +765,6 @@
 </ul>
 <hr>
 <p><a href="https://lianqiujun.co">了解更多</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最全的以太坊开发工具指南]]></title>
-        <id>https://lianqiujun.co/post/zui-quan-de-yi-tai-fang-kai-fa-gong-ju-zhi-nan</id>
-        <link href="https://lianqiujun.co/post/zui-quan-de-yi-tai-fang-kai-fa-gong-ju-zhi-nan">
-        </link>
-        <updated>2020-11-27T18:35:04.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="以太坊开发者工具列表">以太坊开发者工具列表</h1>
-<p>这是一份关于在以太坊上开发应用程序的优质工具清单指南，其中包含一些工具、组件、应用、平台以及服务等。</p>
-<p>该列表的创建受到ConsenSys产品经理的推动，他们认为有必要在初级开发与经验丰富的区块链开发人员之间更好地共享工具，开发模式和组件。</p>
-<p>该资源旨在专注于开发人员工具，但还包括一些生态系统资源：</p>
-<p><a href="EcosystemResources_Chinese.md">以太坊生态系统资源</a>，关于有用的DApp，教育资源，钱包和服务。</p>
-<h2 id="目录">目录</h2>
-<ul>
-<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E5%88%97%E8%A1%A8">以太坊开发者工具列表</a>
-<ul>
-<li><a href="#%E6%AC%A2%E8%BF%8E%E6%8D%90%E6%AC%BE%EF%BC%81">欢迎捐款！</a></li>
-<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
-<li><a href="#%E6%96%B0%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B">新开发者从这里开始</a></li>
-<li><a href="#%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7">开发者工具</a>
-<ul>
-<li><a href="#%E5%BC%80%E5%8F%91%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6">开发智能合约</a>
-<ul>
-<li><a href="#%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E8%AF%AD%E8%A8%80">智能合约语言</a></li>
-<li><a href="#%E6%A1%86%E6%9E%B6">框架</a></li>
-<li><a href="#%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">集成开发环境</a></li>
-</ul>
-</li>
-<li><a href="#%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7">其他工具</a></li>
-<li><a href="#%E6%B5%8B%E8%AF%95%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C">测试区块链网络</a>
-<ul>
-<li><a href="#%E6%B5%8B%E8%AF%95%E4%BB%A5%E5%A4%AA%E5%B8%81%E6%B0%B4%E9%BE%99%E5%A4%B4">测试以太币水龙头</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8E%E4%BB%A5%E5%A4%AA%E5%9D%8A%E9%80%9A%E4%BF%A1">与以太坊通信</a>
-<ul>
-<li><a href="#%E5%89%8D%E7%AB%AF%E4%BB%A5%E5%A4%AA%E5%9D%8AAPI">前端以太坊API</a></li>
-<li><a href="#%E5%90%8E%E7%AB%AF%E4%BB%A5%E5%A4%AA%E5%9D%8AAPI">后端以太坊API</a></li>
-<li><a href="#%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8%E5%B7%A5%E5%85%B7">开箱即用工具</a></li>
-<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8AABI%EF%BC%88%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%8E%A5%E5%8F%A3%EF%BC%89%E5%B7%A5%E5%85%B7">以太坊ABI（应用程序二进制接口）工具</a></li>
-<li><a href="#%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%9C%80%E4%BD%B3%E5%81%9A%E6%B3%95">模式和最佳做法</a>
-<ul>
-<li><a href="#%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%9A%84%E6%A8%A1%E5%BC%8F">智能合约开发的模式</a></li>
-<li><a href="#%E5%8F%AF%E5%8D%87%E7%BA%A7%E6%80%A7">可升级性</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD">基础设施</a>
-<ul>
-<li><a href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%AE%A2%E6%88%B7%E7%AB%AF">以太坊客户端</a></li>
-<li><a href="#%E5%AD%98%E5%82%A8">存储</a></li>
-<li><a href="#%E8%AE%AF%E6%81%AF%E4%BC%A0%E9%80%92">讯息传递</a></li>
-</ul>
-</li>
-<li><a href="#%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7">测试工具</a></li>
-<li><a href="#%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7">安全工具</a></li>
-<li><a href="#%E7%9B%91%E6%8E%A7%E6%96%B9%E5%BC%8F">监控方式</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96%E6%9D%82%E9%A1%B9%E5%B7%A5%E5%85%B7">其他杂项工具</a></li>
-<li><a href="#%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%A0%87%E5%87%86%E5%92%8C%E7%B1%BB%E5%BA%93">智能合约标准和类库</a>
-<ul>
-<li><a href="#ERC-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E8%AF%84%E8%AE%BA%E6%8F%90%E6%A1%88%E5%BA%93">ERC-以太坊评论提案库</a></li>
-<li><a href="#%E6%B5%81%E8%A1%8C%E7%9A%84%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BA%93">流行的智能合约库</a></li>
-</ul>
-</li>
-<li><a href="#%E7%AC%AC%E4%BA%8C%E5%B1%82%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97">第二层基础架构开发人员指南</a>
-<ul>
-<li><a href="#%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7">可扩展性</a></li>
-<li><a href="#%E4%BB%98%E6%AC%BE%E6%B8%A0%E9%81%93">付款渠道</a></li>
-<li><a href="#Plasma">Plasma</a></li>
-<li><a href="#%E4%BE%A7%E9%93%BE">侧链</a></li>
-<li><a href="#%E9%9A%90%E7%A7%81/%E4%BF%9D%E5%AF%86">隐私/保密</a>
-<ul>
-<li><a href="#zkSNARKs">zkSNARKs</a></li>
-</ul>
-</li>
-<li><a href="#%E9%A2%84%E5%BB%BA%E7%9A%84UI%E7%BB%84%E4%BB%B6">预建的UI组件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="新开发者从这里开始">新开发者从这里开始</h2>
-<ul>
-<li><a href="https://solidity.readthedocs.io/en/latest/">Solidity</a> - 最受欢迎的智能合约语言。</li>
-<li><a href="https://trufflesuite.com/">Truffle</a> - 最受欢迎的智能合约开发，测试和部署框架。通过npm安装cli，然后从此处开始编写您的第一个智能合约。</li>
-<li><a href="https://metamask.io/">Metamask</a> - Chrome扩展程序钱包，可与Dapps进行交互。</li>
-<li><a href="https://trufflesuite.com/boxes">Truffle boxes</a> - 以太坊生态系统的打包组件。</li>
-<li><a href="https://openzeppelin.com/starter-kits/">OpenZeppelin Starter Kits</a> - 开发人员的多合一入门组件，可快速启动其受智能合约支持的应用程序。包括Truffle，OpenZeppelin SDK，OpenZeppelin / contracts-ethereum-package EVM经审核的智能合约EVM软件包，react-app和rimble，易于设计。</li>
-<li><a href="https://docs.ethhub.io/">EthHub.io</a> - 以太坊的全面信息概述-它的历史，治理，未来计划和开发资源。</li>
-<li><a href="https://ethereumdev.io">EthereumDev.io</a> - 关于以太坊智能合约编程入门的权威指南。</li>
-<li><a href="https://github.com/cobraframework/cobra">Cobra</a> - 一个快速，灵活，简单的以太坊智能合约开发环境的框架。将智能合约，测试和部署到以太坊虚拟机（EVM）上。</li>
-<li><a href="https://kauri.io/">Kauri.io</a> - 基于Web3的社区和新兴技术的知识平台。分享精选内容，并就最新，高质量的技术文章和系列进行协作。 请查看<a href="https://kauri.io/community/5d9b16fc890d310001b66e1b">“入门”社区</a>以学习基础知识。</li>
-<li><a href="https://dfuse.io">dfuse</a> - Slick 区块链 API 可以构建世界一流的应用程序。</li>
-<li><a href="https://biconomy.io">Biconomy</a> - 通过使用简单易用的SDK启用元交易来在dapp中进行无Gas交易。</li>
-</ul>
-<h2 id="开发者工具">开发者工具</h2>
-<h3 id="开发智能合约">开发智能合约</h3>
-<h4 id="智能合约语言">智能合约语言</h4>
-<ul>
-<li><a href="https://solidity.readthedocs.io/en/latest/">Solidity</a> - 以太坊智能合约编程语言。</li>
-<li><a href="https://vyper.readthedocs.io/en/latest/">Vyper</a> - 新的实验性类python编程语言。</li>
-</ul>
-<h4 id="框架">框架</h4>
-<ul>
-<li><a href="https://trufflesuite.com/">Truffle</a> - 最受欢迎的智能合约开发，测试和部署框架。Truffle套件包括 Truffle, <a href="https://github.com/trufflesuite/ganache">Ganache</a>, 和 <a href="https://github.com/truffle-box/drizzle-box">Drizzle</a>. <a href="https://media.consensys.net/truffle-deep-dive-what-you-need-to-know-when-developing-on-ethereum-e548d4df6e9">在这里深入了解松露</a></li>
-<li><a href="https://github.com/embark-framework/embark">Embark</a> - DAPP开发框架</li>
-<li><a href="https://getwaffle.io/">Waffle</a> - 先进的智能合同开发和测试框架，体积小，灵活，快捷（基于ethers.js）</li>
-<li><a href="https://dapp.tools/dapp/">Dapp</a> - DApp开发的框架，DApple的继承者</li>
-<li><a href="https://github.com/LimeChain/etherlime">Etherlime</a> - 基于ethers.js的框架用于Dapp部署</li>
-<li><a href="https://github.com/Lamarkaz/parasol">Parasol</a> - 敏捷的智能合同开发环境，测试，部署INFURA，合约文件等。它具有灵活，不受限制的设计以及无限的可定制性。</li>
-<li><a href="https://github.com/0xcert/framework/">0xcert</a> - 用于构建去中心化应用程序的JavaScript框架</li>
-<li><a href="https://openzeppelin.com/sdk/">OpenZeppelin SDK</a> - OpenZeppelin SDK：一套工具，可帮助您开发，编译，升级，部署智能合约并与之交互。</li>
-<li><a href="https://sbt-ethereum.io/">sbt-ethereum</a> - 一个基于选项卡的，基于文本的控制台，用于智能合约的交互和开发，包括钱包和ABI管理，ENS支持和高级Scala集成。</li>
-<li><a href="https://github.com/iamdefinitelyahuman/brownie">Brownie</a> - Brownie是一个Python框架，用于部署，测试以太坊智能合约并与之交互。</li>
-<li><a href="https://github.com/cobraframework/cobra">Cobra</a> - 一个快速，灵活，简单的开发环境的框架，用于以太坊智能合约的测试和部署。</li>
-</ul>
-<h4 id="集成开发环境">集成开发环境</h4>
-<ul>
-<li><a href="https://remix.ethereum.org/">Remix</a> - 具有内置静态分析功能的Web IDE，测试区块链虚拟机。</li>
-<li><a href="https://studio.ethereum.org/">Ethereum Studio</a> - Web IDE。浏览器内置区块链虚拟机，集成Metamask（一键部署到Testnet / Mainnet），事务记录器和实时编码Web App等众多其他功能。</li>
-<li><a href="https://atom.io/">Atom</a> - Atom 编辑器包含 <a href="https://atom.io/packages/atom-solidity-linter">Atom Solidity Linter</a>, <a href="https://atom.io/packages/etheratom">Etheratom</a>, <a href="https://atom.io/packages/autocomplete-solidity">autocomplete-solidity</a>, and <a href="https://atom.io/packages/language-solidity">language-solidity</a> 等包。</li>
-<li><a href="https://github.com/tomlion/vim-solidity">Vim solidity</a> - Vim 语法文件支持Solidity。</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity">Visual Studio Code</a> - Visual Studio Code插件，增加了对Solidity的支持。</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=quantanetwork.ethcode">Ethcode</a> - Visual Studio Code插件，用于编译，执行和调试Solidity＆Vyper程序。</li>
-<li><a href="https://github.com/intellij-solidity/intellij-solidity/wiki">Intellij Solidity Plugin</a> - <a href="https://jetbrains.com/idea/">JetBrains IntelliJ Idea IDE</a>（免费/商业）的开源插件，具有语法突出显示，格式设置，代码补全等功能。</li>
-<li><a href="https://github.com/Yakindu/solidity-ide">YAKINDU Solidity Tools</a> - 基于Eclipse的IDE插件。具有上下文相关的代码补全和帮助提示，代码导航，语法着色，内置编译器，快速修复和模板的功能。</li>
-<li><a href="https://ethfiddle.com/">Eth Fiddle</a> - 由<a href="https://loomx.io/">The Loom Network</a>开发的IDE ，可让您编写，编译和调试智能合约。易于共享和查找代码片段。</li>
-</ul>
-<h3 id="其他工具">其他工具</h3>
-<ul>
-<li><a href="https://console.atra.io">Atra Blockchain Services</a> - Atra提供Web服务来帮助您在以太坊区块链上构建，部署和维护去中心化应用程序。</li>
-<li><a href="https://buidler.dev/">Buidler</a> - 可扩展的开发人员工具，可通过可靠地整合所需工具来帮助智能合约开发人员提高生产率。</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain">Azure Blockchain Dev Kit for Ethereum for VSCode</a> - VS Code 插件允许创建智能合约并将其部署到区块链中。</li>
-</ul>
-<h3 id="测试区块链网络">测试区块链网络</h3>
-<ul>
-<li><a href="https://github.com/vrde/ethnode">ethnode</a> - 运行以太坊节点（Geth）进行开发，简单执行 <code>npm i -g ethnode &amp;&amp; ethnode</code>.</li>
-<li><a href="https://github.com/trufflesuite/ganache">Ganache</a> - 具备UI和日志的区块链测试应用</li>
-<li><a href="https://kaleido.io/">Kaleido</a> - 使用Kaleido来建立联盟区块链网络。非常适合PoC和测试</li>
-<li><a href="https://besu.hyperledger.org/en/stable/Tutorials/Quickstarts/Azure-Private-Network-Quickstart/">Besu Private Network</a> - 在Docker容器中运行Besu节点的专用网络<a href="https://github.com/PegaSysEng/orion">Orion</a> -PegaSys进行私人交易的组件 <a href="https://github.com/PegaSysEng/artemis">Artemis</a> - PegaSys的以太坊2.0信标链的Java实现。</li>
-<li><a href="https://github.com/f-o-a-m/cliquebait">Cliquebait</a> - 使用类似于真实区块链网络的docker实例简化智能合约应用程序的集成和测试</li>
-<li><a href="https://github.com/ConsenSys/Local-Raiden">Local Raiden</a> - 在Docker容器中运行本地Raiden网络以进行演示和测试</li>
-<li><a href="https://github.com/ConsenSys/private-networks-deployment-scripts">Private networks deployment scripts</a> - 专用PoA网络的现成部署脚本</li>
-<li><a href="https://github.com/ConsenSys/local_ethereum_network">Local Ethereum Network</a> - 专用PoW网络的现成部署脚本</li>
-<li><a href="https://docs.microsoft.com/en-us/azure/blockchain/templates/ethereum-poa-deployment">Ethereum on Azure</a> - 联盟以太坊PoA网络的部署和治理</li>
-<li><a href="https://console.cloud.google.com/marketplace/details/click-to-deploy-images/ethereum?filter=category:developer-tools">Ethereum on Google Cloud</a> - 基于工作量证明构建以太坊网络</li>
-<li><a href="https://infura.io/">Infura</a> -以太坊API访问以太坊网络（Mainnet，Ropsten，Rinkeby，Goerli，Kovan）</li>
-<li><a href="https://cloudflare.com/distributed-web-gateway/">CloudFlare Distributed Web Gateway</a> - 通过Cloudflare提供对以太坊网络的访问，而不是运行自己的节点</li>
-<li><a href="https://chainstack.com/">Chainstack</a> - 共享和专用的以太坊节点即服务（Mainnet，Ropsten）</li>
-</ul>
-<h4 id="测试以太币水龙头">测试以太币水龙头</h4>
-<ul>
-<li><a href="https://faucet.rinkeby.io/">Rinkeby 水龙头</a></li>
-<li><a href="https://github.com/kovan-testnet/faucet">Kovan 水龙头</a></li>
-<li><a href="https://faucet.metamask.io/">Ropsten 水龙头</a></li>
-<li><a href="https://goerli-faucet.slock.it/">Goerli 水龙头</a></li>
-<li><a href="https://faucets.blockxlabs.com/">Universal 水龙头</a></li>
-<li><a href="https://github.com/Nethereum/Nethereum.Faucet">Nethereum 水龙头</a> - 一个 C#/.NET 水龙头</li>
-</ul>
-<h3 id="与以太坊通信">与以太坊通信</h3>
-<h4 id="前端以太坊api">前端以太坊API</h4>
-<ul>
-<li><a href="https://github.com/ethereum/web3.js/">Web3.js</a> - Javascript Web3</li>
-<li><a href="https://github.com/ethjs">Eth.js</a> - Javascript Web3替代者</li>
-<li><a href="https://github.com/ethers-io/ethers.js/">Ethers.js</a> - Javascript Web3替代，有用的实用程序和钱包功能</li>
-<li><a href="https://github.com/paritytech/js-libs/tree/master/packages/light.js">light.js</a> 为轻客户端优化的高级反应式JS库。</li>
-<li><a href="https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper">Web3Wrapper</a> - Typescript Web3替代者</li>
-<li><a href="https://github.com/ethereumjs/">Ethereumjs</a> - 以太坊的实用程序功能集合，例如<a href="https://github.com/ethereumjs/ethereumjs-util">ethereumjs-util</a>和<a href="https://github.com/ethereumjs/ethereumjs-tx">ethereumjs-tx</a></li>
-<li><a href="https://github.com/merklejerk/flex-contract">flex-contract</a> 和 <a href="https://github.com/merklejerk/flex-ether">flex-ether</a> - 零配置的高级库，用于与智能合约进行交互并进行交易。</li>
-<li><a href="https://github.com/merklejerk/ez-ens">ez-ens</a> - ens-简单的零配置以太坊域名服务地址解析器。</li>
-<li><a href="https://github.com/xf00f/web3x">web3x</a> - web3.js的TypeScript端口。好处包括小巧的构造和全类型的安全性，包括与合同进行交互时的安全性。</li>
-<li><a href="https://github.com/Nethereum/">Nethereum</a> - 跨平台的以太坊开发框架</li>
-<li><a href="https://github.com/dfuse-io/client-js">dfuse</a> - 使用TypeScript实现的<a href="https://dfuse.io">dfuse Ethereum API</a> 以太坊API库</li>
-<li><a href="https://github.com/truffle-box/drizzle-box">Drizzle</a> - Redux库将前端连接到区块链</li>
-<li><a href="https://github.com/tasitlabs/tasitsdk">Tasit SDK</a> -一个React Native库，使用在移动端与以太坊进行交互。</li>
-<li><a href="https://0x.org/docs/tools/subproviders">Subproviders</a> - 与<a href="https://github.com/MetaMask/web3-provider-engine">Web3-provider-engine</a>  结合使用的几个有用的子提供商（包括用于向您的dApp添加Ledger硬件钱包）</li>
-<li><a href="https://github.com/ticket721/ethvtx">ethvtx</a> - 支持以太坊＆框架无关的Redux存储配置。<a href="https://ticket721.github.io/ethvtx/">文档</a></li>
-<li>严格类型-Javascript 替代者
-<ul>
-<li><a href="https://github.com/cmditch/elm-ethereum">elm-ethereum</a></li>
-<li><a href="https://github.com/f-o-a-m/purescript-web3">purescript-web3</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/liquality/chainabstractionlayer">ChainAbstractionLayer</a> - 使用单个界面与不同的区块链（包括以太坊）进行通信。</li>
-<li><a href="https://github.com/svanas/delphereum">Delphereum</a> - 以太坊区块链的Delphi接口，允许开发适用于Windows，macOS，iOS和Android的dApp开发。</li>
-<li><a href="https://tor.us/">Torus</a> - 源SDK构建dapps的无缝衔接的UX</li>
-<li><a href="https://fortmatic.com/">Fortmatic</a> - 一种易于使用的SDK，无需扩展或下载即可构建web3 dApp。</li>
-<li><a href="https://portis.io/">Portis</a> - 具有SDK的非托管钱包，可轻松与DApp进行交互而无需安装任何东西。</li>
-</ul>
-<h4 id="后端以太坊api">后端以太坊API</h4>
-<ul>
-<li><a href="https://github.com/ethereum/web3.py">Web3.py</a> - Python Web3</li>
-<li><a href="https://github.com/sc0Vu/web3.php">Web3.php</a> - PHP Web3</li>
-<li><a href="https://github.com/digitaldonkey/ethereum-php">Ethereum-php</a> - PHP Web3</li>
-<li><a href="https://github.com/web3j/web3j">Web3j</a> - Java Web3</li>
-<li><a href="https://nethereum.com/">Nethereum</a> - .Net Web3</li>
-<li><a href="https://github.com/EthWorks/ethereum.rb">Ethereum.rb</a> - Ruby Web3</li>
-<li><a href="https://hackage.haskell.org/package/web3">Web3.hs</a> - Haskell Web3</li>
-<li><a href="https://github.com/komputing/KEthereum">KEthereum</a> - Kotlin Web3</li>
-<li><a href="https://github.com/ConsenSys/eventeum">Eventeum</a> - 由Kauri用Java编写的以太坊智能合约事件和后端微服务之间的桥梁</li>
-<li><a href="https://github.com/mana-ethereum/ethereumex">Ethereumex</a> - 以太坊区块链的Elixir JSON-RPC客户端</li>
-<li><a href="https://github.com/HydroProtocol/ethereum-jsonrpc-gateway">Ethereum-jsonrpc-gateway</a> - 一个网关，允许您运行多个以太坊节点以实现冗余和负载平衡。可以作为Infura的替代品（或在其之上）运行。用Golang写的。</li>
-<li><a href="https://github.com/AgileAlpha/eth_contract">EthContract</a> - 一组帮助在Elixir中查询ETH智能合约的助手方法</li>
-<li><a href="https://github.com/mesg-foundation/service-ethereum-contract">Ethereum Contract Service</a> - 一种MESG服务，可根据其地址和ABI与任何以太坊合约进行交互。</li>
-<li><a href="https://github.com/mesg-foundation/service-ethereum">Ethereum Service</a> - 一种MESG服务，用于与以太坊中的事件进行交互并与其进行交互。</li>
-<li><a href="https://marmo.io/">Marmo</a> - Python，JS和Java SDK，以简化与以太坊的交互。使用中继器将交易成本分担给中继器。</li>
-</ul>
-<h4 id="开箱即用工具">开箱即用工具</h4>
-<ul>
-<li><a href="https://trufflesuite.com/boxes">Truffle boxes</a> - 以太坊生态系统的打包组件</li>
-<li><a href="https://besu.hyperledger.org/en/stable/Tutorials/Quickstarts/Azure-Private-Network-Quickstart/">Besu Private Network</a> - 在Docker容器中运行Besu节点的专用网络</li>
-<li><a href="https://github.com/Nethereum/TestChains">Testchains</a> - 用于快速响应（PoA）的预配置由.NET开发</li>
-<li><a href="https://github.com/Nethereum/NethereumBlazor">Blazor/Blockchain Explorer</a> - Wasm区块链浏览器（功能示例）</li>
-<li><a href="https://github.com/ConsenSys/Local-Raiden">Local Raiden</a> - 在Docker容器中运行本地Raiden网络以进行演示和测试</li>
-<li><a href="https://github.com/ConsenSys/private-networks-deployment-scripts">Private networks deployment scripts</a> - 专用PoA网络的现成部署脚本</li>
-<li><a href="https://wiki.parity.io/Demo-PoA-tutorial.html">Parity Demo-PoA Tutorial</a> - 分步教程，用于构建具有2个节点且具有Parity授权回合共识的PoA测试链</li>
-<li><a href="https://github.com/ConsenSys/local_ethereum_network">Local Ethereum Network</a> - 专用PoW网络的现成部署脚本</li>
-<li><a href="https://kaleido.io/">Kaleido</a> - 使用Kaleido来建立联盟区块链网络。非常适合PoC和测试</li>
-<li><a href="https://github.com/endless-nameless-inc/cheshire">Cheshire</a> - CryptoKitties API和智能合约的本地沙盒实现，可以作为松露盒使用</li>
-<li><a href="https://github.com/aragon/aragon-cli">aragonCLI</a> - aragonCLI用于创建和开发Aragon应用程序和组织。</li>
-<li><a href="https://github.com/JoinColony/colonyJS">ColonyJS</a> - JavaScript客户端，提供用于与Colony Network智能合约进行交互的API。</li>
-<li><a href="https://github.com/daostack/arc.js">ArcJS</a> - 便于javascript应用程序访问DAOstack Arc以太坊智能合约的库。</li>
-<li><a href="https://docs.arkane.network/pages/connect-js.html">Arkane Connect</a> - JavaScript客户端，提供用于与Arkane Network进行交互的API，Arkane Network是用于构建用户友好的dapp的钱包提供商。</li>
-<li><a href="https://blocknative.com">Blocknative</a> - Assist.js是可嵌入的小部件，可提高Dapp的可用性。该工具以编程方式识别并概述了清晰的操作，供最终用户在与MetaMask进行交互时应遵循的操作，以克服（甚至防止）常见的陷阱和障碍。</li>
-<li><a href="https://github.com/NoahZinsmeister/web3-react">web3-react</a> - 用于构建单页以太坊dApp的React框架</li>
-</ul>
-<h4 id="以太坊abi应用程序二进制接口工具">以太坊ABI（应用程序二进制接口）工具</h4>
-<ul>
-<li><a href="https://github.com/ConsenSys/abi-decoder">ABI decoder</a> - 用于解码以太坊交易中的数据参数和事件的库</li>
-<li><a href="https://github.com/0xProject/0x-monorepo/tree/development/packages/abi-gen">ABI-gen</a> - gen-从合同ABI生成Typescript合同包装。</li>
-<li><a href="https://github.com/hiddentao/ethereum-abi-ui">Ethereum ABI UI</a> - UI-从以太坊合约ABI自动生成UI表单字段定义和相关的验证器</li>
-<li><a href="https://github.com/esaulpaugh/headlong/">headlong</a> - Java中类型安全的合约ABI和递归长度前缀库</li>
-<li><a href="https://oneclickdapp.com">One Click dApp</a> - 使用ABI在唯一的URL上快速的创建dApp前端页面。</li>
-<li><a href="https://npmjs.com/package/trufflepig">Truffle Pig</a> - 一种开发工具，提供简单的HTTP API来查找和读取Truffle生成的合同文件，以便在本地开发期间使用。通过http提供新的合同ABI。</li>
-<li><a href="https://github.com/mesg-foundation/service-ethereum-contract">Ethereum Contract Service</a> - 一种MESG服务，可根据其地址和ABI与任何以太坊合约进行交互。</li>
-<li><a href="https://github.com/StefH/Nethereum-CodeGenerator">Nethereum-CodeGenerator</a> - CodeGenerator-基于Web的生成器，可基于Solidity智能合约创建基于Nethereum的C＃接口和服务。</li>
-</ul>
-<h4 id="模式和最佳做法">模式和最佳做法</h4>
-<h5 id="智能合约开发的模式">智能合约开发的模式</h5>
-<ul>
-<li><a href="https://github.com/dapphub/dappsys">Dappsys：安全，简单和灵活的以太坊合约构建模块</a>
-<ul>
-<li>有针对以太坊/Solidity常见问题的解决方案，例如。
-<ul>
-<li><a href="https://steemit.com/ethereum/@nexusdev/dapp-a-day-11-whitelist-boring">白名单</a></li>
-<li><a href="https://steemit.com/ethereum/@nikolai/dapp-a-day-6-upgradeable-tokens">可升级的ERC20代币</a></li>
-<li><a href="https://steemit.com/ethereum/@nexusdev/dapp-a-day-18-erc20-token-vault">ERC20-令牌库</a></li>
-<li><a href="https://steemit.com/ethereum/@nikolai/dapp-a-day-4-access-control-via-auth">验证（RBAC）</a></li>
-<li><a href="https://github.com/dapphub/dappsys">...更多...</a></li>
-</ul>
-</li>
-<li>为<a href="https://github.com/makerdao/maker-otc">MakerDAO</a>或<a href="https://github.com/ryepdx/the-tao">The TAO</a>提供构建块</li>
-<li>在创建自己的未经测试的解决方案之前，应咨询该公司</li>
-<li><a href="https://steemit.com/@nikolai">Dapp-a-day 1-10</a> 和 <a href="https://steemit.com/@nexusdev">Dapp-a-day 11-25</a>中描述了用法</li>
-</ul>
-</li>
-<li><a href="https://github.com/OpenZeppelin/openzeppelin-contracts">OpenZeppelin合同：以Solidity语言编写的可重用和安全智能合同的开放框架。</a>
-<ul>
-<li>可能是使用最广泛的安全库和智能合约库</li>
-<li>与Dappsys相似，更多地集成到Truffle框架中了</li>
-<li><a href="https://blog.openzeppelin.com/">有关安全审核最佳做法的博客</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/androlo/solidity-workshop">装配高级车间</a></li>
-<li><a href="https://medium.com/@ChrisLundkvist/exploring-simpler-ethereum-multisig-contracts-b71020c19037">更简单的以太坊Multisig</a> - 特点是 <em>Benefits</em></li>
-<li><a href="https://github.com/cryptofinlabs/audit-checklist">CryptoFin Solidity审核清单</a> - 常见发现清单，以及审核主网启动合同时要注意的问题。</li>
-<li><a href="https://hack.aragon.org/docs/aragonos-intro.html">aragonOS：用于构建DAO，Dapp和协议的智能合约框架</a>
-<ul>
-<li>可升级性：智能合约可以升级到新版本</li>
-<li>权限控制：通过使用<code>auth</code>和<code>authP</code>修饰符，您可以保护功能，以便只有其他应用或实体才能访问它</li>
-<li>转发器：aragonOS应用程序可以将其执行操作的意图发送给其他应用程序，以便在满足一组要求的情况下转发意图</li>
-</ul>
-</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2535">EIP-2535钻石标准</a>
-<ul>
-<li>组织合同，使它们共享相同的合同存储和以太坊地址。</li>
-<li>解决最大24KB的合同大小限制。</li>
-<li>通过在单个事务中添加/替换/删除任意数量的功能来升级钻石。</li>
-<li>通过使用标准事件记录升级，透明性是透明的。</li>
-<li>获取有关具有事件和/或四个标准功能的钻石的信息。</li>
-</ul>
-</li>
-</ul>
-<h5 id="可升级性">可升级性</h5>
-<ul>
-<li><a href="https://blog.colony.io/author/elena/">博客von Elena Dimitrova，开发者位于Colony.io</a>
-<ul>
-<li>https://blog.colony.io/writing-more-robust-smart-contracts-99ad0a11e948</li>
-<li>https://blog.colony.io/writing-upgradeable-contracts-in-solidity-6743f0eecc88</li>
-</ul>
-</li>
-<li><a href="https://blog.aragon.org/tag/research/">Aragon 研究博客</a>
-<ul>
-<li><a href="https://blog.aragon.org/library-driven-development-in-solidity-2bebcaf88736">开发库及其发展</a></li>
-<li><a href="https://blog.aragon.org/advanced-solidity-code-deployment-techniques-dc032665f434/">先进的Solidity代码部署技术</a></li>
-</ul>
-</li>
-<li><a href="https://blog.openzeppelin.com/proxy-libraries-in-solidity-79fbe4b970fd/">OpenZeppelin on Proxy Libraries</a></li>
-</ul>
-<h3 id="基础设施">基础设施</h3>
-<h4 id="以太坊客户端">以太坊客户端</h4>
-<ul>
-<li><a href="https://besu.hyperledger.org/en/latest/">Besu</a> - 在Apache 2.0授权开发和用Java编写的开源以太坊客户端。该项目由Hyperledger托管。</li>
-<li><a href="https://geth.ethereum.org/docs/">Geth</a> - Go客户端</li>
-<li><a href="https://www.parity.io/ethereum/">Parity</a> - Rust客户端</li>
-<li><a href="https://github.com/ethereum/aleth">Aleth</a> - C++ 客户端</li>
-<li><a href="https://github.com/NethermindEth/nethermind">Nethermind</a> - .NET 客户端</li>
-<li><a href="https://infura.io/">Infura</a> - 一种托管服务，提供符合以太坊客户端标准的API</li>
-<li><a href="https://trinity.ethereum.org/">Trinity</a> -使用Python客户端 <a href="https://github.com/ethereum/py-evm">py-evm</a></li>
-<li><a href="https://github.com/ethereumjs/ethereumjs-client">Ethereumjs</a> - 使用<a href="https://github.com/ethereumjs/ethereumjs-vm">ethereumjs-vm</a>的JS客户端</li>
-<li><a href="https://github.com/dapphub/dapptools/tree/master/src/seth">Seth</a> - Seth是一个以太坊客户端工具，就像“命令行的MetaMask”一样</li>
-<li><a href="https://github.com/musteka-la/mustekala">Mustekala</a> - Metamask的以太坊轻客户端项目</li>
-<li><a href="https://github.com/exthereum/blockchain">Exthereum</a> - Elixir客户</li>
-<li><a href="https://github.com/energywebfoundation/energyweb-ui">EWF Parity</a> - Tobalaba测试网络的Energy Web Foundation客户端</li>
-<li><a href="https://github.com/jpmorganchase/quorum">Quorum</a> -  <a href="https://jpmorgan.com/quorum">JP Morgan</a>授权的以太坊支持数据隐私的实现</li>
-<li><a href="https://github.com/mana-ethereum/mana">Mana</a> - 用Elixir写的以太坊全节点实现。</li>
-<li><a href="https://chainstack.com/">Chainstack</a> - 提供共享和专用Geth节点的托管服务</li>
-<li><a href="https://quiknode.io/">QuikNode</a> - 具有API访问和节点即服务的区块链开发云。</li>
-</ul>
-<h4 id="存储">存储</h4>
-<ul>
-<li><a href="https://ipfs.io/">IPFS</a> - 分散存储和文件引用
-<ul>
-<li><a href="https://github.com/ConsenSys/Mahuta">Mahuta</a> - 具有附加搜索功能的IPFS存储服务，以前是IPFS-Store</li>
-<li><a href="https://github.com/orbitdb/orbit-db">OrbitDB</a> - IPFS之上的分散式数据库</li>
-<li><a href="https://github.com/ipfs/js-ipfs-http-client">JS IPFS API</a> - 使用JavaScript实现的IPFS HTTP API客户端库</li>
-<li><a href="https://github.com/RTradeLtd/Temporal">TEMPORAL</a> - 易于在IPFS和其他分布式/分散式存储协议中使用的API</li>
-<li><a href="https://pinata.cloud">PINATA</a> - 使用IPFS的最简单方法</li>
-</ul>
-</li>
-<li><a href="https://swarm-gateways.net/">Swarm</a> - 分布式存储平台和内容分发服务，以太坊的数据存储服务层</li>
-<li><a href="https://infura.io/">Infura</a> -托管IPFS API网关和固定服务</li>
-<li><a href="https://docs.3box.io/api/storage">3Box Storage</a> - 用于用户控制的分布式存储的api。建立在IPFS和Orbitdb之上。</li>
-</ul>
-<h4 id="讯息传递">讯息传递</h4>
-<ul>
-<li><a href="https://github.com/ethereum/wiki/wiki/Whisper">Whisper</a> - DApp相互通信的通信协议，这是以太坊web3堆栈的基础层服务</li>
-<li><a href="https://github.com/ethereum/devp2p/blob/master/rlpx.md">DEVp2p Wire Protocol</a> - 运行以太坊/低语的节点之间的对等通信</li>
-<li><a href="https://github.com/ethereum/pydevp2p">Pydevp2p</a> - RLPx网络层的Python实现</li>
-<li><a href="https://docs.3box.io/api/messaging">3Box Threads</a> - API，使开发人员能够持久地实现IPFS，或在内存中实现对等消息传递。</li>
-</ul>
-<h3 id="测试工具">测试工具</h3>
-<ul>
-<li><a href="https://trufflesuite.com/teams">Truffle Teams</a> - 零配置持续集成松露项目</li>
-<li><a href="https://github.com/0xProject/0x-monorepo/tree/development/packages/sol-coverage">Solidity code coverage</a> - Solidity代码覆盖率工具</li>
-<li><a href="https://github.com/sc-forks/solidity-coverage">Solidity coverage</a> - Solidity 智能合约的代码覆盖率</li>
-<li><a href="https://github.com/EricR/sol-function-profiler">Solidity function profiler</a> - Solidity 合约功能分析器</li>
-<li><a href="https://github.com/Aniket-Engg/sol-profiler">Sol-profiler</a> - 替代和更新的Solidity智能合约分析器</li>
-<li><a href="https://github.com/hillstreetlabs/espresso">Espresso</a> - 快速，并行，热加载的Solidity测试框架</li>
-<li><a href="https://github.com/ethereum/eth-tester">Eth tester</a> - 用于测试以太坊应用程序的工具套件</li>
-<li><a href="https://github.com/f-o-a-m/cliquebait">Cliquebait</a> - 使用与真实区块链网络非常相似的Docker实例简化智能合约应用程序的集成和接受测试</li>
-<li><a href="https://github.com/dapphub/dapptools/tree/master/src/hevm">Hevm</a> - hevm项目是以太坊虚拟机（EVM）的实现，专门用于单元测试和调试智能合约</li>
-<li><a href="https://github.com/fergarrui/ethereum-graph-debugger">Ethereum graph debugger</a> - Solidity 图形化调试器</li>
-<li><a href="https://github.com/Tenderly/tenderly-cli">Tenderly CLI</a> - 通过可读的堆栈跟踪加快开发速度</li>
-<li><a href="https://github.com/protofire/solhint">Solhint</a> - 为Solidity智能合约验证提供安全性，样式指南和最佳实践规则</li>
-<li><a href="https://github.com/duaraghav8/Ethlint">Ethlint</a> - 用于识别和修复Solidity（以前为Solium）中的样式和安全问题</li>
-<li><a href="https://github.com/hacker-DOM/decode">Decode</a> - npm软件包，它将tx提交到本地testrpc节点的解析，使它们更具可读性和易懂性</li>
-<li><a href="https://github.com/rkalis/truffle-assertions">truffle-assertions</a> - 一个npm软件包，其中包含其他断言和实用程序，用于测试带有松露的Solidity智能合约。最重要的是，它增加了断言是否已发出特定事件的能力。</li>
-<li><a href="https://github.com/Lamarkaz/psol">Psol</a> - 具有mustache.js样式的语法，宏，条件编译和自动远程依赖关系包含的Solidity词法预处理器。</li>
-<li><a href="https://github.com/merklejerk/solpp">solpp</a> -具有全面指令和表达式语言，高精度数学和许多有用的辅助函数的Solidity预处理器和帮助插件。</li>
-<li><a href="https://flightwallet.github.io/decode-eth-tx/">Decode and Publish</a> – 解码和发布原始的以太坊TX。类似于https://live.blockcypher.com/btc-testnet/decodetx/</li>
-<li><a href="https://getdoppelganger.io/">Doppelgänger</a> - 一个用于在单元测试期间模拟智能合约依赖关系的库。</li>
-<li><a href="https://github.com/wighawag/rocketh">rocketh</a> - 一个简单的库来测试以太坊智能合约，允许使用任何web3库和测试运行器。</li>
-<li><a href="https://github.com/cobraframework/pytest-cobra">pytest-cobra</a> - PyTest插件，用于测试以太坊区块链的智能合约。</li>
-</ul>
-<h3 id="安全工具">安全工具</h3>
-<ul>
-<li><a href="https://mythx.io/">MythX</a> - 以太坊开发人员的安全验证平台和工具生态系统</li>
-<li><a href="https://github.com/ConsenSys/mythril">Mythril</a> - 开源EVM字节码安全性分析工具</li>
-<li><a href="https://github.com/melonproject/oyente">Oyente</a> - 替代静态智能合约安全性分析</li>
-<li><a href="https://securify.chainsecurity.com/">Securify</a> - 安全扫描器以太坊智能合约</li>
-<li><a href="https://tool.smartdec.net/">SmartCheck</a> - 静态智能合约安全分析器</li>
-<li><a href="https://github.com/crytic/ethersplay">Ethersplay</a> - EVM反汇编程序</li>
-<li><a href="https://github.com/Arachnid/evmdis">Evmdis</a> - 替代EVM反汇编程序</li>
-<li><a href="https://github.com/IC3Hydra/Hydra">Hydra</a> - 框架cryptoeconomic合同的安全性，分散的治安悬赏</li>
-<li><a href="https://github.com/raineorshine/solgraph">Solgraph</a> - 可视化Solidity控制流程以进行智能合约安全性分析</li>
-<li><a href="https://github.com/trailofbits/manticore">Manticore</a> - 智能合约和二进制文件上的符号执行工具</li>
-<li><a href="https://github.com/crytic/slither">Slither</a> - 一个Solidity静态分析框架</li>
-<li><a href="https://github.com/sec-bit/adelaide">Adelaide</a> - SECBIT静态分析扩展到Solidity编译器</li>
-<li><a href="https://github.com/SRI-CSL/solidity/">solc-verify</a> - 用于Solidity智能合约的模块化验证器</li>
-<li><a href="https://github.com/sigp/solidity-security-blog">Solidity security blog</a> - 已知攻击媒介和常见反模式的完整列表</li>
-<li><a href="https://github.com/sec-bit/awesome-buggy-erc20-tokens">Awesome Buggy ERC20 Tokens</a> -受影响的代币中ERC20智能合约中的漏洞的集合</li>
-<li><a href="https://callisto.network/smart-contract-audit/">Free Smart Contract Security Audit</a> - Callisto Network提供的免费的智能合约安全审核</li>
-<li><a href="https://piet.slock.it">Piet</a> - 可视化Solidity体系结构分析器</li>
-</ul>
-<h3 id="监控方式">监控方式</h3>
-<ul>
-<li><a href="https://aleth.io/">Alethio</a> - 一个先进的以太坊分析平台，提供实时监控，洞察和异常检测，令牌指标，智能合约审计，图形可视化和区块链搜索。还可以探索以太坊去中心化交易所的实时市场信息和交易活动。</li>
-<li><a href="https://amberdata.io">amberdata.io</a> - 提供实时监控，洞察力和异常检测，令牌指标，智能合约审计，图形可视化和区块链搜索。</li>
-<li><a href="https://github.com/Neufund/smart-contract-watch">Neufund - Smart Contract Watch</a> - 一种监视大量智能合约和交易的工具</li>
-<li><a href="https://scout.cool/">Scout</a> - 以太坊上智能合约的活动和事件日志的实时数据馈送</li>
-<li><a href="https://tenderly.co/">Tenderly</a> - 一种平台，可通过Web仪表板的形式为用户提供可靠的智能合约监控和警报，而无需用户托管或维护基础架构</li>
-<li><a href="https://www.chainlyt.io/main/dashboard/contract">Chainlyt</a> - 使用已解码的交易数据探索智能合约，查看合约的使用方式以及通过特定功能调用搜索交易</li>
-<li><a href="https://github.com/poanetwork/blockscout">BlockScout</a> - 一种用于检查和分析基于EVM的区块链的工具。唯一以太坊网络的功能齐全的区块链浏览器。</li>
-<li><a href="https://terminal.co/">Terminal</a> - 用于监视dapp的控制面板。终端可用于监视用户，dapp，区块链基础设施，交易等。 infrastructure, transactions and more.</li>
-<li><a href="https://github.com/HydroProtocol/ethereum-watcher">Ethereum-watcher</a> - 用Golang编写的可扩展框架，用于侦听链上事件并做一些响应。</li>
-</ul>
-<h3 id="其他杂项工具">其他杂项工具</h3>
-<ul>
-<li><a href="https://hack.aragon.org/docs/apm-intro.html">aragonPM</a> - 由aragonOS和Ethereum支持的去中心化软件包管理器。aragonPM支持对软件包升级进行分散式管理，从而消除集中式故障点。</li>
-<li><a href="https://www.trufflesuite.com/boxes">Truffle boxes</a> - 用于快速构建DApp的打包组件
-<ul>
-<li><a href="https://github.com/endless-nameless-inc/cheshire">Cheshire</a> - CryptoKitties API和智能合约的本地沙盒实现，可以作为松露盒使用</li>
-</ul>
-</li>
-<li><a href="https://solidity.readthedocs.io/en/latest/using-the-compiler.html">Solc</a> - Solidity 编译器</li>
-<li><a href="https://sol-compiler.com/">Sol-compiler</a> -项目级Solidity编译器</li>
-<li><a href="https://github.com/pubkey/solidity-cli">Solidity cli</a> - 更快，更轻松，更可靠地编译Solidity代码</li>
-<li><a href="https://github.com/poanetwork/solidity-flattener">Solidity flattener</a> - Solidity项目组合到平面文件实用程序。对于可视化导入的合同或在Etherscan上验证合同很有用</li>
-<li><a href="https://github.com/RyuuGan/sol-merger">Sol-merger</a> - 替代方案，将所有导入合并到单个文件中以签订固定合同</li>
-<li><a href="https://github.com/ethereumjs/rlp">RLP</a> - JavaScript中的递归长度前缀编码</li>
-<li><a href="https://github.com/protofire/eth-cli">eth-cli</a> - 一系列CLI工具的帮助以太坊学习和开发</li>
-<li><a href="https://github.com/wealdtech/ethereal">Ethereal</a> - Ethereal是用于管理以太坊中常见任务的命令行工具</li>
-<li><a href="https://github.com/pubkey/eth-crypto">Eth crypto</a> - 以太坊的加密javascript函数以及将其与web3js和solidity结合使用的教程</li>
-<li><a href="https://github.com/paritytech/parity-signer">Parity Signer</a> - 移动应用程序允许签署交易</li>
-<li><a href="http://py-eth.com">py-eth</a> - 以太坊生态系统的Python工具集合</li>
-<li><a href="https://github.com/nomiclabs/truffle-flattener">truffle-flattener</a> - 合并在Truffle框架下开发的Solidity的所有依赖项</li>
-<li><a href="https://github.com/hacker-DOM/decode">Decode</a> - npm软件包，它将tx提交到本地testrpc节点的解析，使它们更具可读性和易懂性</li>
-<li><a href="https://github.com/ethereum-ts/TypeChain">TypeChain</a> -  以太坊智能合约的Typescript绑定</li>
-<li><a href="https://ethsum.netlify.com">EthSum</a> - 一个简单的以太坊地址校验和工具</li>
-<li><a href="https://github.com/digitaldonkey/ethereum-php-eventlistener">PHP based Blockchain indexer</a> - 允许索引块或侦听PHP中的事件</li>
-<li><a href="https://github.com/JoinColony/purser">Purser</a> - JavaScript的基于以太坊的钱包通用钱包工具。支持软件，硬件和Metamask-使所有钱包进入dApp开发的一致且可预测的界面。</li>
-<li><a href="https://github.com/JoinColony/node-metamask">Node-Metamask</a> - 从node.js连接到MetaMask</li>
-<li><a href="https://github.com/OpenZeppelin/solidity-docgen">Solidity-docgen</a> - Solidity项目的文档生成器</li>
-<li><a href="https://github.com/blockchain-etl/ethereum-etl">Ethereum ETL</a> - 将以太坊区块链数据导出到CSV或JSON文件</li>
-<li><a href="https://github.com/prettier-solidity/prettier-plugin-solidity">prettier-plugin-solidity</a> - solidity-用于格式化Solidity代码的漂亮插件</li>
-<li><a href="https://github.com/Nethereum/Unity3dSimpleSample">Unity3dSimpleSample</a> - 以太坊和Unity集成演示</li>
-<li><a href="https://github.com/Nethereum/Nethereum.Flappy">Flappy</a> - 以太坊和Unity集成演示/样本</li>
-<li><a href="https://github.com/Nethereum/Wonka">Wonka</a> - Nethereum业务规则引擎演示/样本</li>
-<li><a href="https://github.com/Crypto-Punkers/resolver-engine">Resolver-Engine</a> - 一组用于标准化框架中Solidity导入和工件解析的工具。</li>
-<li><a href="https://github.com/justinjmoses/eth-reveal">eth-reveal</a> - 检查事务的节点和浏览器工具-使用在线找到的ABI尽可能解码方法，事件日志和任何还原原因。</li>
-<li><a href="https://github.com/HydroProtocol/ethereum-tx-sender">Ethereum-tx-sender</a> -一个用Golang编写的有用的库，用于可靠地发送交易-提取一些棘手的底层细节，例如气体优化，随机数计算，同步和重试。</li>
-<li><a href="https://github.com/rkalis/truffle-plugin-verify">truffle-plugin-verify</a> - 从Truffle命令行在Etherscan上无缝验证合同源代码。</li>
-</ul>
-<h3 id="智能合约标准和类库">智能合约标准和类库</h3>
-<h4 id="ercs"><a href="https://eips.ethereum.org/erc">ERCs</a> - 以太坊评论提案库</h4>
-<ul>
-<li>代币
-<ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-20">ERC-20</a> - 同质化资产的原始代币合同</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-721">ERC-721</a> - 非同质化资产的代币标准</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-777">ERC-777</a> - 替代资产的改进令牌标准</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-918">ERC-918</a> - 可采矿代币标准</li>
-</ul>
-</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-165">ERC-165</a> - 创建一种标准方法来发布和检测智能合约实现的接口。</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-725">ERC-725</a> - 密钥管理和执行的代理合同，用于建立区块链身份。</li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-173">ERC-173</a> - 合同所有权的标准接口</li>
-</ul>
-<h4 id="流行的智能合约库">流行的智能合约库</h4>
-<ul>
-<li><a href="https://github.com/OpenZeppelin/openzeppelin-contracts">Zeppelin</a> - 包含经过测试的可重用智能合约，例如SafeMath和<a href="https://github.com/OpenZeppelin/openzeppelin-sdk">OpenZeppelin SDK</a> 库，以实现智能合约的可升级性</li>
-<li><a href="https://github.com/cryptofinlabs/cryptofin-solidity">cryptofin-solidity</a> - 一组Solidity库，用于在以太坊上构建安全且节约Gas的智能合约。</li>
-<li><a href="https://github.com/Modular-Network/ethereum-libraries">Modular Libraries</a> -一组使用以太坊虚拟机在区块链上使用的软件包</li>
-<li><a href="https://github.com/bokkypoobah/BokkyPooBahsDateTimeLibrary">DateTime Library</a> - 节省Gas的Solidity日期和时间库</li>
-<li><a href="https://github.com/aragon/aragon">Aragon</a> - DAO协议。包含 <a href="https://github.com/aragon/aragonOS">aragonOS smart contract framework</a> 智能合约框架，重点关注可升级性和治理</li>
-<li><a href="https://github.com/daostack/arc">ARC</a> - DAO和DAO堆栈基础层的操作系统。</li>
-<li><a href="https://github.com/0xProject">0x</a> - DEX协议</li>
-<li><a href="https://github.com/sec-bit/tokenlibs-with-proofs">Token Libraries with Proofs</a> - 包含令牌合同的正确性证明。给定的规格和高级属性</li>
-<li><a href="https://github.com/provable-things/ethereum-api">Provable API</a> - 提供使用Provable服务的合同，允许进行链下操作，数据获取和计算</li>
-<li><a href="https://github.com/abdk-consulting/abdk-libraries-solidity">ABDK Libraries for Solidity</a> - 用于Solidity的定点（64.64位）和IEEE-754兼容四精度（128位）浮点数学库</li>
-</ul>
-<h3 id="第二层基础架构开发人员指南">第二层基础架构开发人员指南</h3>
-<h4 id="可扩展性">可扩展性</h4>
-<h4 id="付款渠道">付款渠道</h4>
-<ul>
-<li><a href="https://medium.com/@matthewdif/ethereum-payment-channel-in-50-lines-of-code-a94fad2704bc">Ethereum Payment Channel</a> - 50行代码实现的的以太坊支付通道</li>
-<li><a href="https://microraiden.readthedocs.io">µRaiden Documentation</a> - µRaiden发送者/接收者用例的指南和示例</li>
-</ul>
-<h4 id="plasma">Plasma</h4>
-<ul>
-<li><a href="https://github.com/ethsociety/learn-plasma">Learn Plasma</a> - 网站作为节点应用程序，始于康奈尔大学的2018 IC3-以太坊加密新手训练营，涵盖所有Plasma用例（MVP /现金/借记）</li>
-<li><a href="https://github.com/omisego/plasma-contracts">Plasma MVP</a> - OmiseGO的最小可行Plasma研究实施</li>
-<li><a href="https://github.com/kyokan/plasma">Plasma MVP Golang</a> -Golang实施和最小可行Plasma规范的扩展</li>
-<li><a href="https://github.com/mesg-foundation/plasma-guard">Plasma Guard</a> - 在需要时自动观察和挑战或退出Omisego Plasma网络。</li>
-<li><a href="https://github.com/mesg-foundation/service-plasma-omisego-watcher">Plasma OmiseGo Watcher</a> - 与Plasma OmiseGo网络互动并通知任何拜占庭事件。</li>
-</ul>
-<h4 id="侧链">侧链</h4>
-<ul>
-<li><a href="https://www.poa.network/">POA Network</a>
-<ul>
-<li><a href="https://bridge.poa.net/">POA Bridge</a></li>
-<li><a href="https://github.com/poanetwork/bridge-ui">POA Bridge UI</a></li>
-<li><a href="https://github.com/poanetwork/poa-bridge-contracts">POA Bridge Contracts</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/loomnetwork">Loom Network</a></li>
-<li><a href="https://docs.matic.network/">Matic Network</a></li>
-</ul>
-<h4 id="隐私保密">隐私/保密</h4>
-<h5 id="zksnarks">zkSNARKs</h5>
-<ul>
-<li><a href="https://github.com/Zokrates/ZoKrates">ZoKrates</a> - 以太坊上的zkSNARKS的工具箱</li>
-<li><a href="https://github.com/AztecProtocol/AZTEC">The AZTEC Protocol</a> - 以太坊网络上的机密交易，在以太坊主网上实时实施</li>
-<li><a href="https://github.com/EYBlockchain/nightfall">Nightfall</a> - 将任何ERC-20 / ERC-721令牌设为私人-开源工具和微服务</li>
-<li>Proxy Re-encryption (PRE)<br>
-** <a href="https://github.com/nucypher/nucypher">NuCypher Network</a> - 代理重新加密网络，可在分散系统中实现数据保密<br>
-** <a href="https://github.com/nucypher/pyumbral">pyUmbral</a> -门限代理重新加密密码库<br>
-** <a href="https://github.com/nucypher/nufhe">NuFHE</a> - NuFHE -GPU加速的FHE库</li>
-</ul>
-<h4 id="可扩展性隐私">可扩展性+隐私</h4>
-<h4 id="zk-starks">ZK-STARKs</h4>
-<ul>
-<li><a href="https://github.com/starkware-industries">StarkWare</a> 和 <a href="https://github.com/starkware-libs">StarkWare Resources</a> - StarkEx可扩展性引擎在链上存储状态转换</li>
-</ul>
-<h4 id="预建的ui组件">预建的UI组件</h4>
-<ul>
-<li><a href="https://ui.aragon.org">aragonUI</a> - 一个包含Dapp组件的React库</li>
-<li><a href="https://components.bounties.network">components.bounties.network</a> - 一个包含Dapp组件的React库</li>
-<li><a href="https://github.com/decentraland/ui">ui.decentraland.org</a> - 一个包含Dapp组件的React库</li>
-<li><a href="https://github.com/austintgriffith/dapparatus">dapparatus</a> - 可重用的React Dapp组件</li>
-<li><a href="https://github.com/MetaMask/metamask-extension/tree/develop/ui/app/components">Metamask ui</a> - Metamask React组件</li>
-<li><a href="https://github.com/Nethereum/Nethereum.DappHybrid">DappHybrid</a> - 用于基于Web的分散式应用程序的跨平台混合托管机制</li>
-<li><a href="https://github.com/Nethereum/Nethereum.UI.Desktop">Nethereum.UI.Desktop</a> - 跨平台桌面钱包示例</li>
-<li><a href="https://eth-button.github.io/eth-button/">eth-button</a> - 极简主义捐赠按钮</li>
-<li><a href="https://rimble.consensys.design/">Rimble Design System</a> - 适用于分散应用的组件和设计标准。</li>
-<li><a href="https://docs.3box.io/build/plugins">3Box Plugins</a> - 用于社交功能的react组件。包括评论，个人资料和消息。</li>
-</ul>
-<hr>
-<p><a href="https://lianqiujun.co">了解更多</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最优思维法]]></title>
-        <id>https://lianqiujun.co/post/zui-you-si-wei-fa</id>
-        <link href="https://lianqiujun.co/post/zui-you-si-wei-fa">
-        </link>
-        <updated>2020-11-23T02:29:43.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="什么是最优思维">什么是最优思维</h3>
-<p>在思维方式上，质问自己，训练最优思维。对自己的要求始终保持较高的水平，然后让自己尽力去完成。</p>
-<h3 id="最优思维法">最优思维法</h3>
-<p>目的： 训练高标准执行力</p>
-<ol>
-<li>次优方案：</li>
-</ol>
-<p>“做某事的好/极好办法是什么？”</p>
-<ol start="2">
-<li>最优方案：</li>
-</ol>
-<p>“做某事的最好办法是什么？”</p>
-<p>有时你没法立刻知晓某个问题的最佳解决方案。这时你可以自问：“最佳解决方案看起来如何？”然后就开始列出最佳解决方案需要表现的属性和约束条件。</p>
-<p>这能帮你缩小选择范围。若你知道最佳解决方案的某种特定属性，便可排除所有缺乏此属性的可能方案。</p>
-<p>请记住最佳解决方案总需考虑现实可用资源。若一份可能解决方案不切实际，它当然就非最佳方案。</p>
-<p>在最初问题中加入<strong>关键约束条件</strong>： “我能在20分钟或更少时间内，做某事的最好办法是什么？”</p>
-<hr>
-<p>只有询问才能收获答案。</p>
-<p>所以请直接询求那最佳答案。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[全面了解比特币系列]]></title>
-        <id>https://lianqiujun.co/post/quan-mian-liao-jie-bi-te-bi-xi-lie</id>
-        <link href="https://lianqiujun.co/post/quan-mian-liao-jie-bi-te-bi-xi-lie">
-        </link>
-        <updated>2020-11-22T15:58:47.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1-全面了解比特币-一-比特币基础知识"><a href="https://lianqiujun.co/post/1-bi-te-bi-ji-chu-zhi-shi/">1. [全面了解比特币] (一) 比特币基础知识</a></h3>
-<p>关于什么是比特币，以及比特币的前世今生，了解它的发展过程。</p>
-<p><a href="https://lianqiujun.co/post/1-bi-te-bi-ji-chu-zhi-shi/">阅读本文</a></p>
-<hr>
-<h3 id="2-全面了解比特币-二-比特币如何运作"><a href="https://lianqiujun.co/post/2-bi-te-bi-ru-he-yun-zuo/">2. [全面了解比特币] (二)  比特币如何运作</a></h3>
-<p>比特币背后的技术原理，以及比特币是如何保证安全的情况下，可以稳定的运行。</p>
-<p><a href="https://lianqiujun.co/post/2-bi-te-bi-ru-he-yun-zuo/">阅读本文</a></p>
-<hr>
-<h3 id="3-全面了解比特币-三-为什么比特币有价值"><a href="https://lianqiujun.co/post/3-wei-shi-me-bi-te-bi-you-jie-zhi/">3. [全面了解比特币] (三)  为什么比特币有价值</a></h3>
-<p>比特币的价值体现在何处，为什么比特币具备价值。</p>
-<p><a href="https://lianqiujun.co/post/3-wei-shi-me-bi-te-bi-you-jie-zhi/">阅读本文</a></p>
-<hr>
-<h3 id="4-全面了解比特币-四-比特币挖矿的理解"><a href="https://lianqiujun.co/post/4-bi-te-bi-wa-kuang-de-li-jie/">4. [全面了解比特币] (四)  比特币挖矿的理解</a></h3>
-<p>比特币挖矿是什么，挖矿产业的发展与现状。</p>
-<p><a href="https://lianqiujun.co/post/4-bi-te-bi-wa-kuang-de-li-jie/">阅读本文</a></p>
-<hr>
-<h3 id="5-全面了解比特币-五-如何安全存储比特币"><a href="https://lianqiujun.co/post/5-ru-he-an-quan-cun-chu-bi-te-bi/">5. [全面了解比特币] (五)  如何安全存储比特币</a></h3>
-<p>比特币如何安全的存储，比特币的钱包种类划分和优缺点分析。</p>
-<p><a href="https://lianqiujun.co/post/5-ru-he-an-quan-cun-chu-bi-te-bi/">阅读本文</a></p>
-<hr>
-<h3 id="6-全面了解比特币-六-比特币实际使用的优缺点"><a href="https://lianqiujun.co/post/6-bi-te-bi-shi-ji-shi-yong-de-you-que-dian/">6. [全面了解比特币] (六)  比特币实际使用的优缺点</a></h3>
-<p>比特币在实际过程中遇到的种种挑战，以及比特币的显著优点分析讨论。</p>
-<p><a href="https://lianqiujun.co/post/6-bi-te-bi-shi-ji-shi-yong-de-you-que-dian/">阅读本文</a></p>
-<hr>
-<h3 id="7-全面了解比特币-七-了解比特币交易所"><a href="https://lianqiujun.co/post/7-liao-jie-bi-te-bi-jiao-yi-suo/">7. [全面了解比特币] (七)  了解比特币交易所</a></h3>
-<p>比特币如何交易使用，比特币的交易所有哪些，以及比特币交易所的发展状况。</p>
-<p><a href="https://lianqiujun.co/post/7-liao-jie-bi-te-bi-jiao-yi-suo/">阅读本文</a></p>
-<hr>
-<h3 id="8-全面了解比特币-八-比特币与其他加密货币"><a href="https://lianqiujun.co/post/8-bi-te-bi-yu-qi-ta-jia-mi-huo-bi/">8. [全面了解比特币] (八)  比特币与其他加密货币</a></h3>
-<p>比特币之外，陆续诞生了许多其他山寨币，比特币和这些山寨币相比有什么不同。</p>
-<p><a href="https://lianqiujun.co/post/8-bi-te-bi-yu-qi-ta-jia-mi-huo-bi/">阅读本文</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[8. 比特币与其他加密货币]]></title>
-        <id>https://lianqiujun.co/post/8-bi-te-bi-yu-qi-ta-jia-mi-huo-bi</id>
-        <link href="https://lianqiujun.co/post/8-bi-te-bi-yu-qi-ta-jia-mi-huo-bi">
-        </link>
-        <updated>2020-11-22T15:58:09.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-比特币与莱特币有什么区别">1. 比特币与莱特币：有什么区别？</h1>
-<h2 id="比特币与莱特币概述">比特币与莱特币概述</h2>
-<p>在过去的几年中，公众对加密货币的兴趣急剧增长。尽管数字货币目前没有像2017年底那样激发人们的热情，但最近投资者对加密货币的兴趣有所增长。这种兴趣的主要焦点就是比特币，长期以来，比特币一直在加密货币中的占主导地位。自2009年比特币成立以来，数百种其他加密货币也进入了市场。</p>
-<p>尽管事实证明，在市场拥挤的情况下，很多数字货币越来越难以脱颖而出，但莱特币（LTC）是一种与比特币不同的加密货币，已经能够经受住激烈的竞争。截至2020年5月，按市值计算，成为第七大数字货币之一。</p>
-<pre><code>重要要点
-
-* 自2009年以来，比特币一直是加密货币中的主流，随之莱特币（Litecoin）和其他数百个币种也加入了竞争。
-
-* 截至2020年5月，比特币的市值略低于1280亿美元，而莱特币的市值则不到30亿美元。
-
-* 莱特币和比特币相比，可以产生更多的硬币，并且其交易速度更快，但是这些因素在很大程度上对投资者而言，并不会影响货币的价值或可用性。
-
-* 比特币和莱特币使用完成不同的密码算法：比特币使用的是SHA-256算法，而Litecoin使用了更新的算法，称为Scrypt
-
-</code></pre>
-<h2 id="比特币和莱特币之间的相似之处">比特币和莱特币之间的相似之处</h2>
-<p>从表面上看，比特币和莱特币有很多共同点。在最基本的层面上，它们都是去中心化的加密货币。美元或日元等法定货币依靠中央银行的支持来实现价值，流通受到控制并具有合法性，而加密货币仅依靠网络本身的加密完整性维持运作。</p>
-<p>Litecoin由创始人查理·李（Charlie Lee）于2011年推出，他通过在一个受欢迎的比特币论坛上发布的消息宣布了“精简版的比特币”的首次亮相。</p>
-<p>从成立之初起，莱特币就被视为对比特币的优化而创建的。实际上，Litecoin自己的开发人员早就说过，他们的意图是为比特币的“黄金”创造与之对应的“银”。因此，Litecoin采用了Lee和其他开发人员认采用了比特币早期的许多优秀的功能，并在一些方面提出了一些新的改进。</p>
-<h2 id="工作量证明">工作量证明</h2>
-<p>这两种加密货币之间的一个重要相似点是它们都是采用工作量证明的方式达到系统共识，这意味着开采比特币和莱特币的基本过程从根本上是相似的（尽管并不完全相同，如下所述）。</p>
-<h2 id="储存和交易">储存和交易</h2>
-<p>对于投资者而言，使用比特币和莱特币进行交易的许多基本要素也非常相似。这两种加密货币都可以通过交易所购买或使用采矿设备进行开采。两者都需要数字或冷存储“钱包”，以便安全地存储。此外，随着时间的流逝，两种加密货币都可能会受到极大波动，这取决于投资者对其的兴趣，政府监管等相关的因素。</p>
-<h2 id="比特币和莱特币之间的差异">比特币和莱特币之间的差异</h2>
-<p>市值方面，比特币和莱特币有很大不同的地方是市值。截至2020年5月，流通中的所有比特币总价值不到1280亿美元，使其市值是总价值不到30亿美元的莱特币的45倍以上。</p>
-<p>比特币的市值是处于高位还是低位，很大程度上取决于历史变动。当2010年7月的时候比特币市值仅为42,000美元时，我们认为它的当前数字似乎惊人的高，然而到了2017年12月17日的时候比特币达到3,260亿美元的高市值时，相比之下它就并没有那么高了。</p>
-<p>尽管如此，现在比特币的总价值比两年前要少得多，但比特币仍然相比其他数字货币是市场的主流存在。它最接近的竞争对手是第二大加密货币以太坊，其市值约为194亿美元。</p>
-<p>因此，鉴于比特币比目前存在的所有其他数字货币大得多，因此比特币的价值明显高于莱特币本身并不令人感到惊讶。</p>
-<h2 id="生成量">生成量</h2>
-<p>比特币和莱特币之间的另一个主要区别在于加密货币可以产生的硬币总数。这就是莱特币与众不同的地方。比特币网络永远不能超过2100万枚硬币，而莱特币最多可以容纳8400万枚硬币。</p>
-<p>从理论上讲，这听起来像是莱特币的重大优势，但其实际影响最终可能被忽略不计。这是因为比特币和莱特币都可分为几乎无限的数量。实际上，可转让比特币的最小数量是俗称一个“satoshi”的比特币（0.00000001比特币），即最小单位“聪”。</p>
-<p>因此，不管未分割的单个比特币或莱特币的总体价格有多高，使用这两种货币的用户都可以毫不费力地购买低价商品或服务，这得益于数字货币的可分割性。</p>
-<p>2013年11月，IBM高管理查德·布朗提出了这样一种前景：某些用户可能更喜欢以整个单位而不是每个单位的零碎进行交易，这是莱特币的潜在优势。即使假设是真的，也可以通过在进行比特币交易的数字钱包中引入的简单软件更改来解决问题。正如特里斯坦·温特斯（Tristan Winters）在比特币杂志文章“小数心理学”中指出的那样，流行的比特币钱包（例如Coinbase和Trezor）已经提供了选择，以美元（例如法定货币）显示比特币的价值。这可以帮助避免心理上对零碎交易的厌恶。</p>
-<h2 id="交易速度">交易速度</h2>
-<p>尽管从技术上讲，交易在比特币和莱特币网络上都是瞬间发生的，但是需要些时间由其他网络参与者确认。建立莱特币的目的是优先考虑交易速度，随着其日益普及，事实证明，莱特币在交易速度上具有优势。根据Blockchain.info的数据，比特币网络的平均交易确认时间目前约每笔交易9分钟（将区块验证并添加到区块链所需的时间），尽管流量高时差异很大。而莱特币约为2.5分钟。原则上，确认时间的这种差异可能会使莱特币对商人更具吸引力。例如，销售商品以交换比特币的商人将需要等待近四倍的时间来确认付款。另一方面，商人总是可以选择接受交易而根本不等待任何确认。这种零确认交易的安全性造成了一些争议和辩论。</p>
-<h2 id="加密算法">加密算法</h2>
-<p>到目前为止，比特币和莱特币之间最根本的技术区别是它们采用的不同加密算法。比特币使用历史悠久的SHA-256算法，而莱特币则使用相对较新的算法，即Scrypt。</p>
-<p>这些不同算法的主要实际意义是它们对“挖掘”新硬币过程造成的影响。在比特币和莱特币中，确认交易的过程都需要强大的计算能力。货币网络的某些成员（称为矿工）分配其计算资源以确认其他用户的交易。作为交换，这些矿工将获得其所开采货币的收入单位奖励。</p>
-<p>一般认为SHA-256是一种比Scrypt更复杂的算法，同时允许更高程度的并行处理。因此，近年来，比特币矿工已经利用越来越复杂的方法来尽可能高效地开采比特币。比特币挖掘的最常用方法是使用专用集成电路（ASIC）。这些硬件系统与之前的简单CPU和GPU不同，可以针对采矿比特币量身定制。这样做的实际后果是，除非个人加入采矿池，否则比特币的开采对于日常用户而言已经越来越不可取。</p>
-<p>相比之下，Scrypt被设计为不易受基于ASIC的挖掘中使用的各种定制硬件解决方案的影响。这使得许多评论家认为像莱特币这样的基于Scrypt的加密货币对于也希望以矿工身份加入网络的用户更容易访问。尽管一些公司已将Scrypt ASIC推向市场，但莱特币更易于访问的采矿愿景仍然是可以实现的，因为莱特币采矿的很大一部分仍是通过矿工的CPU或GPU完成的。</p>
-<p>虽然比特币和莱特币可能是当今加密货币领域的黄金和白银，但历史表明，这个充满活力的新兴领域的现状甚至可能在几个月内发生新的变化。我们已经熟悉的加密货币是否会在未来的几个月和几年内保持其地位还有待观察。</p>
-<h1 id="2-比特币与瑞波币有什么区别">2. 比特币与瑞波币：有什么区别？</h1>
-<p>尽管就市值和总体采用率而言，比特币仍然是加密货币中的明显领导者，但由于适应性和应用程序的不断发展，其他竞争者仍继续向前发展。XRP（瑞波）按市值在顶级虚拟货币列表中排名第三，仅次于比特币和以太坊。XRP通常被称为“Ripple ”，尽管从技术上讲，Ripple是加密货币背后的公司和网络的名称，而XRP是加密货币。</p>
-<p>下面，我们将仔细研究XRP与比特币和其他顶级数字货币的区别。</p>
-<pre><code>重要要点
-
-* 瑞波是加密货币XRP背后的公司。
-
-* 比特币交易确认可能需要花费数分钟的时间，而交易成本较高，而XRP交易只需几秒钟即可确认，而成本却很少。
-
-* XRP是主要因其数字支付网络和协议而闻名。
-
-* 许多大型银行都使用XRP付款系统。
-</code></pre>
-<h2 id="交易验证">交易验证</h2>
-<p>Ripple网络没有使用区块链挖矿的概念，而是通过服务器网络使用独特的分布式共识机制来验证交易。通过进行轮询，网络上的服务器或节点就交易的有效性和真实性达成共识。这使得几乎没有任何中央授权的情况下几乎可以立即进行确认，这有助于使XRP保持去中心化，并且比许多竞争对手更快速，更可靠。</p>
-<p>虽然比特币网络因其采矿系统而被指控耗能，而由于瑞波币无采矿机制，瑞波系统消耗的功率则微不足道。</p>
-<h2 id="处理时间和成本">处理时间和成本</h2>
-<p>比特币交易确认可能需要花费几分钟，并且可能与高昂的交易成本相关联，而XRP交易却在几秒钟内以非常低的成本得到确认。BTC总共提供2100万枚加密货币，而XRP总共提供1000亿枚预挖加密货币。</p>
-<h2 id="采矿与流通">采矿与流通</h2>
-<p>比特币使用工作量证明和挖矿技术来产生新的BTC，这是验证过程的重要组成部分，而所有XRP令牌均已预先开采。因此，XRP挖矿不像比特币需要挖矿。</p>
-<p>BTC和XRP的加密货币释放机制均不同。当矿工发现比特币并在网络上发布比特币并将其添加到网络，而瑞波币则通过智能合约控制着币的分配。</p>
-<p>Ripple计划每月根据内置智能合约发布最多10亿个XRP令牌；目前的流通量超过430亿。在特定月份中XRP的任何未使用部分将被转回到托管帐户。这种机制确保不会出现由于XRP加密货币供过于求而造成的误用，而且要花费很多年才能使用所有加密货币。</p>
-<p>与比特币交易处理费类似，XRP交易也要收费。每次在Ripple网络上执行交易时，都会向用户（个人或组织）收取少量XRP。XRP的主要用途是促进其他资产的转移，尽管越来越多的商人也以类似于接受比特币的方式接受它进行支付。</p>
-<h2 id="实际应用">实际应用</h2>
-<p>虽然比特币正被越来越多的个人和组织用作虚拟货币，但瑞波支付系统在银行中更受欢迎。RippleNet是由40多个国家/地区的200多家金融机构组成的财团，可轻松促进跨境支付。Ripple网络在金融机构中继续保持增长，在数字货币领域，Ripple网络在这一领域领先于许多竞争对手。</p>
-<pre><code> 总体而言，XRP相比于比特币在缩短处理时间和降低交易费用方面更好。
-</code></pre>
-<p>比特币仍然是一个真正的公共系统，不属于任何个人，机构或政府。Ripple网络虽然是分散的，但由一家同名的私人公司拥有和运营。尽管两者都有其独特的加密货币令牌，但两种流行的虚拟系统都可以满足不同的用途。</p>
-<h1 id="3-比特币与比特币现金有什么区别">3. 比特币与比特币现金：有什么区别？</h1>
-<p>自比特币出现以来，一直有围绕着比特币扩展能力的争议出现。比特币网络中区块链技术的问题在于，它的速度很慢，尤其是与处理信用卡交易的银行相比。例如，流行的信用卡公司Visa，Inc.（V）每天处理近1.5亿笔交易，平均每秒约1,700笔交易。</p>
-<p>比特币网络每秒可以处理多少笔交易？七笔。交易可能需要几分钟或更长时间才能处理。随着比特币用户网络的增长，等待时间变得更长，因为有更多的交易要处理，而现在的问题是无法改变处理这些交易的基础技术。</p>
-<p>围绕比特币技术的持续辩论一直围绕着这一核心问题，即扩展规模和提高交易验证过程的速度。开发人员和加密货币矿工已针对此问题提出了两种主要解决方案。第一种涉及使每个块中需要验证的数据量较小，从而创建更快，更便宜的事务，而第二种则需要使数据块扩大，以便可以一次处理更多信息。在这些解决方案下开发出了比特币现金（BCH）。下面，我们将仔细研究比特币和BCH的区别。</p>
-<pre><code>重要要点
-
-* 比特币受到交易处理时间的限制，这个问题已经导致比特币采矿和发展社区内部各派之间的分歧。
-
-* 比特币现金是由比特币矿工和开发商开始的，他们担心比特币加密货币的未来及其有效扩展的能力。
-
-* 虽然比特币块限制为1 MB，但BCH块为8 MB。
-</code></pre>
-<h2 id="比特币">比特币</h2>
-<p>2017年7月，代表着约80％至90％的比特币计算能力的矿池和公司投票决定采用一种称为隔离见证的技术。通过采用减少数据块中签名数据并将其附加在扩展块中的方式，使每个块中需要验证的数据量变小，从而达到提高验证速度和降低存储量的效果。据估计，签名数据最多占每个块中已处理数据的65％，因此这个改变效果比较明显。关于在2017年和2018年将区块大小从1MB翻倍增加到2MB的讨论开始了，由于之前的方案只能暂时缓解问题，不能从根本上完全解决。</p>
-<p>到2019年2月，比特币的平均区块大小增加到1.305 MB，超过了先前的记录。但是，到2020年1月，块大小平均已回落到1 MB。更大的块大小有助于提高比特币的可扩展性。2017年9月，加密货币交易所BitMex发布的研究表明，在该技术的稳定采用率下，隔离见证的实施帮助增加了区块大小。</p>
-<h2 id="比特币现金">比特币现金</h2>
-<p>比特币现金则是另一回事。比特币现金是由比特币矿工和开发人员开始的，他们同样关注加密货币的未来及其有效扩展的能力。但是，这些人对采用隔离证人技术持保留态度。他们感到隔离见证，似乎没有从根本上解决可扩展性的根本问题。</p>
-<p>2017年8月，一些矿工和开发商发起了所谓的硬分叉，创造了一种新货币：比特现金（BCH），BCH拥有自己的区块链和规范，其中包括与比特币的一项非常重要的区别。BCH已实现增加的8MB的块大小并且加速了验证过程，并且难度可调，以确保链的稳定性和交易验证速度。</p>
-<p>因此，比特币现金比比特币网络能够更快地处理交易，这意味着等待时间更短，交易处理费用往往更低。比特币现金网络每秒可以处理比比特币网络更多的交易。但是，随着交易验证时间的增加，缺点也随之而来。但BCH采用更大的块大小有一个潜在问题是，其安全性可能受到损害。但是，比特币仍然是世界上最受欢迎的加密货币，也是按市值计算的最大加密货币，因此BCH的用户可能会发现其流动性和实际可用性低于比特币。</p>
-<h1 id="4-比特币与以太坊有什么区别">4. 比特币与以太坊：有什么区别？</h1>
-<p>以太坊（ETH）是以太坊网络的加密货币，可以说是仅次于比特币（BTC）的第二受欢迎的数字代币。实际上，作为市值第二大的加密货币，以太币与比特币之间的对比是自然而然的。</p>
-<p>以太坊和比特币在许多方面都相似：都是通过在线交易进行交易，并存储在各种类型的加密货币钱包中的数字货币。这两个货币都是去中心化的，这意味着它们不是由中央银行或其他机构发行或监管的。两者都利用称为区块链的分布式账本技术。但是，按市值计算，两种最受欢迎的加密货币之间也有许多关键的区别。下面，我们将仔细研究比特币和以太币之间的异同。</p>
-<pre><code>重要要点
-
-* 比特币预示着一种全新的数字货币形式的出现，这种形式的数字货币不受任何政府或公司的控制。
-
-* 随着时间的流逝，人们开始意识到，比特币的基础创新之一--区块链可以用于其他目的。 
-
-* 以太坊提议利用区块链技术不仅用于维护去中心化支付网络，而且还用于存储计算机代码，该代码可用于为防篡改的去中心化金融合同和应用程序提供动力。
-
-* 以太坊的应用程序和合约由以太坊网络的货币以太币驱动。
-
-* 以太币旨在补充而不是与比特币竞争，但它却已经成为加密货币交易所的竞争对手。
-</code></pre>
-<p>区块链技术正被用于创建超越货币层面的应用程序。以太坊于2015年7月推出，是最大，最完善的开放式去中心化软件平台。</p>
-<p>以太坊使智能合约和去中心化应用程序（dapps）的部署得以构建和运行，而不会造成任何停机，欺诈，控制或来自第三方的干扰。以太坊带有自己的编程语言，该语言在区块链上运行，从而使开发人员能够构建和运行分布式应用程序。</p>
-<p>以太坊的潜在应用范围广泛，并以其货币以太币（通常缩写为ETH）提供支持。2014年，以太坊启动了以太坊的预售，获得了热烈的反响。ETH就像在以太坊平台上运行命令的燃料，并且被开发人员用来在平台上构建和运行应用程序。</p>
-<p>ETH主要用于两个目的，与其他加密货币相同的方式在交易所上作为数字货币进行交易，并且在以太坊网络上用于运行应用程序。以太坊认为，“全世界的人们都使用ETH进行付款，作为价值的存储或作为抵押。”</p>
-<h2 id="关键差异">关键差异</h2>
-<p>尽管比特币和以太坊网络均由分布式账本和密码学原理提供支持，但两者在技术上有很多不同。例如，以太坊网络上的交易可能包含可执行代码，而固定在比特币网络交易上的数据通常仅用于记录信息。其他区别包括封锁时间（以太币以秒为单位确认以太币交易，而比特币以分钟为单位）以及它们运行的算法（以太坊使用ethash，而比特币使用SHA-256）。</p>
-<p>不过，更重要的是，比特币和以太坊网络的总体目标不同。虽然比特币是作为法定货币的替代物而创建的，因此渴望成为一种交换媒介和价值存储，但以太坊的目的是作为一个平台，通过货币激励结合软件应用创造更多的可能性。</p>
-<p>BTC和ETH都是数字货币，但以太坊的主要目的不是使自身替代货币系统，而是为了促进以太坊智能合约和去中心化应用程序（dapp）平台的创造。</p>
-<p>以太坊是支持比特币网络的区块链的另一个用例，理论上不会与比特币产生竞争。但是，以太坊的流行使它与所有加密货币产生了竞争，特别是从交易者的角度来看。自2015年中期推出以来，在其大部分历史上，以市值计算，以太币一直紧随比特币之后。话虽这么说，但请务必记住，以太坊生态系统要比比特币的规模小得多：截至2020年1月，以太坊的市值略低于160亿美元，而比特币的市值是（1470亿美元）几乎是以太坊的10倍。</p>
-<h1 id="5-除比特币外的10种重要的加密货币">5. 除比特币外的10种重要的加密货币</h1>
-<p>比特币不仅是一个潮流引领者，它迎来了一波基于去中心化的对等网络构建的加密货币浪潮，它已成为加密货币的事实上的标准，激发了越来越多的追随者和衍生企业。</p>
-<pre><code>重要要点
-
-* 广义上讲，加密货币是采用代币或“硬币”形式的虚拟或数字货币。
-
-* 就市值，用户群和受欢迎程度而言，比特币继续领先于其他加密货币。
-
-* 越来越多地出现用于企业解决方案的虚拟货币，例如以太坊和XRP，也变得越来越流行。
-</code></pre>
-<ol>
-<li>以太坊（ETH）</li>
-</ol>
-<p>以太坊是一种去中心化软件平台，它可以构建和运行智能合约和去中心化应用程序（DApp），而不会造成任何停机，欺诈，控制或第三方的干扰。以太币于2015年推出，按市值计算，它目前是仅次于比特币的第二大数字货币，但它依然落后于比特币。截至2020年1月，以太币的市值约为比特币的1/10。</p>
-<p>2014年期间，以太坊启动了以太坊的预售，反应热烈。这有助于迎来初始代币发行（ICO）的时代。根据以太坊的说法，它可以被用来“编码，分散，保护和交易几乎任何东西。”在2016年对DAO的攻击之后，以太坊分叉为以太坊（ETH）和以太坊经典（ETC）。截至2020年1月8日，以太坊（ETH）的市值为156亿美元，每个令牌的价值为142.54美元。</p>
-<ol start="2">
-<li>瑞波（XRP）</li>
-</ol>
-<p>Ripple是一个实时的全球结算网络，可提供即时，确定和低成本的国际支付。Ripple于2012年推出，“使银行能够实时清算跨境支付，并具有端到端的透明性，并且成本更低。”，Ripple的分布式账本的独特之处在于它不需要挖掘。确实，所有Ripple的XRP令牌在发布前都是“预挖”的，这意味着XRP不会随着时间的推移“创造”，而只是根据网络指南将XRP从市场供应中引入和删除。通过这种方式，Ripple将自己与比特币和许多其他山寨币区分开来。由于Ripple的结构不需要挖掘，因此可以减少计算能力的使用并最大程度地减少网络延迟。</p>
-<p>到目前为止，Ripple凭借其当前的商业模式已经取得了成功。在寻求革新跨境支付方式的传统金融机构中，它仍然是最诱人的数字货币之一。按总市值计算，它也是目前世界上第三大加密货币。截至2020年1月8日，Ripple的市值为92亿美元，每令牌的价值为0.21美元。</p>
-<ol start="3">
-<li>莱特币（LTC）</li>
-</ol>
-<p>莱特币于2011年推出，是跟随比特币发展的首批加密货币之一，通常被称为“比特金，莱特银”。它是由麻省理工学院毕业生，前Google工程师查理·李（Charlie Lee）创建的。莱特币基于不受任何中央机构控制的开源全球支付网络，并使用“ scrypt”作为工作证明，可以通过消费级CPU对其进行解码。尽管莱特币在许多方面都类似于比特币，但它具有更快的区块生成率，因此提供了更快的交易确认时间。除开发人员外，越来越多的人开始接受莱特币。截至2020年1月8日，莱特币的市值为30亿美元，每令牌的价值为46.92美元，使其成为全球第六大加密货币。</p>
-<ol start="4">
-<li>泰达币（USDT）</li>
-</ol>
-<p>泰达币是第一个和最流行的一组所谓的稳定币，其目的是以美元作为锚定，价格稳定，以减少波动。因为大多数数字货币，甚至像比特币这样的主要数字货币，都经历了频繁的剧烈波动，泰达币和其他稳定币试图消除价格波动，以吸引用户。</p>
-<p>泰达币于2014年推出，称自己为“旨在促进以数字方式使用法定货币的区块链支持平台”。这种加密货币使个人能够利用区块链网络和相关技术以传统货币进行交易，同时将与数字货币相关的波动性和复杂性降至最低。2020年1月8日，按市值计算，泰达币是第四大加密货币，总市值为46亿美元，每个代币价值为1.00美元。</p>
-<ol start="5">
-<li>比特币现金（BCH）</li>
-</ol>
-<p>比特币现金（BCH）在山寨币的历史上占有重要地位，因为它是原始比特币最早，最成功的硬分叉之一。在加密货币世界中，由于开发人员和矿工之间的辩论和争论而产生了分叉。</p>
-<p>当不同派别无法达成协议时，有时会分叉数字货币，使原始货币保持其原始代码的真实性，而另一副本作为先前硬币的新版本开始使用，并对其代码进行更改。比特现金在2017年8月开始运行。比特币网络对块的大小有严格的限制：1MB。BCH将块大小从1 MB增加到8MB。截至2020年1月8日，BCH的市值为44亿美元，每个代币的价值为240.80美元。</p>
-<p>6.天秤币（Libra）</p>
-<p>炒作最多的加密货币之一是截至2020年1月还尚未发行的加密货币。到2018年中，有传言称社交媒体巨头Facebook。正在开发自己的加密货币。鉴于Facebook难以置信的全球影响力以及跨平台进行大量交易的潜力，加密货币世界早就推测社交媒体巨头可能会推出自己的数字货币。</p>
-<p>谣言于2019年6月18日正式得到证实，当时Facebook为Libra发布了白皮书。该数字货币的暂定发布日期是2020年晚些时候，因为Facebook承诺在发布之前要先应对监管上的壁垒。当Libra启动时，一定会引起加密货币领域内外的人们的广泛关注。</p>
-<p>7.门罗（XMR）</p>
-<p>门罗币是一种安全，私人和无法追踪的货币。这种开源加密货币于2014年4月推出，并很快引起了加密社区和发烧友的极大兴趣。这种加密货币的开发完全基于捐赠且由社区驱动。门罗币的推出着重于去中心化和可扩展性，它通过使用一种称为“环签名”的特殊技术来实现完全的隐私保护。由于这种特殊的安全机制，它已与世界各地的犯罪活动联系在一起。尽管如此，无论它结果是好是坏，都不能否认门罗币已将重要的技术进步引入了加密货币领域。截至2020年1月8日，门罗币的市值为9.94亿美元，每个代币价值为57.16美元。</p>
-<ol start="8">
-<li>EOS（EOS）</li>
-</ol>
-<p>除了Libra，最新的数字货币之一是EOS。EOS由加密货币先驱Dan Larimer创建于2018年6月。在从事EOS之前，Larimer创立了数字货币交易所Bitshares以及基于区块链的社交媒体平台Steemit。与清单中的其他加密货币一样，EOS是在以太坊之后设计的，因此它提供了一个平台，开发人员可以在该平台上构建去中心化的应用程序。</p>
-<p>首先，它的首次代币发行是历史上最长，最赚钱的发行之一，通过持续一年的众筹努力，吸引了创纪录的40亿美元左右的投资者资金。EOS提供了委托权益证明机制，它希望能够提供超越竞争对手的可扩展性。EOS由EOS.IO组成，类似于计算机的操作系统，并充当数字货币和EOS硬币的区块链网络。EOS也是革命性的，它没有生产硬币的采矿机制。取而代之的是，区块生产者生成区块并根据其生产率获得EOS代币奖励。</p>
-<p>EOS包含一个复杂的规则系统来管理该过程，其思想是网络最终将比其他加密货币更加民主和去中心化。</p>
-<ol start="9">
-<li>BSV（BSV）</li>
-</ol>
-<p>BSV（BSV），在这种情况下的“SV”代表“ Satoshi Vision”，是比特现金的硬分叉。从这个意义上讲，BSV是原始比特币网络的一个分支。计划于2018年11月进行的网络升级导致BCH社区中采矿和发展派系之间的旷日持久的辩论，导致了硬分叉和BSV的创建。BSV的开发人员建议，这种加密货币可以恢复比特币开发人员中本聪（Satoshi Nakamoto）的原始协议，同时还允许进行新的开发以提高稳定性和可伸缩性。BSV开发人员还优先考虑了安全性和快速交易处理时间。</p>
-<p>截至2020年1月8日，BSV的市值为21亿美元，每个令牌的价值为114.43美元。</p>
-<p>10.币安币（BNB）</p>
-<p>Binance Coin（BNB）是Binance加密货币交易所的官方令牌。币安成立于2017年，就整体交易量而言，币安已迅速成长为全球同类交易中最大的交易所。Binance Coin令牌使Binance用户可以在Binance平台上有效地交易数十种不同的加密货币。BNB用于简化交易所的交易费用，也可用于支付某些商品和服务，包括差旅费等。</p>
-<p>截至2020年1月8日，BNB的市值为23亿美元，每个令牌的价值为14.71美元。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[7. 了解比特币交易所]]></title>
-        <id>https://lianqiujun.co/post/7-liao-jie-bi-te-bi-jiao-yi-suo</id>
-        <link href="https://lianqiujun.co/post/7-liao-jie-bi-te-bi-jiao-yi-suo">
-        </link>
-        <updated>2020-11-22T15:57:35.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-什么是比特币交易所">1. 什么是比特币交易所？</h1>
-<p>比特币交易所是一个数字市场，交易者可以在其中使用不同的法定货币或山寨币买卖比特币。它是一个在线平台，充当加密货币买卖双方之间的中介。</p>
-<pre><code>重要要点
-
-* 比特币交易所充当买卖双方之间的中介。
-
-* 比特币交易所就像经纪人一样，你可以通过银行转账，电汇和其他常见的存款方式来存钱。但是，你通常需要为此服务付出一定的代价。
-
-* 如果交易者想进行加密货币交易，他们需要支付一定的服务费，类似于你在不同国家/地区交易货币时银行收取的费用。
-
-* 买卖基于与现有的交易系统，买方（买主）下达限价订单，然后当卖方（制造商）可以使用相应的加密货币将其出售。
-</code></pre>
-<h1 id="2-了解比特币交易所">2. 了解比特币交易所</h1>
-<p>比特币交易平台使买家与卖家匹配。就像传统的证券交易所一样，交易者可以通过输入市场订单或限价订单来选择买卖比特币。当使用市场订单时，交易者授权交易所在最佳的价格时进行货币交易。设置了限价订单后，交易者将规定交易所在低于当前要价或高于当前出价的价格交易货币，具体高低取决于它们是在买还是卖。</p>
-<p>为了可以在交易所上进行比特币交易，用户必须在交易所进行注册并经过一系列的验证过程以验证其身份。验证成功后，将为用户开设一个帐户，然后用户必须先将资金转入该帐户，然后才能购买硬币。</p>
-<p>不同的交易所具有不同的付款方式，可用于存入资金，包括银行电汇，直接银行转账，信用卡或借记卡，银行汇票，汇票甚至礼品卡、支付宝、微信等。想要从其帐户中提款的交易者可以使用交易所提供的选项进行提款，包括银行转账，支付宝转账，微信转账，支票邮寄，现金交付，银行电汇或信用卡转账。</p>
-<h1 id="3-去中心化交易所">3. 去中心化交易所</h1>
-<p>去中心化的比特币交易所是在没有中央授权的情况下进行的交易。这种方式可以进行数字货币的点对点交易，而无需交换机构来促进交易。</p>
-<p>去中心化交易所有很多好处。首先，许多加密货币用户认为去中心化交易所更适合大多数数字货币本身的去中心化结构。与其他类型的交易所相比，许多去中心化交易所也要求其成员提供较少的个人信息。</p>
-<p>其次，如果用户将资产可以直接转让给其他用户，则无需将资产转让给交易所，从而降低了黑客和其他欺诈行为造成的盗窃风险。</p>
-<p>第三，去中心化交易所可能不太容易受到价格操纵和其他欺诈性交易活动的影响。</p>
-<p>另一方面，去中心化交易所（像所有加密货币交易所一样）必须以交易量和流动性的形式维持基本的用户量。并非所有的去中心化交易所都能实现这些重要的基础指标。</p>
-<p>此外，与使用中心化交易所的用户相比，去中心化交易所的用户如果是欺诈的受害者，他们的追回损失的可能性更小。</p>
-<h1 id="4-特别注意事项">4. 特别注意事项</h1>
-<h1 id="41-费用">4.1 费用</h1>
-<p>进行存款和取款需要付出一定的服务费，具体取决于转移资金的付款方式。</p>
-<p>除了交易费和资金转移费外，交易者还可能需要支付货币兑换费，具体取决于比特币交易所接受的货币。如果用户将人民币转帐到仅以美元进行交易的交易所，则银行或交易所将收取费用将人民币转换为美元。与接受您当地货币的交易所进行交易是避免外汇费用的最佳方法。</p>
-<p>所有比特币交易所都有交易费，该交易费适用于交易所内完成的每个买卖订单。收费率取决于所进行的比特币交易量。</p>
-<h1 id="42-比特币钱包">4.2 比特币钱包</h1>
-<p>请注意，比特币交易所不同于比特币钱包。前者提供了一个平台，供比特币买卖双方进行交易，而后者只是一种数字存储服务，供比特币持有者安全地存储其代币。从技术上讲，比特币钱包存储私钥，私钥用于授权交易和访问用户的比特币地址。大多数比特币交易所都为其用户提供比特币钱包，但可能会为此服务收费。</p>
-<h1 id="43-比特币交易所的例子">4.3 比特币交易所的例子</h1>
-<p>例如，在一个比特币交易所上，三个硬币卖家要求BTC / USD 8265.75，BTC / USD 8269.55和BTC / USD 8270.00。发起市场订单以购买比特币的交易员将以<code>8265.75</code>美元的最佳要价执行订单。如果仅五个比特币可用于最佳卖出价，而十个硬币可用于<code>$8269.55</code>，并且交易者希望以市场价格购买10个比特币，则该交易者的订单将以5个硬币（<code>$8265.75</code>）和其余5个硬币（<code>$8269.55</code>）成交。</p>
-<p>但是，一个认为自己可以以更好的价格获得比特币的交易者可以将一个<code>限价单</code>设定为<code>2260.10</code>美元。如果卖方将其要价与该订单相匹配或将价格设置为低于此数字，则该订单将被执行。所有这些都是通过交易所完成的，而交易所则需要为其业务收取一定比例的交易费。</p>
-<h1 id="5-最受欢迎的比特币交易所">5. 最受欢迎的比特币交易所</h1>
-<p>比特币（BTC）交易所是虚拟货币世界尤其是其生态系统不可或缺的一部分。实际上，交易所是世界上许多数字货币用户必须使用代币和法定货币进行交易的主要手段。当今的数字货币交易所必须成功地平衡各种监管措施，保持最新的安全保护措施以减少欺诈和黑客攻击的可能性，并吸引用户以确保生存能力和足够的流动性。</p>
-<p>Mt.Gox 交易所，昵称：门头沟。曾经享有垄断者地位的交易所。在2013年和2014年，它占据了BTC-USD交易量的80-90％。<br>
-然而这个传奇性的交易所并没有永恒的存在，在大量的比特币显然从其保险箱中被盗之后，这一次最受欢迎的交易所就面临灭顶之灾。“门头沟被盗事件”可以说是一个警示性的故事。</p>
-<p>现在，成功的交易所已经从其中学到了很多东西。</p>
-<p>（1）火币网</p>
-<ul>
-<li>地址：https://www.huobi.com</li>
-</ul>
-<p>火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产国际站，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务，总部位于新加坡，由火币全球专业站团队负责运营。火币集团是一家具有全球竞争力与影响力的数字资产综合服务商，为超过130个国家百万级用户提供优质服务。在新加坡、香港、韩国、日本等多个国家和地区均有独立的交易业务和运营中心</p>
-<p>（2）Binance 币安</p>
-<ul>
-<li>地址：https://www.binance.com</li>
-</ul>
-<p>币安(Binance)，国际领先的区块链数字资产国际站，向全球提供广泛的数字货币交易、区块链教育、区块链项目孵化、区块链资产发行平台、区块链研究院以及区块链公益慈善等服务，目前用户覆盖全球180多个国家和地区，以140万单/秒的核心内存撮合技术，是全球加密货币交易速度最快的平台之一，也是全球加密货币交易量最大的平台之一。</p>
-<p>（3）Gate 比特儿</p>
-<ul>
-<li>地址：https://www.gate.io</li>
-</ul>
-<p>Gate国际站，是一家有态度的全球区块链资产国际站。从13年创办至今，已为来自全球超过130个国家的数百万用户，提供了近百种优质区块链资产品类的交易和投资服务。Gate致力于做一家值得信赖的安全、稳定、有信誉的区块链资产国际站，不仅为用户提供安全、便捷、公平的区块链资产交易服务，同时全面保障用户的交易信息安全和资产安全。</p>
-<p>（4）OKEX</p>
-<ul>
-<li>地址：https://www.okex.com</li>
-</ul>
-<p>OKEX 是全球著名的数字资产国际站之一，主要面向全球用户提供比特币、莱特币、以太币等数字资产的现货和衍生品交易服务，隶属于OKEX Technology Company Limited。 OKEX创立时，获得了世界顶级投资人Tim Draper参与设立的创业工场百万美金的天使投资，Tim Draper先生同时也是Hotmail、百度、特斯拉等世界顶级企业的投资人。</p>
-<p>（5）ZB 中币</p>
-<ul>
-<li>地址：https://www.zb.com</li>
-</ul>
-<p>ZB集团成立于2012年，旨在区块链的发展提供领导力和更加稳定的环境。总部设立于瑞士苏黎世，ZB集团经营着包括数字资产国际站、电子钱包、投资基金、研究机构和媒体在内的业务网络。集团的旗舰平台是行业领先的数字资产国际站 ZB。自2013年初推出以来，该平台在创新方面一直处于领先地位。ZB集团还拥有全球创新加密货币国际站ZBG、全球首个基于矿池的国际站http://BW.com。</p>
-<p>（6）Bitfinex</p>
-<ul>
-<li>地址：https://www.bitfinex.com</li>
-</ul>
-<p>Bitfinex是全世界最大、最高级的比特币国际站之一，支持以太坊、比特币、莱特币、以太经典等虚拟币的交易，每天的成交量达30多亿人民币。提供币币交易，美元与币的交易。注册非常简单。2016年，Bitfinex大概有12万枚比特币通过社交媒体被盗。受此事件影响，当时比特币价格跌了20%。 优势： 支持美元交易 多种交易形式和功能 不足： 平台页面布局不符合国内用户使用习惯</p>
-<p>（7）MXC 抹茶</p>
-<ul>
-<li>地址：https://www.mxc.io</li>
-</ul>
-<p>MXC国际站是由华尔街以及日本欧洲资深量化交易团队联合区块链资深从业者通过去中心化自组织形式创立的一个专注于区块链资产交流和交换的平台。MXC将为用户提供更加安全、便捷、智能的区块链资产流通服务，聚合全球优质区块链资产，融合全球最顶尖的安全技术，致力于打造全球顶级的区块链资产国际站。</p>
-<p>（8）Dragonex 龙网</p>
-<ul>
-<li>地址：https://www.dragonex.io</li>
-</ul>
-<p>龙网（DragonEx）是新加坡虚拟货币国际站，2017年11月2日正式上线运营。上线同日发行平台币龙币（DT），持有其平台币DT可以获得平台收入分红。首创的开放平台引进的游戏应用爆红整个行业，同时开发了众多功能，如DK大乐透、扭龙蛋、期权预测、抵押借贷等等。目前支持C2C快速法币充提、USDT交易、ETH交易、BTC交易、DC交易、合约交易、杠杆交易。</p>
-<p>（9）Coinw 币赢国际站</p>
-<ul>
-<li>地址：https://www.coinw.ai</li>
-</ul>
-<p>币赢网Coinw是中国香港开设的著名数字资产国际站，面向全球用户提供BTC、ETH、HC、EOS、LEEK、ELF、MTC等优质主流数字资产的交易服务。币赢网Coinw提供移动端APP，方便用户随时随地操作。</p>
-<p>（10）ZBG</p>
-<ul>
-<li>地址： https://www.zbg.com</li>
-</ul>
-<p>ZBG 在2018年成立于香港，凭借创新、高效和全球化的运营，ZBG在短时间内迅速跻身行业世界前十，被誉为新一线国际站。 目前平台已支持七国语言访问，为全球180万加密资产投资者提供服务，平台日均活跃超过12万。在未来，ZBG将继续拓展全球市场，为全球区块链爱好者提供稳定、安全、快捷的区块链项目上市、加密资产投资等服务。</p>
-<h1 id="6-交易所购买比特币的成本">6. 交易所购买比特币的成本</h1>
-<p>交易比特币需要多少钱？除了比特币本身的价格外，每个加密货币交易所都会在客户购买和出售硬币时增加交易费用。这些费用包括制造商（通过限价订单增加订单簿流动性）和收取者（通过市场订单从订单簿中减去流动性）费用。在某些情况下，如果限价单已经存在于订单簿中，则加密货币交易者可能会产生制造商以及交易商的费用。</p>
-<p>加密货币交易所主要通过两种方式来计算费用：每笔交易采用固定的费用，或者采用帐户30天交易量的百分比收取费用。结合两种情况，他们根据交易量的大小决定具体的服务费用。</p>
-<pre><code>重要要点
-
-* 自从2009年首次推出比特币以来，买卖加密货币变得越来越受欢迎。
-
-* 现在存在数十种大型在线交易所，以帮助买卖数字货币以及彼此之间进行加密货币交易。
-
-* 所涉及的典型成本包括支付给交易所的交易佣金，买卖价差的宽度以及向您的银行帐户转移资金的费用。
-
-</code></pre>
-<p>在加密货币交易所进行交易时要考虑的四件事 交易者在购买加密货币时必须考虑四件事。</p>
-<p>首先，在大多数司法管辖区，加密货币交易所不受监管。全球一些国家/地区的大多数监管机构在其一些最大的交易市场中都采取了放任不管的方式来进行加密货币监管。例如，在最大的加密货币交易市场中，加密货币交易所受美国众多法规的约束。截至2017年初，中国禁止某些类型的加密货币交易，占总交易量的90％。</p>
-<p>其次，加密货币交易所的收费服务旨在鼓励频繁交易价值数千美元的大笔交易。费用通常随着交易量和交易频率的增加而降低。因此，在加密货币交易中，小的订单和不频繁的订单并不具有成本效益。例如，某些交易所对价值10,000,000美元及以上的交易不收取任何费用。</p>
-<p>第三，交易所鼓励使用加密货币进行交易。法定货币通常会在交易所产生存款和取款费，具体取决于付款方式。但是在大多数情况下，与其他硬币一起购买加密货币是免费的。在某些情况下，可能需要支付少量费用才能为所需的加密货币设置钱包。</p>
-<p>第四，大多数知名的加密货币交易所都不提供对所有硬币的访问权限。但是，在许多情况下，交易者可以将资金从一个钱包转移到另一个钱包，并使用法定货币或加密货币为他们的交易账户注资。例如，希望以市值排名前15位的加密货币卡尔达诺（ADA）的交易者目前无法直接在流行的Coinbase交易所上进行交易。 但是，交易者可以使用法定货币在Coinbase上购买比特币。另一家交易所Binance已经为用户提供了从其他钱包中导入硬币的功能。一旦他们的Binance帐户中有比特币，他们就可以使用它购买交易所中列出的ADA。多个钱包在不同交易所之间的转账在每一端会产生少量费用。</p>
-<h1 id="总结">总结</h1>
-<p>对于个人资产的分配管理来说，用于交易的资产建议保留在交易所，很少交易的大额资产建议保留在个人钱包中。对于大额且进行交易的资产，可以分开分配在多个主流的交易所中。由于交易所被盗事件经常发生，加密货币放置在交易所中并不是万无一失的选择。分开管理，也同样分散了风险，主流交易所都被盗窃的概率还是很小的。</p>
 ]]></content>
     </entry>
 </feed>
