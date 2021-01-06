@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2021-01-06T07:50:19.031Z</updated>
+    <updated>2021-01-06T08:01:37.728Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://lianqiujun.co/images/avatar.png</logo>
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2021, 链 求 君 | 区 块 链</rights>
+    <entry>
+        <title type="html"><![CDATA[常用工具手册]]></title>
+        <id>https://lianqiujun.co/post/chang-yong-gong-ju-shou-ce</id>
+        <link href="https://lianqiujun.co/post/chang-yong-gong-ju-shou-ce">
+        </link>
+        <updated>2021-01-06T07:57:44.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="命令">命令</h1>
+<ul>
+<li>
+<p><a href="#">Git 命令</a></p>
+</li>
+<li>
+<p><a href="#">IDEA 快捷键</a></p>
+</li>
+<li>
+<p><a href="#">Linux 命令</a></p>
+</li>
+<li>
+<p><a href="#">Mac 命令</a></p>
+</li>
+<li>
+<p><a href="#">Vim 命令</a></p>
+</li>
+<li>
+<p><a href="#">Markdown 语法</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[编程要素：函数和数据]]></title>
         <id>https://lianqiujun.co/post/bian-cheng-yao-su-han-shu-he-shu-ju</id>
@@ -574,197 +603,6 @@ print(r)
 </ul>
 <p>https://etherflow.quiknode.io/</p>
 <p><a href="https://github.com/abunsen/etherflow">GitHub</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最全的以太坊开发资源指南]]></title>
-        <id>https://lianqiujun.co/post/zui-quan-de-yi-tai-fang-kai-fa-zi-yuan-zhi-nan</id>
-        <link href="https://lianqiujun.co/post/zui-quan-de-yi-tai-fang-kai-fa-zi-yuan-zhi-nan">
-        </link>
-        <updated>2020-11-27T18:36:25.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="生态系统资源">生态系统资源</h1>
-<p>有关用于学习和理解以太坊生态系统的可用dapp，服务，著作和知识库的指南。</p>
-<p>该资源旨在专注于生态系统的发展，但该相关资料还包括：</p>
-<ul>
-<li><a href="README_Chinese.md">以太坊开发者工具列表</a></li>
-</ul>
-<h2 id="资源">资源</h2>
-<h3 id="钱包">钱包</h3>
-<ul>
-<li><a href="https://metamask.io/">Metamask</a> - 具有ERC 代币支持的Chrome插件Ether钱包</li>
-<li><a href="https://github.com/gnosis/MultiSigWallet">Gnosis multisig wallet</a> - 经审核的多签名钱包</li>
-<li><a href="https://www.exodus.io">Exodus</a> - 桌面钱包整合</li>
-<li><a href="https://github.com/poanetwork/nifty-wallet">Nifty Wallet</a> - 以太坊浏览器扩展专注于现实应用程序的可用性</li>
-</ul>
-<h4 id="网络钱包">网络钱包</h4>
-<ul>
-<li><a href="https://github.com/MyEtherWallet">MyEtherWallet</a> -用于轻松，安全地与区块链进行交互的开源<a href="https://www.myetherwallet.com/">工具</a></li>
-<li><a href="https://github.com/MyCryptoHQ">MyCrypto</a> - 用于生成以太币钱包，处理ERC-20代币以及更轻松地与区块链进行交互<a href="https://mycrypto.com/account">工具</a></li>
-<li><a href="https://arkane.network">Arkane</a> - 基于Web的钱包专注于用户友好UX和DAPP整合。（适用于移动设备）</li>
-<li><a href="https://tor.us">Torus</a> - 开源客户端钱包重点放在UX</li>
-<li><a href="https://portis.io/">Portis</a> -基于Web的钱包的植入，方便用户对你的DAPP</li>
-<li><a href="https://github.com/ConsenSys/eth-lightwallet">Eth lightwallet</a> - 适用于Node和浏览器的轻量级JS钱包</li>
-<li><a href="https://github.com/SpankChain/SpankCard">SpankCard</a> - 浏览器内以太坊钱包，支持支付渠道</li>
-<li><a href="https://iancoleman.io/bip39/">Mnemonic generator</a> - 生成单词助记符和相关的公用/专用密钥对。选择“以太坊”作为硬币以生成以太坊地址。对于truffle-hd-wallet钱包很有用。</li>
-</ul>
-<h4 id="手机钱包">手机钱包</h4>
-<ul>
-<li><a href="https://github.com/CoinbaseWallet">Coinbase Wallet</a> - 移动Dapp资源管理器和 <a href="https://apps.apple.com/us/app/coinbase-wallet/id1278383455">钱包</a></li>
-<li><a href="https://www.cipherbrowser.com/">Cipher</a> - 移动Dapp资源管理器</li>
-<li><a href="https://github.com/trustwallet">Trust</a> - 用于ERC代币的 <a href="https://trustwallet.com/">移动钱包</a></li>
-<li><a href="https://github.com/status-im/status-react">Status</a> - 适用于以太坊的免费开源移动操作系统</li>
-<li><a href="https://token.im/">imToken</a> - 功能丰富的数字资产移动钱包，支持多链资产管理，DApp浏览以及安全的私有价值交换</li>
-<li><a href="https://jaxx.io">Jaxx</a> - 手机和台式机钱包。集成了Shapeshift支持</li>
-<li><a href="https://walleth.org">WallETH</a> - 原生Android以太坊钱包</li>
-<li><a href="https://github.com/NoahZinsmeister/eth-wallet-light">eth-wallet-light</a> - 针对移动设备进行了优化的轻量级JS钱包</li>
-<li><a href="https://play.google.com/apps/testing/io.metamask">Metamask</a> - 带有ERC令牌的Mobile Ether钱包支持beta</li>
-<li><a href="https://www.winiwallet.io/">WiniWallet</a> - 具有多个DeFi投资的DAI稳定币钱包</li>
-</ul>
-<h4 id="硬件钱包">硬件钱包</h4>
-<ul>
-<li><a href="https://trezor.io">Trezor</a> - 原始硬件钱包</li>
-<li><a href="https://www.ledger.com/">Ledger</a> - 支持多种加密货币和代币</li>
-<li><a href="https://shapeshift.io/keepkey/">KeepKey</a> - 简单的硬件钱包</li>
-</ul>
-<h3 id="区块浏览器">区块浏览器</h3>
-<ul>
-<li><a href="https://etherscan.io/">Etherscan</a> - 最受欢迎的集中式查看Eth交易和合同代码的方式</li>
-<li><a href="https://github.com/poanetwork/blockscout">BlockScout</a> - 由<a href="http://ethprize.io">Ethprize</a>资助，由<a href="https://poa.network/">POA</a>开发的开源以太坊区块浏览器</li>
-<li><a href="https://github.com/Great-Hill-Corporation/trueblocks-core">TrueBlocks</a> -TrueBlocks是软件库，应用程序，工具和示例的集合，可让您更快地检索以太坊区块链数据，（b）具有较高的信息内容，（c）以完全去中心化的方式，（d） （e）以高度免维护的方式。）</li>
-<li><a href="https://github.com/gobitfly/etherchain-light">Etherchain lite</a> - 您的私人以太坊链的轻量级区块链浏览器</li>
-<li><a href="https://ethstats.io/">EthStats</a> - 以太坊区块链分析平台</li>
-<li><a href="https://scout.cool/">Scout</a> - 以太坊上智能合约的活动和事件日志的实时数据馈送</li>
-<li><a href="https://ethq.app">ethq</a> - 为开发人员构建的，由<a href="https://dfuse.io">dfuse</a> 驱动的，最详细的块浏览器</li>
-</ul>
-<h3 id="汽油价格计算器和工具">汽油价格计算器和工具</h3>
-<ul>
-<li><a href="https://ethgasstation.info/">EthGasStation</a> - 用于估算交易价格与时间的网站</li>
-<li><a href="https://github.com/makerdao/petrometer">Petrometer</a> - 汇总从指定以太坊地址发送的所有交易的每日和总汽油消耗</li>
-</ul>
-<h3 id="服务">服务</h3>
-<ul>
-<li><a href="http://docs.provable.xyz/#ethereum">Provable</a> - 用于智能合约的具有真实性证明的区块链Oracle服务</li>
-<li><a href="https://infura.io/">Infura</a> - API网关，因此您不必托管自己的ETH节点</li>
-<li><a href="https://quiknode.io/">Quiknode</a> - 提升个人Parity/Geth节点的服务</li>
-<li><a href="https://nodesmith.io/">Nodesmith</a> - 免费API访问完整的以太坊主网和testnet节点，可以像本地节点一样使用</li>
-<li><a href="https://dfuse.io">dfuse</a> - Slick区块链API构建世界一流的应用程序</li>
-<li><a href="https://regis.nu/">Regis</a> - 数字资产注册表框架</li>
-<li><a href="https://treum.io/">Treum</a> - 如果用例面向业务流程（以前是Viant），只需考虑将Treum用作后端</li>
-<li><a href="https://www.uport.me/">uPort</a> - 整体身份解决方案</li>
-<li><a href="https://chrome.google.com/webstore/detail/etheraddresslookup/pdknmigbbbhmllnmgdfalmedcmcefdfn?hl=en-GB">Ether Address Lookup</a> - Chrome扩展程序，用于网络钓鱼防护和Eth地址突出显示</li>
-<li><a href="https://github.com/cubedro/eth-netstats">Netstats</a> - 以太坊网络<a href="https://ethstats.net/">统计</a></li>
-<li><a href="https://github.com/ensdomains">ENS</a> - ENS提供了一种安全且分散的方式，可以使用简单易读的<a href="https://ens.domains/">名称</a>来处理区块链上和下的资源</li>
-<li><a href="https://namebazaar.io/">Name Bazaar</a> - 通过以太坊名称服务注册的名称交换的对等市场</li>
-<li><a href="https://quantstamp.com">Quantstamp</a> - 一种服务，提供收费的自动和手动智能合约安全性审核</li>
-<li><a href="https://tool.smartdec.net/">SmartCheck</a> - 对Solidity源代码进行静态分析以获取安全漏洞和最佳实践</li>
-<li><a href="https://emn178.github.io/online-tools/md4.html">MD4 Online Hash Function</a> - 使用各种哈希算法选项对输入进行哈希的工具</li>
-<li><a href="https://github.com/iExecBlockchainComputing/iexec-sdk">iExec SDK</a> - 使智能合约能够脱链执行功能或应用程序。支持作为Docker映像提供的所有旧版应用程序。</li>
-<li><a href="https://incentivai.co">Incentivai</a> - 通过使用ML代理进行仿真来测试智能合约经济性</li>
-<li><a href="https://arkane.network/pages/build-on-arkane.html">Arkane - A wallet provider for Dapps</a> - 提供API网关，并为Dapps及其用户提供钱包和钱包管理。</li>
-<li><a href="https://github.com/aave/aave-js">Aave SDK</a> - JavaScript库，可与作为分散贷款市场<a href="https://ethlend.io">ETHLend</a>的Aave生态系统的API连接。</li>
-<li><a href="https://rockside.io">Rockside Cloud</a> - 以太坊网络访问提供商和财团区块链构建商</li>
-<li><a href="https://chainstack.com/">Chainstack</a> - 共享和专用的以太坊节点即服务</li>
-<li><a href="https://buidlhub.com">BUIDLHub</a> - 在传统的Web服务和以太坊之间创建自动化的工作流。支持bot，webhooks，自定义dapp集成等。</li>
-</ul>
-<h3 id="知识教育">知识/教育</h3>
-<ul>
-<li><a href="https://github.com/sec-bit/awesome-buggy-erc20-tokens">Awesome Buggy ERC20 Tokens</a> - 受影响的代币中ERC20智能合约中的漏洞的集合</li>
-<li><a href="https://github.com/miguelmota/solidity-idiosyncrasies">Solidity idiosyncrasies</a> - 实体陷阱，陷阱，局限性和特质</li>
-<li><a href="https://github.com/miguelmota/ethereum-development-with-go-book">Ethereum development with Go</a> - golang的以太坊开发 <a href="https://goethereumbook.org">指南</a></li>
-<li><a href="https://consensys.net/academy/">Consensys Academy</a> - Consensys学院课程</li>
-<li><a href="https://academy.b9lab.com/">B9Lab</a> - 付费课程</li>
-<li><a href="https://courses.blockgeeks.com/">Blockgeeks</a> - 关于Solidity / Dapp开发的付费课程</li>
-<li><a href="https://www.chainshot.com/">Chainshot building blocks</a> - 基于项目的免费课程和挑战</li>
-<li><a href="https://kauri.io/">Kauri</a> - 可公开访问的社区知识库和教程</li>
-<li><a href="https://cleverflare.com/">Delegate call</a> - 课程</li>
-<li><a href="https://ethereum.stackexchange.com">Stackexchange</a> - 问答网站</li>
-<li><a href="https://www.reddit.com/r/ethdev/">r/EthDev</a> - Subreddit</li>
-<li><a href="https://medium.com/stk-token/research-of-the-week-reducing-gas-fees-9061d19cc171">Reducing Gas Fees</a> - 减少执行所花费的汽油的提示和技巧</li>
-<li><a href="http://www.dappuniversity.com">Dapp University</a> - 免费视频教程</li>
-<li><a href="https://www.cryptologie.net/article/423/attacks-on-ethereum-smart-contracts/">Attacks on Smart Contracts</a> - 智能合约攻击</li>
-<li><a href="https://www.zastrin.com">Zastrin</a> - 关于Solidity / Dapp开发的付费课程</li>
-<li><a href="https://docs.chainstack.com/tutorials/">Chainstack Docs</a> - 手把手教学 DApp构建教程</li>
-</ul>
-<h4 id="安全最佳实践">安全最佳实践</h4>
-<ul>
-<li><a href="https://github.com/ConsenSys/smart-contract-best-practices">Smart contract best practices</a> - 智能合约最佳做法-ConsenSys提供</li>
-<li><a href="https://github.com/ethereum/wiki/wiki/Safety">Safety wiki</a> - 以太坊基金会关于安全性的Wiki</li>
-</ul>
-<h4 id="solidity-游戏">Solidity 游戏！</h4>
-<ul>
-<li><a href="https://ethernaut.openzeppelin.com/">OpenZeppelin Ethernaut</a> -基于Web3 / Solidity的战争游戏</li>
-<li><a href="https://cryptozombies.io/">Cryptozombies</a> - 世界上最好的僵尸Solidity游戏教程</li>
-<li><a href="https://capturetheether.com/">Capture the Ether</a> - 智能合约安全游戏教程</li>
-</ul>
-<h4 id="scaling">Scaling</h4>
-<ul>
-<li><a href="https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4">Comprehensive Medium article</a> 关于各种以太坊扩展解决方案的综合媒体文章</li>
-<li><a href="https://github.com/STKtoken/Multi-Token-smart-contracts">Using Multitoken Payment Channels to sign off-chain transactions</a> - 使用多令牌支付渠道签署链下交易</li>
-</ul>
-<h3 id="参考">参考</h3>
-<ul>
-<li><a href="https://github.com/ethereum/wiki/wiki">Wiki</a> - 关于以太坊的各种知识的维基</li>
-<li><a href="https://github.com/ethereum/yellowpaper">Yellow Paper</a> - 以太坊的正式规范</li>
-<li><a href="https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf">Beige Paper</a> - 以非黄皮书语法重写黄皮书</li>
-<li><a href="https://github.com/ConsenSys/EthOn">EthOn</a> - 本体是域内概念和关系的形式化。EthOn用RDF和OWL编写</li>
-<li><a href="https://github.com/ethereumbook/ethereumbook">Mastering Ethereum</a> - 精通以太坊</li>
-<li><a href="https://github.com/crytic/evm-opcodes">EVM opcodes</a> - 以太坊操作码和指令参考</li>
-<li><a href="https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf">EVM illustrated</a> - 这是有关以太坊虚拟机的图示文档</li>
-<li><a href="https://github.com/ethereum-lists/4bytes">4bytes</a> - 常见智能合约功能功能签名的4byte标识符列表 <a href="https://www.4byte.directory/">function signatures</a></li>
-<li><a href="https://topmonks.github.io/solidity_quick_ref/">Solidity cheat sheet</a> - Solidity语法快速概述</li>
-<li><a href="http://reference.auditless.com/cheatsheet/">Solidity &amp; Vyper cheat sheet</a> - Solidity和Vyper的备忘录</li>
-</ul>
-<h3 id="治理">治理</h3>
-<ul>
-<li><a href="https://ethresear.ch/">Ethresear.ch</a> - 参与以太坊研究工作的半公开论坛，包括但不限于：Casper，Sharding，EVM改进，加密经济学，等离子和状态通道</li>
-<li><a href="https://ethereum-magicians.org/">Fellowship of Ethereum Magicians</a> - 该讨论区促进整个以太坊社区中个人之间的有意义的交流</li>
-<li><a href="https://eips.ethereum.org/">EIPs</a> - 的复仇改进建议库</li>
-<li><a href="https://forum.aragon.org/">Aragon Research Forum</a> - 与Aragon研究工作相关的长篇讨论，包括治理，经济学和令牌工程</li>
-</ul>
-<h3 id="去中心化交易所">去中心化交易所</h3>
-<ul>
-<li><a href="https://www.airswap.io/">Airswap</a> - 分散式代币交换</li>
-<li><a href="https://0x.org/">0x</a> 分散式交换协议</li>
-<li><a href="https://app.radarrelay.com/">Radar relay</a></li>
-<li><a href="https://ercdex.com/">ERC Dex</a></li>
-<li><a href="https://ddex.io">DDEX</a></li>
-<li><a href="https://www.deversifi.com/">Deversifi</a></li>
-<li><a href="https://www.ledgerdex.com">LedgerDex</a></li>
-<li><a href="https://www.bamboorelay.com">Bamboo Relay</a></li>
-<li><a href="https://app.instex.io">Instex</a></li>
-<li><a href="https://exchange.star-bit.io/">Starbit</a></li>
-<li><a href="https://Opensea.io">Opensea.io</a> - 加密收藏品的去中心化交易</li>
-<li><a href="https://www.bancor.network/">Bancor</a></li>
-<li><a href="https://www.kyber.network">Kyber</a></li>
-<li><a href="https://github.com/gnosis/dx-contracts">Gnosis Dutch Exchange</a></li>
-</ul>
-<h3 id="安全分散数据协议">安全分散数据协议</h3>
-<ul>
-<li><a href="https://github.com/stow-protocol">Stow</a> - 在我们的组件和SDK分钟您的用户安全地存储和共享数据。前身为Linnia。</li>
-</ul>
-<h3 id="激励货币化工具">激励/货币化工具</h3>
-<ul>
-<li><a href="https://gitcoin.co">Gitcoin</a> - 资助开源或寻找开源工作的赏金网络</li>
-<li><a href="https://codefund.io">CodeFund</a> - 开源广告平台</li>
-</ul>
-<h3 id="很棒的清单">很棒的清单</h3>
-<ul>
-<li><a href="https://github.com/jpantunes/awesome-cryptoeconomics">Awesome Cryptoeconomics</a> - 加密经济学研究和学习资料的精选清单</li>
-<li><a href="https://github.com/bkrem/awesome-solidity">Awesome Solidity</a> - 精选的Solidity资源，库，工具等的精选列表</li>
-<li><a href="https://github.com/pirapira/awesome-ethereum-virtual-machine">Awesome EVM</a> - 以太坊虚拟机真棒列表</li>
-<li><a href="https://github.com/machinomy/awesome-state-channels">Awesome State-Channels</a> - 精选有关以太坊上的状态通道的资源列表</li>
-<li><a href="https://defiprime.com/">Defiprime.com</a> - 精选的很棒的去中心化财务项目，软件，事件和资源的清单</li>
-<li><a href="https://github.com/evbots/dex-protocols">DEX protocols</a> - 分散交换协议列表</li>
-<li><a href="https://github.com/PhABC/ethereum-token-standards-list">Ethereum Token Standards</a> - 以太坊代币标准的详尽清单</li>
-</ul>
-<h3 id="去中心化金融defi">去中心化金融（DeFi）</h3>
-<ul>
-<li><a href="https://ethlend.io">ETHLend</a> - 分散的点对点借贷市场，使世界各地的人们都能获得贷款或成为贷方。</li>
-<li><a href="https://pay.aave.com">Aave Pay</a> - Aave Pay允许用户使用其加密货币以FIAT货币向银行帐户支付。</li>
-<li><a href="https://rtrees.dappy.dev">rTrees</a> - 一种无损捐赠应用程序，用于使用DeFi兴趣来种植真实的树木。</li>
-</ul>
-<hr>
-<p><a href="https://lianqiujun.co">了解更多</a></p>
 ]]></content>
     </entry>
 </feed>
