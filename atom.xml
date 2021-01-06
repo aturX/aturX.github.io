@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2021-01-06T13:23:31.278Z</updated>
+    <updated>2021-01-06T13:30:29.118Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -275,22 +275,22 @@ removeBadWitness()
         <content type="html"><![CDATA[<h1 id="命令">命令</h1>
 <ul>
 <li>
-<p><a href="#">Git 命令</a></p>
+<p><a href="https://lianqiujun.co/post/git%E5%91%BD%E4%BB%A4/">Git 命令</a></p>
 </li>
 <li>
-<p><a href="#">IDEA 快捷键</a></p>
+<p><a href="https://lianqiujun.co/post/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA 快捷键</a></p>
 </li>
 <li>
-<p><a href="#">Linux 命令</a></p>
+<p><a href="https://lianqiujun.co/post/Linux%E5%91%BD%E4%BB%A4/">Linux 命令</a></p>
 </li>
 <li>
-<p><a href="#">Mac 命令</a></p>
+<p><a href="https://lianqiujun.co/post/mac%E5%91%BD%E4%BB%A4/">Mac 命令</a></p>
 </li>
 <li>
-<p><a href="#">Vim 命令</a></p>
+<p><a href="https://lianqiujun.co/post/vim%E5%91%BD%E4%BB%A4/">Vim 命令</a></p>
 </li>
 <li>
-<p><a href="#">Markdown 语法</a></p>
+<p><a href="https://lianqiujun.co/post/Markdown%E8%AF%AD%E6%B3%95/">Markdown 语法</a></p>
 </li>
 </ul>
 ]]></content>
