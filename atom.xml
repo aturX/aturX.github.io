@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2021-01-21T01:41:25.266Z</updated>
+    <updated>2021-01-21T02:05:10.448Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -11,6 +11,292 @@
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2021, 链 求 君 | 区 块 链</rights>
     <entry>
+        <title type="html"><![CDATA[注重实效的编程哲学]]></title>
+        <id>https://lianqiujun.co/post/zhu-chong-shi-xiao-de-bian-cheng-zhe-xue</id>
+        <link href="https://lianqiujun.co/post/zhu-chong-shi-xiao-de-bian-cheng-zhe-xue">
+        </link>
+        <updated>2021-01-21T02:03:49.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="注重实效的编程哲学">注重实效的编程哲学</h1>
+<hr>
+<p>1、关心你的技艺</p>
+<p>Care About Your Craft</p>
+<p>如果你不在乎能否漂亮地开发出软件，你又为何要耗费声明去开发软件呢？</p>
+<hr>
+<p>2、思考！你的工作</p>
+<p>Think!About Your Work</p>
+<p>关掉自动驾驶仪，接管操作。不断地批评和评估你的工作。</p>
+<hr>
+<p>3、提供各种选择，不要找蹩脚的借口</p>
+<p>Provide Options,Don't Make Lame Exceuses</p>
+<p>要提供各种选择，而不是找借口。不要说事情做不到；说明能够做什么。</p>
+<hr>
+<p>4、不要容忍破窗户</p>
+<p>Don't Live with Broken Windows</p>
+<p>当你看到糟糕的设计、错误的决策和糟糕的代码时，修正它们</p>
+<hr>
+<p>5、做变化的催化剂</p>
+<p>Be  a Catalyst for Change</p>
+<p>你不能强迫人们改变。想法，要向它们展示未来可能会怎样，并帮助它们参与对未来的创造。</p>
+<hr>
+<p>6、记住大图景</p>
+<p>Remember the Big Picture</p>
+<p>不要太过专注于细节，已致忘了查看你周围正在发生什么</p>
+<hr>
+<p>7、使质量成为需求问题</p>
+<p>Make Quality a Requirements Issue</p>
+<p>让你的用户参与确定项目真正的质量需求。</p>
+<hr>
+<p>8、定期为你的知识资产投资</p>
+<p>Invest Regularly in Your Knowlege Portfolio</p>
+<p>让学习成为习惯</p>
+<hr>
+<p>9、批判地分析你读到的和听到的</p>
+<p>Critically  Analyze What You Read and Hear</p>
+<p>不要被供应商、媒体炒作、或教条左右。要依照你自己的砍伐和你的项目情况去对信息进行分析。</p>
+<hr>
+<p>10、你说什么和你怎么说同样重要</p>
+<p>It's Both What You Say and the Way You Say It</p>
+<p>如果你不能有效地向他人传达你的了不起的想法，这些想法就毫无用处。</p>
+<hr>
+<p>11、不要重复你自己</p>
+<p>DRY---Don't Repeat Yourself</p>
+<p>代码模块的每一项只是都必须具有单一、无歧义、权威的表示</p>
+<hr>
+<p>12、让复用变得容易</p>
+<p>Make It Easy to Reuse</p>
+<p>如果复用很容易，人们就会去复用。创造一个支持复用的环境。</p>
+<hr>
+<p>13、消除无关事物之间的影响</p>
+<p>Eliminate Effects Between Unrelated Things.</p>
+<p>设计自足、独立、并具有单一、良好定义的目的的组件</p>
+<hr>
+<p>14、不存在最终决策</p>
+<p>There Are No Final Decisions</p>
+<p>没有决策是浇铸在石头上的。相反，要把每项决策都视为是写在沙滩上的，并为变化做好计划。</p>
+<hr>
+<p>15、用曳光弹找到目标</p>
+<p>Use Tracer Bullets to Find the Target</p>
+<p>曳光弹能通过实验各种事物并检查它们离目标有多远让你来追踪目标。</p>
+<hr>
+<p>16、为了学习而制作原型</p>
+<p>Prototype to learn</p>
+<p>原型制作是一种学习经验。其价值并不在于所产生的的代码，而在于所学到的经验教训</p>
+<hr>
+<p>17、靠近问题领域编程</p>
+<p>Program Close to the Problem domain</p>
+<p>用你的用户的语言进行设计和编码</p>
+<hr>
+<p>18、估算，以避免发生意外</p>
+<p>Estimate to Avoid Surprises</p>
+<p>在着手之前先进行估算。你将提前发现潜在的问题。</p>
+<hr>
+<p>19、通过代码对进度表进行迭代</p>
+<p>Iterate the Schedule with the Code</p>
+<p>用你在进行实现时获得的经验提炼项目的时间标度</p>
+<hr>
+<p>20、用纯文本保存知识</p>
+<p>Keep Knowlege in Plain Text</p>
+<p>纯文本不会过时。它能够帮助你有效地利用你的工作，并简化调试和测试</p>
+<hr>
+<p>21、利用命了Shell的力量</p>
+<p>Use the Power of Command Shells</p>
+<p>当图形用户界面无能为力时用shell</p>
+<hr>
+<p>22、用好一种编辑器</p>
+<p>Use a Single Editor Well</p>
+<p>编辑器应该是你手的延伸；确保你的编辑器是可配置、可扩展和可编程的</p>
+<hr>
+<p>23、总是使用源码控制</p>
+<p>Always Use Source Code Control</p>
+<p>源码控制是你的工作的时间机器---你能够回到过去</p>
+<hr>
+<p>24、要修正问题，而不是发出指责</p>
+<p>FIx the Problem,Not the Blame</p>
+<p>bug是你的过错还是别人的过错，并不是真的很有关系----它仍然是你的问题，它仍然需要修正</p>
+<hr>
+<p>25、不要恐慌</p>
+<p>Don't Panic When Debuging</p>
+<p>做一次深呼吸，思考什么是bug的原因</p>
+<hr>
+<p>26、“Select”没有问题</p>
+<p>“Select” Isn't Broken</p>
+<p>在OS或编译器、甚或是第三方产品或库中很少发现bug。bug很可能在应用中。</p>
+<hr>
+<p>27、不要假定，要证明</p>
+<p>Don't Assume It -- Prove It</p>
+<p>在实际环境中----使用真正的数据和边界条件-------证明你的假定</p>
+<hr>
+<p>29、学习一种文本操纵语言</p>
+<p>Learn a Text Manipulation Language</p>
+<p>你每天的很大一部分时间用来处理文本，为什么不让计算机替你完成部分工作呢？</p>
+<hr>
+<p>30、你不可能写出完美的软件</p>
+<p>You Can't Write Perfect Software</p>
+<p>软件不可能完美。保护你的代码和用户，是他们能免于能够遇见的错误</p>
+<hr>
+<p>31、通过合约进行设计</p>
+<p>Design with Contracts</p>
+<p>使用合约建立文档，并检验代码所做的事情正好是它声明要做的</p>
+<hr>
+<p>32、早崩溃</p>
+<p>Crash Early</p>
+<p>死程序造成的危害通常比有问题的程序要小得多</p>
+<hr>
+<p>33、用断言避免不可能发生的事情</p>
+<p>Use Assertions to Prevent the</p>
+<p>断言验证你的各种假定。在一个不确定的世界里，用断言保护你的代码</p>
+<hr>
+<p>34、将异常用于异常的问题</p>
+<p>Use Exception for Exceptional Problems</p>
+<p>异常可能会遭受经典的意大利面条式代码的所有可读性和可维护性问题的折磨。将异常保留给异常的事物</p>
+<hr>
+<p>35、要有始有终</p>
+<p>Finish What You Start</p>
+<p>只要可能，分配某资源的例程或对象也应该负责解除其分配</p>
+<hr>
+<p>36、使模块之间的耦合减至最少</p>
+<p>Minimize Coupling Between Modules</p>
+<p>通过编写“羞怯的”代码并应用德墨忒尔法则来避免耦合</p>
+<hr>
+<p>37、要配置，不要集成</p>
+<p>Configure,Don't Integrage</p>
+<p>要将应用的各种技术选择实现为配置选项，而不是通过集成或工程方法实现。</p>
+<hr>
+<p>38、将抽象放进代码，细节放进元数据</p>
+<p>Put Abstractions in Code,Details in Metadata</p>
+<p>为一般情况编程，将细节放在被便于的代码库之外</p>
+<hr>
+<p>39、分析工作流，以改善并发性</p>
+<p>Analyze Workflow to Improve Concurrency</p>
+<p>利用你的用户的工作流中的并发性</p>
+<hr>
+<p>40、用服务进行设计</p>
+<p>Design Using Services</p>
+<p>根据服务---独立的、在良好定义、一致的接口之后的并发对象---进行设计</p>
+<hr>
+<p>41、总是为并发进行设计</p>
+<p>Always  Design for Concurrency</p>
+<p>容许并发，你将会设计出更整洁、具有更少假定的接口</p>
+<hr>
+<p>42、使视图与模型分离</p>
+<p>Separate Views from Models</p>
+<p>要根据模型和视图设计你的应用，从而以低廉的代码获取灵活性</p>
+<hr>
+<p>43、用黑板协调工作流</p>
+<p>Use Blackboards to Coordinate Workflow</p>
+<p>用黑板协调完全不同的事实和因素，同时又使各参与方保持独立和隔离</p>
+<hr>
+<p>44、不要依靠巧合编程</p>
+<p>Don't Program by Coincidence</p>
+<p>只依靠可靠的事物。注意偶发的复杂性，不要把幸运的巧合与又目的的计划混为一谈</p>
+<hr>
+<p>45、估算你的算法的阶</p>
+<p>Estimate the Order of Your Algorithms</p>
+<p>在你编写代码之前，先大致估算事情需要多长时间</p>
+<hr>
+<p>46、测试你的估算</p>
+<p>Test Your Estimates</p>
+<p>对算法的数学分析并不会告诉你每一件事情。在你的代码的目标环境中测定它的速度</p>
+<hr>
+<p>47、早重构，常重构</p>
+<p>Refactor Early,Refactor Often</p>
+<p>就和你会在花园里除草、并重新布置一样，在需要时对代码进行重新、重做和重新架构。要铲除问题的根源</p>
+<hr>
+<p>48、未测试而设计</p>
+<p>Design to Test</p>
+<p>在你还没有编写代码时就开始思考测试问题</p>
+<hr>
+<p>49、测试你的软件，否则你的用户就得测试</p>
+<p>Test Your Software,or Your Users Will</p>
+<p>无情地测试。不要让你的用户未能查找bug</p>
+<hr>
+<p>50、不要使用你不理解的向导代码</p>
+<p>Don't Use Wizard Code You Don't Understand</p>
+<p>向导可以生成大量代码。在你把它们合并进你的项目之前，确保你理解全部这些代码。</p>
+<hr>
+<p>51、不要搜集需求---挖掘它们</p>
+<p>Don't Gather Requirements --Dig for Them</p>
+<p>需求很少存在在表面上。它们深深地埋藏在层层假定、误解和政治手段的下面。</p>
+<hr>
+<p>52、与用户一同工作，以像用户一样思考</p>
+<p>Work wih a User to Think Like a User</p>
+<p>要了解系统实际上将如何被使用，这是最好的方法。</p>
+<hr>
+<p>53、抽象比细节获得更长久</p>
+<p>Abstractions Live Longer than Details</p>
+<p>“投资”于抽象，而不是实现。抽象能在来自不同的实现和新技术的变化的“攻击”之下存活下去</p>
+<hr>
+<p>54、使用项目词汇表</p>
+<p>Use a Project Glossary</p>
+<p>创建并维护项目中使用的专用术语和词汇的单一信息源</p>
+<hr>
+<p>55、不要在盒子外面思考---要找到盒子</p>
+<p>Don't Think Outside the Box--Find the Box</p>
+<p>在遇到不可能解决的问题时，要确定真正的约束。问问你自己：“”它必须以这种方式完成吗？它真的必须完成吗？&quot;</p>
+<hr>
+<p>56、等你准备好再开始</p>
+<p>Start When You're Ready</p>
+<p>你的一生都在积累经验。不要忽视反复出现的疑虑</p>
+<hr>
+<p>57、对有些事情”做“胜于”描述“</p>
+<p>Some Things Are Better Done than Described</p>
+<p>不要掉进规范的螺旋----在某个时刻，你需要开始编码</p>
+<hr>
+<p>58、不要做形式方法的奴隶</p>
+<p>Don't Be a Slave to Formal Methods</p>
+<p>如果你没有把某项技术放进你的开发实践和能力的语境中，不要盲目地采用它。</p>
+<hr>
+<p>59、昂贵的工具不一定能制作出更好的设计</p>
+<p>Costly Tools Don't Produce Better Designs</p>
+<p>小心供应商的炒作，行业教条、以及价格标签的诱惑。要根据工具的价值判断它们</p>
+<hr>
+<p>60、围绕功能组织团队</p>
+<p>Organize Teams Around Functionality</p>
+<p>不要把设计师与编码员分开，也不要把测试员与数据建模员分开。按照你构建代码的方式构建团队。</p>
+<hr>
+<p>61、不要使用手工流程</p>
+<p>Don't Use Manual Procedures</p>
+<p>shell脚本或批文件会一次次地以同一顺序执行同样的指令。</p>
+<hr>
+<p>62、早测试，场测试，自动测试</p>
+<p>Test Early,Test Often.Test Automatically</p>
+<p>与呆着书架上的测试计划相比，每次构建时运行的测试要有效得多。</p>
+<hr>
+<p>63、要通过全部测试，编码才算完成</p>
+<p>Coding Ain't Done &quot;Til All  the Tests Run</p>
+<p>就是这样</p>
+<hr>
+<p>64、通过”蓄意破坏“测试你的测试</p>
+<p>Use Saboteurs to Test Your Testing</p>
+<p>在单独的软件副本上故意引入bug，以检验测试能够抓住它们</p>
+<hr>
+<p>65、测试状态覆盖，而不是代码覆盖</p>
+<p>Test State Coverage,Not Code Coverage</p>
+<p>确定并测试重要的程序状态。只是测试代码行是不够的</p>
+<hr>
+<p>66、一个bug只抓一次</p>
+<p>Find Bugs Once</p>
+<p>一旦测试员找到一个bug，这应该是测试员最后一次找到它。以后的自动测试应该对其进行检查</p>
+<hr>
+<p>67、英语就是一种编程</p>
+<p>English is Just a Programming Language</p>
+<p>像你写代码一样编写文档：遵守DRY原则、使用元数据、MVC、自动生成，等等</p>
+<hr>
+<p>68、把文档建在里面，不要拴在外面</p>
+<p>Build Documentation In,Don't Bolt it On</p>
+<p>与代码分类的 文档 不太可能被修正和更新</p>
+<hr>
+<p>69、温和地超出用户的期望</p>
+<p>Gently Exceed Your Users' Expectations</p>
+<p>要理解你的用户的期望，然后给他们的东西要多那么一点</p>
+<hr>
+<p>70、在你的作品上签名</p>
+<p>Sign Your Work</p>
+<p>过去时代的手艺人为能在他们的作品上签名而自豪。你也应该如此</p>
+<hr>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[读书&观影]]></title>
         <id>https://lianqiujun.co/post/du-shu-andguan-ying</id>
         <link href="https://lianqiujun.co/post/du-shu-andguan-ying">
@@ -18,156 +304,156 @@
         <updated>2021-01-21T01:31:10.000Z</updated>
         <content type="html"><![CDATA[<h1 id="2021-年书单">2021 年书单</h1>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3990258"><label class="task-list-item-label" for="task-item-3990258"> 《程序员修炼之道:从小工到专家》</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7958526"><label class="task-list-item-label" for="task-item-7958526"> 《程序员修炼之道:从小工到专家》</label></li>
 </ul>
 <p>[资源](https://swarm-gateways.net/bzz:/378fbce4da8c5914687b4e6f2df75c071dbc23b00548781c778baf4b74d5cbdb/程序员修炼之道 从小工到专家.pdf)</p>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4048070"><label class="task-list-item-label" for="task-item-4048070"> 《曾国藩传》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3035562"><label class="task-list-item-label" for="task-item-3035562"> 《曾国藩传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3708343"><label class="task-list-item-label" for="task-item-3708343"> 《精通以太坊（第二版）》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1052594"><label class="task-list-item-label" for="task-item-1052594"> 《精通以太坊（第二版）》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3776237"><label class="task-list-item-label" for="task-item-3776237"> 《人类简史》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3529237"><label class="task-list-item-label" for="task-item-3529237"> 《人类简史》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3120123"><label class="task-list-item-label" for="task-item-3120123"> 《我生活都种种模式》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3344252"><label class="task-list-item-label" for="task-item-3344252"> 《我生活都种种模式》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5285633"><label class="task-list-item-label" for="task-item-5285633"> 《众病之王》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8285705"><label class="task-list-item-label" for="task-item-8285705"> 《众病之王》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3298682"><label class="task-list-item-label" for="task-item-3298682"> 《程序是如何运行的》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2576048"><label class="task-list-item-label" for="task-item-2576048"> 《程序是如何运行的》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7994452"><label class="task-list-item-label" for="task-item-7994452"> 《编程语言实现模式》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1147395"><label class="task-list-item-label" for="task-item-1147395"> 《编程语言实现模式》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5909390"><label class="task-list-item-label" for="task-item-5909390"> 《区块链重塑经济与世界》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4342881"><label class="task-list-item-label" for="task-item-4342881"> 《区块链重塑经济与世界》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1186244"><label class="task-list-item-label" for="task-item-1186244"> 《精通比特币:第二版》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6018658"><label class="task-list-item-label" for="task-item-6018658"> 《精通比特币:第二版》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7647686"><label class="task-list-item-label" for="task-item-7647686"> 《剑指offer》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9672005"><label class="task-list-item-label" for="task-item-9672005"> 《剑指offer》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9468292"><label class="task-list-item-label" for="task-item-9468292"> 《充足理由率的四重根》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-232295"><label class="task-list-item-label" for="task-item-232295"> 《充足理由率的四重根》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7496672"><label class="task-list-item-label" for="task-item-7496672"> 《哥德尔、艾舍尔、巴赫》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8342940"><label class="task-list-item-label" for="task-item-8342940"> 《哥德尔、艾舍尔、巴赫》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5576454"><label class="task-list-item-label" for="task-item-5576454"> 《鸟哥Linux私房菜基础篇》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5473778"><label class="task-list-item-label" for="task-item-5473778"> 《鸟哥Linux私房菜基础篇》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3116134"><label class="task-list-item-label" for="task-item-3116134"> 《区块链：定义金融格局》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5612693"><label class="task-list-item-label" for="task-item-5612693"> 《区块链：定义金融格局》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2052718"><label class="task-list-item-label" for="task-item-2052718"> 《编码》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5760677"><label class="task-list-item-label" for="task-item-5760677"> 《编码》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-946419"><label class="task-list-item-label" for="task-item-946419"> 《像程序员一样思考》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3393016"><label class="task-list-item-label" for="task-item-3393016"> 《像程序员一样思考》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9791159"><label class="task-list-item-label" for="task-item-9791159"> 《黑客与画家》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9551907"><label class="task-list-item-label" for="task-item-9551907"> 《黑客与画家》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7629480"><label class="task-list-item-label" for="task-item-7629480"> 《人件》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2213336"><label class="task-list-item-label" for="task-item-2213336"> 《人件》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4320222"><label class="task-list-item-label" for="task-item-4320222"> 《深入理解计算机系统》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4288157"><label class="task-list-item-label" for="task-item-4288157"> 《深入理解计算机系统》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9677623"><label class="task-list-item-label" for="task-item-9677623"> 《区块链社会》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3828134"><label class="task-list-item-label" for="task-item-3828134"> 《区块链社会》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1540398"><label class="task-list-item-label" for="task-item-1540398"> 《人类群星闪耀时》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9376124"><label class="task-list-item-label" for="task-item-9376124"> 《人类群星闪耀时》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6880207"><label class="task-list-item-label" for="task-item-6880207"> 《Python密码学编程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5471708"><label class="task-list-item-label" for="task-item-5471708"> 《Python密码学编程》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9140203"><label class="task-list-item-label" for="task-item-9140203"> 《计算机程序的构造和解释》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-19099"><label class="task-list-item-label" for="task-item-19099"> 《计算机程序的构造和解释》</label></p>
 </li>
 </ul>
 <h1 id="2020-年书单">2020 年书单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-164184"><label class="task-list-item-label" for="task-item-164184"> 1. 《维特根斯坦传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3823507"><label class="task-list-item-label" for="task-item-3823507"> 1. 《维特根斯坦传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3737431"><label class="task-list-item-label" for="task-item-3737431"> 2. 《Python实现一条区块链》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8184576"><label class="task-list-item-label" for="task-item-8184576"> 2. 《Python实现一条区块链》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6890643"><label class="task-list-item-label" for="task-item-6890643"> 3. 《爱因斯坦传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2567117"><label class="task-list-item-label" for="task-item-2567117"> 3. 《爱因斯坦传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2060916"><label class="task-list-item-label" for="task-item-2060916"> 4.  《精通比特币：第二版》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1114078"><label class="task-list-item-label" for="task-item-1114078"> 4.  《精通比特币：第二版》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6767049"><label class="task-list-item-label" for="task-item-6767049"> 5. 《硅谷之火》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7384055"><label class="task-list-item-label" for="task-item-7384055"> 5. 《硅谷之火》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3902201"><label class="task-list-item-label" for="task-item-3902201"> 6. 《故事》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1560559"><label class="task-list-item-label" for="task-item-1560559"> 6. 《故事》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7688986"><label class="task-list-item-label" for="task-item-7688986"> 7. 《网络是怎样连接的》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5245688"><label class="task-list-item-label" for="task-item-5245688"> 7. 《网络是怎样连接的》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8314390"><label class="task-list-item-label" for="task-item-8314390"> 8. 《刻意练习》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-414266"><label class="task-list-item-label" for="task-item-414266"> 8. 《刻意练习》</label></p>
 </li>
 </ul>
 <h1 id="2018-年书单">2018 年书单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4970615"><label class="task-list-item-label" for="task-item-4970615"> 1. 《发现的乐趣》 理查德 费曼</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6157171"><label class="task-list-item-label" for="task-item-6157171"> 1. 《发现的乐趣》 理查德 费曼</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9734025"><label class="task-list-item-label" for="task-item-9734025"> 2. 《小程序开发》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1536744"><label class="task-list-item-label" for="task-item-1536744"> 2. 《小程序开发》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2737534"><label class="task-list-item-label" for="task-item-2737534"> 3. 《你的灯亮着吗？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2155013"><label class="task-list-item-label" for="task-item-2155013"> 3. 《你的灯亮着吗？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4062722"><label class="task-list-item-label" for="task-item-4062722"> 4. 《计算中的上帝》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2048218"><label class="task-list-item-label" for="task-item-2048218"> 4. 《计算中的上帝》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3690711"><label class="task-list-item-label" for="task-item-3690711"> 5. 《理解专业程序员》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4773213"><label class="task-list-item-label" for="task-item-4773213"> 5. 《理解专业程序员》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2274615"><label class="task-list-item-label" for="task-item-2274615"> 6. 《小王子》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6946790"><label class="task-list-item-label" for="task-item-6946790"> 6. 《小王子》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2295643"><label class="task-list-item-label" for="task-item-2295643"> 7. 《Head First HTML》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5152726"><label class="task-list-item-label" for="task-item-5152726"> 7. 《Head First HTML》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1706323"><label class="task-list-item-label" for="task-item-1706323"> 8. 《人生的智慧》  -- 叔本华</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5639245"><label class="task-list-item-label" for="task-item-5639245"> 8. 《人生的智慧》  -- 叔本华</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8752924"><label class="task-list-item-label" for="task-item-8752924"> 9. 《乔布斯传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-322023"><label class="task-list-item-label" for="task-item-322023"> 9. 《乔布斯传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3970011"><label class="task-list-item-label" for="task-item-3970011"> 10. 《数学是什么？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5702885"><label class="task-list-item-label" for="task-item-5702885"> 10. 《数学是什么？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6186982"><label class="task-list-item-label" for="task-item-6186982"> 11. 《Django教程》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9906931"><label class="task-list-item-label" for="task-item-9906931"> 11. 《Django教程》</label></p>
 </li>
 </ul>
 <h4 id="观影记录">观影记录</h4>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4530854"> <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-4530854"> [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9370370"> <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-9370370"> [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2507402"> <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-2507402"> [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6060847"> <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-6060847"> [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7275764"> <a href="#">《比特币：钱的终结》<label class="task-list-item-label" for="task-item-7275764"> [《比特币：钱的终结》](#)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9122766"> <a href="#">《比特币：钱的终结》<label class="task-list-item-label" for="task-item-9122766"> [《比特币：钱的终结》](#)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5056313"> <a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣<label class="task-list-item-label" for="task-item-5056313"> [访谈纪录片：发现的乐趣](https://v.qq.com/x/page/f0380os1ryc.html)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-221072"> <a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣<label class="task-list-item-label" for="task-item-221072"> [访谈纪录片：发现的乐趣](https://v.qq.com/x/page/f0380os1ryc.html)</label></p>
 </li>
 </ul>
 ]]></content>
@@ -834,19 +1120,6 @@ print(r)
 <p><a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程</a></p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Golang 常见问题汇总]]></title>
-        <id>https://lianqiujun.co/post/golang-chang-jian-wen-ti-hui-zong</id>
-        <link href="https://lianqiujun.co/post/golang-chang-jian-wen-ti-hui-zong">
-        </link>
-        <updated>2021-01-06T06:37:01.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="语法问题">语法问题</h1>
-<ol>
-<li>变量定义简写</li>
-</ol>
-<p><code>:=</code> 只能在函数内部使用，如果声明全局变量需要使用<code>var</code>关键字,否则会出现报错，例如 <code>syntax error: non-declaration statement outside function bod</code></p>
 ]]></content>
     </entry>
 </feed>
