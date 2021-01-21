@@ -79,7 +79,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1610542653135"
+            <form id="gridea-search-form" style="position: relative" data-update="1611192935741"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -110,6 +110,619 @@
   <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
+      
+      <!-- 每行的总容器 -->
+      <div class="post-row-container">
+        <!-- 第0层；标题 -->
+        <div class="title-floor">
+          <div class="post-title-container">
+            
+            <a href="https://lianqiujun.co/post/vim命令">
+              <h2 class="post-title">
+                工具手册 - Vim命令
+              </h2>
+            </a>
+          </div>
+        </div>
+        <!-- 第一层：包含文章描述、时间信息、封面图 -->
+        <div class="post-row-first-floor">
+          <div class="post-preview">
+            <h3 class="post-subtitle">
+              <h3 id="常-用-操-作">😎  常 用 操 作</h3>
+<pre><code>！wq    文件名.后缀
+
+shift + a  跳转行末并写入
+
+shift + i   跳转行首并写入
+
+yy 复制光标所在行  
+
+在光标之后粘贴  p
+</code></pre>
+<h3 id="移-动">🐶 移 动</h3>
+<p><strong>以字（符）为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">上</td>
+<td style="text-align:left"><code>k</code></td>
+</tr>
+<tr>
+<td style="text-align:left">下</td>
+<td style="text-align:left"><code>j</code></td>
+</tr>
+<tr>
+<td style="text-align:left">左</td>
+<td style="text-align:left"><code>h</code></td>
+</tr>
+<tr>
+<td style="text-align:left">右</td>
+<td style="text-align:left"><code>l</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以单词为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">前一个单词尾</td>
+<td style="text-align:left"><code>ge</code></td>
+</tr>
+<tr>
+<td style="text-align:left">后一个单词首</td>
+<td style="text-align:left"><code>w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词首（已在本词首则跳到前一单词首）</td>
+<td style="text-align:left"><code>b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">本单词尾（已在本词尾则跳到后一单词尾）</td>
+<td style="text-align:left"><code>e</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>以屏幕为单位</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下翻页</td>
+<td style="text-align:left"><code>CTRL-f</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻页</td>
+<td style="text-align:left"><code>CTRL-b</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下翻半页</td>
+<td style="text-align:left"><code>CTRL-d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上翻半页</td>
+<td style="text-align:left"><code>CTRL-u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上一行</td>
+<td style="text-align:left"><code>CTRL-y</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下一行</td>
+<td style="text-align:left"><code>CTRL-e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕上方</td>
+<td style="text-align:left"><code>H</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕中间</td>
+<td style="text-align:left"><code>M</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标移到屏幕下方</td>
+<td style="text-align:left"><code>L</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕上方</td>
+<td style="text-align:left"><code>zt</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕中间</td>
+<td style="text-align:left"><code>zz</code></td>
+</tr>
+<tr>
+<td style="text-align:left">光标所在位置移到屏幕下方</td>
+<td style="text-align:left"><code>zb</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>行号</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到第 num 行</td>
+<td style="text-align:left"><code>:num</code> 或 <code>numG</code> 或 <code>numgg</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>文件</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">跳到文件头</td>
+<td style="text-align:left"><code>gg</code></td>
+</tr>
+<tr>
+<td style="text-align:left">跳到文件尾</td>
+<td style="text-align:left"><code>G</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="编-辑">🦊 编 辑</h3>
+<h4 id="复制">复制</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">复制光标所在单词</td>
+<td style="text-align:left"><code>yiw</code></td>
+</tr>
+<tr>
+<td style="text-align:left">复制光标所在行</td>
+<td style="text-align:left"><code>yy</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="粘贴">粘贴</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">在光标之后粘贴</td>
+<td style="text-align:left"><code>p</code></td>
+</tr>
+<tr>
+<td style="text-align:left">在光标之前粘贴</td>
+<td style="text-align:left"><code>P</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="剪切">剪切</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">剪切选中区域</td>
+<td style="text-align:left"><code>d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">剪切光标所在行</td>
+<td style="text-align:left"><code>dd</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="替换">替换</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将全文中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:%s/str1/str2/g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将 1 到 5 行中的 str1 替换为 str2</td>
+<td style="text-align:left"><code>:1,5s/str1/str2/g</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="大小写">大小写</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">将选中内容大小写互换</td>
+<td style="text-align:left"><code>~</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为小写</td>
+<td style="text-align:left"><code>gu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将选中内容全转为大写</td>
+<td style="text-align:left"><code>gU</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成小写</td>
+<td style="text-align:left"><code>guu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">将当前行变成大写</td>
+<td style="text-align:left"><code>gUU</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="选择">选择</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">选中上一次选择的区域</td>
+<td style="text-align:left"><code>gv</code></td>
+</tr>
+<tr>
+<td style="text-align:left">选中括号内区域</td>
+<td style="text-align:left"><code>vi{</code>、<code>vi[</code>、<code>vi(</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="搜-索">🙈 搜 索</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">向下查找字符串</td>
+<td style="text-align:left"><code>/str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向上查找字符串</td>
+<td style="text-align:left"><code>?str</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找下一个</td>
+<td style="text-align:left"><code>n</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查找上一个</td>
+<td style="text-align:left"><code>N</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>*</code></td>
+</tr>
+<tr>
+<td style="text-align:left">向下查找光标所在单词</td>
+<td style="text-align:left"><code>#</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="正-则-表-达-式">🐤 正 则 表 达 式</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">匹配单词左边界</td>
+<td style="text-align:left"><code>\&lt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">匹配单词右边界</td>
+<td style="text-align:left"><code>\&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去重</td>
+<td style="text-align:left"><code>:g/^\(.*\)$\n\1/d</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="常-用">🐔 常 用</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">删除空行</td>
+<td style="text-align:left"><code>:g/^$/d</code></td>
+</tr>
+<tr>
+<td style="text-align:left">撤销/UNDO</td>
+<td style="text-align:left"><code>u</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重做/REDO</td>
+<td style="text-align:left"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:left">统计行/单词/字符/字节数</td>
+<td style="text-align:left"><code>g C-g</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="全-局">🐋 全 局</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">退出</td>
+<td style="text-align:left"><code>:q</code></td>
+</tr>
+<tr>
+<td style="text-align:left">强制执行</td>
+<td style="text-align:left"><code>!</code></td>
+</tr>
+<tr>
+<td style="text-align:left">执行外部命令</td>
+<td style="text-align:left"><code>:!</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="文-件-操-作">🐞 文 件 操 作</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">打开</td>
+<td style="text-align:left"><code>:e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">打开文件对话框</td>
+<td style="text-align:left"><code>:bro e</code></td>
+</tr>
+<tr>
+<td style="text-align:left">保存</td>
+<td style="text-align:left"><code>:w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">另存为对话框</td>
+<td style="text-align:left"><code>:bro w</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看历史文件列表</td>
+<td style="text-align:left"><code>:ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">查看并打开历史文件</td>
+<td style="text-align:left"><code>:bro ol</code></td>
+</tr>
+<tr>
+<td style="text-align:left">重命名当前文件</td>
+<td style="text-align:left"><code>:f filename</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vimdiff">🐗 vimdiff</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">移动到上一个不同处</td>
+<td style="text-align:left"><code>[c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">移动到下一个不同处</td>
+<td style="text-align:left"><code>]c</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用当前文件的</td>
+<td style="text-align:left"><code>dp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">该差异点使用其它文件的</td>
+<td style="text-align:left"><code>do</code></td>
+</tr>
+<tr>
+<td style="text-align:left">手动刷新重新比较</td>
+<td style="text-align:left"><code>:diffupdate</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="buffer">🐼 Buffer</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">查看 Buffer 列表</td>
+<td style="text-align:left"><code>:ls</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的下一个 Buffer</td>
+<td style="text-align:left"><code>:bn</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的上一个 Buffer</td>
+<td style="text-align:left"><code>:bp</code></td>
+</tr>
+<tr>
+<td style="text-align:left">转到 Buffer 列表中的 num 号 Buffer</td>
+<td style="text-align:left"><code>:bnum</code></td>
+</tr>
+<tr>
+<td style="text-align:left">你之前待过的一个 Buffer</td>
+<td style="text-align:left"><code>:b#</code></td>
+</tr>
+<tr>
+<td style="text-align:left">从 Buffer 列表中删除 num 号 Buffer</td>
+<td style="text-align:left"><code>:bdnum</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="组-合-命-令">🦀 组 合 命 令</h3>
+<p>可以使用 <code>|</code> 来组合命令，比如 <code>cmd1 | cmd2</code>。</p>
+<h3 id="代-码">🌘 代 码</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">格式化代码</td>
+<td style="text-align:left"><code>gg=G</code></td>
+</tr>
+<tr>
+<td style="text-align:left">去除 1-20 行首的行号</td>
+<td style="text-align:left"><code>:1,20s/^\\s\*[0-9]\*\\s\*//g</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开全部折叠</td>
+<td style="text-align:left"><code>zR</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前层级折叠</td>
+<td style="text-align:left"><code>zr</code></td>
+</tr>
+<tr>
+<td style="text-align:left">全部折叠</td>
+<td style="text-align:left"><code>zM</code></td>
+</tr>
+<tr>
+<td style="text-align:left">当前层级折叠</td>
+<td style="text-align:left"><code>zm</code></td>
+</tr>
+<tr>
+<td style="text-align:left">切换折叠/展开</td>
+<td style="text-align:left"><code>za</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠/展开当前大区块</td>
+<td style="text-align:left"><code>zA</code></td>
+</tr>
+<tr>
+<td style="text-align:left">折叠当前区块</td>
+<td style="text-align:left"><code>zc</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归折叠当前大区块</td>
+<td style="text-align:left"><code>zC</code></td>
+</tr>
+<tr>
+<td style="text-align:left">展开当前区块</td>
+<td style="text-align:left"><code>zo</code></td>
+</tr>
+<tr>
+<td style="text-align:left">递归展开当前大区块</td>
+<td style="text-align:left"><code>zO</code></td>
+</tr>
+<tr>
+<td style="text-align:left">格式化 json 数据</td>
+<td style="text-align:left"><code>:%!python -m json.tool</code></td>
+</tr>
+<tr>
+<td style="text-align:left">缩进当前行</td>
+<td style="text-align:left"><code>&gt;&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">反缩进当前行</td>
+<td style="text-align:left"><code>&lt;&lt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="插">🐾 插</h3>
+
+            </h3>
+            <p class="post-meta">
+              <span class="time">2020-01-01</span>
+              <span>,</span>
+              <span class="post-stats">5 min read</span>
+            </p>
+          </div>
+          
+        </div>
+        <!-- 第二层：下划线、占位标签、tags -->
+        <div class="post-row-sec-floor">
+          <hr>
+          <div class="clearfix"></div>
+          
+          <a href="https://lianqiujun.co/tag/Utp9E6V0u" class="post-tag">
+            开发工具
+          </a>
+          
+        </div>
+      </div>
+      </>
       
       <!-- 每行的总容器 -->
       <div class="post-row-container">
