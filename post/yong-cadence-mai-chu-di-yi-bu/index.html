@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>使用Pipenv管理Python虚拟环境 | 链 求 君 | 区 块 链</title>
+<title>用Cadence迈出第一步 | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="使用Pipenv管理Python虚拟环境 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="用Cadence迈出第一步 | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,8 +38,8 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="使用Pipenv管理Python虚拟环境" />
-  <meta property="og:url" content="https://lianqiujun.co/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing" />
+  <meta property="og:description" content="用Cadence迈出第一步" />
+  <meta property="og:url" content="https://lianqiujun.co/post/yong-cadence-mai-chu-di-yi-bu" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="链 求 君 | 区 块 链" />
@@ -159,13 +159,11 @@
             <div class="post-heading">
               <span class="tags">
                 
-                <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">Python</a>
-                
               </span>
-              <h1>使用Pipenv管理Python虚拟环境</h1>
+              <h1>用Cadence迈出第一步</h1>
               <span class="meta">
                 Posted on
-                2020-06-29，3 min read
+                2021-02-28，6 min read
               </span>
             </div>
           
@@ -180,132 +178,109 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <h1 id="1-pipenv-的安装">1. Pipenv 的安装</h1>
-<p>python3+ 安装 pipenv 的依赖包</p>
-<pre><code>pip3 install pipenv
-</code></pre>
-<h1 id="2-创建pipenv-的虚拟环境">2. 创建Pipenv 的虚拟环境</h1>
-<p>具体执行步骤如下：</p>
-<p>（1）命令行进入项目目录下</p>
-<p>（2）创建Python虚拟环境</p>
-<p>执行<code>pipenv --python 3.7</code><br>
-生成Python 3.7 版本虚拟环境。（本地必须先具备该版本Python环境）<br>
-或者可以使用，<code>pipenv --three</code> 则使用系统当前的 python3 版本生成虚拟环境。</p>
-<p>完成创建后，项目目录下会产生<code>Pipfile</code>记录项目依赖。</p>
-<p>（3）验证环境</p>
-<p>执行<code>pipenv --venv</code>,显示当前虚拟环境所用的解释器位置。</p>
-<p>（4）配置Pycharm的虚拟环境</p>
-<p>根据（3）中获得的虚拟环境解释器位置，在Pycharm中进行配置，具体过程如下。</p>
-<h1 id="3-pycharm-连接虚拟环境">3. Pycharm 连接虚拟环境</h1>
-<p>（1）配置Pycharm项目虚拟环境</p>
-<p>打开 <code>Pycharm</code>，点击 <code>File -&gt; settings -&gt; Project</code> 选择你要更改的环境，如果没有或点击<code>+</code>进行环境添加。<br>
-命令行中用<code>pipenv --venv</code>,查看当前虚拟环境所用的解释器位置，查到项目的虚拟环境目录进行配置。</p>
-<p>在添加环境时，找到目录中<code>Script</code>文件夹中<code>python.exe</code>后点击确认。</p>
-<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1593401275807.PNG" alt="" loading="lazy"></figure>
-<p>现在就获得了一个干净的Python 3.7 虚拟环境。</p>
-<p>（2）配置Pycharm命令行环境</p>
-<p>避免命令行中Python执行环境和系统环境搞混淆，需要进行配置。</p>
-<p>设置修改项目中的 Python Console 控制台，避免和系统环境搞混<br>
-<code>File -&gt; settings -&gt; Project</code> 中<code>结构、执行、部署</code>进行修改<code>Console</code>,设置好工作目录为项目目录。</p>
-<figure data-type="image" tabindex="2"><img src="https://lianqiujun.co/post-images/1593401293189.PNG" alt="" loading="lazy"></figure>
-<h1 id="4-安装项目依赖包">4. 安装项目依赖包</h1>
-<h3 id="下载慢修改源">下载慢，修改源</h3>
-<pre><code>[[source]]
-
-url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
-verify_ssl = true
-name = &quot;pypi&quot;
-</code></pre>
-<h3 id="命令">命令：</h3>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>进入pipenv的虚拟环境中。</p>
-<ul>
-<li>pipenv install</li>
-</ul>
-<p>安装<code>Pipfile</code>中的依赖包。</p>
-<ul>
-<li>pipenv install xxx</li>
-</ul>
-<p>安装指定依赖包，并更新至<code>Pipfile</code>。</p>
-<ul>
-<li>pipenv lock</li>
-</ul>
-<p>锁定项目依赖，生成<code>Pipfile.lock</code>文件。</p>
-<ul>
-<li>pipenv run xxx.py</li>
-</ul>
-<p>在虚拟环境下执行脚本。</p>
-<h1 id="5-常用操作">5. 常用操作</h1>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>pipenv新建的虚拟环境放在统一的目录下, 在某个目录下运行pipenv<br>
-shell时pipenv会自动在虚拟环境目录下搜索以当前目录名称开头的虚拟环境目录,如果没找到则判断为无虚拟环境。</p>
-<ul>
-<li>pipenv graph</li>
-</ul>
-<p>查看依赖包。</p>
-<ul>
-<li>pipenv install requests</li>
-</ul>
-<p>用Pipenv 安装包。</p>
-<ul>
-<li>pipenv install pytest --dev</li>
-</ul>
-<p>分环境配置包，有些包只在开发环境下使用dev</p>
-<ul>
-<li>pipenv uninstall requests</li>
-</ul>
-<p>卸载Python包</p>
-<ul>
-<li>pipenv uninstall --all</li>
-</ul>
-<p>卸载全部</p>
-<ul>
-<li>pipenv lock<br>
-有时lock文件不存在了，再次生成。</li>
-</ul>
-<h1 id="6-参考">6. 参考</h1>
+          <h1 id="用cadence迈出第一步">用Cadence迈出第一步</h1>
+<p>作者： <code>Joshua Hannan</code></p>
+<p>原文： <code>https://joshuahannan.medium.com/taking-your-first-steps-with-cadence-19dde86bbd0</code></p>
+<p><img src="https://swarm-gateways.net/bzz:/b498be7eef3bdec489f8429a6d1ce06e01c12a0c443adc5921340099b29ced02/1_GcG84v5U97IebXhyMw65Nw%20(1).png" alt="" loading="lazy"><br>
+<code>F 也代表 Fun</code></p>
+<p>你好！我叫Josh Hannan，是Dapper Labs Flow团队的智能合约工程师。自2017年初以来，我一直在区块链领域，花了几年时间从事以太坊项目，并于2019年9月开始与Flow团队合作。在Dapper Labs，我编写Cadence智能合约和文档，并协助社区工作。</p>
+<p>我每周会写一次短文（假设我能在最后期限完成）关于什么是Cadence，目前在我的博客顶部是关于Cadence的文章。我还将重点介绍我遇到的社区中有趣的项目！</p>
+<p>Cadence是一门令人着迷的语言，我想尽我所能开始更多有关它的介绍。</p>
+<h2 id="什么是-flow">什么是 Flow？</h2>
+<p>Flow是为下一代应用程序，游戏以及为其提供动力的数字资产而构建的新区块链。Flow的独特架构使其无需分片即可进行扩展，同时仍提供每个人都希望从区块链获得的相同的去中心化和安全性。</p>
+<p><img src="https://swarm-gateways.net/bzz:/5c2b16b4c7230d9d458d18e2cd55c1f7f8d7afd9bec50054c99a4e81b201fe3a/1_FUuphC1mmWrVXGUxa7dVww.gif" alt="" loading="lazy"><br>
+<code>可以，您可以在这里花些时间。我第一次看这个架构就重复观看了大约10分钟。</code></p>
+<hr>
+<h2 id="从哪儿开始了解-flow">从哪儿开始了解 Flow？</h2>
+<p>最近，人们对Flow产生了很多新的兴趣。也许每个人都制定了新年计划，以了解Flow？也许在Elon Musk 的Tweet™中也会提到了Flow？也许有一款基于Flow的NFT游戏正在迅速流行，并吸引了想要为其开发工具和其他类似体验的开发人员？这都是有可能的。😜</p>
+<p>无论哪种方式，Flow 社区中都有很多新人，并且很多人想了解Cadence。虽然并不总是很清楚，但是从哪里开始，以及在学习了基础知识之后就应该去哪里。</p>
+<p>首先，如果您是区块链的新手，我强烈建议您在继续Cadence之旅之前，先找到指南或在线课程，向您介绍分布式分类账技术的基础知识（超出本文范围）。</p>
+<p>我还建议您阅读Flow Primer，以对Flow区块链的体系结构有一个基本的了解。</p>
+<p><a href="https://zh.onflow.org/primer#primer-intro">Flow Primer： 开发世界的区块链</a></p>
+<hr>
+<h3 id="步骤1cadence简介">步骤1：Cadence简介</h3>
+<p>在尝试学习语言之前，必须先理解, <a href="https://docs.onflow.org/cadence">Cadence语言</a>的创造做了哪些伟大的工作，理解Cadence背后的原理以及为什么采用这样重要的设计决策。</p>
+<p>我还建议您查阅Dapper Labs首席技术官，Flow and Cadence的首席架构师之一Dete Shirley的<a href="https://medium.com/@dete73">博客文章</a>。他解释了为什么Cadence编程模型（面向资源的编程）是数字资产的理想模型。<br>
+Decentology的另一篇博客文章介绍了Flow and Cadence账户模型：</p>
+<p><a href="https://www.decentology.com/guides-and-tutorials/blockchain-accounts-flow-vs-ethereum">Flow 与以太坊 的账户模型有何不同？ </a></p>
+<p>他们在概述Flow编程和独特的账户模型方面介绍得很好。</p>
+<hr>
+<h3 id="步骤2cadence教程">步骤2：Cadence教程</h3>
+<p>接下来，您应该完成所有的Cadence教程，从“<a href="https://docs.onflow.org/cadence/tutorial/01-first-steps">第一步</a>”开始，到“<a href="https://docs.onflow.org/cadence/tutorial/08-voting/">投票合同</a>”结束。这些教程使用真实合约来逐步引导您了解Cadence的重要功能。</p>
+<p>这些教程将帮助您熟悉Flow Playground，这是一个出色的工具，可以在浏览器中快速编写和手动测试智能合约！</p>
+<p><img src="https://swarm-gateways.net/bzz:/1fea74a633929eb5ef9bad009d6a8ec9c39f78e4d7620cbf96206ffcf82e86c3/playground.png" alt="" loading="lazy"><br>
+<code>playground 示例</code></p>
+<p>还有一个Visual Studio代码插件您可以安装，具备语法高亮和VSCode内置Flow 区块链模拟器！很整洁吧？</p>
+<hr>
+<h3 id="步骤3标准实现">步骤3：标准实现</h3>
+<p>正如您将在教程中了解的那样，即使实际上并不需要，许多区块链项目都使用同质化代币（fungible tokens），非同质化代币（non-fungible tokens）或同时使用这两种。</p>
+<p>我们强烈建议您使用两种类型的标准接口，以便与其他智能合约互操作。它们各自位于单独的Github存储库中。</p>
 <ul>
 <li>
-<p><a href="https://cuiqingcai.com/5846.html">Pipenv的常用操作</a></p>
+<p><a href="https://github.com/onflow/flow-ft">同质化代币（fungible tokens）标准</a></p>
 </li>
 <li>
-<p><a href="https://blog.csdn.net/qq_20728575/article/details/82949529">Pycharm使用Pipenv</a></p>
+<p><a href="https://github.com/onflow/flow-nft">非同质化代币（non-fungible tokens）标准</a></p>
 </li>
 </ul>
+<hr>
+<h3 id="步骤4cadence合约实践">步骤4：Cadence合约实践</h3>
+<p>至此，我相信您已经完全被Cadence吸引了，并且正在跃跃欲试，所以请看看其他人使用这种令人难以置信的编程语言所构建的项目。</p>
+<p>下面是我们在在测试网和/或主网上运行的Cadence智能合约的一些很好的例子。（我可能有一点偏见，因为我帮助写了一些。）</p>
+<ul>
+<li>
+<p><a href="https://github.com/onflow/flow-core-contracts">Flow核心合约</a>： 此项目包含作为核心Flow协议一部分的智能合约和交易。他们包含Flow Token，交易，费用，抵押等等的行为。</p>
+</li>
+<li>
+<p><a href="https://github.com/onflow/kitty-items">Kitty物品</a>： Flow和Cryptokitties团队最近构建的NFT游戏，该应用程序完成了令人惊叹的示例，该示例使用最新的Flow开发最佳实践在testnet上运行。让开发者可以通过完整应用程序作为参考进行Cadence和Flow开发！</p>
+</li>
+<li>
+<p><a href="https://github.com/dapperlabs/nba-smart-contracts">NBA Top Shot</a>： 您可能已经听说过这一项目。自2020年6月以来，NBA Top Shot及其市场一直在Flow Mainnet上运行，并已变得极为流行。免责声明：Top Shot合同是很久以前写的，因此使用了一些过时的Cadence设计模式，不建议在以后的大多数NFT项目中使用。Kitty Items项目是Cadence最佳实践的一个更好的例子。</p>
+</li>
+</ul>
+<hr>
+<h2 id="结论">结论</h2>
+<p>如果您学到了这里，恭喜！希望您现在应该拥有足够的工具和知识，以便在Cadence中编写自己的智能合约。</p>
+<p>在整个过程中，您将拥有整个Flow团队和社区来为您提供支持！请不要犹豫，通过我们的Discord服务器，Flow论坛或Flow Github存储库中的问题与我们联系。</p>
+<p>您是否还知道其他对新手有用的资源或有趣的项目？请随意评论您的想法，我可能会在以后的帖子中加入它们！</p>
+<ul>
+<li>Flow Discord: https://discord.gg/flow</li>
+<li>Flow Forum: https://forum.onflow.org</li>
+<li>Flow Github: https://github.com/onflow/flow</li>
+</ul>
+<p>下周见! 👋</p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#1-pipenv-%E7%9A%84%E5%AE%89%E8%A3%85">1. Pipenv 的安装</a></li>
-<li><a href="#2-%E5%88%9B%E5%BB%BApipenv-%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">2. 创建Pipenv 的虚拟环境</a></li>
-<li><a href="#3-pycharm-%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">3. Pycharm 连接虚拟环境</a></li>
-<li><a href="#4-%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E5%8C%85">4. 安装项目依赖包</a><br>
-*
+<li><a href="#%E7%94%A8cadence%E8%BF%88%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AD%A5">用Cadence迈出第一步</a>
 <ul>
-<li><a href="#%E4%B8%8B%E8%BD%BD%E6%85%A2%E4%BF%AE%E6%94%B9%E6%BA%90">下载慢，修改源</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4">命令：</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-flow">什么是 Flow？</a></li>
+<li><a href="#%E4%BB%8E%E5%93%AA%E5%84%BF%E5%BC%80%E5%A7%8B%E4%BA%86%E8%A7%A3-flow">从哪儿开始了解 Flow？</a>
+<ul>
+<li><a href="#%E6%AD%A5%E9%AA%A41cadence%E7%AE%80%E4%BB%8B">步骤1：Cadence简介</a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A42cadence%E6%95%99%E7%A8%8B">步骤2：Cadence教程</a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A43%E6%A0%87%E5%87%86%E5%AE%9E%E7%8E%B0">步骤3：标准实现</a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A44cadence%E5%90%88%E7%BA%A6%E5%AE%9E%E8%B7%B5">步骤4：Cadence合约实践</a></li>
 </ul>
 </li>
-<li><a href="#5-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">5. 常用操作</a></li>
-<li><a href="#6-%E5%8F%82%E8%80%83">6. 参考</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ul>
+</li>
 </ul>
 </div>
           
           <hr />
           <p class="next-post">下一篇：
-            <a href="https://lianqiujun.co/post/python-yi-bu-io-bian-cheng">
+            <a href="https://lianqiujun.co/post/zhu-chong-shi-xiao-de-bian-cheng-zhe-xue">
               <span class="post-title">
-                Python 异步IO编程&rarr;
+                注重实效的编程哲学&rarr;
               </span>
             </a>
           </p>
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing/" class="leancloud_visitors"
-              data-flag-title="使用Pipenv管理Python虚拟环境">
+            <span id="/post/yong-cadence-mai-chu-di-yi-bu/" class="leancloud_visitors"
+              data-flag-title="用Cadence迈出第一步">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>

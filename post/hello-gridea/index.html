@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>使用Pipenv管理Python虚拟环境 | 链 求 君 | 区 块 链</title>
+<title>Hello Gridea | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="使用Pipenv管理Python虚拟环境 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="Hello Gridea | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,8 +38,8 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="使用Pipenv管理Python虚拟环境" />
-  <meta property="og:url" content="https://lianqiujun.co/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing" />
+  <meta property="og:description" content="Hello Gridea" />
+  <meta property="og:url" content="https://lianqiujun.co/post/hello-gridea" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="链 求 君 | 区 块 链" />
@@ -159,13 +159,13 @@
             <div class="post-heading">
               <span class="tags">
                 
-                <a href="https://lianqiujun.co/tag/BYEPncV_B" class="tag">Python</a>
+                <a href="https://lianqiujun.co/tag/z4fqIwpbw" class="tag">Gridea</a>
                 
               </span>
-              <h1>使用Pipenv管理Python虚拟环境</h1>
+              <h1>Hello Gridea</h1>
               <span class="meta">
                 Posted on
-                2020-06-29，3 min read
+                2018-12-12，2 min read
               </span>
             </div>
           
@@ -180,132 +180,44 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <h1 id="1-pipenv-的安装">1. Pipenv 的安装</h1>
-<p>python3+ 安装 pipenv 的依赖包</p>
-<pre><code>pip3 install pipenv
-</code></pre>
-<h1 id="2-创建pipenv-的虚拟环境">2. 创建Pipenv 的虚拟环境</h1>
-<p>具体执行步骤如下：</p>
-<p>（1）命令行进入项目目录下</p>
-<p>（2）创建Python虚拟环境</p>
-<p>执行<code>pipenv --python 3.7</code><br>
-生成Python 3.7 版本虚拟环境。（本地必须先具备该版本Python环境）<br>
-或者可以使用，<code>pipenv --three</code> 则使用系统当前的 python3 版本生成虚拟环境。</p>
-<p>完成创建后，项目目录下会产生<code>Pipfile</code>记录项目依赖。</p>
-<p>（3）验证环境</p>
-<p>执行<code>pipenv --venv</code>,显示当前虚拟环境所用的解释器位置。</p>
-<p>（4）配置Pycharm的虚拟环境</p>
-<p>根据（3）中获得的虚拟环境解释器位置，在Pycharm中进行配置，具体过程如下。</p>
-<h1 id="3-pycharm-连接虚拟环境">3. Pycharm 连接虚拟环境</h1>
-<p>（1）配置Pycharm项目虚拟环境</p>
-<p>打开 <code>Pycharm</code>，点击 <code>File -&gt; settings -&gt; Project</code> 选择你要更改的环境，如果没有或点击<code>+</code>进行环境添加。<br>
-命令行中用<code>pipenv --venv</code>,查看当前虚拟环境所用的解释器位置，查到项目的虚拟环境目录进行配置。</p>
-<p>在添加环境时，找到目录中<code>Script</code>文件夹中<code>python.exe</code>后点击确认。</p>
-<figure data-type="image" tabindex="1"><img src="https://lianqiujun.co/post-images/1593401275807.PNG" alt="" loading="lazy"></figure>
-<p>现在就获得了一个干净的Python 3.7 虚拟环境。</p>
-<p>（2）配置Pycharm命令行环境</p>
-<p>避免命令行中Python执行环境和系统环境搞混淆，需要进行配置。</p>
-<p>设置修改项目中的 Python Console 控制台，避免和系统环境搞混<br>
-<code>File -&gt; settings -&gt; Project</code> 中<code>结构、执行、部署</code>进行修改<code>Console</code>,设置好工作目录为项目目录。</p>
-<figure data-type="image" tabindex="2"><img src="https://lianqiujun.co/post-images/1593401293189.PNG" alt="" loading="lazy"></figure>
-<h1 id="4-安装项目依赖包">4. 安装项目依赖包</h1>
-<h3 id="下载慢修改源">下载慢，修改源</h3>
-<pre><code>[[source]]
-
-url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
-verify_ssl = true
-name = &quot;pypi&quot;
-</code></pre>
-<h3 id="命令">命令：</h3>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>进入pipenv的虚拟环境中。</p>
-<ul>
-<li>pipenv install</li>
-</ul>
-<p>安装<code>Pipfile</code>中的依赖包。</p>
-<ul>
-<li>pipenv install xxx</li>
-</ul>
-<p>安装指定依赖包，并更新至<code>Pipfile</code>。</p>
-<ul>
-<li>pipenv lock</li>
-</ul>
-<p>锁定项目依赖，生成<code>Pipfile.lock</code>文件。</p>
-<ul>
-<li>pipenv run xxx.py</li>
-</ul>
-<p>在虚拟环境下执行脚本。</p>
-<h1 id="5-常用操作">5. 常用操作</h1>
-<ul>
-<li>pipenv shell</li>
-</ul>
-<p>pipenv新建的虚拟环境放在统一的目录下, 在某个目录下运行pipenv<br>
-shell时pipenv会自动在虚拟环境目录下搜索以当前目录名称开头的虚拟环境目录,如果没找到则判断为无虚拟环境。</p>
-<ul>
-<li>pipenv graph</li>
-</ul>
-<p>查看依赖包。</p>
-<ul>
-<li>pipenv install requests</li>
-</ul>
-<p>用Pipenv 安装包。</p>
-<ul>
-<li>pipenv install pytest --dev</li>
-</ul>
-<p>分环境配置包，有些包只在开发环境下使用dev</p>
-<ul>
-<li>pipenv uninstall requests</li>
-</ul>
-<p>卸载Python包</p>
-<ul>
-<li>pipenv uninstall --all</li>
-</ul>
-<p>卸载全部</p>
-<ul>
-<li>pipenv lock<br>
-有时lock文件不存在了，再次生成。</li>
-</ul>
-<h1 id="6-参考">6. 参考</h1>
-<ul>
-<li>
-<p><a href="https://cuiqingcai.com/5846.html">Pipenv的常用操作</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_20728575/article/details/82949529">Pycharm使用Pipenv</a></p>
-</li>
-</ul>
+          <img class="post-feature-header-image" src="https://lianqiujun.co/post-images/hello-gridea.png" alt="封面图">
+          </img>
+          
+          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#1-pipenv-%E7%9A%84%E5%AE%89%E8%A3%85">1. Pipenv 的安装</a></li>
-<li><a href="#2-%E5%88%9B%E5%BB%BApipenv-%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">2. 创建Pipenv 的虚拟环境</a></li>
-<li><a href="#3-pycharm-%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83">3. Pycharm 连接虚拟环境</a></li>
-<li><a href="#4-%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E5%8C%85">4. 安装项目依赖包</a><br>
-*
+<li>
 <ul>
-<li><a href="#%E4%B8%8B%E8%BD%BD%E6%85%A2%E4%BF%AE%E6%94%B9%E6%BA%90">下载慢，修改源</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4">命令：</a></li>
+<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
 </ul>
 </li>
-<li><a href="#5-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">5. 常用操作</a></li>
-<li><a href="#6-%E5%8F%82%E8%80%83">6. 参考</a></li>
 </ul>
 </div>
           
-          <hr />
-          <p class="next-post">下一篇：
-            <a href="https://lianqiujun.co/post/python-yi-bu-io-bian-cheng">
-              <span class="post-title">
-                Python 异步IO编程&rarr;
-              </span>
-            </a>
-          </p>
-          
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/shi-yong-pipenv-guan-li-python-xu-ni-huan-jing/" class="leancloud_visitors"
-              data-flag-title="使用Pipenv管理Python虚拟环境">
+            <span id="/post/hello-gridea/" class="leancloud_visitors"
+              data-flag-title="Hello Gridea">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
