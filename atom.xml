@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lianqiujun.co</id>
     <title>链 求 君 | 区 块 链</title>
-    <updated>2021-02-28T06:17:21.153Z</updated>
+    <updated>2021-02-28T08:08:51.385Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lianqiujun.co"/>
     <link rel="self" href="https://lianqiujun.co/atom.xml"/>
@@ -11,26 +11,54 @@
     <icon>https://lianqiujun.co/favicon.ico</icon>
     <rights>All rights reserved 2021, 链 求 君 | 区 块 链</rights>
     <entry>
-        <title type="html"><![CDATA[设置本地Git代理]]></title>
-        <id>https://lianqiujun.co/post/she-zhi-ben-di-git-dai-li</id>
-        <link href="https://lianqiujun.co/post/she-zhi-ben-di-git-dai-li">
+        <title type="html"><![CDATA[Flow账户与Ethereum账户有何不同？]]></title>
+        <id>https://lianqiujun.co/post/flow-zhang-hu-yu-ethereum-zhang-hu-you-he-bu-tong</id>
+        <link href="https://lianqiujun.co/post/flow-zhang-hu-yu-ethereum-zhang-hu-you-he-bu-tong">
         </link>
-        <updated>2021-02-28T06:16:46.000Z</updated>
-        <content type="html"><![CDATA[<p>设置代理：</p>
-<pre><code>// 根据情况 修改  IP 和 Port
-// http://IP:PORT
-
-git config --global http.proxy http://127.0.0.1:1080
- 
-git config --global https.proxy http://127.0.0.1:1080
-</code></pre>
-<p>取消代理:</p>
-<pre><code>
-取消全局代理：
-git config --global --unset http.proxy
- 
-git config --global --unset https.proxy
-</code></pre>
+        <updated>2021-02-28T08:08:05.000Z</updated>
+        <content type="html"><![CDATA[<p>这篇博客文章供开发人员了解<a href="https://www.onflow.org/">Flow区块链</a>。</p>
+<p>首先，在不同的区块链上开发用例可能会非常艰巨，尤其是当每个区块链都呈现出一个全新的架构。在此文章中，我们将探讨Flow账户与以太坊账户的区别。</p>
+<p>我们假设您具有区块链和密码学领域的基础知识。</p>
+<p>所以，让我们开始吧！</p>
+<p>以太坊账户是从私钥派生的。以太坊私钥是长度为64（256位/ 32字节）的十六进制数。请记住，猜测出相同的以太坊帐户的机会非常非常小，几乎不可能。正式而言，以太坊私钥的猜测几率为：<code>1/2 ^ 256</code>。让我们试想一下这个数字。Adrian Bednarek将识别随机以太坊密钥的难度等同于在海滩上挑选沙粒的场景，那么要求一位朋友在“十亿亿万亿”的海滩中找到相同的一粒沙粒。这疯了，不是吗？</p>
+<p>成功生成私钥后，将对其进行数学运算以得出公钥。最后，对公钥进行更多的数学运算以得出有效地址。</p>
+<figure data-type="image" tabindex="1"><img src="https://swarm-gateways.net/bzz:/e2157b3806cb0d9a91c1f53b93572cf4168176e55784dd00e9908f746f85470b/key.jpeg" alt="" loading="lazy"></figure>
+<p>注意，上述过程是单向的。从给定地址生成私钥是不可能的。</p>
+<p>简而言之，这就是您在以太坊区块链上生成帐户的方式。</p>
+<h1 id="现在让我们看一下flow上的帐户">现在，让我们看一下Flow上的帐户</h1>
+<p>在Flow区块链上，&quot;账户&quot;的概念非常不同。在Flow上，一个账户是由区块链自动生成的，并且可以支持多个公钥。</p>
+<p>要在Flow上创建一个帐户，首先必须使用<code>P-256</code>或<code>secp256k1</code><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>（椭圆曲线数字签名算法）曲线生成公钥和私钥对，然后将交易提交至区块链。通过该交易，初始化新的帐户存储，然后将生成的密钥分配给该帐户。要了解有关在Flow上生成帐户的更多信息，<a href="https://github.com/onflow/flow-go-sdk#creating-an-account">请参阅这里</a>。</p>
+<p>Flow上的每个帐户可能具有1到n个与之关联的公共密钥，并且对应于每个公共密钥，将存在一个由帐户所有者紧密持有的私有密钥。每个密钥的关联权重范围为1到1000。在对交易进行签名时，签名密钥的总权重必须大于或等于1000。</p>
+<h1 id="flow-智能合约">Flow 智能合约</h1>
+<p>在以太坊区块链上，智能合约被部署到他们的个人账户中。这样的帐户没有私钥（即合约账户）。但是，在Flow区块链上，帐户类似于容器。换句话说，智能合约是帐户的一部分，该帐户可以同时具有多个已部署的智能合约。（注：将来的主网将支持多个智能合约，但目前仅支持一个。）Flow区块链还使开发人员能够使用智能合约的私钥删除智能合约（未在会在其他地方使用）。但必须由智能合约所属的账户执行。</p>
+<figure data-type="image" tabindex="2"><img src="https://swarm-gateways.net/bzz:/876aad0a7f95fb2cbba252de17cf40dca7ea52e0a8eaf3beecb8c354ccce09c3/key2.jpeg" alt="" loading="lazy"></figure>
+<h1 id="flow中的资源resource">Flow中的“资源”（Resource）</h1>
+<p>Flow支持使用Cadence（一种基于Flow的编程语言）进行新的编程模式，称为“面向资源的编程”。Cadence使开发人员轻松创建类似于Crypto Kitties的加密资产。此类资产称为“资源”。资源是Cadence语言中内置的一种特殊的类型，由严格的Move语义制约。资源一次只能存在于一个位置，不能被复制，也不能被意外丢失或删除。</p>
+<p>作为开发人员，您可以借用其他帐户的资源来使用它们。例如，您可以从其创建者那里借用Crypto Pokemon之类的加密资产，并出于自己的目的免费使用它（当然要经过所有者的许可）。为了使开发人员能够访问他/她的资源，开发人员必须创建一个功能。能力由路径标识，并链接到目标路径，而不是直接链接到对象。功能可以是公共的（任何用户都可以访问），也可以是私有的（只能授权用户访问）。</p>
+<p>用户通常会希望这样做，以便其他特定用户甚至其他任何人都可以访问存储对象的某些字段和功能。这可以通过创建功能来完成。</p>
+<p>但是，请注意，创建者可以在他们喜欢的任何时候删除该资源。但是，如果当前正在使用资源，则Flow区块链会阻止创建者这样做。</p>
+<p>现在，让我们了解一下Flow区块链上的典型帐户。</p>
+<p>除了私钥和智能合约，这些“资源”也驻留在帐户中。这些资源可以在“存储”下找到。此“存储”已建立索引，可以使用API进行访问。“存储”块上存在三个域：</p>
+<ol>
+<li>
+<p>/ storage /：这是存储资源的位置。让我们以以太坊区块链为例来更好地理解这一点。以太坊上有不同的代币，例如USDT，MKR等。以太坊账户可以跟踪自其创建以来与之交互的所有代币和智能合约吗？从技术上讲，可以使用以太坊日志。但是，以太坊并没有为智能合约中的账户资产提供单一存储。幸运的是，Flow做到了。您可以跟踪与资源进行交互的所有智能合约。Flow 帐户具有管理数据的能力</p>
+</li>
+<li>
+<p>/ private /：这允许其他开发人员操纵帐户中的存储。但是，这并非对所有开发人员都开放。您必须明确授予开发人员访问权限。对存储数据的访问受“功能安全性”原则的约束。这意味着，如果一个帐户希望能够访问另一个帐户的存储对象，则它必须对该对象具有有效的权限。这是Flow区块链是以账户为中心/以资源为中心的区块链的原因之一。</p>
+</li>
+<li>
+<p>/ public /：这使您可以授予开发人员访问某些功能的权限。这些功能的接口在此块中发布。</p>
+</li>
+</ol>
+<p>例如，您可能希望任何人阅读您拥有的NFT，以便该功能（例如getNFTs（））进入/ public，但您只希望与之交易的人能够访问（tradeNFT（），例如），因此您将其放在/ private中。</p>
+<figure data-type="image" tabindex="3"><img src="https://swarm-gateways.net/bzz:/0bb774f43f3b5bda8b48ff6b9b73da475d21c5038bccad2212cc4fa9d97ec735/key3.jpeg" alt="" loading="lazy"></figure>
+<p>最后一个重要的区别是Flow区块链上的智能合约是可升级的。即使超级才华横溢的团队创建了某款软件，也可能很难在第一时间就做到正确。因此，在Flow区块链上，智能合约可以以“beta状态”部署到主网上，在那里智能合约代码仍然可以更新。一旦智能合约创建者确信其代码是安全的，便可以对其进行定稿，从而使智能合约完全不可变。</p>
+<p>在这篇文章中，我们：</p>
+<ul>
+<li>探索以太坊区块链和Flow区块链上的账户结构如何发生巨大变化</li>
+<li>了解到Cadence编程语言将促进Flow区块链上的开发</li>
+<li>讨论什么是资源以及如何将其放置在Flow帐户中</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
@@ -406,156 +434,156 @@ Decentology的另一篇博客文章介绍了Flow and Cadence账户模型：</p>
         <updated>2021-01-21T01:31:10.000Z</updated>
         <content type="html"><![CDATA[<h1 id="2021-年书单">2021 年书单</h1>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9145570"><label class="task-list-item-label" for="task-item-9145570"> 《程序员修炼之道:从小工到专家》</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7508544"><label class="task-list-item-label" for="task-item-7508544"> 《程序员修炼之道:从小工到专家》</label></li>
 </ul>
 <p>[资源](https://swarm-gateways.net/bzz:/378fbce4da8c5914687b4e6f2df75c071dbc23b00548781c778baf4b74d5cbdb/程序员修炼之道 从小工到专家.pdf)</p>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1304450"><label class="task-list-item-label" for="task-item-1304450"> 《曾国藩传》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7646116"><label class="task-list-item-label" for="task-item-7646116"> 《曾国藩传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-570445"><label class="task-list-item-label" for="task-item-570445"> 《精通以太坊（第二版）》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5075418"><label class="task-list-item-label" for="task-item-5075418"> 《精通以太坊（第二版）》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7479173"><label class="task-list-item-label" for="task-item-7479173"> 《人类简史》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6508844"><label class="task-list-item-label" for="task-item-6508844"> 《人类简史》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2165162"><label class="task-list-item-label" for="task-item-2165162"> 《我生活都种种模式》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3374622"><label class="task-list-item-label" for="task-item-3374622"> 《我生活都种种模式》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5873137"><label class="task-list-item-label" for="task-item-5873137"> 《众病之王》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8073890"><label class="task-list-item-label" for="task-item-8073890"> 《众病之王》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7700400"><label class="task-list-item-label" for="task-item-7700400"> 《程序是如何运行的》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2676052"><label class="task-list-item-label" for="task-item-2676052"> 《程序是如何运行的》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4870279"><label class="task-list-item-label" for="task-item-4870279"> 《编程语言实现模式》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6734492"><label class="task-list-item-label" for="task-item-6734492"> 《编程语言实现模式》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2181004"><label class="task-list-item-label" for="task-item-2181004"> 《区块链重塑经济与世界》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9960249"><label class="task-list-item-label" for="task-item-9960249"> 《区块链重塑经济与世界》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6222035"><label class="task-list-item-label" for="task-item-6222035"> 《精通比特币:第二版》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9174151"><label class="task-list-item-label" for="task-item-9174151"> 《精通比特币:第二版》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5860424"><label class="task-list-item-label" for="task-item-5860424"> 《剑指offer》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6775717"><label class="task-list-item-label" for="task-item-6775717"> 《剑指offer》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6251234"><label class="task-list-item-label" for="task-item-6251234"> 《充足理由率的四重根》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-455543"><label class="task-list-item-label" for="task-item-455543"> 《充足理由率的四重根》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6088140"><label class="task-list-item-label" for="task-item-6088140"> 《哥德尔、艾舍尔、巴赫》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9380607"><label class="task-list-item-label" for="task-item-9380607"> 《哥德尔、艾舍尔、巴赫》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9333666"><label class="task-list-item-label" for="task-item-9333666"> 《鸟哥Linux私房菜基础篇》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-136775"><label class="task-list-item-label" for="task-item-136775"> 《鸟哥Linux私房菜基础篇》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4548902"><label class="task-list-item-label" for="task-item-4548902"> 《区块链：定义金融格局》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4844090"><label class="task-list-item-label" for="task-item-4844090"> 《区块链：定义金融格局》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3459100"><label class="task-list-item-label" for="task-item-3459100"> 《编码》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6669072"><label class="task-list-item-label" for="task-item-6669072"> 《编码》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-305921"><label class="task-list-item-label" for="task-item-305921"> 《像程序员一样思考》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4879490"><label class="task-list-item-label" for="task-item-4879490"> 《像程序员一样思考》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3874994"><label class="task-list-item-label" for="task-item-3874994"> 《黑客与画家》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4749945"><label class="task-list-item-label" for="task-item-4749945"> 《黑客与画家》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1009551"><label class="task-list-item-label" for="task-item-1009551"> 《人件》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6123012"><label class="task-list-item-label" for="task-item-6123012"> 《人件》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8482567"><label class="task-list-item-label" for="task-item-8482567"> 《深入理解计算机系统》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7776230"><label class="task-list-item-label" for="task-item-7776230"> 《深入理解计算机系统》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-470535"><label class="task-list-item-label" for="task-item-470535"> 《区块链社会》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1045215"><label class="task-list-item-label" for="task-item-1045215"> 《区块链社会》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1919921"><label class="task-list-item-label" for="task-item-1919921"> 《人类群星闪耀时》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-414750"><label class="task-list-item-label" for="task-item-414750"> 《人类群星闪耀时》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9083432"><label class="task-list-item-label" for="task-item-9083432"> 《Python密码学编程》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1894439"><label class="task-list-item-label" for="task-item-1894439"> 《Python密码学编程》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2829331"><label class="task-list-item-label" for="task-item-2829331"> 《计算机程序的构造和解释》</label></p>
+<p><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4987368"><label class="task-list-item-label" for="task-item-4987368"> 《计算机程序的构造和解释》</label></p>
 </li>
 </ul>
 <h1 id="2020-年书单">2020 年书单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9104190"><label class="task-list-item-label" for="task-item-9104190"> 1. 《维特根斯坦传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9463543"><label class="task-list-item-label" for="task-item-9463543"> 1. 《维特根斯坦传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9100325"><label class="task-list-item-label" for="task-item-9100325"> 2. 《Python实现一条区块链》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2198027"><label class="task-list-item-label" for="task-item-2198027"> 2. 《Python实现一条区块链》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2539781"><label class="task-list-item-label" for="task-item-2539781"> 3. 《爱因斯坦传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-238270"><label class="task-list-item-label" for="task-item-238270"> 3. 《爱因斯坦传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-609234"><label class="task-list-item-label" for="task-item-609234"> 4.  《精通比特币：第二版》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4024995"><label class="task-list-item-label" for="task-item-4024995"> 4.  《精通比特币：第二版》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9945625"><label class="task-list-item-label" for="task-item-9945625"> 5. 《硅谷之火》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-272090"><label class="task-list-item-label" for="task-item-272090"> 5. 《硅谷之火》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1128976"><label class="task-list-item-label" for="task-item-1128976"> 6. 《故事》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9312585"><label class="task-list-item-label" for="task-item-9312585"> 6. 《故事》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4050107"><label class="task-list-item-label" for="task-item-4050107"> 7. 《网络是怎样连接的》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2063061"><label class="task-list-item-label" for="task-item-2063061"> 7. 《网络是怎样连接的》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8033951"><label class="task-list-item-label" for="task-item-8033951"> 8. 《刻意练习》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3919512"><label class="task-list-item-label" for="task-item-3919512"> 8. 《刻意练习》</label></p>
 </li>
 </ul>
 <h1 id="2018-年书单">2018 年书单</h1>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2490161"><label class="task-list-item-label" for="task-item-2490161"> 1. 《发现的乐趣》 理查德 费曼</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-483662"><label class="task-list-item-label" for="task-item-483662"> 1. 《发现的乐趣》 理查德 费曼</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1736014"><label class="task-list-item-label" for="task-item-1736014"> 2. 《小程序开发》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-399501"><label class="task-list-item-label" for="task-item-399501"> 2. 《小程序开发》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4789425"><label class="task-list-item-label" for="task-item-4789425"> 3. 《你的灯亮着吗？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8568043"><label class="task-list-item-label" for="task-item-8568043"> 3. 《你的灯亮着吗？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8549361"><label class="task-list-item-label" for="task-item-8549361"> 4. 《计算中的上帝》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1067442"><label class="task-list-item-label" for="task-item-1067442"> 4. 《计算中的上帝》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8617836"><label class="task-list-item-label" for="task-item-8617836"> 5. 《理解专业程序员》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9934771"><label class="task-list-item-label" for="task-item-9934771"> 5. 《理解专业程序员》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6771136"><label class="task-list-item-label" for="task-item-6771136"> 6. 《小王子》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6713072"><label class="task-list-item-label" for="task-item-6713072"> 6. 《小王子》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3391477"><label class="task-list-item-label" for="task-item-3391477"> 7. 《Head First HTML》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1847539"><label class="task-list-item-label" for="task-item-1847539"> 7. 《Head First HTML》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8694842"><label class="task-list-item-label" for="task-item-8694842"> 8. 《人生的智慧》  -- 叔本华</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-99243"><label class="task-list-item-label" for="task-item-99243"> 8. 《人生的智慧》  -- 叔本华</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4875929"><label class="task-list-item-label" for="task-item-4875929"> 9. 《乔布斯传》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4799780"><label class="task-list-item-label" for="task-item-4799780"> 9. 《乔布斯传》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4078695"><label class="task-list-item-label" for="task-item-4078695"> 10. 《数学是什么？》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1769268"><label class="task-list-item-label" for="task-item-1769268"> 10. 《数学是什么？》</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9693906"><label class="task-list-item-label" for="task-item-9693906"> 11. 《Django教程》</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4310785"><label class="task-list-item-label" for="task-item-4310785"> 11. 《Django教程》</label></p>
 </li>
 </ul>
 <h4 id="观影记录">观影记录</h4>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8475511"> <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-8475511"> [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5009380"> <a href="https://movie.douban.com/subject/24696708/">《神奇的费曼先生》<label class="task-list-item-label" for="task-item-5009380"> [《神奇的费曼先生》](https://movie.douban.com/subject/24696708/)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5497396"> <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-5497396"> [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6196220"> <a href="https://movie.douban.com/subject/27941811/">《区块链之新》<label class="task-list-item-label" for="task-item-6196220"> [《区块链之新》](https://movie.douban.com/subject/27941811/)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9220345"> <a href="#">《比特币：钱的终结》<label class="task-list-item-label" for="task-item-9220345"> [《比特币：钱的终结》](#)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8617348"> <a href="#">《比特币：钱的终结》<label class="task-list-item-label" for="task-item-8617348"> [《比特币：钱的终结》](#)</label></p>
 </li>
 <li class="task-list-item">
-<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4657963"> <a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣<label class="task-list-item-label" for="task-item-4657963"> [访谈纪录片：发现的乐趣](https://v.qq.com/x/page/f0380os1ryc.html)</label></p>
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7458454"> <a href="https://v.qq.com/x/page/f0380os1ryc.html">访谈纪录片：发现的乐趣<label class="task-list-item-label" for="task-item-7458454"> [访谈纪录片：发现的乐趣](https://v.qq.com/x/page/f0380os1ryc.html)</label></p>
 </li>
 </ul>
 ]]></content>

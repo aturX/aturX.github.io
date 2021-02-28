@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[链 求 君 | 区 块 链]的个人博客">
 <meta name="author" content="kveln">
-<title>设置本地Git代理 | 链 求 君 | 区 块 链</title>
+<title>Flow账户与Ethereum账户有何不同？ | 链 求 君 | 区 块 链</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="设置本地Git代理 | 链 求 君 | 区 块 链 » Feed"
+<link rel="alternate" type="application/rss+xml" title="Flow账户与Ethereum账户有何不同？ | 链 求 君 | 区 块 链 » Feed"
   href="https://lianqiujun.co/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -38,8 +38,8 @@
     gtag('js', new Date());
     gtag('config', 'G-HJX498H9SN');</script>
 
-  <meta property="og:description" content="设置本地Git代理" />
-  <meta property="og:url" content="https://lianqiujun.co/post/she-zhi-ben-di-git-dai-li" />
+  <meta property="og:description" content="Flow账户与Ethereum账户有何不同？" />
+  <meta property="og:url" content="https://lianqiujun.co/post/flow-zhang-hu-yu-ethereum-zhang-hu-you-he-bu-tong" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="链 求 君 | 区 块 链" />
@@ -86,7 +86,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1614493035513"
+            <form id="gridea-search-form" style="position: relative" data-update="1614499722797"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -136,7 +136,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1614493035513"
+            <form id="gridea-search-form" style="position: relative" data-update="1614499722797"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -159,13 +159,13 @@
             <div class="post-heading">
               <span class="tags">
                 
-                <a href="https://lianqiujun.co/tag/B6asERmrt" class="tag">Git</a>
+                <a href="https://lianqiujun.co/tag/OlPQmpzE-" class="tag">FlowChain</a>
                 
               </span>
-              <h1>设置本地Git代理</h1>
+              <h1>Flow账户与Ethereum账户有何不同？</h1>
               <span class="meta">
                 Posted on
-                2021-02-28，1 min read
+                2021-02-28，7 min read
               </span>
             </div>
           
@@ -180,23 +180,56 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <p>设置代理：</p>
-<pre><code>// 根据情况 修改  IP 和 Port
-// http://IP:PORT
+          <p>这篇博客文章供开发人员了解<a href="https://www.onflow.org/">Flow区块链</a>。</p>
+<p>首先，在不同的区块链上开发用例可能会非常艰巨，尤其是当每个区块链都呈现出一个全新的架构。在此文章中，我们将探讨Flow账户与以太坊账户的区别。</p>
+<p>我们假设您具有区块链和密码学领域的基础知识。</p>
+<p>所以，让我们开始吧！</p>
+<p>以太坊账户是从私钥派生的。以太坊私钥是长度为64（256位/ 32字节）的十六进制数。请记住，猜测出相同的以太坊帐户的机会非常非常小，几乎不可能。正式而言，以太坊私钥的猜测几率为：<code>1/2 ^ 256</code>。让我们试想一下这个数字。Adrian Bednarek将识别随机以太坊密钥的难度等同于在海滩上挑选沙粒的场景，那么要求一位朋友在“十亿亿万亿”的海滩中找到相同的一粒沙粒。这疯了，不是吗？</p>
+<p>成功生成私钥后，将对其进行数学运算以得出公钥。最后，对公钥进行更多的数学运算以得出有效地址。</p>
+<figure data-type="image" tabindex="1"><img src="https://swarm-gateways.net/bzz:/e2157b3806cb0d9a91c1f53b93572cf4168176e55784dd00e9908f746f85470b/key.jpeg" alt="" loading="lazy"></figure>
+<p>注意，上述过程是单向的。从给定地址生成私钥是不可能的。</p>
+<p>简而言之，这就是您在以太坊区块链上生成帐户的方式。</p>
+<h1 id="现在让我们看一下flow上的帐户">现在，让我们看一下Flow上的帐户</h1>
+<p>在Flow区块链上，&quot;账户&quot;的概念非常不同。在Flow上，一个账户是由区块链自动生成的，并且可以支持多个公钥。</p>
+<p>要在Flow上创建一个帐户，首先必须使用<code>P-256</code>或<code>secp256k1</code><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>（椭圆曲线数字签名算法）曲线生成公钥和私钥对，然后将交易提交至区块链。通过该交易，初始化新的帐户存储，然后将生成的密钥分配给该帐户。要了解有关在Flow上生成帐户的更多信息，<a href="https://github.com/onflow/flow-go-sdk#creating-an-account">请参阅这里</a>。</p>
+<p>Flow上的每个帐户可能具有1到n个与之关联的公共密钥，并且对应于每个公共密钥，将存在一个由帐户所有者紧密持有的私有密钥。每个密钥的关联权重范围为1到1000。在对交易进行签名时，签名密钥的总权重必须大于或等于1000。</p>
+<h1 id="flow-智能合约">Flow 智能合约</h1>
+<p>在以太坊区块链上，智能合约被部署到他们的个人账户中。这样的帐户没有私钥（即合约账户）。但是，在Flow区块链上，帐户类似于容器。换句话说，智能合约是帐户的一部分，该帐户可以同时具有多个已部署的智能合约。（注：将来的主网将支持多个智能合约，但目前仅支持一个。）Flow区块链还使开发人员能够使用智能合约的私钥删除智能合约（未在会在其他地方使用）。但必须由智能合约所属的账户执行。</p>
+<figure data-type="image" tabindex="2"><img src="https://swarm-gateways.net/bzz:/876aad0a7f95fb2cbba252de17cf40dca7ea52e0a8eaf3beecb8c354ccce09c3/key2.jpeg" alt="" loading="lazy"></figure>
+<h1 id="flow中的资源resource">Flow中的“资源”（Resource）</h1>
+<p>Flow支持使用Cadence（一种基于Flow的编程语言）进行新的编程模式，称为“面向资源的编程”。Cadence使开发人员轻松创建类似于Crypto Kitties的加密资产。此类资产称为“资源”。资源是Cadence语言中内置的一种特殊的类型，由严格的Move语义制约。资源一次只能存在于一个位置，不能被复制，也不能被意外丢失或删除。</p>
+<p>作为开发人员，您可以借用其他帐户的资源来使用它们。例如，您可以从其创建者那里借用Crypto Pokemon之类的加密资产，并出于自己的目的免费使用它（当然要经过所有者的许可）。为了使开发人员能够访问他/她的资源，开发人员必须创建一个功能。能力由路径标识，并链接到目标路径，而不是直接链接到对象。功能可以是公共的（任何用户都可以访问），也可以是私有的（只能授权用户访问）。</p>
+<p>用户通常会希望这样做，以便其他特定用户甚至其他任何人都可以访问存储对象的某些字段和功能。这可以通过创建功能来完成。</p>
+<p>但是，请注意，创建者可以在他们喜欢的任何时候删除该资源。但是，如果当前正在使用资源，则Flow区块链会阻止创建者这样做。</p>
+<p>现在，让我们了解一下Flow区块链上的典型帐户。</p>
+<p>除了私钥和智能合约，这些“资源”也驻留在帐户中。这些资源可以在“存储”下找到。此“存储”已建立索引，可以使用API进行访问。“存储”块上存在三个域：</p>
+<ol>
+<li>
+<p>/ storage /：这是存储资源的位置。让我们以以太坊区块链为例来更好地理解这一点。以太坊上有不同的代币，例如USDT，MKR等。以太坊账户可以跟踪自其创建以来与之交互的所有代币和智能合约吗？从技术上讲，可以使用以太坊日志。但是，以太坊并没有为智能合约中的账户资产提供单一存储。幸运的是，Flow做到了。您可以跟踪与资源进行交互的所有智能合约。Flow 帐户具有管理数据的能力</p>
+</li>
+<li>
+<p>/ private /：这允许其他开发人员操纵帐户中的存储。但是，这并非对所有开发人员都开放。您必须明确授予开发人员访问权限。对存储数据的访问受“功能安全性”原则的约束。这意味着，如果一个帐户希望能够访问另一个帐户的存储对象，则它必须对该对象具有有效的权限。这是Flow区块链是以账户为中心/以资源为中心的区块链的原因之一。</p>
+</li>
+<li>
+<p>/ public /：这使您可以授予开发人员访问某些功能的权限。这些功能的接口在此块中发布。</p>
+</li>
+</ol>
+<p>例如，您可能希望任何人阅读您拥有的NFT，以便该功能（例如getNFTs（））进入/ public，但您只希望与之交易的人能够访问（tradeNFT（），例如），因此您将其放在/ private中。</p>
+<figure data-type="image" tabindex="3"><img src="https://swarm-gateways.net/bzz:/0bb774f43f3b5bda8b48ff6b9b73da475d21c5038bccad2212cc4fa9d97ec735/key3.jpeg" alt="" loading="lazy"></figure>
+<p>最后一个重要的区别是Flow区块链上的智能合约是可升级的。即使超级才华横溢的团队创建了某款软件，也可能很难在第一时间就做到正确。因此，在Flow区块链上，智能合约可以以“beta状态”部署到主网上，在那里智能合约代码仍然可以更新。一旦智能合约创建者确信其代码是安全的，便可以对其进行定稿，从而使智能合约完全不可变。</p>
+<p>在这篇文章中，我们：</p>
+<ul>
+<li>探索以太坊区块链和Flow区块链上的账户结构如何发生巨大变化</li>
+<li>了解到Cadence编程语言将促进Flow区块链上的开发</li>
+<li>讨论什么是资源以及如何将其放置在Flow帐户中</li>
+</ul>
 
-git config --global http.proxy http://127.0.0.1:1080
- 
-git config --global https.proxy http://127.0.0.1:1080
-</code></pre>
-<p>取消代理:</p>
-<pre><code>
-取消全局代理：
-git config --global --unset http.proxy
- 
-git config --global --unset https.proxy
-</code></pre>
-
-          <div class="toc-container"></div>
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E7%8E%B0%E5%9C%A8%E8%AE%A9%E6%88%91%E4%BB%AC%E7%9C%8B%E4%B8%80%E4%B8%8Bflow%E4%B8%8A%E7%9A%84%E5%B8%90%E6%88%B7">现在，让我们看一下Flow上的帐户</a></li>
+<li><a href="#flow-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6">Flow 智能合约</a></li>
+<li><a href="#flow%E4%B8%AD%E7%9A%84%E8%B5%84%E6%BA%90resource">Flow中的“资源”（Resource）</a></li>
+</ul>
+</div>
           
           <hr />
           <p class="next-post">下一篇：
@@ -209,8 +242,8 @@ git config --global --unset https.proxy
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/she-zhi-ben-di-git-dai-li/" class="leancloud_visitors"
-              data-flag-title="设置本地Git代理">
+            <span id="/post/flow-zhang-hu-yu-ethereum-zhang-hu-you-he-bu-tong/" class="leancloud_visitors"
+              data-flag-title="Flow账户与Ethereum账户有何不同？">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
